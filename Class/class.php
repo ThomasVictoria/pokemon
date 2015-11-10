@@ -22,7 +22,7 @@ class Call
 	function getImage($id)
 	{
 		
-		$response = $this->getCall('http://pokeapi.co'.$id);
+		$response = $this->getCall('http://pokeapi.co/'.$id);
 		return $response->image;
 		
 	}

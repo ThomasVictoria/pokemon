@@ -1,0 +1,39 @@
+.button{border: 1px solid black;}
+#container{width: 960px; margin: 10px auto;}
+
+.stats{
+	width: 100%; 
+	position: relative;
+	
+	.hp{
+		position: absolute;
+		display: block;
+		top: 10px; right: 10px;
+	}
+	
+	.attack{
+		position: absolute;
+		display: block;
+		top: 25px; right: 10px;
+	}
+}
+
+#names{
+	display: block;
+	width: 100%;
+	
+	& div{
+		display: inline-block;
+	}
+	
+	& .left .right{
+		width: auto;
+		background-color: #0f0f0f;
+		color: #fefefe;
+		padding: 10px;
+	}
+	
+}
+
+div{width: 150px;}
+.compare .second{display: none;}

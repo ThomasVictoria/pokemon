@@ -1,0 +1,26 @@
+{
+  "name": "pokemon",
+  "version": "1.0.0",
+  "description": "projet front",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp-watch": "^4.3.5",
+    "gulp-concat": "^2.6.0",
+    "gulp-sass": "^2.1.0",
+    "gulp": "^3.9.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThomasVictoria/pokemon.git"
+  },
+  "author": "Victoria, Noulelis, Maniguet",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThomasVictoria/pokemon/issues"
+  },
+  "homepage": "https://github.com/ThomasVictoria/pokemon#readme"
+}

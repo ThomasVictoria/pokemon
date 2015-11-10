@@ -1,0 +1,14 @@
+@import "reset";
+@import "fonts";
+
+/*********** BODY **************/
+
+body{
+	font-family: 'klavika-web', 'Open Sans', sans-serif;
+	background: #e5e5e3;
+	overflow: hidden;
+}
+
+
+
+@import "views/style";

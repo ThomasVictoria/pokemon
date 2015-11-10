@@ -5,16 +5,17 @@ function request(datatype, id, callback, optionnal)
 	$.ajax({
 		type: 'post',
 		crossDomain:true,
-		url: 'http://127.0.0.1/pokemon/index.php',
+		url: 'http://127.0.0.1/starter-front.dev/pokemon/class/index.php',
 		data: {'datatype': datatype, 'id': id},
 		dataType: 'json',
 		success: function(json) {
 			if (typeof optionnal === 'undefined') {
 				callback(json);
 			} else {
+				console.log(json);
 				callback(json, optionnal);
 			}
-
+			
 		}
 	});
 
@@ -25,7 +26,7 @@ request('pokedex', 'null', display);
 // Fonction d'affichage du slider
 function display(data) {
 
-	for(key in data.reponse) {
+	for(var key in data.reponse) {
 
 		var link  = data.reponse[key].resource_uri,
 				delimiter = '/' ,
@@ -52,8 +53,8 @@ function display(data) {
 
 	$('.compare .desc').on('click', function() {
 		var compare = $('.active').attr('data-id'),
-				name    = $('.active').text(),
-				image		= $('.image img').attr('src');
+				name = $('.active').text(),
+				image = $('.image img').attr('src');
 		$('.compare .info .name').text(name);
 		$('.compare .info img').attr('src', image);
 		$('.compare').attr('data-id', compare);
@@ -61,7 +62,6 @@ function display(data) {
 	});
 
 	$('.second').on('click', function() {
-		console.log('yolo');
 		var first  = $('.compare').attr('data-id'),
 				second = $('.active').attr('data-id');
 		request('pokemon', first, displayStats, '.comparefield .first');
@@ -77,7 +77,8 @@ function printPokemon(data) {
 		$(this).text( pokemonId+' '+data.reponse[pokemonId-1].name);
 	});
 
-	var current = $('.active').attr('data-id');
+	// -1 afin de selectioner le premier élément
+	var current = $('.left').attr('data-id');
 	request('pokemon', current, displayStats, '.stats');
 
 }
@@ -104,8 +105,8 @@ function displayStats(data, place) {
 
 	request('image', data.reponse.sprites[0].resource_uri, displayImages, place);
 	$('img').load(function(){
-		$(place+' .hp').text(data.reponse.hp);
-		$(place+' .attack').text(data.reponse.attack);
+		$(place+' .hp').text(data.reponse.hp + ' HP');
+		$(place+' .attack').text(data.reponse.attack + ' Attack');
 	});
 }
 

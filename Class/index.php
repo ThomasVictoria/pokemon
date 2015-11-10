@@ -21,4 +21,5 @@ if(!empty($_POST['datatype'])) {
 		$reponse = $api->getImage($_POST['id']);
 	}
 }
+
 echo json_encode(['reponse' => $reponse]);
