@@ -4,12 +4,14 @@
   "description": "projet front",
   "main": "gulpfile.js",
   "dependencies": {
+    
+  },
+  "devDependencies": {
     "gulp-watch": "^4.3.5",
     "gulp-concat": "^2.6.0",
     "gulp-sass": "^2.1.0",
     "gulp": "^3.9.0"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

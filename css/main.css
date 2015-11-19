@@ -112,12 +112,16 @@ body {
   background: #e5e5e3;
   overflow: hidden; }
 
+#home {
+  width: 960px;
+  margin: 10px auto;
+  display: none; }
+
+#description {
+  display: block; }
+
 .button {
   border: 1px solid black; }
-
-#container {
-  width: 960px;
-  margin: 10px auto; }
 
 .stats {
   width: 100%;
@@ -149,3 +153,14 @@ div {
 
 .compare .second {
   display: none; }
+
+#view3d {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: 50%;
+  bottom: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #3a3a3a; }
