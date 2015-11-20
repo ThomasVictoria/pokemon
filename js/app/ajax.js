@@ -22,7 +22,7 @@ var self = this.callback;
   $.ajax({
 		type: 'post',
 		crossDomain:true,
-		url: 'http://127.0.0.1/pokemon/index.php',
+		url: 'http://pokemon.dev/Class/index.php',
 		data: {'datatype': this.datatype, 'id': this.id},
 		dataType: 'json',
 		success: function(json) {
