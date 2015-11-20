@@ -1,6 +1,6 @@
 //Exemple utilisation fonction ajax : 
 
-var pokedex = new call('pokedex', 'null', yolo);
+var pokedex = new call('type', '2', yolo);
 
 function yolo(data) {
   

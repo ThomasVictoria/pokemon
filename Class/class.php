@@ -14,7 +14,6 @@ class Call
 	{
 
 		$response = $this->getCall('http://pokeapi.co/api/v1/pokemon/'.$id.'/');
-
 		return $response;
 
 	}
@@ -26,6 +25,30 @@ class Call
 		return $response->image;
 		
 	}
+  
+  function getAbility($id)
+  {
+    
+    $response = $this->getCall('http://pokeapi.co/api/v1/ability/'.$id.'/');
+    return $response;
+    
+  }
+  
+  function getMove($id)
+  {
+    
+    $response = $this->getCall('http://pokeapi.co/api/v1/move/'.$id.'/');
+    return $response;
+    
+  }
+  
+  function getType($id)
+  {
+    
+    $response = $this->getCall('http://pokeapi.co/api/v1/type/'.$id.'/');
+    return $response;
+    
+  }
 	
 	function getCall($url) {
 		

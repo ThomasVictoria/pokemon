@@ -20,6 +20,18 @@ if(!empty($_POST['datatype'])) {
 	{
 		$reponse = $api->getImage($_POST['id']);
 	}
+  elseif($_POST['datatype'] == 'ability' && !empty($_POST['id']))
+  {
+    $reponse = $api->getAbility($_POST['id']);
+  }
+  elseif($_POST['datatype'] == 'move' && !empty($_POST['id']))
+  {
+    $reponse = $api->getMove($_POST['id']);
+  }
+  elseif($_POST['datatype'] == 'type' && !empty($_POST['id']))
+  {
+    $reponse = $api->getType($_POST['id']);
+  }
 }
 
 echo json_encode(['reponse' => $reponse]);
