@@ -5,6 +5,12 @@ function call(datatype, id, callback, optionnal){
   this.callback = callback;
   this.optionnal = optionnal;
 
+  this.init();
+  
+}
+
+call.prototype.init = function(){
+  
   this.request();
   
 }
@@ -139,15 +145,27 @@ $('#nav').on('mouseleave', function(e){
 
 $('.pokemon').on('click', function(e){
 	$('#article').fadeIn(400);
+	showModel();
 });
 
 $('#article').on('click', '#close', function(e){
 	$('#article').fadeOut(400);
 });
+//Exemple utilisation fonction ajax : 
+
+var pokedex = new call('pokedex', '5', yolo);
+
+function yolo(data) {
+
+  console.log(data);
+
+}
+
+
 function Home(){
 
   this.home      = $('#home');
-  this.categorie = $('#categorie');
+  this.categorie = $('#categorie')
 
   this.init();
 
@@ -156,58 +174,30 @@ function Home(){
 Home.prototype.init = function(){
 
   this.toGen();
-  this.CallPokemons();
+  this.DisplayPokemons();
 
 }
 
 Home.prototype.toGen = function(){
 
   var self = this.categorie;
-
-  $(this.home).on('click', function(){
-    $(this).fadeOut();
+  
+  $(this.home).on('click', function(e){
+    $(e).fadeOut();
     $(self).fadeIn();
   });
 
 }
 
-Home.prototype.CallPokemons = function(){
-
+Home.prototype.DisplayPokemons = function(){
+  
   $(this.home).on('click', function(){
-
-    var generation = $('.time').attr('data-gen');
     
-    var pokedex = new call('pokedex', generation, Display);
-
+    
+    
   });
-
-}
-
-function Display(data){
-
-  console.log(data);
-  
-  var content  = $('#content');
-  
-  for(i = 0; i < Object.keys(data.reponse).length; i++){
-    
-    $(content).append('<div class="pokemon">'+ data.reponse[i].name +'</div>');
-    
-  }
   
 }
-
-var home = new Home();
-
-
-
-
-
-
-
-
-
-
 //// Fonction de requette sur l'api configurer avec callback
 //function request(datatype, id, callback, optionnal)
 //{
