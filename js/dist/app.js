@@ -151,6 +151,12 @@ $('.pokemon').on('click', function(e){
 $('#article').on('click', '#close', function(e){
 	$('#article').fadeOut(400);
 });
+// Home
+$('.time').on('mouseenter', function(){
+	if($(this).attr('data-gen')){
+		console.log($(this).attr('data-gen'));
+	}
+})
 //Exemple utilisation fonction ajax : 
 
 var pokedex = new call('pokedex', '5', yolo);
