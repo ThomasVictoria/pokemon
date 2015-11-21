@@ -1,5 +1,4 @@
 
-qzQZEFQZEFQZEFQEFQERF
 #Tuto git
 ##Architecture git
 
@@ -14,8 +13,8 @@ Deux branches :
 Pour chaque feature on crée une nouvelle branche à partir de develop
 	
 	git checkout -b maBrancheLocale
-	git commit -am'[label] message de commit'
-	git commit -am'[label] message de commit 2'
+	git commit -am"[label] message de commit"
+	git commit -am"[label] message de commit 2"
 	
 Quand on veux push notre travail sur la branche commune, on commence par récuper le travail de la team
 	
