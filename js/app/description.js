@@ -1,10 +1,9 @@
-if ( $('#description').css('display') == 'block' ){
-	console.log('description visible');
+if($('#article') == true){
 	
-	var scene, camera, renderer, controls, dirLight, hemiLight;;
+    var scene, camera, renderer, controls, dirLight, hemiLight;;
 
-    var WIDTH  = 300;
-    var HEIGHT = 300;
+    var WIDTH  = 520;
+    var HEIGHT = $(window).height() - 60;
     
     var SPEED = 0.01;
     
@@ -69,7 +68,7 @@ if ( $('#description').css('display') == 'block' ){
     function initMesh() {
         
         var loader = new THREE.JSONLoader();
-        loader.load('http://starter-front.dev/pokemon/assets/jsonModels/Abra/Abra.json', function(geometry, materials) {
+        loader.load('http://starter-front.dev/pokemon/assets/jsonModels/Charmander/Charmander.json', function(geometry, materials) {
             mesh = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
             mesh.scale.x = mesh.scale.y = mesh.scale.z = 1;
             mesh.translation = THREE.GeometryUtils.center(geometry);

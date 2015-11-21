@@ -1,0 +1,82 @@
+#article{
+	position: fixed;
+	width: 100%; height: 100%;
+	top: 0; right: 0; bottom: 0; left: 0;
+	z-index: 20;
+	background-color: #d8d8d8;
+}
+
+.container{
+	width: 1200px; height: 100%;
+	margin: 0 auto;
+}
+
+#controls{
+	width: 100%;
+	height: 60px;
+	position: relative;
+	
+	#back{
+		width: 40px; 
+		height: 40px;
+		background: url('../img/arrowL.svg') no-repeat;
+		position: absolute;
+		top: 10px; left: 0; bottom: 10px;
+	}
+	
+	#close{
+		width: 40px; 
+		height: 40px;
+		background: url('../img/cross.svg') no-repeat;
+		position: absolute;
+		top: 10px; left: 50%; right: 50%; bottom: 10px;
+    	transform: translateX(-50%); 
+	}
+	
+	#next{
+		width: 40px; 
+		height: 40px;
+		background: url('../img/arrowR.svg') no-repeat;
+		position: absolute;
+		top: 10px; right: 0; bottom: 10px;
+	}
+	
+}
+
+#view3d{
+	width: 520px;
+    height: 750px; 
+	float: left;
+}
+
+#caracteristique{
+	width: 680px;
+	height: 750px; 
+	float: right;
+	
+	h2{
+		font-size: 2em;
+		padding: 40px 40px 40px 20px;
+	}
+	
+	p{
+		font-size: 1.2em;
+		padding: 20px 40px 20px 20px;
+		line-height: 1.4em;
+	}
+	
+	table{
+		background-color: #ebebeb;
+		margin: 20px;
+		border-radius: 5px;
+		width: 620px;
+		
+		td{
+			padding: 20px;
+			
+			strong{
+				font-weight: bold;
+			}
+		}
+	}
+}
