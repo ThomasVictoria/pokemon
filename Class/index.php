@@ -8,9 +8,9 @@ $api = new Call();
 
 if(!empty($_POST['datatype'])) {
 
-	if($_POST['datatype'] == 'pokedex')
+	if($_POST['datatype'] == 'pokedex' && !empty($_POST['id']))
 	{
-		$reponse = $api->pokedex();
+		$reponse = $api->pokedex($_POST['id']);
 	}
 	elseif($_POST['datatype'] == 'pokemon' && !empty($_POST['id']))
 	{
