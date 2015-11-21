@@ -1,6 +1,6 @@
 // Timeline
 function timeline() {
-    console.log("ok");
+//    console.log("ok");
     requestAnimationFrame(timeline);
 }
 timeline();

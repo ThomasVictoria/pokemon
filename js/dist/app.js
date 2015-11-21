@@ -155,7 +155,7 @@ $('#article').on('click', '#close', function(e){
 
 //Exemple utilisation fonction ajax : 
 
-var pokedex = new call('type', '2', yolo);
+var pokedex = new call('pokedex', '5', yolo);
 
 function yolo(data) {
   
@@ -284,7 +284,7 @@ function yolo(data) {
 //
 // Timeline
 function timeline() {
-    console.log("ok");
+//    console.log("ok");
     requestAnimationFrame(timeline);
 }
 timeline();
