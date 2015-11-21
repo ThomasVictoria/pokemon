@@ -203,9 +203,9 @@ Home.prototype.CallPokemons = function(){
 
   $(this.home).on('click', function(){
 
-    var generation = $('.time').attr('data-gen');
+    var generation = $('h3').html();
 
-    var pokedex = new call('pokedex', '1', Display);
+    var pokedex = new call('pokedex', generation, Display);
 
   });
 
