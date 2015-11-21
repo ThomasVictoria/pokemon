@@ -7,51 +7,177 @@
 	</head>
 	<body>
 		
-		<div id="container">
+		<!--
 			
-			<div id="names">
-				<div class="goleft button">Left</div>
+			Home : Page d'accueil
+			
+		-->
 		
-				<div class="left cell" data-id="1"></div>
+		<div id="home">
 		
-				<div class="active cell" data-id="2"></div>
-		
-				<div class="right cell" data-id="3"></div>
-		
-				<div class="goright button">Right</div>
+			<div id="logo">
+				
 			</div>
-	
-			<div class="stats">
-				<div class="hp"></div>
-				<div class="attack"></div>
-				<div class="image"><img src="" alt=""></div>
+			
+			<div id="generation">
+				<h2>Generation</h2>
+				<h3>I</h3>
 			</div>
-	
-			<div class="compare">
-				<div class="info">
-					<div class="name"></div>
-					<img src="" alt="">
-				</div>			
-				<div class="desc">Compare</div>
-				<div class="second">start</div>
-			</div>
-	
-	
-			<div class="comparefield">
-				<div class="first">
-					<div class="hp"></div>
-					<div class="attack"></div>
-					<div class="image"><img src="" alt=""></div>
+			
+			<div id="timeline">
+				
+				<div class="time">
+					<div class="smallTimeL"></div>
+					<div class="smallTimeR"></div>
 				</div>
-				<div class="second">
-					<div class="hp"></div>
-					<div class="attack"></div>
-					<div class="image"><img src="" alt=""></div>
+				<div class="time">
+					<div class="smallTimeL"></div>
+					<div class="smallTimeR"></div>
+				</div>
+				<div class="time">
+					<div class="smallTimeL"></div>
+					<div class="smallTimeR"></div>
+				</div>
+				<div class="time">
+					<div class="smallTimeL"></div>
+					<div class="smallTimeR"></div>
+				</div>
+				<div class="time">
+					<div class="smallTimeL"></div>
+					<div class="smallTimeR"></div>
+				</div>
+				<div class="time">
+					<div class="smallTimeL"></div>
+					<div class="smallTimeR"></div>
+				</div>
+				<div class="time">
+					<span>1998</span>
+					<div class="fullTimeL"></div>
+					<div class="fullTimeR"></div>
+				</div>
+				
+			</div>
+		</div>
+		
+		<!--
+			
+			Categorie : Affichage de tous les pokemons
+			
+		-->
+		
+		<div id="categorie">
+			
+			<div id="nav" class="minNav">
+				
+				<div id="logo"></div>
+				<div id="version">I</div>
+				
+				<ul>
+					<li>
+						<div class="point"></div>
+						<div class="text">Electdiqe</div>
+					</li>
+					<li>
+						<div class="point"></div>
+						<div class="text">Feu</div>
+					</li>
+					<li>
+						<div class="point"></div>
+						<div class="text">Terre</div>
+					</li>
+					<li>
+						<div class="point"></div>
+						<div class="text">Eau</div>
+					</li>
+					<li>
+						<div class="point"></div>
+						<div class="text">Spectde</div>
+					</li>
+					<li>
+						<div class="point"></div>
+						<div class="text">-</div>
+					</li>
+				</ul>
+				
+			</div>
+			
+			<div id="content">
+				<div class="pokemon"></div>
+				<div class="pokemon"></div>
+				<div class="pokemon"></div>
+				<div class="pokemon"></div>
+				<div class="pokemon"></div>
+				<div class="pokemon"></div>
+				<div class="pokemon"></div>
+				<div class="pokemon"></div>
+				<div class="pokemon"></div>
+				<div class="pokemon"></div>
+				<div class="pokemon"></div>
+				<div class="pokemon"></div>
+				<div class="pokemon"></div>
+				<div class="pokemon"></div>
+				<div class="pokemon"></div>
+				<div class="pokemon"></div>
+				<div class="pokemon"></div>
+				<div class="pokemon"></div>
+				<div class="pokemon"></div>
+				<div class="pokemon"></div>
+				<div class="pokemon"></div>
+				<div class="pokemon"></div>
+				<div class="pokemon"></div>
+				<div class="pokemon"></div>
+				<div class="pokemon"></div>
+			</div>
+		</div>
+	
+	
+		<!--
+			
+			Article : Description du pokemon sous forme de pop-up
+			
+		-->
+		<div id="article">
+			<div class="container">
+				
+				<div id="controls">
+					<div id="back"></div>
+					<div id="close"></div>
+					<div id="next"></div>
+				</div>
+				
+				<div id="view3d"></div>
+				
+				<div id="caracteristique">
+					<h2>Salamèche</h2>
+					
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo vel ipsum tenetur totam esse ipsa, doloribus assumenda, quaerat voluptate fugit. Eum officiis omnis, aut dolorum dignissimos pariatur atque at error!</p>
+				
+					<table>
+						<tr>
+							<td><strong>Taille :</strong></td>
+							<td>15cm</td>
+							<td><strong>Catégorie :</strong></td>
+							<td>Feu</td>
+						</tr>
+						<tr>
+							<td><strong>Poids :</strong></td>
+							<td>35kg</td>
+							<td><strong>Talent :</strong></td>
+							<td>Deflagration</td>
+						</tr>
+						<tr>
+							<td><strong>Sexe :</strong></td>
+							<td></td>
+						</tr>
+					</table>
 				</div>
 			</div>
 		</div>
-
+	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="js/vendor/three.min.js"></script>
+	<script src="js/vendor/orbitControls.js"></script>
 	<script src="js/dist/app.js"></script>
+	
 	</body>
 </html>

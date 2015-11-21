@@ -152,6 +152,10 @@ $('#article').on('click', '#close', function(e){
 	$('#article').fadeOut(400);
 });
 // Home
+$('#home').on('click', function(e){
+	$('#home').fadeOut();
+	$('#categorie').fadeIn();
+});
 
 //Exemple utilisation fonction ajax : 
 

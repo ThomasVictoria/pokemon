@@ -169,7 +169,8 @@ body {
   right: 0;
   bottom: 0;
   overflow: hidden;
-  background-color: #d8d8d8; }
+  background-color: #d8d8d8;
+  display: none; }
   #categorie #version {
     position: absolute;
     width: 80px;
