@@ -5,12 +5,6 @@ function call(datatype, id, callback, optionnal){
   this.callback = callback;
   this.optionnal = optionnal;
 
-  this.init();
-  
-}
-
-call.prototype.init = function(){
-  
   this.request();
   
 }
