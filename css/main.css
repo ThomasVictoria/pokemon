@@ -212,13 +212,13 @@ body {
       vertical-align: middle;
       padding: 0 0 0 25px; }
   #categorie #content {
-    width: 100%;
-    height: 100%;
+    height: 800px;
     position: fixed;
     left: 80px;
     right: 0;
     top: 0;
-    bottom: 0; }
+    bottom: 0;
+    overflow-y: auto; }
     #categorie #content .pokemon {
       width: 270px;
       height: 270px;

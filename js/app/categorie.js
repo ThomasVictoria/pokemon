@@ -8,7 +8,6 @@ $('#nav').on('mouseleave', function(e){
 
 $('.pokemon').on('click', function(e){
 	$('#article').fadeIn(400);
-	showModel();
 });
 
 $('#article').on('click', '#close', function(e){

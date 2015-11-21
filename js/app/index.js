@@ -1,18 +1,7 @@
-//Exemple utilisation fonction ajax : 
-
-var pokedex = new call('pokedex', '5', yolo);
-
-function yolo(data) {
-
-  console.log(data);
-
-}
-
-
 function Home(){
 
   this.home      = $('#home');
-  this.categorie = $('#categorie')
+  this.categorie = $('#categorie');
 
   this.init();
 
@@ -21,27 +10,54 @@ function Home(){
 Home.prototype.init = function(){
 
   this.toGen();
-  this.DisplayPokemons();
+  this.CallPokemons();
 
 }
 
 Home.prototype.toGen = function(){
 
   var self = this.categorie;
-  
-  $(this.home).on('click', function(e){
-    $(e).fadeOut();
+
+  $(this.home).on('click', function(){
+    $(this).fadeOut();
     $(self).fadeIn();
   });
 
 }
 
-Home.prototype.DisplayPokemons = function(){
-  
+Home.prototype.CallPokemons = function(){
+
   $(this.home).on('click', function(){
+
+    var generation = $('.time').attr('data-gen');
     
-    
-    
+    var pokedex = new call('pokedex', generation, Display);
+
   });
+
+}
+
+function Display(data){
+
+  console.log(data);
+  
+  var content  = $('#content');
+  
+  for(i = 0; i < Object.keys(data.reponse).length; i++){
+    
+    $(content).append('<div class="pokemon">'+ data.reponse[i].name +'</div>');
+    
+  }
   
 }
+
+var home = new Home();
+
+
+
+
+
+
+
+
+
