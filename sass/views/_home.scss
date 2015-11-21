@@ -33,6 +33,15 @@
 		width: 100%;
 		height: 60px;
 		background-color: #e1e1e1;
+		
+		.interTime{
+			position: relative;
+			display: block;
+			overflow: hidden;
+			float: left;
+			height: 60px;
+			top: 0px;
+		}
 
 		.time{
 			position: relative;
@@ -44,51 +53,53 @@
 				
 				.smallTimeL, .smallTimeR{
 					height: 30px;
-					transition: height 0.5s;
+					transition: height 0.1s;
 				}
 				
 				.fullTimeL, .fullTimeR{
 					height: 50px;
-					transition: height 0.5s;
+					transition: height 0.1s;
 				}
 			}
 			
 			.smallTimeL{
 			position: absolute;
-			width: 9px; height: 20px;
+			width: 10px; height: 20px;
 			bottom: 0px; left: 0;
 			border-right: 1px solid #bcbcbc;
-			transition: height 0.3s;
+			transition: height 0.4s;
 			}
 			
 			.smallTimeR{
 			position: absolute;
-			width: 9px; height: 20px;
+			width: 10px; height: 20px;
 			bottom: 0px; right: 0;
 			border-left: 1px solid #bcbcbc;
-			transition: height 0.3s;
+			transition: height 0.4s;
 			}
 		
 			
 			.fullTimeL{
 				position: absolute;
-				width: 8px; height: 40px;
+				width: 10px; height: 40px;
 				bottom: 0px; left: 0;
 				border-right: 2px solid #bcbcbc;
-				transition: height 0.3s;			
+				transition: height 0.4s;			
 			}
 			
 			.fullTimeR{
 				position: absolute;
-				width: 8px; height: 40px;
+				width: 10px; height: 40px;
 				bottom: 0px; right: 0;
 				border-left: 2px solid #bcbcbc;
-				transition: height 0.3s;			
+				transition: height 0.4s;			
 			}
 			span{
 				position: absolute;
 				left: 0px; right: 0px; top: 0px;
-				transform: translateX(-45%);
+				transform: translateX(-30px);
+				width: 80px;
+				text-align: center;
 			}
 		}
 		
