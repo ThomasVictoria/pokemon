@@ -1,5 +1,3 @@
-qerrrrrrrrgsergsrthsrthsrt
-
 #Tuto git
 ##Architecture git
 
