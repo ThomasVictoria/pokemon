@@ -1,5 +1,3 @@
-qzeffffffffffffffqerpoiugqjerm,
-
 #Tuto git
 ##Architecture git
 
