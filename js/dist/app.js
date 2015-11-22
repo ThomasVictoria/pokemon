@@ -208,7 +208,8 @@ function Home(){
   this.home      = $('#home');
   this.categorie = $('#categorie');
   this.menu      = $('#nav ul');
-  
+  this.menuBall  = $('#categorie ul .point');
+
   this.init();
 
 }
@@ -222,20 +223,8 @@ Home.prototype.init = function(){
 }
 
 Home.prototype.LoadTypes = function(){
-  
-  var self = this.menu;
-  
-  $.getJSON("../../data/types.json", function(json) {
 
-    for(i=1; i < Object.keys(json).length; i++){
 
-      $(self).append('<li><div class="point"></div><div class="text">'+json[i].name+'</div></li>');
-      
-    }
-  
-          console.log(json);
-
-  });
 
 }
 
