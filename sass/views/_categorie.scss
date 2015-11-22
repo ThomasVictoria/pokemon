@@ -48,6 +48,16 @@ $colorNav : #4a4a4a;
 		
 		li{
 			padding: 10px 0 10px 30px;
+			
+			&:hover{
+				
+				font-weight: bold;
+				cursor: pointer;
+				
+				.point{
+					background-color: rgba(239,240,242,0.5);
+				}
+			}
 		}
 		
 		.point{
@@ -55,13 +65,7 @@ $colorNav : #4a4a4a;
 			border: rgba(239,240,242,0.5) 1px solid;
 			border-radius: 50%;
 			display: inline-block;
-			vertical-align: middle;
-			
-			&:hover{
-				background-color: rgba(239,240,242,0.5);
-				cursor: pointer;
-			}
-			
+			vertical-align: middle;			
 		}
 		
 		.text{

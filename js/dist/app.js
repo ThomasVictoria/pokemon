@@ -220,6 +220,7 @@ Home.prototype.toGen = function(){
   $(this.home).on('click', function(e){
     $(this).fadeOut();
     $(self).fadeIn();
+    $('#version').html($('#generation h3').html());
   });
 
 }
@@ -228,7 +229,7 @@ Home.prototype.CallPokemons = function(){
 
   $(this.home).on('click', function(){
 
-    var generation = $('h3').html();
+    var generation = $('#generation h3').html();
 
     var pokedex = new call('pokedex', generation, Display);
 
@@ -243,7 +244,7 @@ function Display(data){
   var content  = $('#content');
   var child = Math.ceil((Object.keys(data.reponse).length / 3));
   
-  var contentW = (child * 270) + 110;
+  var contentW = (child * 272);
   
   $('#content').css('width', contentW+'px');
   for(i = 0; i < Object.keys(data.reponse).length; i++){
@@ -422,9 +423,7 @@ vScroll.prototype.onVirtualScroll = function(e) {
 };
 
 vScroll.prototype.resize = function(child) { 
-	console.log('child : '+child);
-	this.maxScroll = ($('#content .pokemon:nth-child('+child+')').offset().left - ($(window).width() - 540)) * -1;
-	console.log('maxScroll : '+$('#content .pokemon:nth-child(51)').offset().left);
+	this.maxScroll = ($('#content .pokemon:nth-child('+child+')').offset().left - ( $(window).width() - 432 )) * -1;
 };
 
 vScroll.prototype.update = function() {

@@ -206,6 +206,11 @@ body {
     transform: translateY(-50%); }
     #categorie ul li {
       padding: 10px 0 10px 30px; }
+      #categorie ul li:hover {
+        font-weight: bold;
+        cursor: pointer; }
+        #categorie ul li:hover .point {
+          background-color: rgba(239, 240, 242, 0.5); }
     #categorie ul .point {
       width: 15px;
       height: 15px;
@@ -213,9 +218,6 @@ body {
       border-radius: 50%;
       display: inline-block;
       vertical-align: middle; }
-      #categorie ul .point:hover {
-        background-color: rgba(239, 240, 242, 0.5);
-        cursor: pointer; }
     #categorie ul .text {
       color: #eff0f2;
       vertical-align: middle;
