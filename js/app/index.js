@@ -50,6 +50,7 @@ function Display(data){
   };
   
   vScroll = new vScroll();
+  var showCategorie = new categorie();
 
   (function raf(){
     vScroll.update();
@@ -57,7 +58,6 @@ function Display(data){
   })();
   
 }
-
 
 var home = new Home();
 
