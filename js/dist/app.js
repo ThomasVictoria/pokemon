@@ -36,15 +36,16 @@ var self = this.callback;
     
     var SPEED = 0.01;
     
-    function init() {
+    function init(pokemon) {
         scene = new THREE.Scene();
         
-        initMesh();
+        initMesh(pokemon);
         initCamera();
         initLights();
         initRenderer();
     
         controls = new THREE.OrbitControls(camera, renderer.domElement);
+        $('#view3d').html('');
         document.getElementById('view3d').appendChild(renderer.domElement);
     }
     
@@ -94,10 +95,10 @@ var self = this.callback;
     }
     
     var mesh = null;
-    function initMesh() {
+    function initMesh(pokemon) {
         
         var loader = new THREE.JSONLoader();
-        loader.load('http://pokemon.dev/assets/jsonModels/Charmander/Charmander.json', function(geometry, materials) {
+        loader.load('http://pokemon.dev/assets/jsonModels/'+pokemon+'/'+pokemon+'.json', function(geometry, materials) {
             mesh = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
             mesh.scale.x = mesh.scale.y = mesh.scale.z = 1;
             mesh.translation = THREE.GeometryUtils.center(geometry);
@@ -110,7 +111,7 @@ var self = this.callback;
         if (!mesh) {
             return;
         }
-    
+   
         mesh.rotation.x -= SPEED * 2;
         mesh.rotation.y -= SPEED;
         mesh.rotation.z -= SPEED * 3;
@@ -123,9 +124,9 @@ var self = this.callback;
         controls.update();
     }
 
-function showModel(){
+function showModel(pokemon){
     if($('#article').css('display') == 'block'){
-        init();
+        init(pokemon);
         render();
     }
 }
@@ -153,13 +154,16 @@ categorie.prototype.init = function(){
 
   $(this.pokemon).on('click', function(e){
     $(self).fadeIn(400);
-    showModel();
+    var name = $(this).html(),
+        id   = $(this).attr('data-id');
+    showModel(name);
+    var pokemonData = new call('pokemon', id, DisplayData);
   });
 
   $(this.article).on('click', '#close', function(e){
     $(self).fadeOut(400);
   });
-
+  
 }
 function DisplayData(data){
   
@@ -238,7 +242,7 @@ function Display(data){
 
   var content  = $('#content');
   
-  var contentW = (Object.keys(data.reponse).length / 3) * 280;
+  var contentW = (Object.keys(data.reponse).length / 3) * 271;
   $('#content').css('width', contentW+'px');
   
   for(i = 0; i < Object.keys(data.reponse).length; i++){
@@ -247,7 +251,7 @@ function Display(data){
 
   };
   
-  vScroll = new vScroll();
+  vScroll = new vScroll((Object.keys(data.reponse).length / 3));
   var showCategorie = new categorie();
 
   (function raf(){
@@ -379,7 +383,7 @@ var home = new Home();
 //
 //
 //
-var vScroll = function(){
+var vScroll = function(child){
 
 	this.currentY = 0;
 	this.targetY = 0;
@@ -390,7 +394,7 @@ var vScroll = function(){
 
 	this.scrollWrapper = $('#content');
 
-	this.resize();
+	this.resize(child);
 
 	this.bind();
 
@@ -416,10 +420,9 @@ vScroll.prototype.onVirtualScroll = function(e) {
 
 };
 
-vScroll.prototype.resize = function() {
-
-	this.maxScroll = $('#content .pokemon:last-child').offset().left * -1;
-	
+vScroll.prototype.resize = function(child) {
+	this.maxScroll = ($('#content .pokemon:nth-child(36)').offset().left + 270) * -1;
+	console.log(this.maxScroll);
 };
 
 vScroll.prototype.update = function() {

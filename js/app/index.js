@@ -43,7 +43,7 @@ function Display(data){
 
   var content  = $('#content');
   
-  var contentW = (Object.keys(data.reponse).length / 3) * 280;
+  var contentW = (Object.keys(data.reponse).length / 3) * 271;
   $('#content').css('width', contentW+'px');
   
   for(i = 0; i < Object.keys(data.reponse).length; i++){
@@ -52,7 +52,7 @@ function Display(data){
 
   };
   
-  vScroll = new vScroll();
+  vScroll = new vScroll((Object.keys(data.reponse).length / 3));
   var showCategorie = new categorie();
 
   (function raf(){

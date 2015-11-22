@@ -31,5 +31,5 @@ categorie.prototype.init = function(){
   $(this.article).on('click', '#close', function(e){
     $(self).fadeOut(400);
   });
-
+  
 }
