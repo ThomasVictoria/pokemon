@@ -1,2 +1,4 @@
 node_modules/**
 gulpfile.js
+js/dist/**/app.js
+css/**/main.css
