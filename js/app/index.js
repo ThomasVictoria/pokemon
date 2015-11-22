@@ -48,6 +48,14 @@ function Display(data){
     $(content).append('<div class="pokemon">'+ data.reponse[i].name +'</div>');
 
   };
+  
+  vScroll = new vScroll();
+
+  (function raf(){
+    vScroll.update();
+    window.requestAnimationFrame(raf);
+  })();
+  
 }
 
 
