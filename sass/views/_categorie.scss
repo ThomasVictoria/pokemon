@@ -1,3 +1,5 @@
+$colorNav : #4a4a4a;
+
 #categorie{
 	
 	width: 100%; height: 100vh;
@@ -17,7 +19,7 @@
 	#nav {
 		height: 100%;
 		position: fixed;
-		background-color: #4a4a4a;
+		background-color: $colorNav;
 		z-index: 10;
 	}
 	
@@ -74,8 +76,7 @@
 		width: auto; height: 100vh;
 		position: absolute;
 		display: block;
-		left: 80px; right: 0; top: 0;
-		// transition: all 0.3s cubic-bezier(.41,.06,.08,.86);
+		left: 80px; right: 160px; top: 0;
 	
 		.pokemon{
 			width: 270px; 
@@ -83,6 +84,13 @@
 			border: 1px solid rgba(239,240,242,0.5);
 			float: left;
 		}
+	}
+	
+	#search{
+		width: 160px; height: 100%;
+		top: 0; right: 0; bottom: 0;
+		position: fixed;
+		background-color: $colorNav;
 	}
 
 }
