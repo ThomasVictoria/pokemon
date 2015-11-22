@@ -307,3 +307,41 @@ body {
       padding: 20px; }
       #caracteristique table td strong {
         font-weight: bold; }
+
+#loader-container {
+  position: absolute;
+  z-index: 1000;
+  width: 816px;
+  height: 136px;
+  top: 50%;
+  left: 50%;
+  margin-top: -68px;
+  margin-left: -408px; }
+  #loader-container #loader {
+    position: relative;
+    height: 100%;
+    width: 100%; }
+    #loader-container #loader .img-loader {
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      height: 100%;
+      width: 116px;
+      opacity: 0;
+      transition: opacity 0.4s;
+      display: inline-block; }
+    #loader-container #loader #img-loader1 {
+      background: url("../img/img-loader1.png") center center; }
+    #loader-container #loader #img-loader2 {
+      background: url("../img/img-loader2.png") center center; }
+    #loader-container #loader #img-loader3 {
+      background: url("../img/img-loader3.png") center center; }
+    #loader-container #loader #img-loader4 {
+      background: url("../img/img-loader4.png") center center; }
+    #loader-container #loader #img-loader5 {
+      background: url("../img/img-loader5.png") center center; }
+    #loader-container #loader #img-loader6 {
+      background: url("../img/img-loader6.png") center center; }
+    #loader-container #loader #img-loader7 {
+      background: url("../img/img-loader7.png") center center; }
+    #loader-container #loader .img-active {
+      opacity: 1; }
