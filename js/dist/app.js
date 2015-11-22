@@ -219,7 +219,7 @@ function Display(data){
 
   for(i = 0; i < Object.keys(data.reponse).length; i++){
 
-    $(content).append('<div class="pokemon">'+ data.reponse[i].name +'</div>');
+    $(content).append('<div class="pokemon" data-id="'+ data.reponse[i].id +'">'+ data.reponse[i].name +'</div>');
 
   };
   
