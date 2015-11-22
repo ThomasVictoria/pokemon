@@ -61,6 +61,14 @@
 			}
 			
 		}
+    
+    .select{
+      opacity: 1;
+    }
+    
+    .unselect{
+      opacity: 0.5;
+    }
 		
 		.text{
 			color: rgba(239,240,242,1);
@@ -83,6 +91,15 @@
 			border: 1px solid rgba(239,240,242,0.5);
 			float: left;
 		}
+    
+    .hide{
+      display: none;
+    }
+    
+    .view{
+      display: inherit;
+    }
+    
 	}
 
 }

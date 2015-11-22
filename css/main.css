@@ -216,6 +216,10 @@ body {
       #categorie ul .point:hover {
         background-color: rgba(239, 240, 242, 0.5);
         cursor: pointer; }
+    #categorie ul .select {
+      opacity: 1; }
+    #categorie ul .unselect {
+      opacity: 0.5; }
     #categorie ul .text {
       color: #eff0f2;
       vertical-align: middle;
@@ -233,6 +237,10 @@ body {
       height: 270px;
       border: 1px solid rgba(239, 240, 242, 0.5);
       float: left; }
+    #categorie #content .hide {
+      display: none; }
+    #categorie #content .view {
+      display: inherit; }
 
 #article {
   position: fixed;

@@ -1,9 +1,9 @@
 function Home(){
 
-  this.home      = $('#home');
-  this.categorie = $('#categorie');
-  this.menu      = $('#nav ul');
-  this.menuBall  = $('#categorie ul .point');
+  this.home       = $('#home');
+  this.categorie  = $('#categorie');
+  this.menu       = $('#nav ul');
+  this.menuButton = $('#categorie ul .point');
 
   this.init();
 
@@ -13,13 +13,84 @@ Home.prototype.init = function(){
 
   this.toGen();
   this.CallPokemons();
-  this.LoadTypes();
+  this.filters();
 
 }
 
-Home.prototype.LoadTypes = function(){
+Home.prototype.filters = function(){
+
+  var self         = this.menuButton,
+      selfFunction = this.applyFilters;
+
+  $(this.menuButton).on('click', function(){
+
+    if($(this).hasClass('empty')){
+      $(self).addClass('unselect');
+      $(this).addClass('select');
+      $(this).removeClass('unselect');
+      $(self).removeClass('empty');
+    }else if($(this).hasClass('unselect')){
+      $(this).addClass('select');
+      $(this).removeClass('unselect');
+    }else if($(this).hasClass('select')){
+      $(this).addClass('unselect');
+      $(this).removeClass('select');
+      if($(self).hasClass('select') === false && $(self).hasClass('empty') === false){
+        $(self).addClass('empty');
+        $(self).removeClass('select');
+        $(self).removeClass('unselect');
+      } 
+    }
+
+    var filters = Array();
+
+    $('#categorie ul .point.select').parent().each(function(){
+
+      filters.push($(this).find('.text').html());
+
+    });
+
+    $.getJSON( "../../data/types.json", function(data){
+
+      selfFunction(filters, data);
+
+    });
 
 
+  });
+
+}
+
+Home.prototype.applyFilters = function(filters, data){
+
+  for(i=1; i < Object.keys(data).length; i++){
+
+    for(y=0; y < filters.length; y++){
+
+      if(filters[y] == data[i].name){
+
+        for(z=0; z < Object.keys(data[i].pokemons).length; z++){
+
+          $('.pokemon').each(function(){
+
+            if($(this).attr('data-id') != data[i].pokemons[z]){
+              $(this).addClass('hide');
+              $(this).removeClass('view');
+            }
+            else{
+              $(this).addClass('view');  
+              $(this).removeClass('hide') ; 
+            }
+
+          });
+
+        }
+
+      }
+
+    }
+
+  }
 
 }
 
