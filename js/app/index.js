@@ -6,7 +6,7 @@ function Home(){
   this.init();
 
 }
-console.log('yolo');
+
 Home.prototype.init = function(){
 
   this.toGen();
@@ -45,11 +45,12 @@ function Display(data){
 
   for(i = 0; i < Object.keys(data.reponse).length; i++){
 
-    $(content).append('<div class="pokemon">'+ data.reponse[i].name +'</div>');
+    $(content).append('<div class="pokemon" data-id="'+ data.reponse[i].id +'">'+ data.reponse[i].name +'</div>');
 
   };
   
   vScroll = new vScroll();
+  var showCategorie = new categorie();
 
   (function raf(){
     vScroll.update();
@@ -57,7 +58,6 @@ function Display(data){
   })();
   
 }
-
 
 var home = new Home();
 
