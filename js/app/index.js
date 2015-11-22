@@ -42,7 +42,10 @@ function Display(data){
   console.log(data);
 
   var content  = $('#content');
-
+  
+  var contentW = (Object.keys(data.reponse).length / 3) * 280;
+  $('#content').css('width', contentW+'px');
+  
   for(i = 0; i < Object.keys(data.reponse).length; i++){
 
     $(content).append('<div class="pokemon" data-id="'+ data.reponse[i].id +'">'+ data.reponse[i].name +'</div>');

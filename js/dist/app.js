@@ -161,6 +161,11 @@ categorie.prototype.init = function(){
   });
 
 }
+function DisplayData(data){
+  
+  console.log(data);
+  
+}
 // Home
 $('#timeline > .time').on('mouseenter', function(){
 	if($(this).attr('data-gen')){
@@ -232,7 +237,10 @@ function Display(data){
   console.log(data);
 
   var content  = $('#content');
-
+  
+  var contentW = (Object.keys(data.reponse).length / 3) * 280;
+  $('#content').css('width', contentW+'px');
+  
   for(i = 0; i < Object.keys(data.reponse).length; i++){
 
     $(content).append('<div class="pokemon" data-id="'+ data.reponse[i].id +'">'+ data.reponse[i].name +'</div>');
@@ -410,7 +418,7 @@ vScroll.prototype.onVirtualScroll = function(e) {
 
 vScroll.prototype.resize = function() {
 
-	this.maxScroll = $('#content .pokemon:last-child').offset().top * -1;
+	this.maxScroll = $('#content .pokemon:last-child').offset().left * -1;
 	
 };
 
@@ -418,7 +426,7 @@ vScroll.prototype.update = function() {
 
 	this.currentY += (this.targetY - this.currentY) * this.ease;
 	this.scrollWrapper.css({
-		transform: 'translateY(' + this.currentY + 'px)'
+		transform: 'translateX(' + this.currentY + 'px)'
 	});
 
 };

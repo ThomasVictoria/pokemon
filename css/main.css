@@ -226,13 +226,21 @@ body {
     position: absolute;
     display: block;
     left: 80px;
-    right: 0;
+    right: 160px;
     top: 0; }
     #categorie #content .pokemon {
       width: 270px;
       height: 270px;
       border: 1px solid rgba(239, 240, 242, 0.5);
       float: left; }
+  #categorie #search {
+    width: 160px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    background-color: #4a4a4a; }
 
 #article {
   position: fixed;

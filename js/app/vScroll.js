@@ -37,7 +37,7 @@ vScroll.prototype.onVirtualScroll = function(e) {
 
 vScroll.prototype.resize = function() {
 
-	this.maxScroll = $('#content .pokemon:last-child').offset().top * -1;
+	this.maxScroll = $('#content .pokemon:last-child').offset().left * -1;
 	
 };
 
@@ -45,7 +45,7 @@ vScroll.prototype.update = function() {
 
 	this.currentY += (this.targetY - this.currentY) * this.ease;
 	this.scrollWrapper.css({
-		transform: 'translateY(' + this.currentY + 'px)'
+		transform: 'translateX(' + this.currentY + 'px)'
 	});
 
 };
