@@ -10,7 +10,7 @@ function Loader(){
 
 Loader.prototype.init = function(){
 	
-	setInterval(this.activateLoader, 400);
+	setInterval(this.activateLoader, 200);
 	
 }
 
@@ -26,7 +26,7 @@ Loader.prototype.activateLoader = function(){
 		Loader.i = -1;
 	}
 	
-	Loader.i++; 
+	Loader.i++;  
 	
 }
 
