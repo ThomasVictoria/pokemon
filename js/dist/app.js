@@ -5,6 +5,12 @@ function call(datatype, id, callback, optionnal){
   this.callback = callback;
   this.optionnal = optionnal;
 
+  this.init();
+  
+}
+
+call.prototype.init = function(){
+  
   this.request();
   
 }
@@ -36,15 +42,16 @@ var self = this.callback;
     
     var SPEED = 0.01;
     
-    function init() {
+    function init(pokemon) {
         scene = new THREE.Scene();
         
-        initMesh();
+        initMesh(pokemon);
         initCamera();
         initLights();
         initRenderer();
     
         controls = new THREE.OrbitControls(camera, renderer.domElement);
+        $('#view3d').html('');
         document.getElementById('view3d').appendChild(renderer.domElement);
     }
     
@@ -94,10 +101,10 @@ var self = this.callback;
     }
     
     var mesh = null;
-    function initMesh() {
+    function initMesh(pokemon) {
         
         var loader = new THREE.JSONLoader();
-        loader.load('http://pokemon.dev/assets/jsonModels/Charmander/Charmander.json', function(geometry, materials) {
+        loader.load('http://pokemon.dev/assets/jsonModels/'+pokemon+'/'+pokemon+'.json', function(geometry, materials) {
             mesh = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
             mesh.scale.x = mesh.scale.y = mesh.scale.z = 1;
             mesh.translation = THREE.GeometryUtils.center(geometry);
@@ -123,9 +130,9 @@ var self = this.callback;
         controls.update();
     }
 
-function showModel(){
+function showModel(pokemon){
     if($('#article').css('display') == 'block'){
-        init();
+        init(pokemon);
         render();
     }
 }
@@ -153,13 +160,21 @@ categorie.prototype.init = function(){
 
   $(this.pokemon).on('click', function(e){
     $(self).fadeIn(400);
-    showModel();
+    var name = $(this).html(),
+        id   = $(this).attr('data-id');
+    showModel(name);
+    var pokemonData = new call('pokemon', id, DisplayData);
   });
 
   $(this.article).on('click', '#close', function(e){
     $(self).fadeOut(400);
   });
 
+}
+function DisplayData(data){
+  
+  console.log(data);
+  
 }
 // Home
 $('#timeline > .time').on('mouseenter', function(){
@@ -196,7 +211,7 @@ function Home(){
   this.init();
 
 }
-console.log('yolo');
+
 Home.prototype.init = function(){
 
   this.toGen();
