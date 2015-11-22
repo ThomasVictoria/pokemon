@@ -347,32 +347,39 @@ var home = new Home();
 //
 //
 //
-$(document).ready(function(){
+function Loader(){
 	
-	// var loaderLeft = $('#loader-bg').css('left');
-	// var loaderLeftInt = parseInt(loaderLeft);
-	var imgLoaderLength = $('#loader').children().length;
-	console.log(imgLoaderLength);
-	var i = 1;
+	this.loader = $('#loader');
+	Loader.imgLoaderLength = this.loader.children().length;
+	Loader.i = 0;
 	
-	var loader = function(){
-		
-		var imgLoader = $('#img-loader' + i);
-		var imgLoaderNext = $('#img-loader' + (i+1))
-		
-		imgLoader.removeClass('img-active');
-		imgLoaderNext.addClass('img-active');
-		
-		if(i == imgLoaderLength){
-			i = -1;
-		}
-		
-		i++;
+	this.init();
+	
+}
+
+Loader.prototype.init = function(){
+	
+	setInterval(this.activateLoader, 400);
+	
+}
+
+Loader.prototype.activateLoader = function(){
+	
+	var imgLoader = $('#img-loader' + Loader.i);
+	var imgLoaderNext = $('#img-loader' + (Loader.i+1))
+	
+	imgLoader.removeClass('img-active');
+	imgLoaderNext.addClass('img-active');
+	
+	if(Loader.i == Loader.imgLoaderLength){
+		Loader.i = -1;
 	}
 	
-	setInterval(loader, 400);
+	Loader.i++; 
 	
-});
+}
+
+var loader = new Loader();
 // Timeline
 function timeline() {
 //    console.log("ok");
