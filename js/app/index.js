@@ -6,7 +6,7 @@ function Home(){
   this.init();
 
 }
-
+console.log('yolo');
 Home.prototype.init = function(){
 
   this.toGen();
