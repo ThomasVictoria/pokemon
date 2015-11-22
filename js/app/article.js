@@ -5,15 +5,16 @@
     
     var SPEED = 0.01;
     
-    function init() {
+    function init(pokemon) {
         scene = new THREE.Scene();
         
-        initMesh();
+        initMesh(pokemon);
         initCamera();
         initLights();
         initRenderer();
     
         controls = new THREE.OrbitControls(camera, renderer.domElement);
+        $('#view3d').html('');
         document.getElementById('view3d').appendChild(renderer.domElement);
     }
     
@@ -63,10 +64,10 @@
     }
     
     var mesh = null;
-    function initMesh() {
+    function initMesh(pokemon) {
         
         var loader = new THREE.JSONLoader();
-        loader.load('http://pokemon.dev/assets/jsonModels/Charmander/Charmander.json', function(geometry, materials) {
+        loader.load('http://pokemon.dev/assets/jsonModels/'+pokemon+'/'+pokemon+'.json', function(geometry, materials) {
             mesh = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
             mesh.scale.x = mesh.scale.y = mesh.scale.z = 1;
             mesh.translation = THREE.GeometryUtils.center(geometry);
@@ -92,9 +93,9 @@
         controls.update();
     }
 
-function showModel(){
+function showModel(pokemon){
     if($('#article').css('display') == 'block'){
-        init();
+        init(pokemon);
         render();
     }
 }
