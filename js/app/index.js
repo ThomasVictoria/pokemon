@@ -2,7 +2,8 @@ function Home(){
 
   this.home      = $('#home');
   this.categorie = $('#categorie');
-
+  this.menu      = $('#nav ul');
+  
   this.init();
 
 }
@@ -11,22 +12,26 @@ Home.prototype.init = function(){
 
   this.toGen();
   this.CallPokemons();
+  this.LoadTypes();
 
 }
 
 Home.prototype.LoadTypes = function(){
-
-  var self = this.displayTypes;
+  
+  var self = this.menu;
   
   $.getJSON("../../data/types.json", function(json) {
-    self(json);
+
+    for(i=1; i < Object.keys(json).length; i++){
+
+      $(self).append('<li><div class="point"></div><div class="text">'+json[i].name+'</div></li>');
+      
+    }
+  
+          console.log(json);
+
   });
 
-}
-
-Home.prototype.DisplayTypes = function(){
-  
-  
 }
 
 Home.prototype.toGen = function(){
