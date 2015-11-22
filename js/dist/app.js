@@ -241,17 +241,18 @@ function Display(data){
   console.log(data);
 
   var content  = $('#content');
+  var child = Math.ceil((Object.keys(data.reponse).length / 3));
   
-  var contentW = (Object.keys(data.reponse).length / 3) * 271;
+  var contentW = (child * 270) + 110;
+  
   $('#content').css('width', contentW+'px');
-  
   for(i = 0; i < Object.keys(data.reponse).length; i++){
 
     $(content).append('<div class="pokemon" data-id="'+ data.reponse[i].id +'">'+ data.reponse[i].name +'</div>');
-
+ 
   };
   
-  vScroll = new vScroll((Object.keys(data.reponse).length / 3));
+  vScroll = new vScroll(child);
   var showCategorie = new categorie();
 
   (function raf(){
@@ -420,9 +421,10 @@ vScroll.prototype.onVirtualScroll = function(e) {
 
 };
 
-vScroll.prototype.resize = function(child) {
-	this.maxScroll = ($('#content .pokemon:nth-child(36)').offset().left + 270) * -1;
-	console.log(this.maxScroll);
+vScroll.prototype.resize = function(child) { 
+	console.log('child : '+child);
+	this.maxScroll = ($('#content .pokemon:nth-child('+child+')').offset().left - ($(window).width() - 540)) * -1;
+	console.log('maxScroll : '+$('#content .pokemon:nth-child(51)').offset().left);
 };
 
 vScroll.prototype.update = function() {
