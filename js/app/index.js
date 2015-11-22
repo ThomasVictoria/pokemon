@@ -14,6 +14,21 @@ Home.prototype.init = function(){
 
 }
 
+Home.prototype.LoadTypes = function(){
+
+  var self = this.displayTypes;
+  
+  $.getJSON("../../data/types.json", function(json) {
+    self(json);
+  });
+
+}
+
+Home.prototype.DisplayTypes = function(){
+  
+  
+}
+
 Home.prototype.toGen = function(){
 
   var self = this.categorie;
@@ -48,7 +63,7 @@ function Display(data){
     $(content).append('<div class="pokemon" data-id="'+ data.reponse[i].id +'">'+ data.reponse[i].name +'</div>');
 
   };
-  
+
   vScroll = new vScroll();
   var showCategorie = new categorie();
 
@@ -56,7 +71,7 @@ function Display(data){
     vScroll.update();
     window.requestAnimationFrame(raf);
   })();
-  
+
 }
 
 var home = new Home();
