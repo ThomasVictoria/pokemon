@@ -39,6 +39,8 @@ Home.prototype.filters = function(){
         $(self).addClass('empty');
         $(self).removeClass('select');
         $(self).removeClass('unselect');
+        $('.pokemon').removeClass('hide');
+        $('.pokemon').removeClass('view');
       } 
     }
 
@@ -94,16 +96,11 @@ Home.prototype.applyFilters = function(filters, data){
             results.push(sortedPokemons[b]);
           }
         }
-        
-        console.log(sortedPokemons);
-        console.log(results);
-        
+
         if(filters.length > 1)
           usedArray = results;
         else
           usedArray = sortedPokemons;
-
-//        console.log(usedArray);
         
         $('.pokemon').addClass('hide');
         $('.pokemon').removeClass('view');
