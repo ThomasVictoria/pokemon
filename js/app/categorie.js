@@ -22,10 +22,14 @@ categorie.prototype.init = function(){
 
   $(this.pokemon).on('click', function(e){
     $(self).fadeIn(400);
+
     var name = $(this).html(),
         id   = $(this).attr('data-id');
     showModel(name);
     var pokemonData = new call('pokemon', id, DisplayData);
+
+    showModel();
+
   });
 
   $(this.article).on('click', '#close', function(e){
