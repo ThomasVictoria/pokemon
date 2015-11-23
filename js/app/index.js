@@ -63,36 +63,67 @@ Home.prototype.filters = function(){
 
 Home.prototype.applyFilters = function(filters, data){
 
+  var pokemonFiltered = Array();
+
   for(i=1; i < Object.keys(data).length; i++){
 
     for(y=0; y < filters.length; y++){
 
       if(filters[y] == data[i].name){
 
-        for(z=0; z < Object.keys(data[i].pokemons).length; z++){
+        $('.pokemon').each(function(){
 
-          $('.pokemon').each(function(){
+          for(z=0; z < Object.keys(data[i].pokemons).length; z++){
 
-            if($(this).attr('data-id') != data[i].pokemons[z]){
-              $(this).addClass('hide');
-              $(this).removeClass('view');
-            }
-            else{
-              $(this).addClass('view');  
-              $(this).removeClass('hide') ; 
+            if($(this).attr('data-id') == data[i].pokemons[z]){
+
+              pokemonFiltered.push($(this).attr('data-id'));
+
             }
 
-          });
+          }
+
+        });
+
+        var sortedPokemons = pokemonFiltered.sort(function(a, b) {
+          return a - b;
+        });
+        var results = [];
+        for (b = 0; b < sortedPokemons.length - 1; b++) {
+          if (sortedPokemons[b + 1] == sortedPokemons[b]) {
+            results.push(sortedPokemons[b]);
+          }
+        }
+        
+        console.log(sortedPokemons);
+        console.log(results);
+        
+        if(filters.length > 1)
+          usedArray = results;
+        else
+          usedArray = sortedPokemons;
+
+//        console.log(usedArray);
+        
+        $('.pokemon').addClass('hide');
+        $('.pokemon').removeClass('view');
+
+        for(w=0; w < usedArray.length; w++){
+
+          $('.pokemon[data-id='+usedArray[w]+']').removeClass('hide');
+          $('.pokemon[data-id='+usedArray[w]+']').addClass('view');
 
         }
 
       }
 
-    }
+    }  
 
   }
 
 }
+
+
 
 Home.prototype.toGen = function(){
 
