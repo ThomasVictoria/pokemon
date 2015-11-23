@@ -70,6 +70,18 @@ Home.prototype.applyFilters = function(filters, data){
 
   for(i=1; i < Object.keys(data).length; i++){
 
+    if(filters.length == 0){
+
+      $('.pokemon').each(function(){
+
+        if($(this).hasClass('cache')){
+          $(this).addClass('hide');
+        }
+
+      });
+
+    }
+
     for(y=0; y < filters.length; y++){
 
       if(filters[y] == data[i].name){
