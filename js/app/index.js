@@ -120,8 +120,6 @@ Home.prototype.applyFilters = function(filters, data){
 
 }
 
-
-
 Home.prototype.toGen = function(){
 
   var self = this.categorie;
@@ -147,13 +145,11 @@ Home.prototype.CallPokemons = function(){
 
 function Display(data){
 
-  console.log(data);
-
   var content  = $('#content');
 
   for(i = 0; i < Object.keys(data.reponse).length; i++){
 
-    $(content).append('<div class="pokemon" data-id="'+ data.reponse[i].id +'">'+ data.reponse[i].name +'</div>');
+    $(content).append('<div class="pokemon view" data-id="'+ data.reponse[i].id +'">'+ data.reponse[i].name +'</div>');
 
   };
 
@@ -167,5 +163,4 @@ function Display(data){
 
 }
 
-var home = new Home();
-
+new Home();
