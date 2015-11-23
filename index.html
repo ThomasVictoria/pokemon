@@ -1,191 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>pokemon</title>
-		<link rel="stylesheet" href="css/main.css">
-	</head>
-	<body>
-		
-		<!--
-			
-			Home : Page d'accueil
-			
-		-->
-		
-		<div id="home">
-		
-			<div id="logo">
-				
-			</div>
-			
-			<div id="generation">
-				<h2>Generation</h2>
-				<h3>1</h3>
-			</div>
-			
-			<div id="timeline">
-				
-				<div class="interTime"></div>
-				
-				<div class="time" data-gen="1">
-					<span>1996</span>
-					<div class="fullTimeL"></div>
-					<div class="fullTimeR"></div>
-				</div>
-				
-				<div class="interTime"></div>
-				
-				<div class="time" data-gen="2">
-					<span>2001</span>
-					<div class="fullTimeL"></div>
-					<div class="fullTimeR"></div>
-				</div>
-				
-				<div class="interTime"></div>
-				
-				<div class="time" data-gen="3">
-					<span>2004</span>
-					<div class="fullTimeL"></div>
-					<div class="fullTimeR"></div>
-				</div>
-				
-				<div class="interTime"></div>
-				
-				<div class="time" data-gen="4">
-					<span>2007</span>
-					<div class="fullTimeL"></div>
-					<div class="fullTimeR"></div>
-				</div>
-				
-				<div class="interTime"></div>
-				
-				<div class="time" data-gen="5">
-					<span>2011</span>
-					<div class="fullTimeL"></div>
-					<div class="fullTimeR"></div>
-				</div>
-				
-				<div class="interTime"></div>
-				
-				<div class="time" data-gen="6">
-					<span>2013</span>
-					<div class="fullTimeL"></div>
-					<div class="fullTimeR"></div>
-				</div>
-				
-				<div class="interTime"></div>
-				
-				<div class="time" data-gen="all">
-					<span>All</span>
-					<div class="fullTimeL"></div>
-					<div class="fullTimeR"></div>
-				</div>
-				
-				<div class="interTime"></div>
-				
-			</div>
-		</div>
-		
-		<!--
-			
-			Categorie : Affichage de tous les pokemons
-			
-		-->
-		
-		<div id="categorie">
-			
-			<div id="nav" class="minNav">
-				
-				<div id="logo"></div>
-				<div id="version">I</div>
-				
-				<ul>
-					<li>
-						<div class="point"></div>
-						<div class="text">Electdiqe</div>
-					</li>
-					<li>
-						<div class="point"></div>
-						<div class="text">Feu</div>
-					</li>
-					<li>
-						<div class="point"></div>
-						<div class="text">Terre</div>
-					</li>
-					<li>
-						<div class="point"></div>
-						<div class="text">Eau</div>
-					</li>
-					<li>
-						<div class="point"></div>
-						<div class="text">Spectde</div>
-					</li>
-					<li>
-						<div class="point"></div>
-						<div class="text">-</div>
-					</li>
-				</ul>
-				
-			</div>
-			
-			<div id="content">
-			</div>
-		</div>
-	
-	
-		<!--
-			
-			Article : Description du pokemon sous forme de pop-up
-			
-		-->
-		<div id="article">
-			<div class="container">
-				
-				<div id="controls">
-					<div id="back"></div>
-					<div id="close"></div>
-					<div id="next"></div>
-				</div>
-				
-				<div id="view3d"></div>
-				
-				<div id="caracteristique">
-					<h2>Salamèche</h2>
-					
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo vel ipsum tenetur totam esse ipsa, doloribus assumenda, quaerat voluptate fugit. Eum officiis omnis, aut dolorum dignissimos pariatur atque at error!</p>
-				
-					<table>
-						<tr>
-							<td><strong>Taille :</strong></td>
-							<td>15cm</td>
-							<td><strong>Catégorie :</strong></td>
-							<td>Feu</td>
-						</tr>
-						<tr>
-							<td><strong>Poids :</strong></td>
-							<td>35kg</td>
-							<td><strong>Talent :</strong></td>
-							<td>Deflagration</td>
-						</tr>
-						<tr>
-							<td><strong>Sexe :</strong></td>
-							<td></td>
-						</tr>
-					</table>
-				</div>
-			</div>
-		</div>
-	
-	<!-- Scripts -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script src="js/vendor/three.min.js"></script>
-	<script src="js/vendor/orbitControls.js"></script>
-	<script src="js/vendor/virtualScroll.js"></script>
-	<script src="js/vendor/raf.js"></script>
-	
-	<script src="js/dist/app.js"></script>
-	
-	</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>pokemon</title>
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+
+    <!--
+
+Home : Page d'accueil
+
+-->
+
+    <div id="home">
+
+      <div id="logo">
+
+      </div>
+
+      <div id="generation">
+        <h2>Generation</h2>
+        <h3>1</h3>
+      </div>
+
+      <div id="timeline">
+
+        <div class="interTime"></div>
+
+        <div class="time" data-gen="1">
+          <span>1996</span>
+          <div class="fullTimeL"></div>
+          <div class="fullTimeR"></div>
+        </div>
+
+        <div class="interTime"></div>
+
+        <div class="time" data-gen="2">
+          <span>2001</span>
+          <div class="fullTimeL"></div>
+          <div class="fullTimeR"></div>
+        </div>
+
+        <div class="interTime"></div>
+
+        <div class="time" data-gen="3">
+          <span>2004</span>
+          <div class="fullTimeL"></div>
+          <div class="fullTimeR"></div>
+        </div>
+
+        <div class="interTime"></div>
+
+        <div class="time" data-gen="4">
+          <span>2007</span>
+          <div class="fullTimeL"></div>
+          <div class="fullTimeR"></div>
+        </div>
+
+        <div class="interTime"></div>
+
+        <div class="time" data-gen="5">
+          <span>2011</span>
+          <div class="fullTimeL"></div>
+          <div class="fullTimeR"></div>
+        </div>
+
+        <div class="interTime"></div>
+
+        <div class="time" data-gen="6">
+          <span>2013</span>
+          <div class="fullTimeL"></div>
+          <div class="fullTimeR"></div>
+        </div>
+
+        <div class="interTime"></div>
+
+        <div class="time" data-gen="all">
+          <span>All</span>
+          <div class="fullTimeL"></div>
+          <div class="fullTimeR"></div>
+        </div>
+
+        <div class="interTime"></div>
+
+      </div>
+    </div>
+
+    <!--
+
+Categorie : Affichage de tous les pokemons
+
+-->
+
+    <div id="categorie">
+
+      <div id="nav" class="minNav">
+
+        <div id="logo"></div>
+        <div id="version">I</div>
+
+        <ul>
+          <li>
+            <div class="point empty"></div>
+            <div class="text">Normal</div>
+          </li>
+          <li>
+            <div class="point empty"></div>
+            <div class="text">Fire</div>
+          </li>
+          <li>
+            <div class="point empty"></div>
+            <div class="text">Water</div>
+          </li>
+          <li>
+            <div class="point empty"></div>
+            <div class="text">Grass</div>
+          </li>
+          <li>
+            <div class="point empty"></div>
+            <div class="text">Ground</div>
+          </li>
+          <li>
+            <div class="point empty"></div>
+            <div class="text">Bug</div>
+          </li>
+          <li>
+            <div class="point empty"></div>
+            <div class="text">Steel</div>
+          </li>
+          <li>
+            <div class="point empty"></div>
+            <div class="text">Poison</div>
+          </li>
+          <li>
+            <div class="point empty"></div>
+            <div class="text">Fighting</div>
+          </li>
+          <li>
+            <div class="point empty"></div>
+            <div class="text">Flying</div>
+          </li>
+          <li>
+            <div class="point empty"></div>
+            <div class="text">Bug</div>
+          </li>
+          <li>
+            <div class="point empty"></div>
+            <div class="text">Ghost</div>
+          </li>
+          <li>
+            <div class="point empty"></div>
+            <div class="text">Eletric</div>
+          </li>
+          <li>
+            <div class="point empty"></div>
+            <div class="text">Psychic</div>
+          </li>
+          <li>
+            <div class="point empty"></div>
+            <div class="text">Ice</div>
+          </li>
+          <li>
+            <div class="point empty"></div>
+            <div class="text">Rock</div>
+          </li>
+          <li>
+            <div class="point empty"></div>
+            <div class="text">Dragon</div>
+          </li>
+          <li>
+            <div class="point empty"></div>
+            <div class="text">Dark</div>
+          </li>
+          <li>
+            <div class="point empty"></div>
+            <div class="text">Fairy</div>
+          </li>
+        </ul>
+
+      </div>
+
+      <div id="content">
+      </div>
+    </div>
+
+
+    <!--
+
+Article : Description du pokemon sous forme de pop-up
+
+-->
+    <div id="article">
+      <div class="container">
+
+        <div id="controls">
+          <div id="back"></div>
+          <div id="close"></div>
+          <div id="next"></div>
+        </div>
+
+        <div id="view3d"></div>
+
+        <div id="caracteristique">
+          <h2>Salamèche</h2>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo vel ipsum tenetur totam esse ipsa, doloribus assumenda, quaerat voluptate fugit. Eum officiis omnis, aut dolorum dignissimos pariatur atque at error!</p>
+
+          <table>
+            <tr>
+              <td><strong>Taille :</strong></td>
+              <td>15cm</td>
+              <td><strong>Catégorie :</strong></td>
+              <td>Feu</td>
+            </tr>
+            <tr>
+              <td><strong>Poids :</strong></td>
+              <td>35kg</td>
+              <td><strong>Talent :</strong></td>
+              <td>Deflagration</td>
+            </tr>
+            <tr>
+              <td><strong>Sexe :</strong></td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="data/types.json"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/vendor/three.min.js"></script>
+    <script src="js/vendor/orbitControls.js"></script>
+    <script src="js/vendor/virtualScroll.js"></script>
+    <script src="js/vendor/raf.js"></script>
+
+    <script src="js/dist/app.js"></script>
+
+  </body>
 </html>
