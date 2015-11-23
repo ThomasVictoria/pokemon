@@ -5,29 +5,35 @@ function call(datatype, id, callback, optionnal){
   this.callback = callback;
   this.optionnal = optionnal;
 
+  this.init();
+
+}
+
+call.prototype.init = function(){
+
   this.request();
-  
+
 }
 
 call.prototype.request = function(){
 
-var self = this.callback;
-  
+  var self = this.callback;
+
   $.ajax({
-		type: 'post',
-		crossDomain:true,
-		url: 'http://pokemon.dev/Class/index.php',
-		data: {'datatype': this.datatype, 'id': this.id},
-		dataType: 'json',
-		success: function(json) {
-			if (typeof this.optionnal === 'undefined') {
-				self(json);
-			} else {
-				self(json, this.optionnal);
+    type: 'post',
+    crossDomain:true,
+    url: 'http://pokemon.dev/Class/index.php',
+    data: {'datatype': this.datatype, 'id': this.id},
+    dataType: 'json',
+    success: function(json) {
+      if (typeof this.optionnal === 'undefined') {
+        self(json);
+      } else {
+        self(json, this.optionnal);
       }
-		}
-	});
-  
+    }
+  });
+
 }
     var scene, camera, renderer, controls, dirLight, hemiLight;;
 
@@ -134,7 +140,6 @@ function categorie(){
 
   this.nav      = $('#nav');
   this.pokemon  = $('.pokemon');
-  this.searchBar = $('input');
   this.article  = $('#article');
  
   this.init();
@@ -154,7 +159,7 @@ categorie.prototype.init = function(){
   });
 
   $(this.pokemon).on('click', function(e){
-    $(self).fadeIn(400);
+    $(self).fadeIn();
     var name = $(this).html(),
         id   = $(this).attr('data-id');
     showModel(name);
@@ -164,10 +169,6 @@ categorie.prototype.init = function(){
   $(this.article).on('click', '#close', function(e){
     $(self).fadeOut(400);
   });
-  
-  $(this.searchBar).on('click', function(){
-    $('#search').addClass('fullSearch');
-  })
   
 }
 function DisplayData(data){
@@ -234,8 +235,10 @@ TimeLine.prototype.init = function(){
 new TimeLine();
 function Home(){
 
-  this.home      = $('#home');
-  this.categorie = $('#categorie');
+  this.home       = $('#home');
+  this.categorie  = $('#categorie');
+  this.menu       = $('#nav ul');
+  this.menuButton = $('#categorie ul .point');
 
   this.init();
 
@@ -245,6 +248,110 @@ Home.prototype.init = function(){
 
   this.toGen();
   this.CallPokemons();
+  this.filters();
+
+}
+
+Home.prototype.filters = function(){
+
+  var self         = this.menuButton,
+      selfFunction = this.applyFilters;
+
+  $(this.menuButton).on('click', function(){
+
+    if($(this).hasClass('empty')){
+      $(self).addClass('unselect');
+      $(this).addClass('select');
+      $(this).removeClass('unselect');
+      $(self).removeClass('empty');
+    }else if($(this).hasClass('unselect')){
+      $(this).addClass('select');
+      $(this).removeClass('unselect');
+    }else if($(this).hasClass('select')){
+      $(this).addClass('unselect');
+      $(this).removeClass('select');
+      if($(self).hasClass('select') === false && $(self).hasClass('empty') === false){
+        $(self).addClass('empty');
+        $(self).removeClass('select');
+        $(self).removeClass('unselect');
+        $('.pokemon').removeClass('hide');
+        $('.pokemon').removeClass('view');
+      } 
+    }
+
+    var filters = Array();
+
+    $('#categorie ul .point.select').parent().each(function(){
+
+      filters.push($(this).find('.text').html());
+
+    });
+
+    $.getJSON( "../../data/types.json", function(data){
+
+      selfFunction(filters, data);
+
+    });
+
+
+  });
+
+}
+
+Home.prototype.applyFilters = function(filters, data){
+
+  var pokemonFiltered = Array();
+
+  for(i=1; i < Object.keys(data).length; i++){
+
+    for(y=0; y < filters.length; y++){
+
+      if(filters[y] == data[i].name){
+
+        $('.pokemon').each(function(){
+
+          for(z=0; z < Object.keys(data[i].pokemons).length; z++){
+
+            if($(this).attr('data-id') == data[i].pokemons[z]){
+
+              pokemonFiltered.push($(this).attr('data-id'));
+
+            }
+
+          }
+
+        });
+
+        var sortedPokemons = pokemonFiltered.sort(function(a, b) {
+          return a - b;
+        });
+        var results = [];
+        for (b = 0; b < sortedPokemons.length - 1; b++) {
+          if (sortedPokemons[b + 1] == sortedPokemons[b]) {
+            results.push(sortedPokemons[b]);
+          }
+        }
+
+        if(filters.length > 1)
+          usedArray = results;
+        else
+          usedArray = sortedPokemons;
+        
+        $('.pokemon').addClass('hide');
+        $('.pokemon').removeClass('view');
+
+        for(w=0; w < usedArray.length; w++){
+
+          $('.pokemon[data-id='+usedArray[w]+']').removeClass('hide');
+          $('.pokemon[data-id='+usedArray[w]+']').addClass('view');
+
+        }
+
+      }
+
+    }  
+
+  }
 
 }
 
@@ -274,8 +381,6 @@ Home.prototype.CallPokemons = function(){
 
 function Display(data){
 
-  console.log(data);
-
   var content  = $('#content');
   var child = Math.ceil((Object.keys(data.reponse).length / 3));
   
@@ -284,22 +389,22 @@ function Display(data){
   $('#content').css('width', contentW+'px');
   for(i = 0; i < Object.keys(data.reponse).length; i++){
 
-    $(content).append('<div class="pokemon" data-id="'+ data.reponse[i].id +'">'+ data.reponse[i].name +'</div>');
- 
+    $(content).append('<div class="pokemon view" data-id="'+ data.reponse[i].id +'">'+ data.reponse[i].name +'</div>');
+
   };
-  
-  vScroll = new vScroll(child);
+
+  var VS = new vScroll(child);
+
   var showCategorie = new categorie();
 
   (function raf(){
-    vScroll.update();
+    VS.update();
     window.requestAnimationFrame(raf);
   })();
-  
+
 }
 
-var home = new Home();
-
+new Home();
 
 //// Fonction de requette sur l'api configurer avec callback
 //function request(datatype, id, callback, optionnal)
@@ -420,6 +525,110 @@ var home = new Home();
 //
 //
 //
+function SearchField(){
+
+  this.field = $('form #search');
+
+  this.inputOnKeydown();
+
+}
+
+SearchField.prototype.inputOnKeydown = function(){
+
+  var type         = $.getJSON('../../data/types.json'),
+      abitily      = $.getJSON('../../data/ability.json'),
+      move         = $.getJSON('../../data/moves.json');
+
+  var self       = this.init;
+  var selfSecond = this.DisplaySearch;
+
+  $(this.field).keyup(function(e){
+
+    var InputValue = $(this).val();
+
+    $.when(type,abitily,move,InputValue,selfSecond).done(function(type, ability, move, value, selfSecond){
+
+      self(type[0], ability[0], move[0], value, selfSecond);
+
+    });
+
+  });
+
+}
+
+SearchField.prototype.init = function(type, ability, move, value, callback){
+
+  var index  = [type, ability, move],
+      result = $('.searchField .results');
+
+  $(result).html('');
+
+  for(i=0; i < 3;i++){
+
+    if(i == 0)
+      $(result).append('<div class="title">Types</div>');
+    else if(i == 1)
+      $(result).append('<div class="title">Ability</div>');
+    else if(i == 2)
+      $(result).append('<div class="title">Move</div>');
+
+    for(y=1; y <= Object.keys(index[i]).length; y++){
+
+      if(index[i][y] != undefined){
+
+        var Vallenght = value.length,
+            name      = index[i][y].name,
+            cutName   = name.substring(0, Vallenght);
+
+        if(Vallenght == 0){
+          if($('.pokemon').hasClass('cache')){
+            $('.pokemon').removeClass('cache');
+            $('.pokemon').removeClass('hide');
+            $('.pokemon').addClass('view');
+          }
+          return false;
+        }
+        else if(value.toUpperCase() === cutName.toUpperCase()){
+          callback(index[i][y].name, i);
+        }
+
+        $('.pokemon').each(function(){
+
+          var Pokemon    = $(this).html(),
+              cutPokemon = Pokemon.substring(0, Vallenght);
+
+          if(value.toUpperCase() === cutPokemon.toUpperCase()){
+            if($(this).hasClass('cache')){
+              $(this).removeClass('cache');
+              $(this).removeClass('hide');
+              $(this).addClass('view');
+            }
+          }
+          else{
+            $(this).addClass('cache');
+            $(this).addClass('hide');
+            $(this).removeClass('view');
+          }
+
+        });
+
+      }
+    }
+
+  }
+
+}
+
+SearchField.prototype.DisplaySearch = function(name, id){
+
+  var result  = $('.searchField .results');
+
+  $(result).append('<div>'+ name +'</div>');
+
+}
+
+new SearchField();
+
 var vScroll = function(child){
 
 	this.currentY = 0;
@@ -457,7 +666,7 @@ vScroll.prototype.onVirtualScroll = function(e) {
 
 };
 
-vScroll.prototype.resize = function(child) { 
+vScroll.prototype.resize = function(child) {
 	this.maxScroll = ($('#content .pokemon:nth-child('+child+')').offset().left - ( $(window).width() - 432 )) * -1;
 };
 
@@ -468,4 +677,4 @@ vScroll.prototype.update = function() {
 		transform: 'translateX(' + this.currentY + 'px)'
 	});
 
-};
+}; 

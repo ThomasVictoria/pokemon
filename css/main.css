@@ -222,34 +222,39 @@ body {
       border-radius: 50%;
       display: inline-block;
       vertical-align: middle; }
+    #categorie ul .select {
+      opacity: 1; }
+    #categorie ul .unselect {
+      opacity: 0.5; }
     #categorie ul .text {
       color: #eff0f2;
       vertical-align: middle;
       padding: 0 0 0 25px; }
   #categorie #content {
-    width: auto;
+    width: 600px;
     height: 100vh;
     position: absolute;
     display: block;
     left: 80px;
-    right: 160px;
+    right: 0;
     top: 0; }
     #categorie #content .pokemon {
       width: 270px;
       height: 270px;
       border: 1px solid rgba(239, 240, 242, 0.5);
       float: left; }
-  #categorie #search {
-    width: 160px;
-    height: 100%;
+    #categorie #content .hide {
+      display: none; }
+    #categorie #content .view {
+      display: inherit; }
+  #categorie .searchField {
+    position: fixed;
     top: 0;
     right: 0;
-    bottom: 0;
-    position: fixed; }
-    #categorie #search .fullSearch {
-      width: 250px;
-      transition: width 0.5s ease-in-out; }
-    #categorie #search input {
+    width: 200px;
+    height: 100%;
+    background: #4b4b4b; }
+    #categorie .searchField input {
       position: relative;
       top: 20px;
       left: 20px;
@@ -266,6 +271,8 @@ body {
       -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
       -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
       box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset; }
+    #categorie .searchField .results .title {
+      color: aliceblue; }
 
 #article {
   position: fixed;

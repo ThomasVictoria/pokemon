@@ -1,48 +1,48 @@
 $colorNav : #4a4a4a;
 
 #categorie{
-	
-	width: 100%; height: 100vh;
-	top: 0; left: 0; right: 0; bottom: 0;
-	overflow: hidden;
-	background-color: #d8d8d8;
-	display: none;
-	
-	#version{
-		position: absolute;
-		width: 80px;
-		top: 70px;
-		text-align: center;
-		font-size: 30px;
+
+  width: 100%; height: 100vh;
+  top: 0; left: 0; right: 0; bottom: 0;
+  overflow: hidden;
+  background-color: #d8d8d8;
+  display: none;
+
+  #version{
+    position: absolute;
+    width: 80px;
+    top: 70px;
+    text-align: center;
+    font-size: 30px;
+  }
+
+  #nav {
+    height: 100%;
+    position: fixed;
+    background-color: #4a4a4a;
+    z-index: 10;
+  }
+  
+  .minNav{
+    width: 80px;
+	transition: width 0.3s ease-out;
+	.text{
+		display: none;
 	}
-	
-	#nav {
-		height: 100%;
-		position: fixed;
-		background-color: $colorNav;
-		z-index: 10;
+  }	
+  
+  .fullNav{
+    width: 250px;
+	transition: width 0.2s ease-out;
+	.text{
+		display: inline-block;
 	}
-	
-	.minNav{
-		width: 80px;
-		transition: width 0.3s ease-out;
-		.text{
-			display: none;
-		}
-		
-	}	
-	.fullNav{
-		width: 250px;
-		transition: width 0.2s ease-out;
-		.text{
-			display: inline-block;
-		}
-	}
-	
-	
-	ul{
-		
-		position: relative;
+  }
+
+
+  ul{
+
+    position: relative;
 		top: 50%; bottom: 50%;
 		transform: translateY(-50%);
 		
@@ -67,58 +67,84 @@ $colorNav : #4a4a4a;
 			display: inline-block;
 			vertical-align: middle;			
 		}
-		
-		.text{
-			color: rgba(239,240,242,1);
-			vertical-align: middle;
-			padding: 0 0 0 25px;
-		}
+
+    .select{
+      opacity: 1;
+    }
+
+    .unselect{
+      opacity: 0.5;
+    }
+
+    .text{
+      color: rgba(239,240,242,1);
+      vertical-align: middle;
+      padding: 0 0 0 25px;
+    }
+
+  }
+
+  #content{
+    width: 600px;
+    height: 100vh;
+    position: absolute;
+    display: block;
+    left: 80px; right: 0; top: 0;
+
+    .pokemon{
+      width: 270px; 
+      height: 270px;
+      border: 1px solid rgba(239,240,242,0.5);
+      float: left;
+    }
+
+    .hide{
+      display: none;
+    }
+
+    .view{
+      display: inherit;
+    }
+
+  }
+
+  .searchField{
+    
+    position: fixed;
+    top: 0; right: 0;
+    width: 200px;
+    height: 100%;
+    background: #4b4b4b;
 	
+	input{
+		position: relative;
+		top: 20px; left: 20px;
+		background: url(../img/search-dark.png) no-repeat 10px 6px #444;
+		border: 0 none;
+		font: bold 12px Arial,Helvetica,Sans-serif;
+		color: #777;
+		width: 45%;
+		padding: 6px 15px 6px 35px;
+		-webkit-border-radius: 20px;
+		-moz-border-radius: 20px;
+		border-radius: 20px;
+		text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+		-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+		-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+		box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
 	}
-	
-	#content{
-		width: auto; height: 100vh;
-		position: absolute;
-		display: block;
-		left: 80px; right: 160px; top: 0;
-	
-		.pokemon{
-			width: 270px; 
-			height: 270px;
-			border: 1px solid rgba(239,240,242,0.5);
-			float: left;
-		}
-	}
-	
-	#search{
-		width: 160px; height: 100%;
-		top: 0; right: 0; bottom: 0;
-		position: fixed;
-		// background-color: $colorNav;
-		
-		.fullSearch{
-			width: 250px;
-			transition: width 0.5s ease-in-out;
-		}
-		
-		input{
-			position: relative;
-			top: 20px; left: 20px;
-			background: url(../img/search-dark.png) no-repeat 10px 6px #444;
-			border: 0 none;
-			font: bold 12px Arial,Helvetica,Sans-serif;
-			color: #777;
-			width: 45%;
-			padding: 6px 15px 6px 35px;
-			-webkit-border-radius: 20px;
-			-moz-border-radius: 20px;
-			border-radius: 20px;
-			text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
-			-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
-			-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
-			box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
-		}
-	}
+    
+    .results{
+      
+      .title{
+        
+        color:aliceblue;
+        
+      }
+      
+    }
+    
+  }
 
 }
 

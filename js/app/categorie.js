@@ -2,7 +2,6 @@ function categorie(){
 
   this.nav      = $('#nav');
   this.pokemon  = $('.pokemon');
-  this.searchBar = $('input');
   this.article  = $('#article');
  
   this.init();
@@ -22,7 +21,7 @@ categorie.prototype.init = function(){
   });
 
   $(this.pokemon).on('click', function(e){
-    $(self).fadeIn(400);
+    $(self).fadeIn();
     var name = $(this).html(),
         id   = $(this).attr('data-id');
     showModel(name);
@@ -32,9 +31,5 @@ categorie.prototype.init = function(){
   $(this.article).on('click', '#close', function(e){
     $(self).fadeOut(400);
   });
-  
-  $(this.searchBar).on('click', function(){
-    $('#search').addClass('fullSearch');
-  })
   
 }
