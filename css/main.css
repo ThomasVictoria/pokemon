@@ -58,6 +58,10 @@ input, select {
 input[type="submit"] {
   cursor: pointer; }
 
+a {
+  text-decoration: none;
+  color: black; }
+
 /*********** BODY **************/
 body {
   font-family: 'klavika-web', 'Open Sans', sans-serif;
@@ -274,7 +278,7 @@ body {
     #categorie .searchField .results .title {
       color: aliceblue; }
 
-#article {
+.popup {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -291,11 +295,11 @@ body {
   height: 100%;
   margin: 0 auto; }
 
-#controls {
+.controls {
   width: 100%;
   height: 60px;
   position: relative; }
-  #controls #back {
+  .controls .back {
     width: 40px;
     height: 40px;
     background: url("../img/arrowL.svg") no-repeat;
@@ -303,7 +307,7 @@ body {
     top: 10px;
     left: 0;
     bottom: 10px; }
-  #controls #close {
+  .controls .close {
     width: 40px;
     height: 40px;
     background: url("../img/cross.svg") no-repeat;
@@ -313,7 +317,7 @@ body {
     right: 50%;
     bottom: 10px;
     transform: translateX(-50%); }
-  #controls #next {
+  .controls .next {
     width: 40px;
     height: 40px;
     background: url("../img/arrowR.svg") no-repeat;
@@ -327,23 +331,23 @@ body {
   height: 750px;
   float: left; }
 
-#caracteristique {
+.caracteristique {
   width: 680px;
   height: 750px;
   float: right; }
-  #caracteristique h2 {
+  .caracteristique h2 {
     font-size: 2em;
     padding: 40px 40px 40px 20px; }
-  #caracteristique p {
+  .caracteristique p {
     font-size: 1.2em;
     padding: 20px 40px 20px 20px;
     line-height: 1.4em; }
-  #caracteristique table {
+  .caracteristique table {
     background-color: #ebebeb;
     margin: 20px;
     border-radius: 5px;
     width: 620px; }
-    #caracteristique table td {
+    .caracteristique table td {
       padding: 20px; }
-      #caracteristique table td strong {
+      .caracteristique table td strong {
         font-weight: bold; }

@@ -14,6 +14,8 @@ SearchField.prototype.inputOnKeydown = function(){
 
   var self       = this.init;
   var selfSecond = this.DisplaySearch;
+  var nav        = this.navigationSearch;
+
 
   $(this.field).keyup(function(e){
 
@@ -51,10 +53,17 @@ SearchField.prototype.init = function(type, ability, move, value, callback){
       if(index[i][y] != undefined){
 
         var name      = index[i][y].name,
+            link      = index[i][y].resource_uri,
+            delimiter = '/',
+            start     = 4,
+            tokens    = link.split(delimiter).slice(start),
+            step      = tokens.join(delimiter),
+            lenght    = step.length,
+            id        = step.slice(0,lenght -1),
             cutName   = name.substring(0, Vallenght);
 
         if(value.toUpperCase() === cutName.toUpperCase()){
-          callback(index[i][y].name, i);
+          callback(name, id, i);
         }
 
         $('.pokemon').each(function(){
@@ -85,7 +94,7 @@ SearchField.prototype.init = function(type, ability, move, value, callback){
             $(this).addClass('hide');
             $(this).removeClass('view');
           }
-          
+
         });
 
       }
@@ -97,13 +106,20 @@ SearchField.prototype.init = function(type, ability, move, value, callback){
     $(result).empty();
   }
 
+  new Navigation();
+
 }
 
-SearchField.prototype.DisplaySearch = function(name, id){
+SearchField.prototype.DisplaySearch = function(name, data, id){
 
   var result  = $('.searchField .results');
 
-  $(result).append('<div>'+ name +'</div>');
+  if(id == 0)
+    $(result).append('<a href="#"><div class="type" data-id="'+ data +'">'+ name +'</div></a>');
+  else if(id == 1)
+    $(result).append('<a href="#"><div class="ability" data-id="'+ data +'">'+ name +'</div></a>');
+  else if(id == 2)
+    $(result).append('<a href="#"><div class="move" data-id="'+ data +'">'+ name +'</div></a>');
 
 }
 

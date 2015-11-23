@@ -998,6 +998,7 @@
   },
   "14": {
     "name" : "Psychic",
+    "resource_uri": "/api/v1/type/14/",
     "pokemons": [
       10001,
       10002,
