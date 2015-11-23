@@ -4,7 +4,7 @@ function categorie(){
   this.pokemon  = $('.pokemon');
   this.searchBar = $('input');
   this.article  = $('#article');
-
+ 
   this.init();
 
 }

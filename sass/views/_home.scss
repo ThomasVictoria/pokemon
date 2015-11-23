@@ -107,10 +107,12 @@
 
 }
 
-#logo{
+.logo{
 		width: 40px; height: 40px;
 		border-radius: 50%;
 		position: absolute;
 		top: 20px; left: 20px;
-		background-color: #9b9b9b;
+		background: url(../img/logo.png) no-repeat 50% 50% #9b9b9b;
+    	background-size: cover;
+		cursor: pointer;
 }
