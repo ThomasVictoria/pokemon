@@ -130,7 +130,7 @@ Home.prototype.applyFilters = function(filters, data){
     }  
 
   }
-
+  
 }
 
 Home.prototype.toGen = function(){
