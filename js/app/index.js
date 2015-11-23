@@ -39,10 +39,11 @@ Home.prototype.filters = function(){
         $(self).addClass('empty');
         $(self).removeClass('select');
         $(self).removeClass('unselect');
-        $('.pokemon').removeClass('hide');
-        $('.pokemon').removeClass('view');
+        $('.pokemon').removeClass('hide filters');
+        $('.pokemon').removeClass('view filters');
       } 
     }
+
 
     var filters = Array();
 
@@ -101,14 +102,14 @@ Home.prototype.applyFilters = function(filters, data){
           usedArray = results;
         else
           usedArray = sortedPokemons;
-        
-        $('.pokemon').addClass('hide');
-        $('.pokemon').removeClass('view');
+
+        $('.pokemon').addClass('hide filters');
+        $('.pokemon').removeClass('view filters');
 
         for(w=0; w < usedArray.length; w++){
 
-          $('.pokemon[data-id='+usedArray[w]+']').removeClass('hide');
-          $('.pokemon[data-id='+usedArray[w]+']').addClass('view');
+          $('.pokemon[data-id='+usedArray[w]+']').removeClass('hide filters');
+          $('.pokemon[data-id='+usedArray[w]+']').addClass('view filters');
 
         }
 
@@ -148,9 +149,9 @@ function Display(data){
 
   var content  = $('#content');
   var child = Math.ceil((Object.keys(data.reponse).length / 3));
-  
+
   var contentW = (child * 272);
-  
+
   $('#content').css('width', contentW+'px');
   for(i = 0; i < Object.keys(data.reponse).length; i++){
 
