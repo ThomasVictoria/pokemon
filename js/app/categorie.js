@@ -3,7 +3,7 @@ function categorie(){
   this.nav      = $('#nav');
   this.pokemon  = $('.pokemon');
   this.article  = $('#article');
-
+ 
   this.init();
 
 }
@@ -28,12 +28,10 @@ categorie.prototype.init = function(){
     showModel(name);
     var pokemonData = new call('pokemon', id, DisplayData);
 
-    showModel();
-
   });
 
   $(this.article).on('click', '#close', function(e){
     $(self).fadeOut(400);
   });
-
+  
 }

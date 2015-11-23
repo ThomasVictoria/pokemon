@@ -161,14 +161,16 @@ body {
         width: 80px;
         text-align: center; }
 
-#logo {
+.logo {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   position: absolute;
   top: 20px;
   left: 20px;
-  background-color: #9b9b9b; }
+  background: url(../img/logo.png) no-repeat 50% 50% #9b9b9b;
+  background-size: cover;
+  cursor: pointer; }
 
 #categorie {
   width: 100%;
@@ -192,11 +194,13 @@ body {
     background-color: #4a4a4a;
     z-index: 10; }
   #categorie .minNav {
-    width: 80px; }
+    width: 80px;
+    transition: width 0.3s ease-out; }
     #categorie .minNav .text {
       display: none; }
   #categorie .fullNav {
-    width: 250px; }
+    width: 250px;
+    transition: width 0.2s ease-out; }
     #categorie .fullNav .text {
       display: inline-block; }
   #categorie ul {
@@ -206,6 +210,11 @@ body {
     transform: translateY(-50%); }
     #categorie ul li {
       padding: 10px 0 10px 30px; }
+      #categorie ul li:hover {
+        font-weight: bold;
+        cursor: pointer; }
+        #categorie ul li:hover .point {
+          background-color: rgba(239, 240, 242, 0.5); }
     #categorie ul .point {
       width: 15px;
       height: 15px;
@@ -213,9 +222,6 @@ body {
       border-radius: 50%;
       display: inline-block;
       vertical-align: middle; }
-      #categorie ul .point:hover {
-        background-color: rgba(239, 240, 242, 0.5);
-        cursor: pointer; }
     #categorie ul .select {
       opacity: 1; }
     #categorie ul .unselect {
@@ -242,10 +248,29 @@ body {
     #categorie #content .view {
       display: inherit; }
   #categorie .searchField {
-    float: right;
+    position: fixed;
+    top: 0;
+    right: 0;
     width: 200px;
     height: 100%;
     background: #4b4b4b; }
+    #categorie .searchField input {
+      position: relative;
+      top: 20px;
+      left: 20px;
+      background: url(../img/search-dark.png) no-repeat 10px 6px #444;
+      border: 0 none;
+      font: bold 12px Arial,Helvetica,Sans-serif;
+      color: #777;
+      width: 45%;
+      padding: 6px 15px 6px 35px;
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+      border-radius: 20px;
+      text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+      -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+      -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+      box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset; }
     #categorie .searchField .results .title {
       color: aliceblue; }
 

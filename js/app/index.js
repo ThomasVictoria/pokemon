@@ -39,10 +39,11 @@ Home.prototype.filters = function(){
         $(self).addClass('empty');
         $(self).removeClass('select');
         $(self).removeClass('unselect');
-        $('.pokemon').removeClass('hide');
-        $('.pokemon').removeClass('view');
+        $('.pokemon').removeClass('hide filters');
+        $('.pokemon').removeClass('view filters');
       } 
     }
+
 
     var filters = Array();
 
@@ -68,6 +69,18 @@ Home.prototype.applyFilters = function(filters, data){
   var pokemonFiltered = Array();
 
   for(i=1; i < Object.keys(data).length; i++){
+
+    if(filters.length == 0){
+
+      $('.pokemon').each(function(){
+
+        if($(this).hasClass('cache')){
+          $(this).addClass('hide');
+        }
+
+      });
+
+    }
 
     for(y=0; y < filters.length; y++){
 
@@ -101,14 +114,14 @@ Home.prototype.applyFilters = function(filters, data){
           usedArray = results;
         else
           usedArray = sortedPokemons;
-        
-        $('.pokemon').addClass('hide');
-        $('.pokemon').removeClass('view');
+
+        $('.pokemon').addClass('hide filters');
+        $('.pokemon').removeClass('view filters');
 
         for(w=0; w < usedArray.length; w++){
 
-          $('.pokemon[data-id='+usedArray[w]+']').removeClass('hide');
-          $('.pokemon[data-id='+usedArray[w]+']').addClass('view');
+          $('.pokemon[data-id='+usedArray[w]+']').removeClass('hide filters');
+          $('.pokemon[data-id='+usedArray[w]+']').addClass('view filters');
 
         }
 
@@ -127,6 +140,7 @@ Home.prototype.toGen = function(){
   $(this.home).on('click', function(e){
     $(this).fadeOut();
     $(self).fadeIn();
+    $('#version').html($('#generation h3').html());
   });
 
 }
@@ -135,7 +149,7 @@ Home.prototype.CallPokemons = function(){
 
   $(this.home).on('click', function(){
 
-    var generation = $('h3').html();
+    var generation = $('#generation h3').html();
 
     var pokedex = new call('pokedex', generation, Display);
 
@@ -146,18 +160,23 @@ Home.prototype.CallPokemons = function(){
 function Display(data){
 
   var content  = $('#content');
+  var child = Math.ceil((Object.keys(data.reponse).length / 3));
 
+  var contentW = (child * 272);
+
+  $('#content').css('width', contentW+'px');
   for(i = 0; i < Object.keys(data.reponse).length; i++){
 
     $(content).append('<div class="pokemon view" data-id="'+ data.reponse[i].id +'">'+ data.reponse[i].name +'</div>');
 
   };
 
-  vScroll = new vScroll();
+  var VS = new vScroll(child);
+
   var showCategorie = new categorie();
 
   (function raf(){
-    vScroll.update();
+    VS.update();
     window.requestAnimationFrame(raf);
   })();
 

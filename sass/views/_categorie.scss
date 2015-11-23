@@ -1,3 +1,5 @@
+$colorNav : #4a4a4a;
+
 #categorie{
 
   width: 100%; height: 100vh;
@@ -20,47 +22,51 @@
     background-color: #4a4a4a;
     z-index: 10;
   }
-
+  
   .minNav{
     width: 80px;
-
-    .text{
-      display: none;
-    }
-
+	transition: width 0.3s ease-out;
+	.text{
+		display: none;
+	}
   }	
+  
   .fullNav{
     width: 250px;
-
-    .text{
-      display: inline-block;
-    }
+	transition: width 0.2s ease-out;
+	.text{
+		display: inline-block;
+	}
   }
 
 
   ul{
 
     position: relative;
-    top: 50%; bottom: 50%;
-    transform: translateY(-50%);
-
-    li{
-      padding: 10px 0 10px 30px;
-    }
-
-    .point{
-      width: 15px; height: 15px;
-      border: rgba(239,240,242,0.5) 1px solid;
-      border-radius: 50%;
-      display: inline-block;
-      vertical-align: middle;
-
-      &:hover{
-        background-color: rgba(239,240,242,0.5);
-        cursor: pointer;
-      }
-
-    }
+		top: 50%; bottom: 50%;
+		transform: translateY(-50%);
+		
+		li{
+			padding: 10px 0 10px 30px;
+			
+			&:hover{
+				
+				font-weight: bold;
+				cursor: pointer;
+				
+				.point{
+					background-color: rgba(239,240,242,0.5);
+				}
+			}
+		}
+		
+		.point{
+			width: 15px; height: 15px;
+			border: rgba(239,240,242,0.5) 1px solid;
+			border-radius: 50%;
+			display: inline-block;
+			vertical-align: middle;			
+		}
 
     .select{
       opacity: 1;
@@ -84,7 +90,6 @@
     position: absolute;
     display: block;
     left: 80px; right: 0; top: 0;
-    // transition: all 0.3s cubic-bezier(.41,.06,.08,.86);
 
     .pokemon{
       width: 270px; 
@@ -104,11 +109,30 @@
   }
 
   .searchField{
-
-    float: right;
+    
+    position: fixed;
+    top: 0; right: 0;
     width: 200px;
     height: 100%;
     background: #4b4b4b;
+	
+	input{
+		position: relative;
+		top: 20px; left: 20px;
+		background: url(../img/search-dark.png) no-repeat 10px 6px #444;
+		border: 0 none;
+		font: bold 12px Arial,Helvetica,Sans-serif;
+		color: #777;
+		width: 45%;
+		padding: 6px 15px 6px 35px;
+		-webkit-border-radius: 20px;
+		-moz-border-radius: 20px;
+		border-radius: 20px;
+		text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+		-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+		-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+		box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+	}
     
     .results{
       

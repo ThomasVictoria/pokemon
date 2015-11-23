@@ -1,4 +1,4 @@
-var vScroll = function(){
+var vScroll = function(child){
 
 	this.currentY = 0;
 	this.targetY = 0;
@@ -9,7 +9,7 @@ var vScroll = function(){
 
 	this.scrollWrapper = $('#content');
 
-	this.resize();
+	this.resize(child);
 
 	this.bind();
 
@@ -35,17 +35,15 @@ vScroll.prototype.onVirtualScroll = function(e) {
 
 };
 
-vScroll.prototype.resize = function() {
-
-	this.maxScroll = $('#content .pokemon:last-child').offset().top * -1;
-	
+vScroll.prototype.resize = function(child) {
+	this.maxScroll = ($('#content .pokemon:nth-child('+child+')').offset().left - ( $(window).width() - 432 )) * -1;
 };
 
 vScroll.prototype.update = function() {
 
 	this.currentY += (this.targetY - this.currentY) * this.ease;
 	this.scrollWrapper.css({
-		transform: 'translateY(' + this.currentY + 'px)'
+		transform: 'translateX(' + this.currentY + 'px)'
 	});
 
-};
+}; 
