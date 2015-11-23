@@ -2,6 +2,7 @@ function categorie(){
 
   this.nav      = $('#nav');
   this.pokemon  = $('.pokemon');
+  this.searchBar = $('input');
   this.article  = $('#article');
 
   this.init();
@@ -31,5 +32,9 @@ categorie.prototype.init = function(){
   $(this.article).on('click', '#close', function(e){
     $(self).fadeOut(400);
   });
+  
+  $(this.searchBar).on('click', function(){
+    $('#search').addClass('fullSearch');
+  })
   
 }

@@ -192,11 +192,13 @@ body {
     background-color: #4a4a4a;
     z-index: 10; }
   #categorie .minNav {
-    width: 80px; }
+    width: 80px;
+    transition: width 0.3s ease-out; }
     #categorie .minNav .text {
       display: none; }
   #categorie .fullNav {
-    width: 250px; }
+    width: 250px;
+    transition: width 0.2s ease-out; }
     #categorie .fullNav .text {
       display: inline-block; }
   #categorie ul {
@@ -241,8 +243,27 @@ body {
     top: 0;
     right: 0;
     bottom: 0;
-    position: fixed;
-    background-color: #4a4a4a; }
+    position: fixed; }
+    #categorie #search .fullSearch {
+      width: 250px;
+      transition: width 0.5s ease-in-out; }
+    #categorie #search input {
+      position: relative;
+      top: 20px;
+      left: 20px;
+      background: url(../img/search-dark.png) no-repeat 10px 6px #444;
+      border: 0 none;
+      font: bold 12px Arial,Helvetica,Sans-serif;
+      color: #777;
+      width: 45%;
+      padding: 6px 15px 6px 35px;
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+      border-radius: 20px;
+      text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+      -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+      -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+      box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset; }
 
 #article {
   position: fixed;
