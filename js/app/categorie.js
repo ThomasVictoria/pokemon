@@ -82,6 +82,4 @@ categorie.prototype.callAjax = function(){
     $(selfPopup).fadeOut(400);
   });
 
-
-
 }

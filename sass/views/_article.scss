@@ -5,6 +5,14 @@
 	z-index: 20;
 	background-color: #d8d8d8;
 	display: none;
+  
+  .interaction{
+    
+    width: 20%;
+    float: left;
+    
+  }
+  
 }
 
 .container{
@@ -53,11 +61,12 @@
 .caracteristique{
 	width: 680px;
 	height: 750px; 
-	float: right;
-	
+  margin: auto;
+  
 	h2{
 		font-size: 2em;
 		padding: 40px 40px 40px 20px;
+    text-align: center;
 	}
 	
 	p{

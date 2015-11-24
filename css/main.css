@@ -290,6 +290,9 @@ body {
   z-index: 20;
   background-color: #d8d8d8;
   display: none; }
+  .popup .interaction {
+    width: 20%;
+    float: left; }
 
 .container {
   width: 1200px;
@@ -335,10 +338,11 @@ body {
 .caracteristique {
   width: 680px;
   height: 750px;
-  float: right; }
+  margin: auto; }
   .caracteristique h2 {
     font-size: 2em;
-    padding: 40px 40px 40px 20px; }
+    padding: 40px 40px 40px 20px;
+    text-align: center; }
   .caracteristique p {
     font-size: 1.2em;
     padding: 20px 40px 20px 20px;
