@@ -14,6 +14,8 @@ SearchField.prototype.inputOnKeydown = function(){
 
   var self       = this.init;
   var selfSecond = this.DisplaySearch;
+  var nav        = this.navigationSearch;
+
 
   $(this.field).keyup(function(e){
 
@@ -32,9 +34,10 @@ SearchField.prototype.inputOnKeydown = function(){
 SearchField.prototype.init = function(type, ability, move, value, callback){
 
   var index  = [type, ability, move],
-      result = $('.searchField .results');
+      result = $('.searchField .results'),
+      Vallenght = value.length;
 
-  $(result).html('');
+  $(result).empty();
 
   for(i=0; i < 3;i++){
 
@@ -49,29 +52,38 @@ SearchField.prototype.init = function(type, ability, move, value, callback){
 
       if(index[i][y] != undefined){
 
-        var Vallenght = value.length,
-            name      = index[i][y].name,
+        var name      = index[i][y].name,
+            link      = index[i][y].resource_uri,
+            delimiter = '/',
+            start     = 4,
+            tokens    = link.split(delimiter).slice(start),
+            step      = tokens.join(delimiter),
+            lenght    = step.length,
+            id        = step.slice(0,lenght -1),
             cutName   = name.substring(0, Vallenght);
 
-        if(Vallenght == 0){
-          if($('.pokemon').hasClass('cache')){
-            $('.pokemon').removeClass('cache');
-            $('.pokemon').removeClass('hide');
-            $('.pokemon').addClass('view');
-          }
-          return false;
-        }
-        else if(value.toUpperCase() === cutName.toUpperCase()){
-          callback(index[i][y].name, i);
+        if(value.toUpperCase() === cutName.toUpperCase()){
+          callback(name, id, i);
         }
 
         $('.pokemon').each(function(){
 
-          var Pokemon    = $(this).html(),
-              cutPokemon = Pokemon.substring(0, Vallenght);
+          if(Vallenght == 0){
+            if($(this).hasClass('filters') && $(this).hasClass('cache')){
+              $(this).removeClass('hide');
+              $(this).addClass('view');
+            }
+            else if($(this).hasClass('hide') && $(this).hasClass('cache')){
+              $(this).removeClass('hide');
+              $(this).removeClass('cache');
+            }
+          }
+
+          var Pokemon      = $(this).html(),
+              cutPokemon   = Pokemon.substring(0, Vallenght);
 
           if(value.toUpperCase() === cutPokemon.toUpperCase()){
-            if($(this).hasClass('cache')){
+            if($(this).hasClass('cache')&& $(this).hasClass('filters')){
               $(this).removeClass('cache');
               $(this).removeClass('hide');
               $(this).addClass('view');
@@ -90,13 +102,24 @@ SearchField.prototype.init = function(type, ability, move, value, callback){
 
   }
 
+  if(Vallenght == 0){
+    $(result).empty();
+  }
+
+  new Navigation();
+
 }
 
-SearchField.prototype.DisplaySearch = function(name, id){
+SearchField.prototype.DisplaySearch = function(name, data, id){
 
   var result  = $('.searchField .results');
 
-  $(result).append('<div>'+ name +'</div>');
+  if(id == 0)
+    $(result).append('<a href="#"><div class="type" data-id="'+ data +'">'+ name +'</div></a>');
+  else if(id == 1)
+    $(result).append('<a href="#"><div class="ability" data-id="'+ data +'">'+ name +'</div></a>');
+  else if(id == 2)
+    $(result).append('<a href="#"><div class="move" data-id="'+ data +'">'+ name +'</div></a>');
 
 }
 

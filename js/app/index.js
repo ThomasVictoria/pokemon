@@ -39,10 +39,11 @@ Home.prototype.filters = function(){
         $(self).addClass('empty');
         $(self).removeClass('select');
         $(self).removeClass('unselect');
-        $('.pokemon').removeClass('hide');
-        $('.pokemon').removeClass('view');
+        $('.pokemon').removeClass('hide filters');
+        $('.pokemon').removeClass('view filters');
       } 
     }
+
 
     var filters = Array();
 
@@ -68,6 +69,18 @@ Home.prototype.applyFilters = function(filters, data){
   var pokemonFiltered = Array();
 
   for(i=1; i < Object.keys(data).length; i++){
+
+    if(filters.length == 0){
+
+      $('.pokemon').each(function(){
+
+        if($(this).hasClass('cache')){
+          $(this).addClass('hide');
+        }
+
+      });
+
+    }
 
     for(y=0; y < filters.length; y++){
 
@@ -101,14 +114,14 @@ Home.prototype.applyFilters = function(filters, data){
           usedArray = results;
         else
           usedArray = sortedPokemons;
-        
-        $('.pokemon').addClass('hide');
-        $('.pokemon').removeClass('view');
+
+        $('.pokemon').addClass('hide filters');
+        $('.pokemon').removeClass('view filters');
 
         for(w=0; w < usedArray.length; w++){
 
-          $('.pokemon[data-id='+usedArray[w]+']').removeClass('hide');
-          $('.pokemon[data-id='+usedArray[w]+']').addClass('view');
+          $('.pokemon[data-id='+usedArray[w]+']').removeClass('hide filters');
+          $('.pokemon[data-id='+usedArray[w]+']').addClass('view filters');
 
         }
 
@@ -117,7 +130,7 @@ Home.prototype.applyFilters = function(filters, data){
     }  
 
   }
-
+  
 }
 
 Home.prototype.toGen = function(){
@@ -156,7 +169,7 @@ function Display(data){
   // Height pokemon elmt
   
   var contentW = (child * 272);
-  
+
   $('#content').css('width', contentW+'px');
   for(i = 0; i < Object.keys(data.reponse).length; i++){
 

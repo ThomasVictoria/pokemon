@@ -1,4 +1,4 @@
-#article{
+.popup{
 	position: fixed;
 	width: 100%; height: 100%;
 	top: 0; right: 0; bottom: 0; left: 0;
@@ -12,12 +12,12 @@
 	margin: 0 auto;
 }
 
-#controls{
+.controls{
 	width: 100%;
 	height: 60px;
 	position: relative;
 	
-	#back{
+	.back{
 		width: 40px; 
 		height: 40px;
 		background: url('../img/arrowL.svg') no-repeat;
@@ -25,7 +25,7 @@
 		top: 10px; left: 0; bottom: 10px;
 	}
 	
-	#close{
+	.close{
 		width: 40px; 
 		height: 40px;
 		background: url('../img/cross.svg') no-repeat;
@@ -34,7 +34,7 @@
     	transform: translateX(-50%); 
 	}
 	
-	#next{
+	.next{
 		width: 40px; 
 		height: 40px;
 		background: url('../img/arrowR.svg') no-repeat;
@@ -50,7 +50,7 @@
 	float: left;
 }
 
-#caracteristique{
+.caracteristique{
 	width: 680px;
 	height: 750px; 
 	float: right;
