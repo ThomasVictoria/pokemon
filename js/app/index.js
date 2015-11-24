@@ -6,7 +6,6 @@ function Home(){
   this.menuButton = $('#categorie ul .point');
 
   this.init();
-
 }
 
 Home.prototype.init = function(){
@@ -14,7 +13,7 @@ Home.prototype.init = function(){
   this.toGen();
   this.CallPokemons();
   this.filters();
-
+  
 }
 
 Home.prototype.filters = function(){
@@ -131,6 +130,10 @@ Home.prototype.applyFilters = function(filters, data){
 
   }
   
+  //   Get the size of the content
+  new resizeContent();
+  //   Size of the content
+  
 }
 
 Home.prototype.toGen = function(){
@@ -160,24 +163,26 @@ Home.prototype.CallPokemons = function(){
 function Display(data){
 
   var content  = $('#content');
-  var child = Math.ceil((Object.keys(data.reponse).length / 3));
+  var child = Math.ceil((Object.keys(data.reponse)).length / 3);
   
   // Height pokemon elmt
   
-   var size = Math.round($(window).height() / 3);
+   var size = Math.floor($(window).height() / 3);
   
   // Height pokemon elmt
-  
-  var contentW = (child * 272);
-
-  $('#content').css('width', contentW+'px');
   for(i = 0; i < Object.keys(data.reponse).length; i++){
 
-    $(content).append('<div class="pokemon view" style="width:'+size+'px;height:'+size+'px;"data-id="'+ data.reponse[i].id +'">'+ data.reponse[i].name +'</div>');
+    $(content).append('<div class="pokemon view" style="width:'+(size-2)+'px;height:'+(size-2)+'px;"data-id="'+ data.reponse[i].id +'">'+ data.reponse[i].name +'</div>');
 
   };
 
-  var VS = new vScroll(child);
+  //   Get the size of the content
+  new resizeContent();
+  //   Size of the content
+
+  
+  //  Gère le scroll
+  var VS = new vScroll();
 
   var showCategorie = new categorie();
 

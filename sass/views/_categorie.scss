@@ -90,14 +90,16 @@ $colorNav : #4a4a4a;
     width: 600px;
     height: 100vh;
     position: absolute;
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     left: 80px; right: 0; top: 0;
 
     .pokemon{
       width: 270px; 
       height: 270px;
       border: 1px solid rgba(239,240,242,0.5);
-      float: left;
+      justify-content: flex-start;
     }
 
     .hide{

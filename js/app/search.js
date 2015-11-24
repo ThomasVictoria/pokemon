@@ -101,6 +101,10 @@ SearchField.prototype.init = function(type, ability, move, value, callback){
     }
 
   }
+  
+  //   Get the size of the content
+  new resizeContent();
+  //   Size of the content
 
   if(Vallenght == 0){
     $(result).empty();

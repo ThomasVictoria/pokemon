@@ -346,7 +346,6 @@ function Home(){
   this.menuButton = $('#categorie ul .point');
 
   this.init();
-
 }
 
 Home.prototype.init = function(){
@@ -354,7 +353,7 @@ Home.prototype.init = function(){
   this.toGen();
   this.CallPokemons();
   this.filters();
-
+  
 }
 
 Home.prototype.filters = function(){
@@ -471,6 +470,10 @@ Home.prototype.applyFilters = function(filters, data){
 
   }
   
+  //   Get the size of the content
+  new resizeContent();
+  //   Size of the content
+  
 }
 
 Home.prototype.toGen = function(){
@@ -500,24 +503,26 @@ Home.prototype.CallPokemons = function(){
 function Display(data){
 
   var content  = $('#content');
-  var child = Math.ceil((Object.keys(data.reponse).length / 3));
+  var child = Math.ceil((Object.keys(data.reponse)).length / 3);
   
   // Height pokemon elmt
   
-   var size = Math.round($(window).height() / 3);
+   var size = Math.floor($(window).height() / 3);
   
   // Height pokemon elmt
-  
-  var contentW = (child * 272);
-
-  $('#content').css('width', contentW+'px');
   for(i = 0; i < Object.keys(data.reponse).length; i++){
 
-    $(content).append('<div class="pokemon view" style="width:'+size+'px;height:'+size+'px;"data-id="'+ data.reponse[i].id +'">'+ data.reponse[i].name +'</div>');
+    $(content).append('<div class="pokemon view" style="width:'+(size-2)+'px;height:'+(size-2)+'px;"data-id="'+ data.reponse[i].id +'">'+ data.reponse[i].name +'</div>');
 
   };
 
-  var VS = new vScroll(child);
+  //   Get the size of the content
+  new resizeContent();
+  //   Size of the content
+
+  
+  //  Gère le scroll
+  var VS = new vScroll();
 
   var showCategorie = new categorie();
 
@@ -529,7 +534,6 @@ function Display(data){
 }
 
 new Home();
-
 function Loader(){
 	
 	this.loader = $('#loader');
@@ -697,6 +701,21 @@ Navigation.prototype.init = function(){
   });
 
 }
+var resizeContent = function(){
+	
+	this.size = Math.floor($(window).height() / 3);
+	this.view = $('#content').find('.view');
+	this.content = $('#content');
+	this.contentW;
+	
+	this.resize();
+}
+
+resizeContent.prototype.resize = function(){
+  this.view = this.view.length / 3;
+  this.contentW = (this.view * (this.size-2));
+  this.content.css('width', this.contentW+'px');
+}
 function SearchField(){
 
   this.field = $('form #search');
@@ -800,6 +819,10 @@ SearchField.prototype.init = function(type, ability, move, value, callback){
     }
 
   }
+  
+  //   Get the size of the content
+  new resizeContent();
+  //   Size of the content
 
   if(Vallenght == 0){
     $(result).empty();
@@ -956,7 +979,7 @@ Type.prototype.show = function(){
 
 
 
-var vScroll = function(child){
+var vScroll = function(){
 
 	this.currentY = 0;
 	this.targetY = 0;
@@ -967,7 +990,7 @@ var vScroll = function(child){
 
 	this.scrollWrapper = $('#content');
 
-	this.resize(child);
+	this.resize();
 
 	this.bind();
 
@@ -993,8 +1016,8 @@ vScroll.prototype.onVirtualScroll = function(e) {
 
 };
 
-vScroll.prototype.resize = function(child) {
-	this.maxScroll = ($('#content .pokemon:nth-child('+child+')').offset().left - $(window).width()) * -1;
+vScroll.prototype.resize = function() {
+	this.maxScroll = ($('#content .pokemon:last-child').offset().left - ($(window).width() - 266)) * -1;
 };
 
 vScroll.prototype.update = function() {
@@ -1004,4 +1027,4 @@ vScroll.prototype.update = function() {
 		transform: 'translateX(' + this.currentY + 'px)'
 	});
 
-}; 
+};
