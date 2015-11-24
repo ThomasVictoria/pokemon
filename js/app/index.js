@@ -149,12 +149,18 @@ function Display(data){
   var content  = $('#content');
   var child = Math.ceil((Object.keys(data.reponse).length / 3));
   
+  // Height pokemon elmt
+  
+   var size = Math.round($(window).height() / 3);
+  
+  // Height pokemon elmt
+  
   var contentW = (child * 272);
   
   $('#content').css('width', contentW+'px');
   for(i = 0; i < Object.keys(data.reponse).length; i++){
 
-    $(content).append('<div class="pokemon view" data-id="'+ data.reponse[i].id +'">'+ data.reponse[i].name +'</div>');
+    $(content).append('<div class="pokemon view" style="width:'+size+'px;height:'+size+'px;"data-id="'+ data.reponse[i].id +'">'+ data.reponse[i].name +'</div>');
 
   };
 

@@ -36,7 +36,7 @@ vScroll.prototype.onVirtualScroll = function(e) {
 };
 
 vScroll.prototype.resize = function(child) {
-	this.maxScroll = ($('#content .pokemon:nth-child('+child+')').offset().left - ( $(window).width() - 432 )) * -1;
+	this.maxScroll = ($('#content .pokemon:nth-child('+child+')').offset().left - $(window).width()) * -1;
 };
 
 vScroll.prototype.update = function() {

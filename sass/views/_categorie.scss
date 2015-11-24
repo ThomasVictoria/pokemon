@@ -28,6 +28,7 @@ $colorNav : #4a4a4a;
 	transition: width 0.3s ease-out;
 	.text{
 		display: none;
+    transition: display 0.3s ease-out;
 	}
   }	
   
@@ -36,6 +37,7 @@ $colorNav : #4a4a4a;
 	transition: width 0.2s ease-out;
 	.text{
 		display: inline-block;
+    transition: display 0.3s ease-out;
 	}
   }
 
@@ -114,7 +116,6 @@ $colorNav : #4a4a4a;
     top: 0; right: 0;
     width: 200px;
     height: 100%;
-    background: #4b4b4b;
 	
 	input{
 		position: relative;
