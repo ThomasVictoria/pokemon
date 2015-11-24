@@ -295,6 +295,9 @@ body {
   .popup .interaction {
     width: 20%;
     float: left; }
+  .popup .desc {
+    width: 10%;
+    float: left; }
 
 .container {
   width: 1200px;

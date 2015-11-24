@@ -31,9 +31,12 @@ Type.prototype.clear = function(){
 }
 
 Type.prototype.show = function(){
-  
+
   var self         = this.data;
-  var selfBlock    = this.detail;
+  var selfBlock    = this.detail,
+      selfFun      = this.pokemon,
+      selfid       = self.id,
+      json         = $.getJSON('../../data/types.json');
 
   $(this.detail).children('h2').html(self.name);
   $(this.detail).children('div img').attr('src', function(){
@@ -117,15 +120,24 @@ Type.prototype.show = function(){
     $(selfBlock).children('.weakness').append('<a href="#"><div class="type" data-id="'+id+'">'+ this.name +'</div></a>');
 
   });
-  
+
   new Navigation();
+
+  $(this.detail).children('h2').html(self.name);
+
+  $.when(json).done(function(json){
+
+    selfFun(json[selfid]);
+
+  });
 
 }
 
+Type.prototype.pokemon = function(json){
 
+  new call('pokedex', 'all', DisplayPokemon, json);
 
-
-
+};
 
 
 
