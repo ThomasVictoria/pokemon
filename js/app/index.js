@@ -172,7 +172,7 @@ function Display(data){
   // Height pokemon elmt
   for(i = 0; i < Object.keys(data.reponse).length; i++){
 
-    $(content).append('<div class="pokemon view" style="width:'+(size-2)+'px;height:'+(size-2)+'px;"data-id="'+ data.reponse[i].id +'">'+ data.reponse[i].name +'</div>');
+    $(content).append('<div class="pokemon view" style="width:'+(size-2)+'px;height:'+(size-2)+'px;"data-id="'+ data.reponse[i].id +'" data-name="'+data.reponse[i].name+'"><img src="assets/images/' + data.reponse[i].name + '.png" /></div>');
 
   };
 
@@ -182,15 +182,21 @@ function Display(data){
 
   
   //  Gère le scroll
-  var VS = new vScroll();
+  VS = new vScroll();
 
   var showCategorie = new categorie();
 
-  (function raf(){
-    VS.update();
-    window.requestAnimationFrame(raf);
-  })();
-
+  raf();
 }
+
+var VS;
+
+function raf(){
+  VS.update();
+  if(!stopScroll){
+    window.requestAnimationFrame(raf);
+  }
+};
+var stopScroll = true;
 
 new Home();

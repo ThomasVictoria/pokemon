@@ -8,7 +8,8 @@ $('#timeline > .time').on('mouseenter', function(){
 var TimeLine = function(){
 	
 	// Var
-	this.sizeIT; 
+	this.sizeIT;
+	this.elmt = $('.time');
 	
 	// Function
 	this.init();

@@ -47,21 +47,40 @@ call.prototype.request = function(){
     
     var SPEED = 0.01;
     
-    function init(pokemon) {
-        scene = new THREE.Scene();
-        
-        initMesh(pokemon);
-        initCamera();
-        initLights();
-        initRenderer();
+    var loader;    
+    var img;
+    var theJson;
     
-        controls = new THREE.OrbitControls(camera, renderer.domElement);
+    function init(pokemon) {
         $('#view3d').html('');
-        document.getElementById('view3d').appendChild(renderer.domElement);
+        scene = new THREE.Scene();
+        var monBool;
+        theJson = 'http://pokemon.dev/assets/jsonModels/'+pokemon+'/'+pokemon+'.json';
+        
+        var http = new XMLHttpRequest();
+        http.open('HEAD', theJson, false);
+        http.send();
+        monBool = http.status;
+        
+        if(!monBool){
+            img = 'http://pokemon.dev/assets/images/'+pokemon+'.png';
+            img = '<img src="'+img+'" />';
+            $('#view3d').html(img);
+        }else{
+            initMesh(theJson);
+            initCamera();
+            initLights();
+            initRenderer();
+        
+            controls = new THREE.OrbitControls(camera, renderer.domElement);
+            document.getElementById('view3d').appendChild(renderer.domElement);
+            
+            render();
+        }
     }
     
     function initCamera() {
-        camera = new THREE.PerspectiveCamera(70, WIDTH / HEIGHT, 1, 10);
+        camera = new THREE.PerspectiveCamera(90, WIDTH / HEIGHT, 1, 1000);
         camera.position.set(0, 3.5, 5);
         camera.lookAt(scene.position);
     }
@@ -75,8 +94,8 @@ call.prototype.request = function(){
     function initLights() {
 
         hemiLight = new THREE.HemisphereLight( 0xffffff, 0xffffff, 0.6 );
-        hemiLight.color.setHSL( 0.6, 1, 0.6 );
-        hemiLight.groundColor.setHSL( 0.095, 1, 0.75 );
+        hemiLight.color.setHSL( 1, 1, 1 );
+        hemiLight.groundColor.setHSL( 1, 1, 1 );
         hemiLight.position.set( 0, 500, 0 );
         scene.add( hemiLight );
 
@@ -106,16 +125,15 @@ call.prototype.request = function(){
     }
     
     var mesh = null;
-    function initMesh(pokemon) {
-        
-        var loader = new THREE.JSONLoader();
-        loader.load('http://pokemon.dev/assets/jsonModels/'+pokemon+'/'+pokemon+'.json', function(geometry, materials) {
+    
+    function initMesh(theJson) {
+       loader = new THREE.JSONLoader();
+        loader.load(theJson, function(geometry, materials) {
             mesh = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
             mesh.scale.x = mesh.scale.y = mesh.scale.z = 1;
             mesh.translation = THREE.GeometryUtils.center(geometry);
             scene.add(mesh);
         });
-        
     }
     
     function rotateMesh() {
@@ -131,14 +149,13 @@ call.prototype.request = function(){
     function render() {
         requestAnimationFrame(render);
         renderer.render(scene, camera);
-        renderer.setClearColor( 0x2ecc71 );
+        renderer.setClearColor( 0xd8d8d8 );
         controls.update();
     }
 
 function showModel(pokemon){
     if($('#article').css('display') == 'block'){
         init(pokemon);
-        render();
     }
 }
 function categorie(){
@@ -190,7 +207,7 @@ categorie.prototype.callAjax = function(){
   $(this.pokemon).on('click', function(e){
     $(selfPokemon).fadeIn(400);
 
-    var name = $(this).html(),
+    var name = $(this).attr('data-name'),
         id   = $(this).attr('data-id');
     showModel(name);
     var Data = new call('pokemon', id, DisplayData);
@@ -273,7 +290,8 @@ $('#timeline > .time').on('mouseenter', function(){
 var TimeLine = function(){
 	
 	// Var
-	this.sizeIT; 
+	this.sizeIT;
+	this.elmt = $('.time');
 	
 	// Function
 	this.init();
@@ -464,7 +482,7 @@ function Display(data){
   // Height pokemon elmt
   for(i = 0; i < Object.keys(data.reponse).length; i++){
 
-    $(content).append('<div class="pokemon view" style="width:'+(size-2)+'px;height:'+(size-2)+'px;"data-id="'+ data.reponse[i].id +'">'+ data.reponse[i].name +'</div>');
+    $(content).append('<div class="pokemon view" style="width:'+(size-2)+'px;height:'+(size-2)+'px;"data-id="'+ data.reponse[i].id +'" data-name="'+data.reponse[i].name+'"><img src="assets/images/' + data.reponse[i].name + '.png" /></div>');
 
   };
 
@@ -474,16 +492,22 @@ function Display(data){
 
   
   //  Gère le scroll
-  var VS = new vScroll();
+  VS = new vScroll();
 
   var showCategorie = new categorie();
 
-  (function raf(){
-    VS.update();
-    window.requestAnimationFrame(raf);
-  })();
-
+  raf();
 }
+
+var VS;
+
+function raf(){
+  VS.update();
+  if(!stopScroll){
+    window.requestAnimationFrame(raf);
+  }
+};
+var stopScroll = true;
 
 new Home();
 function Loader(){
@@ -575,16 +599,37 @@ var resizeContent = function(){
 	
 	this.size = Math.floor($(window).height() / 3);
 	this.view = $('#content').find('.view');
+	this.divView = $('#content').find('.view');
 	this.content = $('#content');
 	this.contentW;
 	
 	this.resize();
+	this.razScroll();
 }
 
 resizeContent.prototype.resize = function(){
+  stopScroll = !stopScroll;
   this.view = this.view.length / 3;
   this.contentW = (this.view * (this.size-2));
   this.content.css('width', this.contentW+'px');
+}
+
+resizeContent.prototype.razScroll = function(){
+  TweenMax.staggerFrom(this.divView, 0.5,{opacity: 0, x:-300, delai:0.5});
+	if(stopScroll){
+		TweenMax.from(this.content, 1, {
+			transform:"translateX(0)",
+			ease: Power1.easeIn, 
+			onComplete:completeRazScroll
+			});
+		
+	}
+}
+
+function completeRazScroll(){
+	stopScroll = false;
+	VS.raz();
+	raf();
 }
 function SearchField(){
 
@@ -732,7 +777,8 @@ var vScroll = function(){
 	this.maxScroll = 0;
 
 	this.scrollWrapper = $('#content');
-
+	this.lastChild = $('#content .pokemon:last-child');
+	
 	this.resize();
 
 	this.bind();
@@ -760,7 +806,10 @@ vScroll.prototype.onVirtualScroll = function(e) {
 };
 
 vScroll.prototype.resize = function() {
-	this.maxScroll = ($('#content .pokemon:last-child').offset().left - ($(window).width() - 266)) * -1;
+	
+	this.maxScroll = ( ( this.lastChild.offset().left ) - ($(window).width() - (this.lastChild.width() - 2)) ) * -1;
+	console.log(this.maxScroll);
+	
 };
 
 vScroll.prototype.update = function() {
@@ -771,3 +820,11 @@ vScroll.prototype.update = function() {
 	});
 
 };
+
+vScroll.prototype.raz = function(){
+	this.currentY = 0;
+	this.targetY = 0;
+	
+	this.resize();
+	this.bind();
+}

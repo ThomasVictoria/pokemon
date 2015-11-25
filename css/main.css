@@ -118,44 +118,34 @@ body {
       top: 0px; }
       #home #timeline .time:hover {
         cursor: pointer; }
-        #home #timeline .time:hover .smallTimeL, #home #timeline .time:hover .smallTimeR {
-          height: 30px;
-          transition: height 0.1s; }
-        #home #timeline .time:hover .fullTimeL, #home #timeline .time:hover .fullTimeR {
-          height: 50px;
-          transition: height 0.1s; }
       #home #timeline .time .smallTimeL {
         position: absolute;
         width: 10px;
         height: 20px;
         bottom: 0px;
         left: 0;
-        border-right: 1px solid #bcbcbc;
-        transition: height 0.4s; }
+        border-right: 1px solid #bcbcbc; }
       #home #timeline .time .smallTimeR {
         position: absolute;
         width: 10px;
         height: 20px;
         bottom: 0px;
         right: 0;
-        border-left: 1px solid #bcbcbc;
-        transition: height 0.4s; }
+        border-left: 1px solid #bcbcbc; }
       #home #timeline .time .fullTimeL {
         position: absolute;
         width: 10px;
         height: 40px;
         bottom: 0px;
         left: 0;
-        border-right: 2px solid #bcbcbc;
-        transition: height 0.4s; }
+        border-right: 2px solid #bcbcbc; }
       #home #timeline .time .fullTimeR {
         position: absolute;
         width: 10px;
         height: 40px;
         bottom: 0px;
         right: 0;
-        border-left: 2px solid #bcbcbc;
-        transition: height 0.4s; }
+        border-left: 2px solid #bcbcbc; }
       #home #timeline .time span {
         position: absolute;
         left: 0px;

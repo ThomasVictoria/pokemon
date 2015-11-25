@@ -47,7 +47,7 @@ categorie.prototype.callAjax = function(){
   $(this.pokemon).on('click', function(e){
     $(selfPokemon).fadeIn(400);
 
-    var name = $(this).html(),
+    var name = $(this).attr('data-name'),
         id   = $(this).attr('data-id');
     showModel(name);
     var Data = new call('pokemon', id, DisplayData);
