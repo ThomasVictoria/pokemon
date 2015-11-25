@@ -15,8 +15,10 @@
   
   .desc{
     
-    width: 10%;
+    width: 18%;
     float: left;
+    overflow:auto;
+    height: 500px;
     
   }
   
@@ -65,10 +67,32 @@
 	float: left;
 }
 
-.caracteristique{
+#caracteristique{
 	width: 680px;
 	height: 750px; 
-  margin: auto;
+  float: right;
+  
+  .spec{
+    
+    width: 600px;
+    height: 300px;
+    position: relative;
+    border: 1px solid black;
+   
+    li{
+
+      font-size: 5px;
+      background: #0f0;
+      height: 78%;
+      width: 5%;
+      position: relative;
+      display: inline-block;
+      margin-left: 6%;
+      bottom: 0;
+      
+    }
+    
+  }
   
 	h2{
 		font-size: 2em;
