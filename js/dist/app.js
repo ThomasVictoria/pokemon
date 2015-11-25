@@ -1,8 +1,57 @@
 function DisplayAbility(data){
   
-  console.log(data);
+  new Ability(data);
   
 }
+
+function Ability(data){
+
+  this.data   = data;
+  this.detail = $('#ability .container .caracteristique');
+
+  this.init();
+
+}
+
+Ability.prototype.init = function(){
+
+  this.clear();
+  this.show();
+
+}
+
+Ability.prototype.clear = function(){
+
+  $(this.detail).children().each(function(){
+
+    $(this).empty();
+
+  });
+
+}
+
+Ability.prototype.show = function(){
+
+  var self    = this.data,
+      selfFun = this.pokemon,
+      selfid  = self.reponse.id,
+      json    = $.getJSON('../../data/ability.json');
+  
+  $(this.detail).children('h2').html(self.name);
+
+  $.when(json).done(function(json){
+
+    selfFun(json[selfid]);
+
+  });
+
+}
+
+Ability.prototype.pokemon = function(json){
+  
+  new call('pokedex', 'all', DisplayPokemon, json);
+
+};
 function call(datatype, id, callback, optionnal){
 
   this.datatype = datatype;
@@ -22,7 +71,8 @@ call.prototype.init = function(){
 
 call.prototype.request = function(){
 
-  var self = this.callback;
+  var self       = this.callback,
+      selfOption = this.optionnal;
 
   $.ajax({
     type: 'post',
@@ -31,10 +81,10 @@ call.prototype.request = function(){
     data: {'datatype': this.datatype, 'id': this.id},
     dataType: 'json',
     success: function(json) {
-      if (typeof this.optionnal === 'undefined') {
+      if (typeof selfOption === 'undefined') {
         self(json);
       } else {
-        self(json, this.optionnal);
+        self(json, selfOption);
       }
     }
   });
@@ -242,44 +292,167 @@ categorie.prototype.callAjax = function(){
     $(selfPopup).fadeOut(400);
   });
 
-
-
 }
 function DisplayData(data){
-  console.log(data);
+
   var popo = new pokearticle(data);
-  
+
 }
 
 var pokearticle = function(data){
-  
+
+  this.data = data;
+
   this.article = $('#article');
   this.td = $('#article').find('td');
 
-  this.show(data);
-  
+  this.init();
+
 }
 
-pokearticle.prototype.show = function(data){
-  
-  this.article.find('h2').html(data.reponse.name);
-  
-  this.td[0].innerText = 'Height : ';
-  this.td[1].innerText = data.reponse.height;
-  
-  this.td[2].innerText = 'Attack : ';
-  this.td[3].innerText = data.reponse.attack;
-  
-  this.td[4].innerText = 'Weight : ';
-  this.td[5].innerText = data.reponse.weight;
-  
-  this.td[6].innerText = 'Defense : ';
-  this.td[7].innerText = data.reponse.defense;
-  
-  this.td[8].innerText = 'Speed : ';
-  this.td[9].innerText = data.reponse.speed;
-  
+pokearticle.prototype.init = function(){
+
+  this.show();
+  this.moveability();
+
 }
+
+pokearticle.prototype.show = function(){
+
+  console.log(this.data.reponse);
+  
+  this.article.find('h2').html(this.data.reponse.name);
+
+  $('#taille').html('Height : '+this.data.reponse.height);
+  $('#taille').css('height', (this.data.reponse.height*100)/145+'%');
+  $('#poid').html('Weight : '+this.data.reponse.weight);
+  $('#poid').css('height', (this.data.reponse.weight*100)/22044+'%');
+  $('#vitesse').html('Speed : '+this.data.reponse.speed);
+  $('#vitesse').css('height', (this.data.reponse.speed*100)/180+'%');
+  $('#attack').html('Attack : '+this.data.reponse.attack);
+  $('#attack').css('height', (this.data.reponse.attack*100)/180+'%');
+  $('#spe_attack').html('Special Attack : '+this.data.reponse.sp_atk);
+  $('#spe_attack').css('height', (this.data.reponse.sp_atk*100)/180+'%');
+  $('#defense').html('Defense : '+this.data.reponse.defense);
+  $('#defense').css('height', (this.data.reponse.defense*100)/230+'%');
+  $('#hp').html('HP : '+this.data.reponse.hp);
+  $('#hp').css('height', (this.data.reponse.hp*100)/255+'%');
+  $('#spe_def').html('Special Defense : '+this.data.reponse.sp_def);
+  $('#spe_def').css('height', (this.data.reponse.sp_def*100)/230+'%');
+
+}
+
+pokearticle.prototype.moveability = function(){
+
+  var self          = this.data,
+      localSelector = this,
+      selfFun       = this.display,
+      selfid        = self.reponse.national_id,
+      ability       = $.getJSON('../../data/ability.json'),
+      moves         = $.getJSON('../../data/moves.json'),
+      type          = $.getJSON('../../data/types.json');
+
+  console.log(selfid);
+
+  $(this.detail).children('h2').html(self.name);
+
+  $.when(ability, moves, type).done(function(ability, moves, type){
+
+    selfFun(ability[0], moves[0], type[0], selfid, localSelector);
+
+  });
+}
+
+pokearticle.prototype.display = function(ability, moves, type, pokemonId, localSelector){
+
+  $('#abilities, #moves, #types').empty();
+
+  $('#abilities').append('Abilities :');
+  $('#moves').append('Moves :');
+  $('#types').append('Type :');
+
+
+  for(i=1; i < Object.keys(ability).length; i++){
+
+    for(x=0; x < Object.keys(ability[i].pokemons).length; x++){
+
+      if(ability[i].pokemons[x] == pokemonId){
+
+        var link      = ability[i].resource_uri,
+            delimiter = '/',
+            start     = 4,
+            tokens    = link.split(delimiter).slice(start),
+            step      = tokens.join(delimiter),
+            lenght    = step.length,
+            id        = step.slice(0,lenght -1);
+
+        $('#abilities').append('<a href="#"><div class="ability" data-id="'+id+'" >'+ ability[i].name +'</div></a>')
+      }
+
+    }
+
+  }
+
+  for(y=1; y < Object.keys(moves).length; y++){
+
+    if(y != 165){
+
+      for(z=1; z < Object.keys(moves[y].pokemons).length; z++){
+
+        if(moves[y].pokemons[z] == pokemonId){
+
+          var link      = moves[y].resource_uri,
+              delimiter = '/',
+              start     = 4,
+              tokens    = link.split(delimiter).slice(start),
+              step      = tokens.join(delimiter),
+              lenght    = step.length,
+              id        = step.slice(0,lenght -1);
+
+          $('#moves').append('<a href="#"><div class="ability" data-id="'+id+'" >'+ moves[y].name +'</div></a>')
+        }
+
+      }
+
+    }
+
+  }
+
+  for(y=1; y < Object.keys(type).length; y++){
+
+    if(y != 165){
+
+      for(z=1; z < Object.keys(type[y].pokemons).length; z++){
+        
+        if(type[y].pokemons[z] == pokemonId){
+
+          var link      = type[y].resource_uri,
+              delimiter = '/',
+              start     = 4,
+              tokens    = link.split(delimiter).slice(start),
+              step      = tokens.join(delimiter),
+              lenght    = step.length,
+              id        = step.slice(0,lenght -1);
+
+          $('#types').append('<a href="#"><div class="type" data-id="'+id+'" >'+ type[y].name +'</div></a>')
+        }
+
+      }
+
+    }
+
+  }
+
+  new Navigation();
+
+}
+
+
+
+
+
+
+
 // Home
 $('#timeline > .time').on('mouseenter', function(){
 	if($(this).attr('data-gen')){
@@ -544,10 +717,67 @@ Loader.prototype.activateLoader = function(){
 
 var loader = new Loader();
 function DisplayMove(data){
-    
-  console.log(data);
-  
+
+  new Move(data.reponse);
+
 }
+
+function Move(data){
+
+  this.data   = data;
+  this.detail = $('#move .container .caracteristique');
+
+  this.init();
+
+}
+
+Move.prototype.init = function(){
+
+  this.clear();
+  this.show();
+
+}
+
+Move.prototype.clear = function(){
+
+  $(this.detail).children().each(function(){
+
+    $(this).empty();
+
+  });
+
+}
+
+Move.prototype.show = function(){
+
+  var self    = this.data,
+      selfFun = this.pokemon,
+      selfid  = self.id,
+      json    = $.getJSON('../../data/moves.json');
+
+  $(this.detail).children('h2').html(self.name);
+
+  $.when(json).done(function(json){
+
+    selfFun(json[selfid]);
+
+  });
+
+}
+
+Move.prototype.pokemon = function(json){
+
+  new call('pokedex', 'all', DisplayPokemon, json);
+
+};
+
+
+
+
+
+
+
+
 function Navigation(){
 
   this.type      = $('a div.type');
@@ -591,6 +821,28 @@ Navigation.prototype.init = function(){
 
     var id = $(this).attr('data-id');
     new call('type', id, DisplayType);
+
+  });
+
+}
+function DisplayPokemon(pokemon, json){
+  
+  for(i=1; i < Object.keys(json.pokemons).length; i++){
+
+    for(x=1; x < Object.keys(pokemon.reponse).length; x++){
+
+      if(pokemon.reponse[x].id == json.pokemons[i])
+        $('.pokemons').append('<a href="#"><div class="pokemon" data-id="'+pokemon.reponse[x].id+'">'+pokemon.reponse[x].name+'</div></a>')
+
+        }
+
+  }
+
+  new categorie();
+
+  $('#move, #ability, #type').on('click', function(){
+
+    $(this).fadeOut(500);
 
   });
 
@@ -763,10 +1015,149 @@ SearchField.prototype.DisplaySearch = function(name, data, id){
 new SearchField();
 
 function DisplayType(data){
-  
-  console.log(data);
-  
+
+  new Type (data.reponse);
+
 }
+
+function Type(data){
+
+  this.data   = data;
+  this.detail = $('#type .container .caracteristique');
+
+  this.init();
+
+}
+
+Type.prototype.init = function(){
+
+  this.clear();
+  this.show();
+
+}
+
+Type.prototype.clear = function(){
+
+  $(this.detail).children().each(function(){
+
+    $(this).empty();
+
+  });
+
+}
+
+Type.prototype.show = function(){
+
+  var self         = this.data;
+  var selfBlock    = this.detail,
+      selfFun      = this.pokemon,
+      selfid       = self.id,
+      json         = $.getJSON('../../data/types.json');
+
+  $(this.detail).children('h2').html(self.name);
+  $(this.detail).children('div img').attr('src', function(){
+    return self.name + '.png';
+  });
+
+
+  $(selfBlock).children('.ineffective').append('Ineffective');
+  $(selfBlock).children('.no_effect').append('No effect');
+  $(selfBlock).children('.super_effective').append('Super Effective');
+  $(selfBlock).children('.weakness').append('Weakness');
+  $(selfBlock).children('.resistance').append('Resistance');
+
+
+  $(this.data.ineffective).each(function(){
+
+    var link      = this.resource_uri,
+        delimiter = '/',
+        start     = 4,
+        tokens    = link.split(delimiter).slice(start),
+        step      = tokens.join(delimiter),
+        lenght    = step.length,
+        id        = step.slice(0,lenght -1);
+
+    $(selfBlock).children('.ineffective').append('<a href="#"><div class="type" data-id="'+id+'">'+ this.name +'</div></a>');
+
+  });
+
+  $(this.data.no_effect).each(function(){
+
+    var link      = this.resource_uri,
+        delimiter = '/',
+        start     = 4,
+        tokens    = link.split(delimiter).slice(start),
+        step      = tokens.join(delimiter),
+        lenght    = step.length,
+        id        = step.slice(0,lenght -1);
+
+    $(selfBlock).children('.no_effect').append('<a href="#"><div class="type" data-id="'+id+'">'+ this.name +'</div></a>'); 
+
+  });
+
+  $(this.data.resistance).each(function(){
+
+    var link      = this.resource_uri,
+        delimiter = '/',
+        start     = 4,
+        tokens    = link.split(delimiter).slice(start),
+        step      = tokens.join(delimiter),
+        lenght    = step.length,
+        id        = step.slice(0,lenght -1);
+
+    $(selfBlock).children('.resistance').append('<a href="#"><div class="type" data-id="'+id+'">'+ this.name +'</div></a>');    
+
+  });
+
+  $(this.data.super_effective).each(function(){
+
+    var link      = this.resource_uri,
+        delimiter = '/',
+        start     = 4,
+        tokens    = link.split(delimiter).slice(start),
+        step      = tokens.join(delimiter),
+        lenght    = step.length,
+        id        = step.slice(0,lenght -1);
+
+    $(selfBlock).children('.super_effective').append('<a href="#"><div class="type" data-id="'+id+'">'+ this.name +'</div></a>');    
+
+  });
+
+  $(this.data.weakness).each(function(){
+
+    var link      = this.resource_uri,
+        delimiter = '/',
+        start     = 4,
+        tokens    = link.split(delimiter).slice(start),
+        step      = tokens.join(delimiter),
+        lenght    = step.length,
+        id        = step.slice(0,lenght -1);
+
+    $(selfBlock).children('.weakness').append('<a href="#"><div class="type" data-id="'+id+'">'+ this.name +'</div></a>');
+
+  });
+
+  new Navigation();
+
+  $(this.detail).children('h2').html(self.name);
+
+  $.when(json).done(function(json){
+
+    selfFun(json[selfid]);
+
+  });
+
+}
+
+Type.prototype.pokemon = function(json){
+
+  new call('pokedex', 'all', DisplayPokemon, json);
+
+};
+
+
+
+
 var vScroll = function(){
 
 	this.currentY = 0;

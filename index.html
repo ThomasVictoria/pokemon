@@ -190,7 +190,7 @@ Categorie : Affichage de tous les pokemons
           <input type="text" placeholder="Search..." id="search">
 
         </form>
-        
+
         <div class="results">
         </div>
 
@@ -208,128 +208,128 @@ Article : Description du pokemon sous forme de pop-up
       <div class="container">
 
         <div class="controls">
-          <div class="back"></div>
           <div class="close"></div>
-          <div class="next"></div>
         </div>
 
         <div id="view3d"></div>
 
         <div id="caracteristique">
-          <h2>Salamèche</h2>
+          <h2></h2>
 
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo vel ipsum tenetur totam esse ipsa, doloribus assumenda, quaerat voluptate fugit. Eum officiis omnis, aut dolorum dignissimos pariatur atque at error!</p>
+          
+          <ul class="spec">
+            <li id="taille"></li>
+            <li id="poid"></li>
+            <li id="vitesse"></li>
+            <li id="attack"></li>
+            <li id="spe_attack"></li>
+            <li id="defense"></li>
+            <li id="spe_def"></li>
+            <li id="hp"></li>
+          </ul>
 
-          <table>
-            <tr>
-              <td><strong>Taille :</strong></td>
-              <td>15cm</td>
-              <td><strong>Catégorie :</strong></td>
-              <td>Feu</td>
-            </tr>
-            <tr>
-              <td><strong>Poids :</strong></td>
-              <td>35kg</td>
-              <td><strong>Talent :</strong></td>
-              <td>Deflagration</td>
-            </tr>
-            <tr>
-              <td><strong>Sexe :</strong></td>
-              <td></td>
-            </tr>
-          </table>
+          <div id="types" class='desc'></div>
+          <div id="moves" class='desc'></div>
+          <div id="abilities" class='desc'></div>
+
         </div>
       </div>
     </div>
-    
- 
-    <!--
-			
-			Loader
-			
-		-->
-		
-		<div id="loader-container">
-			<div id="loader">
-				<div class="img-loader" id="img-loader1">
-				</div><div class="img-loader" id="img-loader2">
-				</div><div class="img-loader" id="img-loader3">
-				</div><div class="img-loader" id="img-loader4">
-				</div><div class="img-loader" id="img-loader5">
-				</div><div class="img-loader" id="img-loader6">
-				</div><div class="img-loader" id="img-loader7">
-				</div>
-			</div>
-		</div> 
-    
-    
-    <!--
-      
-      Loader
-      
-    -->
-<!--    
 
-    Affichage Types
-            
+
+    <!--
+
+Loader
+
 -->
-    
+
+    <div id="loader-container">
+      <div id="loader">
+        <div class="img-loader" id="img-loader1">
+        </div><div class="img-loader" id="img-loader2">
+        </div><div class="img-loader" id="img-loader3">
+        </div><div class="img-loader" id="img-loader4">
+        </div><div class="img-loader" id="img-loader5">
+        </div><div class="img-loader" id="img-loader6">
+        </div><div class="img-loader" id="img-loader7">
+        </div>
+      </div>
+    </div> 
+
+
+    <!--
+
+Loader
+
+-->
+    <!--    
+
+Affichage Types
+
+-->
+
     <div id="type" class="popup">
       <div class="container">
 
         <div class="controls">
-          <div class="back"></div>
           <div class="close"></div>
-          <div class="next"></div>
         </div>
 
 
         <div class="caracteristique">
           <h2></h2>
+          <img src="" alt="">
+          <div class="ineffective interaction"></div>
+          <div class="no_effect interaction"></div>
+          <div class="resistance interaction"></div>
+          <div class="super_effective interaction"></div>
+          <div class="weakness interaction"></div>
+
+          <div class="pokemons desc"></div>
+
         </div>
       </div>
     </div>
-    
+
     <!--    
 
-    Affichage Ability
-            
+Affichage Ability
+
 -->
-    
+
     <div id="ability" class="popup">
       <div class="container">
 
         <div class="controls">
-          <div class="back"></div>
           <div class="close"></div>
-          <div class="next"></div>
         </div>
 
 
         <div class="caracteristique">
           <h2></h2>
+          <div class="pokemons desc"></div>
         </div>
       </div>
     </div>
-    
+
     <!--    
 
-    Affichage move
-            
+Affichage move
+
 -->
-    
+
     <div id="move" class="popup">
       <div class="container">
 
         <div class="controls">
-          <div class="back"></div>
           <div class="close"></div>
-          <div class="next"></div>
         </div>
 
 
         <div class="caracteristique">
           <h2></h2>
+          <div class="pokemons"></div>
         </div>
       </div>
     </div>

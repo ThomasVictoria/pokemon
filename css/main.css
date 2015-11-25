@@ -282,6 +282,14 @@ body {
   z-index: 20;
   background-color: #d8d8d8;
   display: none; }
+  .popup .interaction {
+    width: 20%;
+    float: left; }
+  .popup .desc {
+    width: 18%;
+    float: left;
+    overflow: auto;
+    height: 500px; }
 
 .container {
   width: 1200px;
@@ -324,25 +332,40 @@ body {
   height: 750px;
   float: left; }
 
-.caracteristique {
+#caracteristique {
   width: 680px;
   height: 750px;
   float: right; }
-  .caracteristique h2 {
+  #caracteristique .spec {
+    width: 600px;
+    height: 300px;
+    position: relative;
+    border: 1px solid black; }
+    #caracteristique .spec li {
+      font-size: 5px;
+      background: #0f0;
+      height: 78%;
+      width: 5%;
+      position: relative;
+      display: inline-block;
+      margin-left: 6%;
+      bottom: 0; }
+  #caracteristique h2 {
     font-size: 2em;
-    padding: 40px 40px 40px 20px; }
-  .caracteristique p {
+    padding: 40px 40px 40px 20px;
+    text-align: center; }
+  #caracteristique p {
     font-size: 1.2em;
     padding: 20px 40px 20px 20px;
     line-height: 1.4em; }
-  .caracteristique table {
+  #caracteristique table {
     background-color: #ebebeb;
     margin: 20px;
     border-radius: 5px;
     width: 620px; }
-    .caracteristique table td {
+    #caracteristique table td {
       padding: 20px; }
-      .caracteristique table td strong {
+      #caracteristique table td strong {
         font-weight: bold; }
 
 #loader-container {

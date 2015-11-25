@@ -17,7 +17,8 @@ call.prototype.init = function(){
 
 call.prototype.request = function(){
 
-  var self = this.callback;
+  var self       = this.callback,
+      selfOption = this.optionnal;
 
   $.ajax({
     type: 'post',
@@ -26,10 +27,10 @@ call.prototype.request = function(){
     data: {'datatype': this.datatype, 'id': this.id},
     dataType: 'json',
     success: function(json) {
-      if (typeof this.optionnal === 'undefined') {
+      if (typeof selfOption === 'undefined') {
         self(json);
       } else {
-        self(json, this.optionnal);
+        self(json, selfOption);
       }
     }
   });
