@@ -37,7 +37,7 @@ Home.prototype.CallPokemons = function(){
 
 }
 
-function Display(data){
+function Display(data){ 
 
   console.log(data);
 
