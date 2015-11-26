@@ -57,8 +57,6 @@ pokearticle.prototype.moveability = function(){
       moves         = $.getJSON('../../data/moves.json'),
       type          = $.getJSON('../../data/types.json');
 
-  console.log(selfid);
-
   $(this.detail).children('h2').html(self.name);
 
   $.when(ability, moves, type).done(function(ability, moves, type){
