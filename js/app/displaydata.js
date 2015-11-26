@@ -87,6 +87,7 @@ pokearticle.prototype.moveability = function(){
 
   $(this.detail).children('h2').html(self.reponse.name);
 
+
   $.when(ability, moves, type).done(function(ability, moves, type){
 
     selfFun(ability[0], moves[0], type[0], selfid, localSelector);
