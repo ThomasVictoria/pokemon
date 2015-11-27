@@ -79,7 +79,7 @@ SearchField.prototype.init = function(type, ability, move, value, callback){
             }
           }
 
-          var Pokemon      = $(this).html(),
+          var Pokemon      = $(this).attr('data-name'),
               cutPokemon   = Pokemon.substring(0, Vallenght);
 
           if(value.toUpperCase() === cutPokemon.toUpperCase()){
@@ -94,7 +94,7 @@ SearchField.prototype.init = function(type, ability, move, value, callback){
             $(this).addClass('hide');
             $(this).removeClass('view');
           }
-
+          
         });
 
       }

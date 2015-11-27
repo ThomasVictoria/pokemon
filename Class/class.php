@@ -70,11 +70,11 @@ class Call
 
   }
 
-  function getImage($id)
+  function getDesc($id)
   {
 
-    $response = $this->getCall('http://pokeapi.co/'.$id);
-    return $response->image;
+    $response = $this->getCall('http://pokeapi.co/api/v1/description/'.$id.'/');
+    return $response;
 
   }
 

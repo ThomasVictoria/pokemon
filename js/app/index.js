@@ -46,10 +46,12 @@ Home.prototype.filters = function(){
 
     var filters = Array();
 
-    $('#categorie ul .point.select').parent().each(function(){
+    $('#categorie ul .point.select').each(function(){
 
-      filters.push($(this).find('.text').html());
+      filters.push($(this).attr('data-name'));      
 
+      console.log($(this).attr('data-name'));
+      
     });
 
     $.getJSON( "../../data/types.json", function(data){
@@ -67,7 +69,7 @@ Home.prototype.applyFilters = function(filters, data){
 
   var pokemonFiltered = Array();
 
-  for(i=1; i < Object.keys(data).length; i++){
+  for(i=1; i < Object.keys(data).length+1; i++){
 
     if(filters.length == 0){
 

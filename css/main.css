@@ -201,27 +201,29 @@ body {
       transition: display 0.3s ease-out; }
   #categorie ul {
     position: relative;
-    top: 50%;
-    bottom: 50%;
-    transform: translateY(-50%); }
+    top: 53%;
+    transform: translateY(-50%);
+    margin-left: 20px; }
     #categorie ul li {
-      padding: 10px 0 10px 30px; }
+      margin-top: 5px; }
+      #categorie ul li .point {
+        width: 40px;
+        height: 40px; }
+        #categorie ul li .point img {
+          width: 100%; }
       #categorie ul li:hover {
         font-weight: bold;
         cursor: pointer; }
-        #categorie ul li:hover .point {
-          background-color: rgba(239, 240, 242, 0.5); }
     #categorie ul .point {
       width: 15px;
       height: 15px;
-      border: rgba(239, 240, 242, 0.5) 1px solid;
       border-radius: 50%;
       display: inline-block;
       vertical-align: middle; }
     #categorie ul .select {
       opacity: 1; }
     #categorie ul .unselect {
-      opacity: 0.5; }
+      opacity: 0.3; }
     #categorie ul .text {
       color: #eff0f2;
       vertical-align: middle;
@@ -336,20 +338,58 @@ body {
   width: 680px;
   height: 750px;
   float: right; }
+  #caracteristique #types span {
+    padding-top: 10px;
+    margin-left: 10px; }
+    #caracteristique #types span img {
+      width: 75px; }
+  #caracteristique .details li {
+    display: inline-block;
+    width: 50px;
+    margin-left: 6.2%;
+    text-align: center;
+    font-size: 13px; }
   #caracteristique .spec {
     width: 600px;
-    height: 300px;
-    position: relative;
-    border: 1px solid black; }
+    height: 200px;
+    position: relative; }
+    #caracteristique .spec .attack {
+      background: #19B5FE; }
+      #caracteristique .spec .attack .triangle {
+        border-color: transparent transparent #19B5FE transparent; }
+    #caracteristique .spec .vitesse {
+      background: #9A12B3; }
+      #caracteristique .spec .vitesse .triangle {
+        border-color: transparent transparent #9A12B3 transparent; }
+    #caracteristique .spec .spe_attack {
+      background: #F9BF3B; }
+      #caracteristique .spec .spe_attack .triangle {
+        border-color: transparent transparent #F9BF3B transparent; }
+    #caracteristique .spec .defense {
+      background: #2ECC71; }
+      #caracteristique .spec .defense .triangle {
+        border-color: transparent transparent #2ECC71 transparent; }
+    #caracteristique .spec .spe_def {
+      background: #26C281; }
+      #caracteristique .spec .spe_def .triangle {
+        border-color: transparent transparent #26C281 transparent; }
+    #caracteristique .spec .hp {
+      background: #CF000F; }
+      #caracteristique .spec .hp .triangle {
+        border-color: transparent transparent #CF000F transparent; }
     #caracteristique .spec li {
-      font-size: 5px;
-      background: #0f0;
-      height: 78%;
-      width: 5%;
+      text-align: center;
+      width: 50px;
       position: relative;
       display: inline-block;
-      margin-left: 6%;
-      bottom: 0; }
+      margin-left: 7%; }
+      #caracteristique .spec li .triangle {
+        position: absolute;
+        top: -20px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 25px 20px 25px; }
   #caracteristique h2 {
     font-size: 2em;
     padding: 40px 40px 40px 20px;
@@ -363,6 +403,10 @@ body {
     margin: 20px;
     border-radius: 5px;
     width: 620px; }
+    #caracteristique table td#abilities a:after {
+      content: ", "; }
+    #caracteristique table td#abilities a:last-child:after {
+      content: ""; }
     #caracteristique table td {
       padding: 20px; }
       #caracteristique table td strong {

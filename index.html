@@ -101,80 +101,148 @@ Categorie : Affichage de tous les pokemons
 
         <ul>
           <li>
-            <div class="point empty"></div>
-            <div class="text">Normal</div>
+            <div class="point empty" data-name="Normal">
+              <img src="assets/types/Normal.png" alt="">
+            </div>
+            <div class="text">
+              Normal
+            </div>
           </li>
           <li>
-            <div class="point empty"></div>
-            <div class="text">Fire</div>
+            <div class="point empty" data-name="Fire">
+              <img src="assets/types/Fire.png" alt="">
+            </div>
+            <div class="text">
+              Fire
+            </div>
           </li>
           <li>
-            <div class="point empty"></div>
-            <div class="text">Water</div>
+            <div class="point empty" data-name="Water">
+              <img src="assets/types/Water.png" alt="">
+            </div>
+            <div class="text">
+              Water
+            </div>
           </li>
           <li>
-            <div class="point empty"></div>
-            <div class="text">Grass</div>
+            <div class="point empty" data-name="Grass">
+              <img src="assets/types/Grass.png" alt="">
+            </div>
+            <div class="text">
+              Grass
+            </div>
           </li>
           <li>
-            <div class="point empty"></div>
-            <div class="text">Ground</div>
+            <div class="point empty" data-name="Ground">
+              <img src="assets/types/Ground.png" alt="">
+            </div>
+            <div class="text">
+              Ground
+            </div>
           </li>
           <li>
-            <div class="point empty"></div>
-            <div class="text">Bug</div>
+            <div class="point empty" data-name="Steel">
+              <img src="assets/types/Steel.png" alt="">
+            </div>
+            <div class="text">
+              Steel
+            </div>
           </li>
           <li>
-            <div class="point empty"></div>
-            <div class="text">Steel</div>
+            <div class="point empty" data-name="Poison">
+              <img src="assets/types/Poison.png" alt="">
+            </div>
+            <div class="text">
+              Poison
+            </div>
           </li>
           <li>
-            <div class="point empty"></div>
-            <div class="text">Poison</div>
+            <div class="point empty" data-name="Fighting">
+              <img src="assets/types/Fighting.png" alt="">
+            </div>
+            <div class="text">
+              Fight
+            </div>
           </li>
           <li>
-            <div class="point empty"></div>
-            <div class="text">Fighting</div>
+            <div class="point empty" data-name="Flying">
+              <img src="assets/types/Fly.png" alt="">
+            </div>
+            <div class="text">
+              Fly
+            </div>
           </li>
           <li>
-            <div class="point empty"></div>
-            <div class="text">Flying</div>
+            <div class="point empty" data-name="Bug">
+              <img src="assets/types/Insect.png" alt="">
+            </div>
+            <div class="text">
+              Bug
+            </div>
           </li>
           <li>
-            <div class="point empty"></div>
-            <div class="text">Bug</div>
+            <div class="point empty" data-name="Ghost">
+              <img src="assets/types/Ghost.png" alt="">
+            </div>
+            <div class="text">
+              Ghost
+            </div>
           </li>
           <li>
-            <div class="point empty"></div>
-            <div class="text">Ghost</div>
+            <div class="point empty" data-name="Electric">
+              <img src="assets/types/Electric.png" alt="">
+            </div>
+            <div class="text">
+              Electric
+            </div>
           </li>
           <li>
-            <div class="point empty"></div>
-            <div class="text">Eletric</div>
+            <div class="point empty" data-name="Psychic">
+              <img src="assets/types/Psy.png" alt="">
+            </div>
+            <div class="text">
+              Psy
+            </div>
           </li>
           <li>
-            <div class="point empty"></div>
-            <div class="text">Psychic</div>
+            <div class="point empty" data-name="Ice">
+              <img src="assets/types/Ice.png" alt="">
+            </div>
+            <div class="text">
+              Ice
+            </div>
           </li>
           <li>
-            <div class="point empty"></div>
-            <div class="text">Ice</div>
+            <div class="point empty" data-name="Rock">
+              <img src="assets/types/Rock.png" alt="">
+            </div>
+            <div class="text">
+              Rock
+            </div>
           </li>
           <li>
-            <div class="point empty"></div>
-            <div class="text">Rock</div>
+            <div class="point empty" data-name="Dragon">
+              <img src="assets/types/Dragon.png" alt="">
+            </div>
+            <div class="text">
+              Dragon
+            </div>
           </li>
           <li>
-            <div class="point empty"></div>
-            <div class="text">Dragon</div>
+            <div class="point empty" data-name="Dark">
+              <img src="assets/types/shadow.png" alt="">
+            </div>
+            <div class="text">
+              Dark
+            </div>
           </li>
           <li>
-            <div class="point empty"></div>
-            <div class="text">Dark</div>
-          </li>
-          <li>
-            <div class="point empty"></div>
-            <div class="text">Fairy</div>
+            <div class="point empty" data-name="Fairy">
+              <img src="assets/types/Fairy.png" alt="">
+            </div>
+            <div class="text">
+              Fairy
+            </div>
           </li>
         </ul>
 
@@ -216,20 +284,39 @@ Article : Description du pokemon sous forme de pop-up
         <div id="caracteristique">
           <h2></h2>
 
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo vel ipsum tenetur totam esse ipsa, doloribus assumenda, quaerat voluptate fugit. Eum officiis omnis, aut dolorum dignissimos pariatur atque at error!</p>
-          
+          <div id="types"></div>
+
+          <p></p>
+
+         <table>
+           <tr>
+             <td id="height"></td>
+             <td id="categories"></td>
+           </tr>
+           <tr>
+             <td id="weight"></td>
+             <td id="abilities"></td>
+           </tr>
+         </table>
+         
           <ul class="spec">
-            <li id="taille"></li>
-            <li id="poid"></li>
-            <li id="vitesse"></li>
-            <li id="attack"></li>
-            <li id="spe_attack"></li>
-            <li id="defense"></li>
-            <li id="spe_def"></li>
-            <li id="hp"></li>
+            <li class="vitesse"><span></span><div class="triangle"></div></li>
+            <li class="attack"><span></span><div class="triangle"></div></li>
+            <li class="spe_attack"><span></span><div class="triangle"></div></li>
+            <li class="defense"><span></span><div class="triangle"></div></li>
+            <li class="spe_def"><span></span><div class="triangle"></div></li>
+            <li class="hp"><span></span><div class="triangle"></div></li>
           </ul>
 
-          <div id="types" class='desc'></div>
+          <ul class="details">
+            <li class="vitesse">Speed</li>
+            <li class="attack">Attack</li>
+            <li class="spe_attack">Special Attack</li>
+            <li class="defense">Defense</li>
+            <li class="spe_def">Special Defense</li>
+            <li class="hp">HP</li>
+          </ul>
+
           <div id="moves" class='desc'></div>
           <div id="abilities" class='desc'></div>
 

@@ -16,9 +16,9 @@ if(!empty($_POST['datatype'])) {
 	{
 		$reponse = $api->getPokemon($_POST['id']);
 	}
-	elseif($_POST['datatype'] == 'image' && !empty($_POST['id']))
+	elseif($_POST['datatype'] == 'description' && !empty($_POST['id']))
 	{
-		$reponse = $api->getImage($_POST['id']);
+		$reponse = $api->getDesc($_POST['id']);
 	}
   elseif($_POST['datatype'] == 'ability' && !empty($_POST['id']))
   {

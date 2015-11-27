@@ -295,7 +295,7 @@ categorie.prototype.callAjax = function(){
 }
 function DisplayData(data){
 
-  var popo = new pokearticle(data);
+  new pokearticle(data);
 
 }
 
@@ -317,28 +317,50 @@ pokearticle.prototype.init = function(){
 
 }
 
+function desc(data){
+
+  $(this.article).find('p').html(data.reponse.description);
+
+}
+
 pokearticle.prototype.show = function(){
 
-  console.log(this.data.reponse);
-  
+  $('.spec').children().each(function(){
+
+      $(this).children('span').empty();
+
+  });
+
   this.article.find('h2').html(this.data.reponse.name);
 
-  $('#taille').html('Height : '+this.data.reponse.height);
-  $('#taille').css('height', (this.data.reponse.height*100)/145+'%');
-  $('#poid').html('Weight : '+this.data.reponse.weight);
-  $('#poid').css('height', (this.data.reponse.weight*100)/22044+'%');
-  $('#vitesse').html('Speed : '+this.data.reponse.speed);
-  $('#vitesse').css('height', (this.data.reponse.speed*100)/180+'%');
-  $('#attack').html('Attack : '+this.data.reponse.attack);
-  $('#attack').css('height', (this.data.reponse.attack*100)/180+'%');
-  $('#spe_attack').html('Special Attack : '+this.data.reponse.sp_atk);
-  $('#spe_attack').css('height', (this.data.reponse.sp_atk*100)/180+'%');
-  $('#defense').html('Defense : '+this.data.reponse.defense);
-  $('#defense').css('height', (this.data.reponse.defense*100)/230+'%');
-  $('#hp').html('HP : '+this.data.reponse.hp);
-  $('#hp').css('height', (this.data.reponse.hp*100)/255+'%');
-  $('#spe_def').html('Special Defense : '+this.data.reponse.sp_def);
-  $('#spe_def').css('height', (this.data.reponse.sp_def*100)/230+'%');
+  var link         = this.data.reponse.descriptions[0].resource_uri,
+      delimiter    = '/',
+      start        = 4,
+      tokens       = link.split(delimiter).slice(start),
+      step         = tokens.join(delimiter),
+      lenght       = step.length,
+      id           = step.slice(0,lenght -1);
+
+  new call('description', id, desc);
+
+  $('.spec .vitesse span').append(this.data.reponse.speed);
+  $('.spec .vitesse').css('height', (this.data.reponse.speed*100)/180+'%');
+  $('.spec .vitesse').css('top', 100-((this.data.reponse.speed*100)/180)+'%');
+  $('.spec .attack span').append(this.data.reponse.attack);
+  $('.spec .attack').css('height', (this.data.reponse.attack*100)/180+'%');
+  $('.spec .attack').css('top', 100-((this.data.reponse.attack*100)/180)+'%');
+  $('.spec .spe_attack span').append(this.data.reponse.sp_atk);
+  $('.spec .spe_attack').css('height', (this.data.reponse.sp_atk*100)/180+'%');
+  $('.spec .spe_attack').css('top', 100-((this.data.reponse.sp_atk*100)/180)+'%');
+  $('.spec .defense span').append(this.data.reponse.defense);
+  $('.spec .defense').css('height', (this.data.reponse.defense*100)/230+'%');
+  $('.spec .defense').css('top', 100-((this.data.reponse.defense*100)/230)+'%');
+  $('.spec .hp span').append(this.data.reponse.hp);
+  $('.spec .hp').css('height', (this.data.reponse.hp*100)/255+'%');
+  $('.spec .hp').css('top', 100-((this.data.reponse.hp*100)/255)+'%');
+  $('.spec .spe_def span').append(this.data.reponse.sp_def);
+  $('.spec .spe_def').css('height', (this.data.reponse.sp_def*100)/230+'%');
+  $('.spec .spe_def').css('top', 100-((this.data.reponse.sp_def*100)/230)+'%');
 
 }
 
@@ -352,9 +374,16 @@ pokearticle.prototype.moveability = function(){
       moves         = $.getJSON('../../data/moves.json'),
       type          = $.getJSON('../../data/types.json');
 
-  console.log(selfid);
+  showModel(self.reponse.name);
 
-  $(this.detail).children('h2').html(self.name);
+  $('#weight').html('Weight : '+self.reponse.weight);
+  $('#height').html('Height : '+self.reponse.height);
+  $('#categories').html('Categories : '+self.reponse.species);
+
+
+  $(this.detail).children('h2').html(self.reponse.name);
+
+  console.log(self);
 
   $.when(ability, moves, type).done(function(ability, moves, type){
 
@@ -367,9 +396,10 @@ pokearticle.prototype.display = function(ability, moves, type, pokemonId, localS
 
   $('#abilities, #moves, #types').empty();
 
-  $('#abilities').append('Abilities :');
-  $('#moves').append('Moves :');
-  $('#types').append('Type :');
+  $('#abilities').append('Abilities : ');
+
+  $('#moves').append('Moves : ');
+
 
 
   for(i=1; i < Object.keys(ability).length; i++){
@@ -386,7 +416,7 @@ pokearticle.prototype.display = function(ability, moves, type, pokemonId, localS
             lenght    = step.length,
             id        = step.slice(0,lenght -1);
 
-        $('#abilities').append('<a href="#"><div class="ability" data-id="'+id+'" >'+ ability[i].name +'</div></a>')
+        $('#abilities').append('<a href="#"><span class="ability" data-id="'+id+'" >'+ ability[i].name +'</span></a>')
       }
 
     }
@@ -423,7 +453,7 @@ pokearticle.prototype.display = function(ability, moves, type, pokemonId, localS
     if(y != 165){
 
       for(z=1; z < Object.keys(type[y].pokemons).length; z++){
-        
+
         if(type[y].pokemons[z] == pokemonId){
 
           var link      = type[y].resource_uri,
@@ -434,7 +464,7 @@ pokearticle.prototype.display = function(ability, moves, type, pokemonId, localS
               lenght    = step.length,
               id        = step.slice(0,lenght -1);
 
-          $('#types').append('<a href="#"><div class="type" data-id="'+id+'" >'+ type[y].name +'</div></a>')
+          $('#types').append('<a href="#"><span class="type" data-id="'+id+'" ><img src="assets/pokemon_type/'+ type[y].name +'.png"></span></a>')
         }
 
       }
@@ -529,10 +559,12 @@ Home.prototype.filters = function(){
 
     var filters = Array();
 
-    $('#categorie ul .point.select').parent().each(function(){
+    $('#categorie ul .point.select').each(function(){
 
-      filters.push($(this).find('.text').html());
+      filters.push($(this).attr('data-name'));      
 
+      console.log($(this).attr('data-name'));
+      
     });
 
     $.getJSON( "../../data/types.json", function(data){
@@ -550,7 +582,7 @@ Home.prototype.applyFilters = function(filters, data){
 
   var pokemonFiltered = Array();
 
-  for(i=1; i < Object.keys(data).length; i++){
+  for(i=1; i < Object.keys(data).length+1; i++){
 
     if(filters.length == 0){
 
@@ -964,7 +996,7 @@ SearchField.prototype.init = function(type, ability, move, value, callback){
             }
           }
 
-          var Pokemon      = $(this).html(),
+          var Pokemon      = $(this).attr('data-name'),
               cutPokemon   = Pokemon.substring(0, Vallenght);
 
           if(value.toUpperCase() === cutPokemon.toUpperCase()){
@@ -979,7 +1011,7 @@ SearchField.prototype.init = function(type, ability, move, value, callback){
             $(this).addClass('hide');
             $(this).removeClass('view');
           }
-
+          
         });
 
       }
@@ -1199,7 +1231,6 @@ vScroll.prototype.onVirtualScroll = function(e) {
 vScroll.prototype.resize = function() {
 	
 	this.maxScroll = (  this.lastChild.offset().left) * -1;
-	console.log(this.maxScroll);
 	
 };
 

@@ -39,7 +39,6 @@ vScroll.prototype.onVirtualScroll = function(e) {
 vScroll.prototype.resize = function() {
 	
 	this.maxScroll = (  this.lastChild.offset().left) * -1;
-	console.log(this.maxScroll);
 	
 };
 
