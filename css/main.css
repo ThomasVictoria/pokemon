@@ -581,16 +581,12 @@ body {
     left: 50%;
     right: 50%;
     bottom: 10px;
-<<<<<<< HEAD
     transform: translateX(-50%);
     transition: all 0.2s ease-out; }
     .controls .close:hover {
       width: 45px;
       height: 45px;
       transition: all 0.2s ease-out; }
-=======
-    transform: translateX(-50%); }
->>>>>>> recherche
 
 #view3d {
   width: 520px;
