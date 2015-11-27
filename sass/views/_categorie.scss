@@ -111,22 +111,15 @@ $colorNav : #4a4a4a;
     }
 
   }
-
-  .searchField{
-    
-    position: fixed;
-    top: 0; right: 0;
-    width: 200px;
-    height: 100%;
-	
-	input{
-		position: relative;
-		top: 20px; left: 20px;
+  
+	#search{
+		position: fixed;
+		top: 20px; right: 20px;
 		background: url(../img/search-dark.png) no-repeat 10px 6px #444;
 		border: 0 none;
 		font: bold 12px Arial,Helvetica,Sans-serif;
 		color: #777;
-		width: 45%;
+		width: 5%;
 		padding: 6px 15px 6px 35px;
 		-webkit-border-radius: 20px;
 		-moz-border-radius: 20px;
@@ -136,6 +129,14 @@ $colorNav : #4a4a4a;
 		-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
 		box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
 	}
+  
+  .searchField{
+    
+    position: fixed;
+    top: 0; right: 0;
+    width: 0px;
+    height: 100%;
+	
     
     .results{
       
