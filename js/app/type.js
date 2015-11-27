@@ -47,8 +47,6 @@ Type.prototype.show = function(){
       selfFun      = this.pokemon,
       selfid       = self.id,
       json         = $.getJSON('../../data/types.json');
-
-  console.log($(selfBlock).children('.ineffective'));
   
   $('.caracteristique .image').html('<img src="assets/pokemon_type/'+ self.name +'.png" alt="">');
 

@@ -21,7 +21,8 @@ Navigation.prototype.init = function(){
   var selfType    = this.articleT;
 
   $(this.ability).on('click', function(e){
-    $(selfAbility).fadeIn(400);
+        TweenMax.fromTo($(selfAbility), 1,{'left': '100%', display: 'none'}, {left: '0%', display: 'block'});
+
 
     var id = $(this).attr('data-id');
     new call('ability', id, DisplayAbility);
@@ -29,7 +30,8 @@ Navigation.prototype.init = function(){
   });
 
   $(this.move).on('click', function(e){
-    $(selfMove).fadeIn(400);
+        TweenMax.fromTo($(selfMove), 1,{'left': '100%', display: 'none'}, {left: '0%', display: 'block'});
+
 
     var id = $(this).attr('data-id');
     new call('move', id, DisplayMove);
@@ -37,7 +39,8 @@ Navigation.prototype.init = function(){
   });
 
   $(this.type).on('click', function(e){
-    $(selfType).fadeIn(400);
+        TweenMax.fromTo($(selfType), 1,{'left': '100%', display: 'none'}, {left: '0%', display: 'block'});
+
 
     var id = $(this).attr('data-id');
     new call('type', id, DisplayType);

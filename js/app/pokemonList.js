@@ -1,6 +1,6 @@
 function DisplayPokemon(pokemon, json){
 
-  $('.popup').find('h2').html(json.name);
+  $('#ability').find('h2').html(json.name);
   
   for(i=1; i < Object.keys(json.pokemons).length; i++){
 
@@ -17,7 +17,7 @@ function DisplayPokemon(pokemon, json){
 
   $('#move, #ability, #type').on('click', function(){
 
-    $(this).fadeOut(500);
+//    $(this).fadeOut(500);
 
   });
 

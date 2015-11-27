@@ -7,21 +7,38 @@
   display: none;
 
   .caracteristique{
+    
+    .pokemon{
+
+        text-align: center;
+        width: 150px;
+        height: 40px;
+        border-radius: 5px;
+        display: inline-block;
+        float: left;
+        margin-left: 20px;
+        margin-top: 20px;
+        background-color: #eee;
+        padding-top: 20px
+
+      }
 
     .tableEffect{
 
+      height: 350px;
       width: 90%;
       margin: auto;
       text-align: center;
+      
 
     }
 
     .image{
 
-      width: 300px;
+      width: 150px;
       margin: auto;
       margin-top: 50px;
-      margin-bottom: 50px;
+      margin-bottom: 30px;
 
       img{
 
@@ -41,8 +58,7 @@
 
       width: 90%;
       margin: auto;
-      height: 550px;
-      margin-top: 180px;
+      height: 400px;
       overflow-y: auto;
 
       .pokemon{
@@ -68,16 +84,16 @@
 
     width: 20%;
     float: left;
-    font-size: 25px;
+    font-size: 17px;
     background-color: #8b8b8b;
-    height: 30px ;
-    padding-top: 10px;
+    height: 20px ;
+    padding-top: 5px;
     
     .type.img{
       
       width: 100px;
       margin: auto;
-      margin-top: 20px;
+      margin-top: 10px;
       
       img{
         
@@ -292,7 +308,7 @@
       margin-top: 5px;
     }
 
-    .ability{
+    .ability, .move{
 
       display: inline-block;
       float: left;
@@ -308,4 +324,22 @@
 
   }
 
+}
+
+#move{
+  
+  h2{
+    margin-bottom: 75px;
+  }
+  
+  .pokemons{
+    
+    margin: auto;
+    height: 600px;
+    overflow-x: auto;
+    width: 80%;
+    
+    
+  }
+  
 }
