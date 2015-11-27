@@ -551,7 +551,7 @@ function Home(){
 
   this.init();
 }
-
+console.log('yolo');
 Home.prototype.init = function(){
 
   this.toGen();
@@ -722,7 +722,7 @@ Home.prototype.CallPokemons = function(){
 
 }
 
-function Display(data){
+function Display(data){ 
 
   var content  = $('#content');
   content.html('');

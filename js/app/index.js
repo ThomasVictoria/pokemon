@@ -180,7 +180,7 @@ Home.prototype.CallPokemons = function(){
 
 }
 
-function Display(data){
+function Display(data){ 
 
   var content  = $('#content');
   content.html('');
