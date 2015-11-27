@@ -113,7 +113,7 @@ $colorNav : #4a4a4a;
       justify-content: flex-start;
       
       img{
-        width: 60%;
+        width: 100%; height: auto !important;
       }
     }
 
@@ -187,8 +187,6 @@ $colorNav : #4a4a4a;
     }
 
   }
-  
-  //img{width: 80%; height: auto;}
 
 }
 

@@ -92,7 +92,7 @@ body {
     bottom: 0;
     left: 0; }
   #home .bg1 {
-    background-color: #a288ff; }
+    background-color: #1460a8; }
     #home .bg1 img {
       position: absolute;
       transform: translateX(-50%); }
@@ -123,7 +123,7 @@ body {
         left: 50%;
         top: 3%; }
   #home .bg2 {
-    background-color: #ff8853;
+    background-color: #3a8ac1;
     display: none; }
     #home .bg2 img {
       position: absolute;
@@ -161,7 +161,7 @@ body {
         left: 63%;
         top: 1%; }
   #home .bg3 {
-    background-color: #141f88;
+    background-color: #8cb8d8;
     display: none; }
     #home .bg3 img {
       position: absolute;
@@ -193,7 +193,7 @@ body {
         right: -8%;
         top: 3%; }
   #home .bg4 {
-    background-color: #a288ff;
+    background-color: #1460a8;
     display: none; }
     #home .bg4 img {
       position: absolute;
@@ -228,7 +228,7 @@ body {
         right: 2%;
         top: 4%; }
   #home .bg5 {
-    background-color: #ff8853;
+    background-color: #3a8ac1;
     display: none; }
     #home .bg5 img {
       position: absolute;
@@ -263,7 +263,7 @@ body {
         right: 2%;
         top: 7%; }
   #home .bg6 {
-    background-color: #141f88;
+    background-color: #8cb8d8;
     display: none; }
     #home .bg6 img {
       position: absolute;
@@ -457,7 +457,8 @@ body {
       border: 1px solid rgba(239, 240, 242, 0.5);
       justify-content: flex-start; }
       #categorie #content .pokemon img {
-        width: 60%; }
+        width: 100%;
+        height: auto !important; }
     #categorie #content .hide {
       display: none; }
     #categorie #content .view {
@@ -550,14 +551,6 @@ body {
   width: 100%;
   height: 60px;
   position: relative; }
-  .controls .back {
-    width: 40px;
-    height: 40px;
-    background: url("../img/arrowL.svg") no-repeat;
-    position: absolute;
-    top: 10px;
-    left: 0;
-    bottom: 10px; }
   .controls .close {
     width: 40px;
     height: 40px;
@@ -567,15 +560,12 @@ body {
     left: 50%;
     right: 50%;
     bottom: 10px;
-    transform: translateX(-50%); }
-  .controls .next {
-    width: 40px;
-    height: 40px;
-    background: url("../img/arrowR.svg") no-repeat;
-    position: absolute;
-    top: 10px;
-    right: 0;
-    bottom: 10px; }
+    transform: translateX(-50%);
+    transition: all 0.2s ease-out; }
+    .controls .close:hover {
+      width: 45px;
+      height: 45px;
+      transition: all 0.2s ease-out; }
 
 #view3d {
   width: 520px;
