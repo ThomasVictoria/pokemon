@@ -12,7 +12,7 @@
     function init(pokemon) {
         $('#view3d').html('');
         scene = new THREE.Scene();
-        theJson = 'http://pokemon.dev/assets/jsonModels/'+pokemon+'/'+pokemon+'.json';
+        theJson = 'http://thomasvictoria.fr/pokemon/assets/jsonModels/'+pokemon+'/'+pokemon+'.json';
         
         initMesh(theJson);
         initCamera();

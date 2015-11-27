@@ -8,9 +8,9 @@ function SearchField(){
 
 SearchField.prototype.inputOnKeydown = function(){
 
-  var type         = $.getJSON('../../data/types.json'),
-      abitily      = $.getJSON('../../data/ability.json'),
-      move         = $.getJSON('../../data/moves.json');
+  var type         = $.getJSON('http://thomasvictoria.fr/pokemon/data/types.json'),
+      abitily      = $.getJSON('http://thomasvictoria.fr/pokemon/data/ability.json'),
+      move         = $.getJSON('http://thomasvictoria.fr/pokemon/data/moves.json');
 
   var self       = this.init;
   var selfSecond = this.DisplaySearch;

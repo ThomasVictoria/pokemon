@@ -46,9 +46,9 @@ Type.prototype.show = function(){
   var selfBlock    = this.detail.children('.tableEffect'),
       selfFun      = this.pokemon,
       selfid       = self.id,
-      json         = $.getJSON('../../data/types.json');
+      json         = $.getJSON('http://thomasvictoria.fr/pokemon/data/types.json');
   
-  $('.caracteristique .image').html('<img src="assets/pokemon_type/'+ self.name +'.png" alt="">');
+  $('.caracteristique .image').html('<img src="http://thomasvictoria.fr/pokemon/assets/pokemon_type/'+ self.name.charAt(0).toUpperCase()+self.name.slice(1) +'.png" alt="">');
 
   $(selfBlock).children('.ineffective').append('Ineffective');
   $(selfBlock).children('.no_effect').append('No effect');
@@ -67,7 +67,7 @@ Type.prototype.show = function(){
         lenght    = step.length,
         id        = step.slice(0,lenght -1);
 
-    $(selfBlock).children('.ineffective').append('<a href="#"><div class="type img" data-id="'+id+'"><img src="assets/pokemon_type/'+ this.name +'.png" ></div></a>');
+    $(selfBlock).children('.ineffective').append('<a href="#"><div class="type img" data-id="'+id+'"><img src="http://thomasvictoria.fr/pokemon/assets/pokemon_type/'+ this.name.charAt(0).toUpperCase()+this.name.slice(1) +'.png" ></div></a>');
 
   });
 
@@ -81,7 +81,7 @@ Type.prototype.show = function(){
         lenght    = step.length,
         id        = step.slice(0,lenght -1);
 
-    $(selfBlock).children('.no_effect').append('<a href="#"><div class="type img" data-id="'+id+'"><img src="assets/pokemon_type/'+ this.name +'.png" ></div></a>'); 
+    $(selfBlock).children('.no_effect').append('<a href="#"><div class="type img" data-id="'+id+'"><img src="http://thomasvictoria.fr/pokemon/assets/pokemon_type/'+ this.name.charAt(0).toUpperCase()+this.name.slice(1) +'.png" ></div></a>'); 
 
   });
 
@@ -95,7 +95,7 @@ Type.prototype.show = function(){
         lenght    = step.length,
         id        = step.slice(0,lenght -1);
 
-    $(selfBlock).children('.resistance').append('<a href="#"><div class="type img" data-id="'+id+'"><img src="assets/pokemon_type/'+ this.name +'.png" ></div></a>');    
+    $(selfBlock).children('.resistance').append('<a href="#"><div class="type img" data-id="'+id+'"><img src="http://thomasvictoria.fr/pokemon/assets/pokemon_type/'+ this.name.charAt(0).toUpperCase()+this.name.slice(1) +'.png" ></div></a>');    
 
   });
 
@@ -109,7 +109,7 @@ Type.prototype.show = function(){
         lenght    = step.length,
         id        = step.slice(0,lenght -1);
 
-    $(selfBlock).children('.super_effective').append('<a href="#"><div class="type img" data-id="'+id+'"><img src="assets/pokemon_type/'+ this.name +'.png" ></div></a>');    
+    $(selfBlock).children('.super_effective').append('<a href="#"><div class="type img" data-id="'+id+'"><img src="http://thomasvictoria.fr/pokemon/assets/pokemon_type/'+ this.name.charAt(0).toUpperCase()+this.name.slice(1) +'.png" ></div></a>');    
 
   });
 
@@ -123,7 +123,7 @@ Type.prototype.show = function(){
         lenght    = step.length,
         id        = step.slice(0,lenght -1);
 
-    $(selfBlock).children('.weakness').append('<a href="#"><div class="type img" data-id="'+id+'"><img src="assets/pokemon_type/'+ this.name +'.png" ></div></a>');
+    $(selfBlock).children('.weakness').append('<a href="#"><div class="type img" data-id="'+id+'"><img src="http://thomasvictoria.fr/pokemon/assets/pokemon_type/'+ this.name.charAt(0).toUpperCase()+this.name.slice(1) +'.png" ></div></a>');
 
   });
 

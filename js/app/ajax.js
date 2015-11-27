@@ -23,7 +23,7 @@ call.prototype.request = function(){
   $.ajax({
     type: 'post',
     crossDomain:true,
-    url: 'http://pokemon.dev/Class/index.php',
+    url: 'http://thomasvictoria.fr/pokemon/Class/index.php',
     data: {'datatype': this.datatype, 'id': this.id},
     dataType: 'json',
     success: function(json) {

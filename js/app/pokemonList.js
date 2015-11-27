@@ -15,10 +15,4 @@ function DisplayPokemon(pokemon, json){
 
   new categorie();
 
-  $('#move, #ability, #type').on('click', function(){
-
-//    $(this).fadeOut(500);
-
-  });
-
 }

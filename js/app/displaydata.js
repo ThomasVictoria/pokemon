@@ -92,9 +92,9 @@ pokearticle.prototype.moveability = function(){
       localSelector = this,
       selfFun       = this.display,
       selfid        = self.reponse.national_id,
-      ability       = $.getJSON('../../data/ability.json'),
-      moves         = $.getJSON('../../data/moves.json'),
-      type          = $.getJSON('../../data/types.json');
+      ability       = $.getJSON('http://thomasvictoria.fr/pokemon/data/ability.json'),
+      moves         = $.getJSON('http://thomasvictoria.fr/pokemon/data/moves.json'),
+      type          = $.getJSON('http://thomasvictoria.fr/pokemon/data/types.json');
 
   showModel(self.reponse.name);
 
@@ -152,7 +152,7 @@ pokearticle.prototype.display = function(ability, moves, type, pokemonId, localS
               lenght    = step.length,
               id        = step.slice(0,lenght -1);
 
-          $('#moves').append('<a href="#"><div class="move" data-id="'+id+'" ><div>Name : '+ moves[y].name +' </div><div> Learn type : '+ moves[y].learn_type +'</div></div></a>')
+          $('#moves').append('<a href="#"><div class="move" data-id="'+id+'" ><div>Name : '+ moves[y].name.charAt(0).toUpperCase()+moves[y].name.slice(1) +' </div><div> Learn type : '+ moves[y].learn_type +'</div></div></a>')
         }
 
       }
@@ -177,7 +177,7 @@ pokearticle.prototype.display = function(ability, moves, type, pokemonId, localS
               lenght    = step.length,
               id        = step.slice(0,lenght -1);
           
-          $('#types').append('<a href="#"><span class="type" data-id="'+id+'" ><img src="assets/pokemon_type/'+ type[y].name +'.png"></span></a>')
+          $('#types').append('<a href="#"><span class="type" data-id="'+id+'" ><img src="http://thomasvictoria.fr/pokemon/assets/pokemon_type/'+ type[y].name.charAt(0).toUpperCase()+type[y].name.slice(1) +'.png"></span></a>')
         }
 
       }

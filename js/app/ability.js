@@ -35,7 +35,7 @@ Ability.prototype.show = function(){
   var self    = this.data,
       selfFun = this.pokemon,
       selfid  = self.reponse.id,
-      json    = $.getJSON('../../data/ability.json');
+      json    = $.getJSON('http://thomasvictoria.fr/pokemon/data/ability.json');
   
   $(this.detail).children('h2').html(self.name);
 

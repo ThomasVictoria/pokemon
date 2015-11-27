@@ -7,29 +7,29 @@
   display: none;
 
   .caracteristique{
-    
+
     .pokemon{
 
-        text-align: center;
-        width: 150px;
-        height: 40px;
-        border-radius: 5px;
-        display: inline-block;
-        float: left;
-        margin-left: 20px;
-        margin-top: 20px;
-        background-color: #eee;
-        padding-top: 20px
+      text-align: center;
+      width: 150px;
+      height: 40px;
+      border-radius: 5px;
+      display: inline-block;
+      float: left;
+      margin-left: 20px;
+      margin-top: 20px;
+      background-color: #eee;
+      padding-top: 20px
 
-      }
+    }
 
     .tableEffect{
 
-      height: 350px;
+      height: 390px;
       width: 90%;
       margin: auto;
       text-align: center;
-      
+
 
     }
 
@@ -88,21 +88,21 @@
     background-color: #8b8b8b;
     height: 20px ;
     padding-top: 5px;
-    
+
     .type.img{
-      
+
       width: 100px;
       margin: auto;
       margin-top: 10px;
-      
+
       img{
-        
+
         width: 100%;
-        
+
       }
-      
+
     }
-    
+
   }
 
 }
@@ -125,7 +125,7 @@
     top: 10px; left: 50%; right: 50%; bottom: 10px;
     transform: translateX(-50%);
     transition: all 0.2s ease-out;
-    
+
     &:hover{
       width: 45px;
       height: 45px;
@@ -149,7 +149,10 @@
 
 
   #types{ 
-    
+
+    margin: auto;
+    width: 600px;
+
     span{
       padding-top: 10px;
       margin-left: 10px;      
@@ -163,13 +166,15 @@
 
   .details{
 
+    width: 600px;
+    margin: auto;
     margin-top: 5px;
 
     li{
 
       display: inline-block;      
       width: 50px;
-      margin-left: 6.2%;
+      margin-left: 7%;
       text-align: center;
       font-size: 13px;
 
@@ -180,8 +185,11 @@
   .spec{
 
     width: 600px;
+    background-color:#EBEBEB;
     height: 200px;
+    border-radius: 5px;
     position: relative;
+    margin: auto;
 
     .attack{
       background: #19B5FE; 
@@ -256,15 +264,19 @@
 
   p{
     font-size: 1.2em;
-    padding: 20px 40px 20px 20px;
+    padding: 20px 0px 20px 20px;
     line-height: 1.4em;
+    width: 600px;
+    margin: auto;
   }
 
   table{
     background-color: #ebebeb;
     margin: 20px;
     border-radius: 5px;
-    width: 620px;
+    width: 600px;
+    margin: auto;
+    margin-bottom: 20px;
 
     td#abilities{
 
@@ -299,7 +311,7 @@
 
   #moves{
     margin-top: 20px;
-    width: 100%;
+    width: 600px;
     margin: auto;
     overflow-y: auto;
     height: 300px;
@@ -311,13 +323,13 @@
     .ability, .move{
 
       display: inline-block;
-      float: left;
+      float: right;
       background-color: #eee;
       padding: 10px 10px 10px 10px;
       margin-left: 10px;
       margin-top: 10px;
       border-radius:5px;
-      width: 175px;
+      width: 167px;
       height: 50px;
 
     }
@@ -327,19 +339,19 @@
 }
 
 #move{
-  
+
   h2{
     margin-bottom: 75px;
   }
-  
+
   .pokemons{
-    
+
     margin: auto;
     height: 600px;
     overflow-x: auto;
     width: 80%;
-    
-    
+
+
   }
-  
+
 }

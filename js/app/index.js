@@ -54,7 +54,7 @@ Home.prototype.filters = function(){
 
     });
 
-    $.getJSON( "../../data/types.json", function(data){
+    $.getJSON( "http://thomasvictoria.fr/pokemon/data/types.json", function(data){
 
       selfFunction(filters, data);
 
@@ -193,7 +193,7 @@ function Display(data){
   // Height pokemon elmt
   for(i = 0; i < Object.keys(data.reponse).length; i++){
 
-    $(content).append('<div class="pokemon view" style="width:'+(size-2)+'px;height:'+(size-2)+'px;"data-id="'+ data.reponse[i].id +'" data-name="'+data.reponse[i].name+'"><div class="image"><img src="assets/images/' + data.reponse[i].name + '.png" /></div></div>');
+    $(content).append('<div class="pokemon view" style="width:'+(size-2)+'px;height:'+(size-2)+'px;"data-id="'+ data.reponse[i].id +'" data-name="'+data.reponse[i].name+'"><div class="image"><img src="http://thomasvictoria.fr/pokemon/assets/images/' + data.reponse[i].name.charAt(0).toUpperCase()+data.reponse[i].name.slice(1) + '.png" /></div></div>');
 
   };
 

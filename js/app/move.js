@@ -35,7 +35,7 @@ Move.prototype.show = function(){
   var self    = this.data,
       selfFun = this.pokemon,
       selfid  = self.id,
-      json    = $.getJSON('../../data/moves.json');
+      json    = $.getJSON('http://thomasvictoria.fr/pokemon/data/moves.json');
 
   $(this.detail).children('h2').html(self.name);
 

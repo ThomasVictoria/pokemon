@@ -549,7 +549,7 @@ body {
     background-color: #eee;
     padding-top: 20px; }
   .popup .caracteristique .tableEffect {
-    height: 350px;
+    height: 390px;
     width: 90%;
     margin: auto;
     text-align: center; }
@@ -628,23 +628,31 @@ body {
   width: 680px;
   height: 750px;
   float: right; }
-  #caracteristique #types span {
-    padding-top: 10px;
-    margin-left: 10px; }
-    #caracteristique #types span img {
-      width: 75px; }
+  #caracteristique #types {
+    margin: auto;
+    width: 600px; }
+    #caracteristique #types span {
+      padding-top: 10px;
+      margin-left: 10px; }
+      #caracteristique #types span img {
+        width: 75px; }
   #caracteristique .details {
+    width: 600px;
+    margin: auto;
     margin-top: 5px; }
     #caracteristique .details li {
       display: inline-block;
       width: 50px;
-      margin-left: 6.2%;
+      margin-left: 7%;
       text-align: center;
       font-size: 13px; }
   #caracteristique .spec {
     width: 600px;
+    background-color: #EBEBEB;
     height: 200px;
-    position: relative; }
+    border-radius: 5px;
+    position: relative;
+    margin: auto; }
     #caracteristique .spec .attack {
       background: #19B5FE; }
       #caracteristique .spec .attack .triangle {
@@ -688,13 +696,17 @@ body {
     text-align: center; }
   #caracteristique p {
     font-size: 1.2em;
-    padding: 20px 40px 20px 20px;
-    line-height: 1.4em; }
+    padding: 20px 0px 20px 20px;
+    line-height: 1.4em;
+    width: 600px;
+    margin: auto; }
   #caracteristique table {
     background-color: #ebebeb;
     margin: 20px;
     border-radius: 5px;
-    width: 620px; }
+    width: 600px;
+    margin: auto;
+    margin-bottom: 20px; }
     #caracteristique table td#abilities a:after {
       content: ", "; }
     #caracteristique table td#abilities a:last-child:after {
@@ -705,7 +717,7 @@ body {
         font-weight: bold; }
   #caracteristique #moves {
     margin-top: 20px;
-    width: 100%;
+    width: 600px;
     margin: auto;
     overflow-y: auto;
     height: 300px; }
@@ -713,13 +725,13 @@ body {
       margin-top: 5px; }
     #caracteristique #moves .ability, #caracteristique #moves .move {
       display: inline-block;
-      float: left;
+      float: right;
       background-color: #eee;
       padding: 10px 10px 10px 10px;
       margin-left: 10px;
       margin-top: 10px;
       border-radius: 5px;
-      width: 175px;
+      width: 167px;
       height: 50px; }
 
 #move h2 {

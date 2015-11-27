@@ -35,7 +35,7 @@ Ability.prototype.show = function(){
   var self    = this.data,
       selfFun = this.pokemon,
       selfid  = self.reponse.id,
-      json    = $.getJSON('../../data/ability.json');
+      json    = $.getJSON('http://thomasvictoria.fr/pokemon/data/ability.json');
   
   $(this.detail).children('h2').html(self.name);
 
@@ -77,7 +77,7 @@ call.prototype.request = function(){
   $.ajax({
     type: 'post',
     crossDomain:true,
-    url: 'http://pokemon.dev/Class/index.php',
+    url: 'http://thomasvictoria.fr/pokemon/Class/index.php',
     data: {'datatype': this.datatype, 'id': this.id},
     dataType: 'json',
     success: function(json) {
@@ -107,7 +107,7 @@ $('#search').on('click', function(e){
     function init(pokemon) {
         $('#view3d').html('');
         scene = new THREE.Scene();
-        theJson = 'http://pokemon.dev/assets/jsonModels/'+pokemon+'/'+pokemon+'.json';
+        theJson = 'http://thomasvictoria.fr/pokemon/assets/jsonModels/'+pokemon+'/'+pokemon+'.json';
         
         initMesh(theJson);
         initCamera();
@@ -410,9 +410,9 @@ pokearticle.prototype.moveability = function(){
       localSelector = this,
       selfFun       = this.display,
       selfid        = self.reponse.national_id,
-      ability       = $.getJSON('../../data/ability.json'),
-      moves         = $.getJSON('../../data/moves.json'),
-      type          = $.getJSON('../../data/types.json');
+      ability       = $.getJSON('http://thomasvictoria.fr/pokemon/data/ability.json'),
+      moves         = $.getJSON('http://thomasvictoria.fr/pokemon/data/moves.json'),
+      type          = $.getJSON('http://thomasvictoria.fr/pokemon/data/types.json');
 
   showModel(self.reponse.name);
 
@@ -470,7 +470,7 @@ pokearticle.prototype.display = function(ability, moves, type, pokemonId, localS
               lenght    = step.length,
               id        = step.slice(0,lenght -1);
 
-          $('#moves').append('<a href="#"><div class="move" data-id="'+id+'" ><div>Name : '+ moves[y].name +' </div><div> Learn type : '+ moves[y].learn_type +'</div></div></a>')
+          $('#moves').append('<a href="#"><div class="move" data-id="'+id+'" ><div>Name : '+ moves[y].name.charAt(0).toUpperCase()+moves[y].name.slice(1) +' </div><div> Learn type : '+ moves[y].learn_type +'</div></div></a>')
         }
 
       }
@@ -495,7 +495,7 @@ pokearticle.prototype.display = function(ability, moves, type, pokemonId, localS
               lenght    = step.length,
               id        = step.slice(0,lenght -1);
           
-          $('#types').append('<a href="#"><span class="type" data-id="'+id+'" ><img src="assets/pokemon_type/'+ type[y].name +'.png"></span></a>')
+          $('#types').append('<a href="#"><span class="type" data-id="'+id+'" ><img src="http://thomasvictoria.fr/pokemon/assets/pokemon_type/'+ type[y].name.charAt(0).toUpperCase()+type[y].name.slice(1) +'.png"></span></a>')
         }
 
       }
@@ -626,7 +626,7 @@ Home.prototype.filters = function(){
 
     });
 
-    $.getJSON( "../../data/types.json", function(data){
+    $.getJSON( "http://thomasvictoria.fr/pokemon/data/types.json", function(data){
 
       selfFunction(filters, data);
 
@@ -765,7 +765,7 @@ function Display(data){
   // Height pokemon elmt
   for(i = 0; i < Object.keys(data.reponse).length; i++){
 
-    $(content).append('<div class="pokemon view" style="width:'+(size-2)+'px;height:'+(size-2)+'px;"data-id="'+ data.reponse[i].id +'" data-name="'+data.reponse[i].name+'"><div class="image"><img src="assets/images/' + data.reponse[i].name + '.png" /></div></div>');
+    $(content).append('<div class="pokemon view" style="width:'+(size-2)+'px;height:'+(size-2)+'px;"data-id="'+ data.reponse[i].id +'" data-name="'+data.reponse[i].name+'"><div class="image"><img src="http://thomasvictoria.fr/pokemon/assets/images/' + data.reponse[i].name.charAt(0).toUpperCase()+data.reponse[i].name.slice(1) + '.png" /></div></div>');
 
   };
 
@@ -863,7 +863,7 @@ Move.prototype.show = function(){
   var self    = this.data,
       selfFun = this.pokemon,
       selfid  = self.id,
-      json    = $.getJSON('../../data/moves.json');
+      json    = $.getJSON('http://thomasvictoria.fr/pokemon/data/moves.json');
 
   $(this.detail).children('h2').html(self.name);
 
@@ -973,12 +973,6 @@ function DisplayPokemon(pokemon, json){
 
   new categorie();
 
-  $('#move, #ability, #type').on('click', function(){
-
-//    $(this).fadeOut(500);
-
-  });
-
 }
 var resizeContent = function(){
 	
@@ -1028,9 +1022,9 @@ function SearchField(){
 
 SearchField.prototype.inputOnKeydown = function(){
 
-  var type         = $.getJSON('../../data/types.json'),
-      abitily      = $.getJSON('../../data/ability.json'),
-      move         = $.getJSON('../../data/moves.json');
+  var type         = $.getJSON('http://thomasvictoria.fr/pokemon/data/types.json'),
+      abitily      = $.getJSON('http://thomasvictoria.fr/pokemon/data/ability.json'),
+      move         = $.getJSON('http://thomasvictoria.fr/pokemon/data/moves.json');
 
   var self       = this.init;
   var selfSecond = this.DisplaySearch;
@@ -1204,9 +1198,9 @@ Type.prototype.show = function(){
   var selfBlock    = this.detail.children('.tableEffect'),
       selfFun      = this.pokemon,
       selfid       = self.id,
-      json         = $.getJSON('../../data/types.json');
+      json         = $.getJSON('http://thomasvictoria.fr/pokemon/data/types.json');
   
-  $('.caracteristique .image').html('<img src="assets/pokemon_type/'+ self.name +'.png" alt="">');
+  $('.caracteristique .image').html('<img src="http://thomasvictoria.fr/pokemon/assets/pokemon_type/'+ self.name.charAt(0).toUpperCase()+self.name.slice(1) +'.png" alt="">');
 
   $(selfBlock).children('.ineffective').append('Ineffective');
   $(selfBlock).children('.no_effect').append('No effect');
@@ -1225,7 +1219,7 @@ Type.prototype.show = function(){
         lenght    = step.length,
         id        = step.slice(0,lenght -1);
 
-    $(selfBlock).children('.ineffective').append('<a href="#"><div class="type img" data-id="'+id+'"><img src="assets/pokemon_type/'+ this.name +'.png" ></div></a>');
+    $(selfBlock).children('.ineffective').append('<a href="#"><div class="type img" data-id="'+id+'"><img src="http://thomasvictoria.fr/pokemon/assets/pokemon_type/'+ this.name.charAt(0).toUpperCase()+this.name.slice(1) +'.png" ></div></a>');
 
   });
 
@@ -1239,7 +1233,7 @@ Type.prototype.show = function(){
         lenght    = step.length,
         id        = step.slice(0,lenght -1);
 
-    $(selfBlock).children('.no_effect').append('<a href="#"><div class="type img" data-id="'+id+'"><img src="assets/pokemon_type/'+ this.name +'.png" ></div></a>'); 
+    $(selfBlock).children('.no_effect').append('<a href="#"><div class="type img" data-id="'+id+'"><img src="http://thomasvictoria.fr/pokemon/assets/pokemon_type/'+ this.name.charAt(0).toUpperCase()+this.name.slice(1) +'.png" ></div></a>'); 
 
   });
 
@@ -1253,7 +1247,7 @@ Type.prototype.show = function(){
         lenght    = step.length,
         id        = step.slice(0,lenght -1);
 
-    $(selfBlock).children('.resistance').append('<a href="#"><div class="type img" data-id="'+id+'"><img src="assets/pokemon_type/'+ this.name +'.png" ></div></a>');    
+    $(selfBlock).children('.resistance').append('<a href="#"><div class="type img" data-id="'+id+'"><img src="http://thomasvictoria.fr/pokemon/assets/pokemon_type/'+ this.name.charAt(0).toUpperCase()+this.name.slice(1) +'.png" ></div></a>');    
 
   });
 
@@ -1267,7 +1261,7 @@ Type.prototype.show = function(){
         lenght    = step.length,
         id        = step.slice(0,lenght -1);
 
-    $(selfBlock).children('.super_effective').append('<a href="#"><div class="type img" data-id="'+id+'"><img src="assets/pokemon_type/'+ this.name +'.png" ></div></a>');    
+    $(selfBlock).children('.super_effective').append('<a href="#"><div class="type img" data-id="'+id+'"><img src="http://thomasvictoria.fr/pokemon/assets/pokemon_type/'+ this.name.charAt(0).toUpperCase()+this.name.slice(1) +'.png" ></div></a>');    
 
   });
 
@@ -1281,7 +1275,7 @@ Type.prototype.show = function(){
         lenght    = step.length,
         id        = step.slice(0,lenght -1);
 
-    $(selfBlock).children('.weakness').append('<a href="#"><div class="type img" data-id="'+id+'"><img src="assets/pokemon_type/'+ this.name +'.png" ></div></a>');
+    $(selfBlock).children('.weakness').append('<a href="#"><div class="type img" data-id="'+id+'"><img src="http://thomasvictoria.fr/pokemon/assets/pokemon_type/'+ this.name.charAt(0).toUpperCase()+this.name.slice(1) +'.png" ></div></a>');
 
   });
 
