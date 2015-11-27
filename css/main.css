@@ -675,7 +675,8 @@ body {
   position: absolute;
   z-index: 1000;
   width: 100%;
-  height: 100vh; }
+  height: 100vh;
+  background-color: rgba(50, 50, 50, 0.5); }
   #loader-container #loader {
     position: relative;
     height: 100px;

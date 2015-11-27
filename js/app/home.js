@@ -14,9 +14,9 @@ $('#timeline > .time').on('mouseenter', function(){
 		var bg = '.bg'+$(this).attr('data-gen');
 		var img = bg+' img';
 		TweenMax.to($(bg), 0,{display: 'block', opacity: 1});
-		TweenMax.staggerFrom($(img), 0.2, {
+		TweenMax.staggerFrom($(img), 0.5, {
 			x:"-3000px",
-			ease: Power1.easeIn
+			ease: Back.easeOut.config(1.7)
 			}, 0.1);
 	}
 })
