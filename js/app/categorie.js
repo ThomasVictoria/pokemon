@@ -58,7 +58,7 @@ categorie.prototype.callAjax = function(){
     $(selfAbility).fadeIn(400);
 
     var id = $(this).attr('data-id');
-    new call('ability', id, DisplayType);
+    new call('ability', id, DisplayAbility);
 
   });
 
@@ -66,12 +66,21 @@ categorie.prototype.callAjax = function(){
     $(selfMove).fadeIn(400);
 
     var id = $(this).attr('data-id');
-    new call('move', id, DisplayType);
+    new call('move', id, DisplayMove);
 
   });
 
   $(this.type).on('click', function(e){
-    $(selfType).fadeIn(400);
+
+    console.log($(this).hasClass('img'));
+    
+    if($(this).hasClass('img') == false){
+//      $(selfType).fadeIn(400);
+      console.log('pas fade');
+      }
+    else {
+      console.log('fade');
+    }
 
     var id = $(this).attr('data-id');
     new call('type', id, DisplayType);
