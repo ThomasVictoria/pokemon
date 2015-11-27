@@ -445,13 +445,18 @@ pokearticle.prototype.display = function(ability, moves, type, pokemonId, localS
 
 
 // Home
+var gen;
+var actualGen = 1;
 $('#timeline > .time').on('mouseenter', function(){
 	if($(this).attr('data-gen')){
-		$('#generation h3').html($(this).attr('data-gen'));
+		gen = $(this).attr('data-gen');
+		$('#generation h3').html(gen);
 	}
-	$('#home .bg').css('display', 'none');
 	
-	if($(this).attr('data-gen') != "all"){
+	
+	if(gen != "all" && gen != actualGen){
+		$('#home .bg').css('display', 'none');
+		actualGen = gen;
 		var bg = '.bg'+$(this).attr('data-gen');
 		var img = bg+' img';
 		TweenMax.to($(bg), 0,{display: 'block', opacity: 1});
@@ -488,6 +493,8 @@ new TimeLine();
 function Home(){
 
   this.home       = $('#home');
+  this.logo       = $('.logo');
+  this.bg         = $('.bg');
   this.categorie  = $('#categorie');
   this.menu       = $('#nav ul');
   this.menuButton = $('#categorie ul .point');
@@ -626,23 +633,40 @@ Home.prototype.applyFilters = function(filters, data){
 Home.prototype.toGen = function(){
 
   var self = this.categorie;
-
-  $(this.home).on('click', function(e){
-    $(this).fadeOut();
+  var home = this.home;
+  
+  $(this.bg).on('click', function(e){
+    $(home).fadeOut();
     $(self).fadeIn();
     $('#version').html($('#generation h3').html());
   });
+  
+  $(this.logo).on('click', function(){
+    if($(home).css('display') == 'block'){
+      $(home).fadeOut();
+      $(self).fadeIn();
+      $('#version').html('All');
+    }else{
+      $(self).fadeOut();
+      $(home).fadeIn();
+    }
+  })
 
 }
 
 Home.prototype.CallPokemons = function(){
+  
+  var self = this.categorie;
 
-  $(this.home).on('click', function(){
-
+  $(this.bg).on('click', function(){
     var generation = $('#generation h3').html();
-
     var pokedex = new call('pokedex', generation, Display);
-
+  });
+  
+  $(this.logo).on('click', function(){
+    if($(home).css('display') == 'block'){
+      var pokedex = new call('pokedex', 'all', Display);
+    }
   });
 
 }
@@ -650,6 +674,7 @@ Home.prototype.CallPokemons = function(){
 function Display(data){
 
   var content  = $('#content');
+  content.html('');
   var child = Math.ceil((Object.keys(data.reponse)).length / 3);
   
   // Height pokemon elmt

@@ -1,11 +1,16 @@
 // Home
+var gen;
+var actualGen = 1;
 $('#timeline > .time').on('mouseenter', function(){
 	if($(this).attr('data-gen')){
-		$('#generation h3').html($(this).attr('data-gen'));
+		gen = $(this).attr('data-gen');
+		$('#generation h3').html(gen);
 	}
-	$('#home .bg').css('display', 'none');
 	
-	if($(this).attr('data-gen') != "all"){
+	
+	if(gen != "all" && gen != actualGen){
+		$('#home .bg').css('display', 'none');
+		actualGen = gen;
 		var bg = '.bg'+$(this).attr('data-gen');
 		var img = bg+' img';
 		TweenMax.to($(bg), 0,{display: 'block', opacity: 1});
