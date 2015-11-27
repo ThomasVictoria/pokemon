@@ -245,8 +245,8 @@ categorie.prototype.callAjax = function(){
   var selfPopup   = this.popup;
 
   $(this.pokemon).on('click', function(e){
-    TweenMax.fromTo($('#loader-container'), 1,{display: 'block', opacity: 1}, {opcity: '0', display: 'none', delay:0.2});
-    TweenMax.to($('#loader-container'), 0.2,{opcity: '0', display: 'none', delay:0.8})
+    TweenMax.fromTo($('#loader-container'), 1,{display: 'block', opacity: 1}, {opcity: '0', display: 'none', delay:0.9});
+    // TweenMax.to($('#loader-container'), 0.2,{opcity: '0', display: 'none', delay:0.8})
     TweenMax.fromTo($(selfPokemon), 1,{'left': '-100%', display: 'block'}, {left: '0%', display: 'block', delay:1});
     var name = $(this).attr('data-name'),
         id   = $(this).attr('data-id');
@@ -501,23 +501,11 @@ $('#timeline > .time').on('mouseenter', function(){
 		var img = bg+' img';
 		TweenMax.to($(bg), 0,{display: 'block', opacity: 1});
 		TweenMax.staggerFrom($(img), 0.5, {
-			x:"-3000px",
+			left:"-300%",
 			ease: Back.easeOut.config(1.7)
 			}, 0.1);
 	}
 })
-
-
-$('#timeline').on('mouseenter', '.time', function(){
-	var thiss, before, afer;
-	thiss = $(this);
-	
-	var size = $(this).children('div').css('height');
-	size = size - 20;
-	TweenMax.to(thiss.children('div'), 1, {height: size+'px'});
-	
-});
-
 
 var TimeLine = function(){
 	
@@ -847,8 +835,7 @@ Move.prototype.show = function(){
 
 Move.prototype.pokemon = function(json){
 
-  new call('pokedex', 'all', DisplayPokemon, json);
-
+   new call('pokedex', 'all', DisplayPokemon, json);
 };
 
 
@@ -914,7 +901,8 @@ function DisplayPokemon(pokemon, json){
     for(x=1; x < Object.keys(pokemon.reponse).length; x++){
 
       if(pokemon.reponse[x].id == json.pokemons[i])
-        $('.pokemons').append('<a href="#"><div class="pokemon" data-id="'+pokemon.reponse[x].id+'">'+pokemon.reponse[x].name+'</div></a>')
+          
+            $('.pokemons').append('<a href="#"><div class="pokemon" data-id="'+pokemon.reponse[x].id+'">'+pokemon.reponse[x].name+'</div></a>');
 
         }
 

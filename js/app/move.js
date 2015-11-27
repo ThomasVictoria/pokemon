@@ -49,8 +49,7 @@ Move.prototype.show = function(){
 
 Move.prototype.pokemon = function(json){
 
-  new call('pokedex', 'all', DisplayPokemon, json);
-
+   new call('pokedex', 'all', DisplayPokemon, json);
 };
 
 

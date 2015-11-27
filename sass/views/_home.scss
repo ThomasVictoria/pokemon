@@ -330,7 +330,7 @@
 		h2{
 			font-size: 4em;
 			text-align: center;
-			color: #a0a0a0;
+			color: rgb(253, 204, 3);
 		}
 		
 		h3{
@@ -340,7 +340,7 @@
 			left: 0;
 			right: 0;
 			bottom: -55px;
-			color: #4a4a4a;
+			color: #2a2a2a;
 			font-weight: bold;
 		}
 		
@@ -368,11 +368,32 @@
 			float: left;
 			width: 20px; height: 60px;
 			top: 0px;
+			
 			&:hover{
 				cursor: pointer;
+				
+				.smallTimeL, .smallTimeR{
+					height: 30px;
+					border-color: #9c9c9c;
+					transition: all 0.2s ease-out;
+				}
+				
+				.fullTimeL, .fullTimeR{
+					height: 50px;
+					border-color: #9c9c9c;
+					transition: all 0.2s ease-out;
+				}
+				
+				span{
+					top: -15px;
+					font-size: 2em;
+					transition: all 0.2s ease-out;
+				}
+				
 			}
 			
 			.smallTimeL{
+			transition: all 0.2s ease-out;
 			position: absolute;
 			width: 10px; height: 20px;
 			bottom: 0px; left: 0;
@@ -380,6 +401,7 @@
 			}
 			
 			.smallTimeR{
+			transition: all 0.2s ease-out;
 			position: absolute;
 			width: 10px; height: 20px;
 			bottom: 0px; right: 0;
@@ -403,9 +425,11 @@
 			span{
 				position: absolute;
 				left: 0px; right: 0px; top: 0px;
+				font-size: 1em;
 				transform: translateX(-30px);
 				width: 80px;
 				text-align: center;
+				transition: all 0.2s ease-out;
 			}
 		}
 		
