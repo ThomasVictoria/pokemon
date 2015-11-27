@@ -128,7 +128,7 @@ $('#search').on('click', function(e){
     
     
     function initRenderer() {
-        renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
         renderer.setSize(WIDTH, HEIGHT);
     }
     
@@ -172,7 +172,7 @@ $('#search').on('click', function(e){
        loader.load(theJson, function(geometry, materials) {
             mesh = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
             mesh.scale.x = mesh.scale.y = mesh.scale.z = 1;
-           // mesh.translation = THREE.GeometryUtils.center(geometry);
+           mesh.translation = THREE.GeometryUtils.center(geometry);
             scene.add(mesh);
         });
     }
@@ -190,7 +190,7 @@ $('#search').on('click', function(e){
     function render() {
         requestAnimationFrame(render);
         renderer.render(scene, camera);
-        renderer.setClearColor( 0xd8d8d8 );
+        renderer.setClearColor( 0xe0736b, 0.2 );
         controls.update();
     }
 
@@ -493,6 +493,16 @@ $('#timeline > .time').on('mouseenter', function(){
 })
 
 
+$('#timeline').on('mouseenter', '.time', function(){
+	var thiss, before, afer;
+	thiss = $(this);
+	
+	var size = $(this).children('div').css('height');
+	size = size - 20;
+	TweenMax.to(thiss.children('div'), 1, {height: size+'px'});
+	
+});
+
 
 var TimeLine = function(){
 	
@@ -661,19 +671,20 @@ Home.prototype.toGen = function(){
   var home = this.home;
   
   $(this.bg).on('click', function(e){
-    $(home).fadeOut();
-    $(self).fadeIn();
+    TweenMax.fromTo(home, 1, {left:0,display:'block', opacity:'1'},{left:'-100%', display:"none", opacity:'0'});
+    TweenMax.fromTo(self, 1, {right:"100%", display:'none', opacity:'0'},{left:0, display:"block", opacity:'1'});
     $('#version').html($('#generation h3').html());
   });
   
   $(this.logo).on('click', function(){
     if($(home).css('display') == 'block'){
-      $(home).fadeOut();
-      $(self).fadeIn();
+      TweenMax.fromTo(home, 1, {left:0,display:'block', opacity:'1'},{left:'-100%', display:"none", opacity:'0'});
+      TweenMax.fromTo(self, 1, {right:"100%", display:'none', opacity:'0'},{left:0, display:"block", opacity:'1'});
       $('#version').html('All');
     }else{
-      $(self).fadeOut();
-      $(home).fadeIn();
+      $('#content').empty();
+      TweenMax.fromTo(self, 1, {left:0,display:'block', opacity:'1'},{right:'100%', display:"none", opacity:'0'});
+      TweenMax.fromTo(home, 1, {left:"-100%", display:'none', opacity:'0'},{left:0, display:"block", opacity:'1'});
     }
   })
 
@@ -923,8 +934,10 @@ resizeContent.prototype.resize = function(){
 }
 
 resizeContent.prototype.razScroll = function(){
-  	
-	TweenMax.staggerFrom(this.divView, 0.5,{opacity: 0, x:-300, delai:0.5}, 0.1);
+
+	TweenMax.staggerFrom(this.divView, 0.5,{opacity: 0, x:-300}, 0.1);
+	
+	
 	
 	if(stopScroll){
 		TweenMax.from(this.content, 1, {

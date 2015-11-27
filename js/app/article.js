@@ -33,7 +33,7 @@
     
     
     function initRenderer() {
-        renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
         renderer.setSize(WIDTH, HEIGHT);
     }
     
@@ -77,7 +77,7 @@
        loader.load(theJson, function(geometry, materials) {
             mesh = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
             mesh.scale.x = mesh.scale.y = mesh.scale.z = 1;
-           // mesh.translation = THREE.GeometryUtils.center(geometry);
+           mesh.translation = THREE.GeometryUtils.center(geometry);
             scene.add(mesh);
         });
     }
@@ -95,7 +95,7 @@
     function render() {
         requestAnimationFrame(render);
         renderer.render(scene, camera);
-        renderer.setClearColor( 0xd8d8d8 );
+        renderer.setClearColor( 0xe0736b, 0.2 );
         controls.update();
     }
 

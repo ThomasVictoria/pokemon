@@ -22,6 +22,16 @@ $('#timeline > .time').on('mouseenter', function(){
 })
 
 
+$('#timeline').on('mouseenter', '.time', function(){
+	var thiss, before, afer;
+	thiss = $(this);
+	
+	var size = $(this).children('div').css('height');
+	size = size - 20;
+	TweenMax.to(thiss.children('div'), 1, {height: size+'px'});
+	
+});
+
 
 var TimeLine = function(){
 	
