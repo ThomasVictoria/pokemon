@@ -90,6 +90,9 @@ call.prototype.request = function(){
   });
 
 }
+$('#search').on('click', function(e){
+	TweenMax.to($(this), 0.5,{width: '15%', delai:0.5, ease: Elastic.easeOut.config(1, 0.3)});
+});
     var scene, camera, renderer, controls, dirLight, hemiLight;;
 
     var WIDTH  = 520;
@@ -104,34 +107,22 @@ call.prototype.request = function(){
     function init(pokemon) {
         $('#view3d').html('');
         scene = new THREE.Scene();
-        var monBool;
         theJson = 'http://pokemon.dev/assets/jsonModels/'+pokemon+'/'+pokemon+'.json';
         
-        var http = new XMLHttpRequest();
-        http.open('HEAD', theJson, false);
-        http.send();
-        monBool = http.status;
-        
-        if(!monBool){
-            img = 'http://pokemon.dev/assets/images/'+pokemon+'.png';
-            img = '<img src="'+img+'" />';
-            $('#view3d').html(img);
-        }else{
-            initMesh(theJson);
-            initCamera();
-            initLights();
-            initRenderer();
-        
-            controls = new THREE.OrbitControls(camera, renderer.domElement);
-            document.getElementById('view3d').appendChild(renderer.domElement);
+        initMesh(theJson);
+        initCamera();
+        initLights();
+        initRenderer();
+        controls = new THREE.OrbitControls(camera, renderer.domElement);
+        document.getElementById('view3d').appendChild(renderer.domElement);
             
-            render();
-        }
+        render();
+        
     }
     
     function initCamera() {
         camera = new THREE.PerspectiveCamera(90, WIDTH / HEIGHT, 1, 1000);
-        camera.position.set(0, 3.5, 5);
+        camera.position.set(0, 5, 5);
         camera.lookAt(scene.position);
     }
     
@@ -151,7 +142,7 @@ call.prototype.request = function(){
 
         //
 
-        dirLight = new THREE.DirectionalLight( 0xffffff, 1 );
+        dirLight = new THREE.DirectionalLight( 0xffffff, 0.6 );
         dirLight.color.setHSL( 0.1, 1, 0.95 );
         dirLight.position.set( -1, 1.75, 1 );
         dirLight.position.multiplyScalar( 50 );
@@ -178,10 +169,10 @@ call.prototype.request = function(){
     
     function initMesh(theJson) {
        loader = new THREE.JSONLoader();
-        loader.load(theJson, function(geometry, materials) {
+       loader.load(theJson, function(geometry, materials) {
             mesh = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
             mesh.scale.x = mesh.scale.y = mesh.scale.z = 1;
-            mesh.translation = THREE.GeometryUtils.center(geometry);
+           // mesh.translation = THREE.GeometryUtils.center(geometry);
             scene.add(mesh);
         });
     }
@@ -481,11 +472,29 @@ pokearticle.prototype.display = function(ability, moves, type, pokemonId, localS
 
 
 // Home
+var gen;
+var actualGen = 1;
 $('#timeline > .time').on('mouseenter', function(){
 	if($(this).attr('data-gen')){
-		$('#generation h3').html($(this).attr('data-gen'));
+		gen = $(this).attr('data-gen');
+		$('#generation h3').html(gen);
+	}
+	
+	
+	if(gen != "all" && gen != actualGen){
+		$('#home .bg').css('display', 'none');
+		actualGen = gen;
+		var bg = '.bg'+$(this).attr('data-gen');
+		var img = bg+' img';
+		TweenMax.to($(bg), 0,{display: 'block', opacity: 1});
+		TweenMax.staggerFrom($(img), 0.2, {
+			x:"-3000px",
+			ease: Power1.easeIn
+			}, 0.1);
 	}
 })
+
+
 
 var TimeLine = function(){
 	
@@ -511,6 +520,8 @@ new TimeLine();
 function Home(){
 
   this.home       = $('#home');
+  this.logo       = $('.logo');
+  this.bg         = $('.bg');
   this.categorie  = $('#categorie');
   this.menu       = $('#nav ul');
   this.menuButton = $('#categorie ul .point');
@@ -651,23 +662,40 @@ Home.prototype.applyFilters = function(filters, data){
 Home.prototype.toGen = function(){
 
   var self = this.categorie;
-
-  $(this.home).on('click', function(e){
-    $(this).fadeOut();
+  var home = this.home;
+  
+  $(this.bg).on('click', function(e){
+    $(home).fadeOut();
     $(self).fadeIn();
     $('#version').html($('#generation h3').html());
   });
+  
+  $(this.logo).on('click', function(){
+    if($(home).css('display') == 'block'){
+      $(home).fadeOut();
+      $(self).fadeIn();
+      $('#version').html('All');
+    }else{
+      $(self).fadeOut();
+      $(home).fadeIn();
+    }
+  })
 
 }
 
 Home.prototype.CallPokemons = function(){
+  
+  var self = this.categorie;
 
-  $(this.home).on('click', function(){
-
+  $(this.bg).on('click', function(){
     var generation = $('#generation h3').html();
-
     var pokedex = new call('pokedex', generation, Display);
-
+  });
+  
+  $(this.logo).on('click', function(){
+    if($(home).css('display') == 'block'){
+      var pokedex = new call('pokedex', 'all', Display);
+    }
   });
 
 }
@@ -675,6 +703,7 @@ Home.prototype.CallPokemons = function(){
 function Display(data){
 
   var content  = $('#content');
+  content.html('');
   var child = Math.ceil((Object.keys(data.reponse)).length / 3);
   
   // Height pokemon elmt
@@ -896,7 +925,9 @@ resizeContent.prototype.resize = function(){
 }
 
 resizeContent.prototype.razScroll = function(){
-  TweenMax.staggerFrom(this.divView, 0.5,{opacity: 0, x:-300, delai:0.5});
+  	
+	TweenMax.staggerFrom(this.divView, 0.5,{opacity: 0, x:-300, delai:0.5}, 0.1);
+	
 	if(stopScroll){
 		TweenMax.from(this.content, 1, {
 			transform:"translateX(0)",

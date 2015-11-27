@@ -12,34 +12,22 @@
     function init(pokemon) {
         $('#view3d').html('');
         scene = new THREE.Scene();
-        var monBool;
         theJson = 'http://pokemon.dev/assets/jsonModels/'+pokemon+'/'+pokemon+'.json';
         
-        var http = new XMLHttpRequest();
-        http.open('HEAD', theJson, false);
-        http.send();
-        monBool = http.status;
-        
-        if(!monBool){
-            img = 'http://pokemon.dev/assets/images/'+pokemon+'.png';
-            img = '<img src="'+img+'" />';
-            $('#view3d').html(img);
-        }else{
-            initMesh(theJson);
-            initCamera();
-            initLights();
-            initRenderer();
-        
-            controls = new THREE.OrbitControls(camera, renderer.domElement);
-            document.getElementById('view3d').appendChild(renderer.domElement);
+        initMesh(theJson);
+        initCamera();
+        initLights();
+        initRenderer();
+        controls = new THREE.OrbitControls(camera, renderer.domElement);
+        document.getElementById('view3d').appendChild(renderer.domElement);
             
-            render();
-        }
+        render();
+        
     }
     
     function initCamera() {
         camera = new THREE.PerspectiveCamera(90, WIDTH / HEIGHT, 1, 1000);
-        camera.position.set(0, 3.5, 5);
+        camera.position.set(0, 5, 5);
         camera.lookAt(scene.position);
     }
     
@@ -59,7 +47,7 @@
 
         //
 
-        dirLight = new THREE.DirectionalLight( 0xffffff, 1 );
+        dirLight = new THREE.DirectionalLight( 0xffffff, 0.6 );
         dirLight.color.setHSL( 0.1, 1, 0.95 );
         dirLight.position.set( -1, 1.75, 1 );
         dirLight.position.multiplyScalar( 50 );
@@ -86,10 +74,10 @@
     
     function initMesh(theJson) {
        loader = new THREE.JSONLoader();
-        loader.load(theJson, function(geometry, materials) {
+       loader.load(theJson, function(geometry, materials) {
             mesh = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
             mesh.scale.x = mesh.scale.y = mesh.scale.z = 1;
-            mesh.translation = THREE.GeometryUtils.center(geometry);
+           // mesh.translation = THREE.GeometryUtils.center(geometry);
             scene.add(mesh);
         });
     }
