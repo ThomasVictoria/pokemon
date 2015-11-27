@@ -45,8 +45,7 @@ categorie.prototype.callAjax = function(){
   var selfPopup   = this.popup;
 
   $(this.pokemon).on('click', function(e){
-    TweenMax.fromTo($('#loader-container'), 1,{display: 'block', opacity: 1}, {opacity: '0', display: 'none', delay:0.2});
-    TweenMax.to($('#loader-container'), 0.2,{opacity: '0', display: 'none', delay:0.8});
+    TweenMax.fromTo($('#loader-container'), 1,{display: 'block', opacity: 1}, {opacity: '0', display: 'none', delay:0.9});
     TweenMax.fromTo($(selfPokemon), 1,{'left': '-100%', display: 'block'}, {left: '0%', display: 'block', delay:1});
     var name = $(this).attr('data-name'),
         id   = $(this).attr('data-id');

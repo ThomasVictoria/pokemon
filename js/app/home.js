@@ -15,23 +15,11 @@ $('#timeline > .time').on('mouseenter', function(){
 		var img = bg+' img';
 		TweenMax.to($(bg), 0,{display: 'block', opacity: 1});
 		TweenMax.staggerFrom($(img), 0.5, {
-			x:"-3000px",
+			left:"-300%",
 			ease: Back.easeOut.config(1.7)
 			}, 0.1);
 	}
 })
-
-
-$('#timeline').on('mouseenter', '.time', function(){
-	var thiss, before, afer;
-	thiss = $(this);
-	
-	var size = $(this).children('div').css('height');
-	size = size - 20;
-	TweenMax.to(thiss.children('div'), 1, {height: size+'px'});
-	
-});
-
 
 var TimeLine = function(){
 	

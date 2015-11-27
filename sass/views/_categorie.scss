@@ -198,3 +198,11 @@ $colorNav : #4a4a4a;
 
 }
 
+@media screen and (max-height: 1079px) {
+  #nav{
+    ul{
+      max-height: 630px;
+      overflow-y: auto;
+    }
+  }
+}

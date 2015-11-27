@@ -125,7 +125,8 @@
     top: 10px; left: 50%; right: 50%; bottom: 10px;
     transform: translateX(-50%);
     transition: all 0.2s ease-out;
-
+    cursor: pointer;
+  
     &:hover{
       width: 45px;
       height: 45px;

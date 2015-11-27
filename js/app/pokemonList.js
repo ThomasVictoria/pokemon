@@ -7,7 +7,8 @@ function DisplayPokemon(pokemon, json){
     for(x=1; x < Object.keys(pokemon.reponse).length; x++){
 
       if(pokemon.reponse[x].id == json.pokemons[i])
-        $('.pokemons').append('<a href="#"><div class="pokemon" data-id="'+pokemon.reponse[x].id+'">'+pokemon.reponse[x].name+'</div></a>')
+          
+            $('.pokemons').append('<a href="#"><div class="pokemon" data-id="'+pokemon.reponse[x].id+'">'+pokemon.reponse[x].name+'</div></a>');
 
         }
 
