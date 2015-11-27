@@ -245,8 +245,8 @@ categorie.prototype.callAjax = function(){
   var selfPopup   = this.popup;
 
   $(this.pokemon).on('click', function(e){
-    TweenMax.fromTo($('#loader-container'), 1,{display: 'block', opacity: 1}, {opcity: '0', display: 'none', delay:0.2});
-    TweenMax.to($('#loader-container'), 0.2,{opcity: '0', display: 'none', delay:0.8})
+    TweenMax.fromTo($('#loader-container'), 1,{display: 'block', opacity: 1}, {opacity: '0', display: 'none', delay:0.2});
+    TweenMax.to($('#loader-container'), 0.2,{opacity: '0', display: 'none', delay:0.8});
     TweenMax.fromTo($(selfPokemon), 1,{'left': '-100%', display: 'block'}, {left: '0%', display: 'block', delay:1});
     var name = $(this).attr('data-name'),
         id   = $(this).attr('data-id');
@@ -256,23 +256,26 @@ categorie.prototype.callAjax = function(){
   });
 
   $(this.ability).on('click', function(e){
-    $(selfAbility).fadeIn(400);
+
+    TweenMax.fromTo($(selfAbility), 1,{'left': '100%', display: 'none'}, {left: '0%', display: 'block'});
 
     var id = $(this).attr('data-id');
-    new call('ability', id, DisplayType);
+    new call('ability', id, DisplayAbility);
 
   });
 
   $(this.move).on('click', function(e){
-    $(selfMove).fadeIn(400);
+
+    TweenMax.fromTo($(selfMove), 1,{'left': '100%', display: 'none'}, {left: '0%', display: 'block'});
 
     var id = $(this).attr('data-id');
-    new call('move', id, DisplayType);
+    new call('move', id, DisplayMove);
 
   });
 
   $(this.type).on('click', function(e){
-    $(selfType).fadeIn(400);
+
+    TweenMax.fromTo($(selfType), 1,{'left': '100%', display: 'none'}, {left: '0%', display: 'block'});
 
     var id = $(this).attr('data-id');
     new call('type', id, DisplayType);
@@ -282,7 +285,34 @@ categorie.prototype.callAjax = function(){
   $(this.close).on('click', function(e){
     stopScroll = false;
     raf();
-    TweenMax.fromTo($(selfPopup), 1,{'left': '0%', display: 'block'}, {left: '100%', display: 'none'});
+    TweenMax.fromTo($(this).parent().parent().parent(), 1,{'left': '0%', display: 'block'}, {left: '100%', display: 'none'});
+    var context = $(this).parent().find('caracteristique');
+    $(context).children('.image').empty();
+    $(context).children('.tableEffect').children('.innteraction').each(function(){
+      
+      $(this).empty();
+      
+    });
+    $(context).children('.pokemons').empty();
+    $(context).children('h2').empty();
+    
+  });
+  
+  $(this.pokemon).on('click', function(e){
+    stopScroll = false;
+    raf();
+    console.log($(this));
+    new TweenMax.to($('#ability, #type, #move'), 1, {left: '100%', display: 'none'});
+    var context = $('#ability, #type, #move');
+    $(context).children('.image').empty();
+    $(context).children('.tableEffect').children('.innteraction').each(function(){
+      
+      $(this).empty();
+      
+    });
+    $(context).children('.pokemons').empty();
+    $(context).children('h2').empty();
+    
   });
 
 }
@@ -320,12 +350,14 @@ pokearticle.prototype.show = function(){
 
   $('.spec').children().each(function(){
 
-      $(this).children('span').empty();
+    $(this).children('span').empty();
 
   });
 
-  this.article.find('h2').html(this.data.reponse.name);
-  
+  console.log(this.data.reponse.name);
+
+  $('#article .container #caracteristique h2').html(this.data.reponse.name);
+
   var link         = this.data.reponse.descriptions[0].resource_uri,
       delimiter    = '/',
       start        = 4,
@@ -335,16 +367,16 @@ pokearticle.prototype.show = function(){
       id           = step.slice(0,lenght -1);
 
   new call('description', id, desc);
-  
+
   var heightVar, topVar;
-  
+
   stopScroll = true;
-  
+
   $('.spec .vitesse span').append(this.data.reponse.speed);
   heightVar = (this.data.reponse.speed*100)/180 + '%';
   topVar = (100-((this.data.reponse.speed*100)/180)) + '%';
   TweenMax.fromTo($('.spec .vitesse'), 1,{'height': '0%', 'top': '100%'}, {height: heightVar, top: topVar, delay:0.6});
-  
+
   $('.spec .attack span').append(this.data.reponse.attack);
   heightVar = (this.data.reponse.attack*100)/180 + '%';
   topVar = (100-((this.data.reponse.attack*100)/180)) + '%';
@@ -354,19 +386,19 @@ pokearticle.prototype.show = function(){
   heightVar = (this.data.reponse.sp_atk*100)/180 + '%';
   topVar = (100-((this.data.reponse.sp_atk*100)/180)) + '%';
   TweenMax.fromTo($('.spec .spe_attack'), 1,{'height': '0%', 'top': '100%'}, {height: heightVar, top: topVar, delay:1});
-  
+
   $('.spec .defense span').append(this.data.reponse.defense);
   heightVar = (this.data.reponse.defense*100)/180 + '%';
   topVar = (100-((this.data.reponse.defense*100)/180)) + '%';
   TweenMax.fromTo($('.spec .defense'), 1,{'height': '0%', 'top': '100%'}, {height: heightVar, top: topVar, delay:1.2});
-  
+
   $('.spec .hp span').append(this.data.reponse.hp);
-   heightVar = (this.data.reponse.hp*100)/180 + '%';
+  heightVar = (this.data.reponse.hp*100)/180 + '%';
   topVar = (100-((this.data.reponse.hp*100)/180)) + '%';
   TweenMax.fromTo($('.spec .hp'), 1,{'height': '0%', 'top': '100%'}, {height: heightVar, top: topVar, delay:1.4});
-  
+
   $('.spec .spe_def span').append(this.data.reponse.sp_def);
-   heightVar = (this.data.reponse.sp_def*100)/180 + '%';
+  heightVar = (this.data.reponse.sp_def*100)/180 + '%';
   topVar = (100-((this.data.reponse.sp_def*100)/180)) + '%';
   TweenMax.fromTo($('.spec .spe_def'), 1,{'height': '0%', 'top': '100%'}, {height: heightVar, top: topVar, delay:1.6});
 
@@ -387,8 +419,6 @@ pokearticle.prototype.moveability = function(){
   $('#weight').html('Weight : '+self.reponse.weight);
   $('#height').html('Height : '+self.reponse.height);
   $('#categories').html('Categories : '+self.reponse.species);
-
-  $(this.detail).children('h2').html(self.reponse.name);
 
   $.when(ability, moves, type).done(function(ability, moves, type){
 
@@ -440,7 +470,7 @@ pokearticle.prototype.display = function(ability, moves, type, pokemonId, localS
               lenght    = step.length,
               id        = step.slice(0,lenght -1);
 
-          $('#moves').append('<a href="#"><div class="ability" data-id="'+id+'" ><div>Name : '+ moves[y].name +' </div><div> Learn type : '+ moves[y].learn_type +'</div></div></a>')
+          $('#moves').append('<a href="#"><div class="move" data-id="'+id+'" ><div>Name : '+ moves[y].name +' </div><div> Learn type : '+ moves[y].learn_type +'</div></div></a>')
         }
 
       }
@@ -464,7 +494,7 @@ pokearticle.prototype.display = function(ability, moves, type, pokemonId, localS
               step      = tokens.join(delimiter),
               lenght    = step.length,
               id        = step.slice(0,lenght -1);
-
+          
           $('#types').append('<a href="#"><span class="type" data-id="'+id+'" ><img src="assets/pokemon_type/'+ type[y].name +'.png"></span></a>')
         }
 
@@ -500,9 +530,9 @@ $('#timeline > .time').on('mouseenter', function(){
 		var bg = '.bg'+$(this).attr('data-gen');
 		var img = bg+' img';
 		TweenMax.to($(bg), 0,{display: 'block', opacity: 1});
-		TweenMax.staggerFrom($(img), 0.2, {
+		TweenMax.staggerFrom($(img), 0.5, {
 			x:"-3000px",
-			ease: Power1.easeIn
+			ease: Back.easeOut.config(1.7)
 			}, 0.1);
 	}
 })
@@ -735,7 +765,7 @@ function Display(data){
   // Height pokemon elmt
   for(i = 0; i < Object.keys(data.reponse).length; i++){
 
-    $(content).append('<div class="pokemon view" style="width:'+(size-2)+'px;height:'+(size-2)+'px;"data-id="'+ data.reponse[i].id +'" data-name="'+data.reponse[i].name+'"><img src="assets/images/' + data.reponse[i].name + '.png" /></div>');
+    $(content).append('<div class="pokemon view" style="width:'+(size-2)+'px;height:'+(size-2)+'px;"data-id="'+ data.reponse[i].id +'" data-name="'+data.reponse[i].name+'"><div class="image"><img src="assets/images/' + data.reponse[i].name + '.png" /></div></div>');
 
   };
 
@@ -863,6 +893,7 @@ function Navigation(){
   this.type      = $('a .type');
   this.move      = $('a .move');
   this.ability   = $('a .ability');
+  this.pokemon   = $('.pokemon');
   this.articleP  = $('.popup#article');
   this.articleA  = $('.popup#ability');
   this.articleT  = $('.popup#type');
@@ -875,13 +906,14 @@ function Navigation(){
 
 Navigation.prototype.init = function(){
 
-  var selfPokemon = this.articleP;
+  var selfPokemon = this.pokemon;
   var selfMove    = this.articleM;
   var selfAbility = this.articleA;
   var selfType    = this.articleT;
 
   $(this.ability).on('click', function(e){
-    $(selfAbility).fadeIn(400);
+        TweenMax.fromTo($(selfAbility), 1,{'left': '100%', display: 'none'}, {left: '0%', display: 'block'});
+
 
     var id = $(this).attr('data-id');
     new call('ability', id, DisplayAbility);
@@ -889,7 +921,8 @@ Navigation.prototype.init = function(){
   });
 
   $(this.move).on('click', function(e){
-    $(selfMove).fadeIn(400);
+        TweenMax.fromTo($(selfMove), 1,{'left': '100%', display: 'none'}, {left: '0%', display: 'block'});
+
 
     var id = $(this).attr('data-id');
     new call('move', id, DisplayMove);
@@ -897,17 +930,35 @@ Navigation.prototype.init = function(){
   });
 
   $(this.type).on('click', function(e){
-    $(selfType).fadeIn(400);
+        TweenMax.fromTo($(selfType), 1,{'left': '100%', display: 'none'}, {left: '0%', display: 'block'});
+
 
     var id = $(this).attr('data-id');
     new call('type', id, DisplayType);
 
   });
+  
+  $(selfPokemon).on('click', function(e){
+    stopScroll = false;
+    raf();
+    console.log($(this));
+    new TweenMax.to($('#ability, #type, #move'), 1, {left: '100%', display: 'none'});
+    var context = $('#ability, #type, #move');
+    $(context).children('.image').empty();
+    $(context).children('.tableEffect').children('.innteraction').each(function(){
+      
+      $(this).empty();
+      
+    });
+    $(context).children('.pokemons').empty();
+    $(context).children('h2').empty();
+    
+  });
 
 }
 function DisplayPokemon(pokemon, json){
 
-  $('.popup').find('h2').html(json.name);
+  $('#ability').find('h2').html(json.name);
   
   for(i=1; i < Object.keys(json.pokemons).length; i++){
 
@@ -924,7 +975,7 @@ function DisplayPokemon(pokemon, json){
 
   $('#move, #ability, #type').on('click', function(){
 
-    $(this).fadeOut(500);
+//    $(this).fadeOut(500);
 
   });
 
@@ -951,8 +1002,6 @@ resizeContent.prototype.resize = function(){
 resizeContent.prototype.razScroll = function(){
 
 	TweenMax.staggerFrom(this.divView, 0.5,{opacity: 0, x:-300}, 0.1);
-	
-	
 	
 	if(stopScroll){
 		TweenMax.from(this.content, 1, {
@@ -1133,7 +1182,17 @@ Type.prototype.clear = function(){
 
   $(this.detail).children().each(function(){
 
-    $(this).empty();
+    if($(this).hasClass('image') == false && $(this).hasClass('tableEffect') == false)
+      $(this).empty();
+    else if($(this).hasClass('tableEffect')){
+      
+      $('.tableEffect').children().each(function(){
+        
+        $(this).empty();
+        
+      });
+      
+    }
 
   });
 
@@ -1142,16 +1201,12 @@ Type.prototype.clear = function(){
 Type.prototype.show = function(){
 
   var self         = this.data;
-  var selfBlock    = this.detail,
+  var selfBlock    = this.detail.children('.tableEffect'),
       selfFun      = this.pokemon,
       selfid       = self.id,
       json         = $.getJSON('../../data/types.json');
-
-  $(this.detail).children('h2').html(self.name);
-  $(this.detail).children('div img').attr('src', function(){
-    return self.name + '.png';
-  });
-
+  
+  $('.caracteristique .image').html('<img src="assets/pokemon_type/'+ self.name +'.png" alt="">');
 
   $(selfBlock).children('.ineffective').append('Ineffective');
   $(selfBlock).children('.no_effect').append('No effect');
@@ -1170,7 +1225,7 @@ Type.prototype.show = function(){
         lenght    = step.length,
         id        = step.slice(0,lenght -1);
 
-    $(selfBlock).children('.ineffective').append('<a href="#"><div class="type" data-id="'+id+'">'+ this.name +'</div></a>');
+    $(selfBlock).children('.ineffective').append('<a href="#"><div class="type img" data-id="'+id+'"><img src="assets/pokemon_type/'+ this.name +'.png" ></div></a>');
 
   });
 
@@ -1184,7 +1239,7 @@ Type.prototype.show = function(){
         lenght    = step.length,
         id        = step.slice(0,lenght -1);
 
-    $(selfBlock).children('.no_effect').append('<a href="#"><div class="type" data-id="'+id+'">'+ this.name +'</div></a>'); 
+    $(selfBlock).children('.no_effect').append('<a href="#"><div class="type img" data-id="'+id+'"><img src="assets/pokemon_type/'+ this.name +'.png" ></div></a>'); 
 
   });
 
@@ -1198,7 +1253,7 @@ Type.prototype.show = function(){
         lenght    = step.length,
         id        = step.slice(0,lenght -1);
 
-    $(selfBlock).children('.resistance').append('<a href="#"><div class="type" data-id="'+id+'">'+ this.name +'</div></a>');    
+    $(selfBlock).children('.resistance').append('<a href="#"><div class="type img" data-id="'+id+'"><img src="assets/pokemon_type/'+ this.name +'.png" ></div></a>');    
 
   });
 
@@ -1212,7 +1267,7 @@ Type.prototype.show = function(){
         lenght    = step.length,
         id        = step.slice(0,lenght -1);
 
-    $(selfBlock).children('.super_effective').append('<a href="#"><div class="type" data-id="'+id+'">'+ this.name +'</div></a>');    
+    $(selfBlock).children('.super_effective').append('<a href="#"><div class="type img" data-id="'+id+'"><img src="assets/pokemon_type/'+ this.name +'.png" ></div></a>');    
 
   });
 
@@ -1226,13 +1281,11 @@ Type.prototype.show = function(){
         lenght    = step.length,
         id        = step.slice(0,lenght -1);
 
-    $(selfBlock).children('.weakness').append('<a href="#"><div class="type" data-id="'+id+'">'+ this.name +'</div></a>');
+    $(selfBlock).children('.weakness').append('<a href="#"><div class="type img" data-id="'+id+'"><img src="assets/pokemon_type/'+ this.name +'.png" ></div></a>');
 
   });
 
   new Navigation();
-
-  $(this.detail).children('h2').html(self.name);
 
   $.when(json).done(function(json){
 

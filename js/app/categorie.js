@@ -45,8 +45,8 @@ categorie.prototype.callAjax = function(){
   var selfPopup   = this.popup;
 
   $(this.pokemon).on('click', function(e){
-    TweenMax.fromTo($('#loader-container'), 1,{display: 'block', opacity: 1}, {opcity: '0', display: 'none', delay:0.2});
-    TweenMax.to($('#loader-container'), 0.2,{opcity: '0', display: 'none', delay:0.8})
+    TweenMax.fromTo($('#loader-container'), 1,{display: 'block', opacity: 1}, {opacity: '0', display: 'none', delay:0.2});
+    TweenMax.to($('#loader-container'), 0.2,{opacity: '0', display: 'none', delay:0.8});
     TweenMax.fromTo($(selfPokemon), 1,{'left': '-100%', display: 'block'}, {left: '0%', display: 'block', delay:1});
     var name = $(this).attr('data-name'),
         id   = $(this).attr('data-id');
@@ -56,23 +56,26 @@ categorie.prototype.callAjax = function(){
   });
 
   $(this.ability).on('click', function(e){
-    $(selfAbility).fadeIn(400);
+
+    TweenMax.fromTo($(selfAbility), 1,{'left': '100%', display: 'none'}, {left: '0%', display: 'block'});
 
     var id = $(this).attr('data-id');
-    new call('ability', id, DisplayType);
+    new call('ability', id, DisplayAbility);
 
   });
 
   $(this.move).on('click', function(e){
-    $(selfMove).fadeIn(400);
+
+    TweenMax.fromTo($(selfMove), 1,{'left': '100%', display: 'none'}, {left: '0%', display: 'block'});
 
     var id = $(this).attr('data-id');
-    new call('move', id, DisplayType);
+    new call('move', id, DisplayMove);
 
   });
 
   $(this.type).on('click', function(e){
-    $(selfType).fadeIn(400);
+
+    TweenMax.fromTo($(selfType), 1,{'left': '100%', display: 'none'}, {left: '0%', display: 'block'});
 
     var id = $(this).attr('data-id');
     new call('type', id, DisplayType);
@@ -82,7 +85,34 @@ categorie.prototype.callAjax = function(){
   $(this.close).on('click', function(e){
     stopScroll = false;
     raf();
-    TweenMax.fromTo($(selfPopup), 1,{'left': '0%', display: 'block'}, {left: '100%', display: 'none'});
+    TweenMax.fromTo($(this).parent().parent().parent(), 1,{'left': '0%', display: 'block'}, {left: '100%', display: 'none'});
+    var context = $(this).parent().find('caracteristique');
+    $(context).children('.image').empty();
+    $(context).children('.tableEffect').children('.innteraction').each(function(){
+      
+      $(this).empty();
+      
+    });
+    $(context).children('.pokemons').empty();
+    $(context).children('h2').empty();
+    
+  });
+  
+  $(this.pokemon).on('click', function(e){
+    stopScroll = false;
+    raf();
+    console.log($(this));
+    new TweenMax.to($('#ability, #type, #move'), 1, {left: '100%', display: 'none'});
+    var context = $('#ability, #type, #move');
+    $(context).children('.image').empty();
+    $(context).children('.tableEffect').children('.innteraction').each(function(){
+      
+      $(this).empty();
+      
+    });
+    $(context).children('.pokemons').empty();
+    $(context).children('h2').empty();
+    
   });
 
 }

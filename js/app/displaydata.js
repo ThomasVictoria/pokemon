@@ -32,12 +32,14 @@ pokearticle.prototype.show = function(){
 
   $('.spec').children().each(function(){
 
-      $(this).children('span').empty();
+    $(this).children('span').empty();
 
   });
 
-  this.article.find('h2').html(this.data.reponse.name);
-  
+  console.log(this.data.reponse.name);
+
+  $('#article .container #caracteristique h2').html(this.data.reponse.name);
+
   var link         = this.data.reponse.descriptions[0].resource_uri,
       delimiter    = '/',
       start        = 4,
@@ -47,16 +49,16 @@ pokearticle.prototype.show = function(){
       id           = step.slice(0,lenght -1);
 
   new call('description', id, desc);
-  
+
   var heightVar, topVar;
-  
+
   stopScroll = true;
-  
+
   $('.spec .vitesse span').append(this.data.reponse.speed);
   heightVar = (this.data.reponse.speed*100)/180 + '%';
   topVar = (100-((this.data.reponse.speed*100)/180)) + '%';
   TweenMax.fromTo($('.spec .vitesse'), 1,{'height': '0%', 'top': '100%'}, {height: heightVar, top: topVar, delay:0.6});
-  
+
   $('.spec .attack span').append(this.data.reponse.attack);
   heightVar = (this.data.reponse.attack*100)/180 + '%';
   topVar = (100-((this.data.reponse.attack*100)/180)) + '%';
@@ -66,19 +68,19 @@ pokearticle.prototype.show = function(){
   heightVar = (this.data.reponse.sp_atk*100)/180 + '%';
   topVar = (100-((this.data.reponse.sp_atk*100)/180)) + '%';
   TweenMax.fromTo($('.spec .spe_attack'), 1,{'height': '0%', 'top': '100%'}, {height: heightVar, top: topVar, delay:1});
-  
+
   $('.spec .defense span').append(this.data.reponse.defense);
   heightVar = (this.data.reponse.defense*100)/180 + '%';
   topVar = (100-((this.data.reponse.defense*100)/180)) + '%';
   TweenMax.fromTo($('.spec .defense'), 1,{'height': '0%', 'top': '100%'}, {height: heightVar, top: topVar, delay:1.2});
-  
+
   $('.spec .hp span').append(this.data.reponse.hp);
-   heightVar = (this.data.reponse.hp*100)/180 + '%';
+  heightVar = (this.data.reponse.hp*100)/180 + '%';
   topVar = (100-((this.data.reponse.hp*100)/180)) + '%';
   TweenMax.fromTo($('.spec .hp'), 1,{'height': '0%', 'top': '100%'}, {height: heightVar, top: topVar, delay:1.4});
-  
+
   $('.spec .spe_def span').append(this.data.reponse.sp_def);
-   heightVar = (this.data.reponse.sp_def*100)/180 + '%';
+  heightVar = (this.data.reponse.sp_def*100)/180 + '%';
   topVar = (100-((this.data.reponse.sp_def*100)/180)) + '%';
   TweenMax.fromTo($('.spec .spe_def'), 1,{'height': '0%', 'top': '100%'}, {height: heightVar, top: topVar, delay:1.6});
 
@@ -99,8 +101,6 @@ pokearticle.prototype.moveability = function(){
   $('#weight').html('Weight : '+self.reponse.weight);
   $('#height').html('Height : '+self.reponse.height);
   $('#categories').html('Categories : '+self.reponse.species);
-
-  $(this.detail).children('h2').html(self.reponse.name);
 
   $.when(ability, moves, type).done(function(ability, moves, type){
 
@@ -152,7 +152,7 @@ pokearticle.prototype.display = function(ability, moves, type, pokemonId, localS
               lenght    = step.length,
               id        = step.slice(0,lenght -1);
 
-          $('#moves').append('<a href="#"><div class="ability" data-id="'+id+'" ><div>Name : '+ moves[y].name +' </div><div> Learn type : '+ moves[y].learn_type +'</div></div></a>')
+          $('#moves').append('<a href="#"><div class="move" data-id="'+id+'" ><div>Name : '+ moves[y].name +' </div><div> Learn type : '+ moves[y].learn_type +'</div></div></a>')
         }
 
       }
@@ -176,7 +176,7 @@ pokearticle.prototype.display = function(ability, moves, type, pokemonId, localS
               step      = tokens.join(delimiter),
               lenght    = step.length,
               id        = step.slice(0,lenght -1);
-
+          
           $('#types').append('<a href="#"><span class="type" data-id="'+id+'" ><img src="assets/pokemon_type/'+ type[y].name +'.png"></span></a>')
         }
 

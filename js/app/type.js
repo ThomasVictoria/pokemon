@@ -24,7 +24,17 @@ Type.prototype.clear = function(){
 
   $(this.detail).children().each(function(){
 
-    $(this).empty();
+    if($(this).hasClass('image') == false && $(this).hasClass('tableEffect') == false)
+      $(this).empty();
+    else if($(this).hasClass('tableEffect')){
+      
+      $('.tableEffect').children().each(function(){
+        
+        $(this).empty();
+        
+      });
+      
+    }
 
   });
 
@@ -33,16 +43,12 @@ Type.prototype.clear = function(){
 Type.prototype.show = function(){
 
   var self         = this.data;
-  var selfBlock    = this.detail,
+  var selfBlock    = this.detail.children('.tableEffect'),
       selfFun      = this.pokemon,
       selfid       = self.id,
       json         = $.getJSON('../../data/types.json');
-
-  $(this.detail).children('h2').html(self.name);
-  $(this.detail).children('div img').attr('src', function(){
-    return self.name + '.png';
-  });
-
+  
+  $('.caracteristique .image').html('<img src="assets/pokemon_type/'+ self.name +'.png" alt="">');
 
   $(selfBlock).children('.ineffective').append('Ineffective');
   $(selfBlock).children('.no_effect').append('No effect');
@@ -61,7 +67,7 @@ Type.prototype.show = function(){
         lenght    = step.length,
         id        = step.slice(0,lenght -1);
 
-    $(selfBlock).children('.ineffective').append('<a href="#"><div class="type" data-id="'+id+'">'+ this.name +'</div></a>');
+    $(selfBlock).children('.ineffective').append('<a href="#"><div class="type img" data-id="'+id+'"><img src="assets/pokemon_type/'+ this.name +'.png" ></div></a>');
 
   });
 
@@ -75,7 +81,7 @@ Type.prototype.show = function(){
         lenght    = step.length,
         id        = step.slice(0,lenght -1);
 
-    $(selfBlock).children('.no_effect').append('<a href="#"><div class="type" data-id="'+id+'">'+ this.name +'</div></a>'); 
+    $(selfBlock).children('.no_effect').append('<a href="#"><div class="type img" data-id="'+id+'"><img src="assets/pokemon_type/'+ this.name +'.png" ></div></a>'); 
 
   });
 
@@ -89,7 +95,7 @@ Type.prototype.show = function(){
         lenght    = step.length,
         id        = step.slice(0,lenght -1);
 
-    $(selfBlock).children('.resistance').append('<a href="#"><div class="type" data-id="'+id+'">'+ this.name +'</div></a>');    
+    $(selfBlock).children('.resistance').append('<a href="#"><div class="type img" data-id="'+id+'"><img src="assets/pokemon_type/'+ this.name +'.png" ></div></a>');    
 
   });
 
@@ -103,7 +109,7 @@ Type.prototype.show = function(){
         lenght    = step.length,
         id        = step.slice(0,lenght -1);
 
-    $(selfBlock).children('.super_effective').append('<a href="#"><div class="type" data-id="'+id+'">'+ this.name +'</div></a>');    
+    $(selfBlock).children('.super_effective').append('<a href="#"><div class="type img" data-id="'+id+'"><img src="assets/pokemon_type/'+ this.name +'.png" ></div></a>');    
 
   });
 
@@ -117,13 +123,11 @@ Type.prototype.show = function(){
         lenght    = step.length,
         id        = step.slice(0,lenght -1);
 
-    $(selfBlock).children('.weakness').append('<a href="#"><div class="type" data-id="'+id+'">'+ this.name +'</div></a>');
+    $(selfBlock).children('.weakness').append('<a href="#"><div class="type img" data-id="'+id+'"><img src="assets/pokemon_type/'+ this.name +'.png" ></div></a>');
 
   });
 
   new Navigation();
-
-  $(this.detail).children('h2').html(self.name);
 
   $.when(json).done(function(json){
 

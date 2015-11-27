@@ -107,13 +107,20 @@ $colorNav : #4a4a4a;
     left: 80px; right: 0; top: 0;
 
     .pokemon{
-      width: 270px; 
-      height: 270px;
+      width: 100px; 
       border: 1px solid rgba(239,240,242,0.5);
       justify-content: flex-start;
+
+      .image{
+
+        max-width: 201px;
+        max-height: 200px;
+        margin: auto;
       
-      img{
-        width: 100%; height: auto !important;
+        
+        img{
+          width: 100%;
+        }
       }
     }
 
@@ -134,24 +141,25 @@ $colorNav : #4a4a4a;
     margin-top: 5px;
   }
 
-  
-	#search{
-		position: fixed;
-		top: 20px; right: 20px;
-		background: url(../img/search-dark.png) no-repeat 10px 6px #444;
-		border: 0 none;
-		font: bold 12px Arial,Helvetica,Sans-serif;
-		color: #777;
-		width: 5%;
-		padding: 6px 15px 6px 35px;
-		-webkit-border-radius: 20px;
-		-moz-border-radius: 20px;
-		border-radius: 20px;
-		text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
-		-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
-		-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
-		box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
-	}
+
+  #search{
+    position: fixed;
+    top: 20px; right: 20px;
+    background: url(../img/search-dark.png) no-repeat 10px 6px #444;
+    border: 0 none;
+    font: bold 12px Arial,Helvetica,Sans-serif;
+    color: #777;
+    z-index: 11;
+    width: 5%;
+    padding: 6px 15px 6px 35px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+  }
 
   .searchField{
     overflow-y: auto; 
@@ -168,12 +176,12 @@ $colorNav : #4a4a4a;
       margin-left: 10px;
 
       .type, .ability, .move{
-        
+
         font-size: 18px;
         color: #eee;
-        
+
       }
-      
+
       .title{
 
         font-size:30px;
