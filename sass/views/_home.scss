@@ -10,10 +10,12 @@
 		height: 100%; 
 		position: relative;
 		top: 0; right: 0; bottom: 0; left: 0;
+		background: url(../img/background.png) no-repeat 50% 50%;
+		background-size: cover;
 	}
 	
 	.bg1{
-		background-color: rgb(20, 96, 168);
+		// background-color: rgb(20, 96, 168);
 		
 		img{
 			position: absolute;
@@ -62,7 +64,7 @@
 	}
 	
 	.bg2{
-		background-color: rgb(58, 138, 193);
+		// background-color: rgb(58, 138, 193);
 		display: none;
 		img{
 			position: absolute;
@@ -121,7 +123,7 @@
 	}
 	
 	.bg3{
-		background-color: rgb(140, 184, 216);
+		// background-color: rgb(140, 184, 216);
 		display: none;
 		img{
 			position: absolute;
@@ -171,7 +173,7 @@
 	
 	
 	.bg4{
-		background-color: rgb(20, 96, 168);
+		// background-color: rgb(20, 96, 168);
 		display: none;
 		img{
 			position: absolute;
@@ -225,7 +227,7 @@
 	}
 	
 	.bg5{
-		background-color: rgb(58, 138, 193);
+		// background-color: rgb(58, 138, 193);
 		display: none;
 		img{
 			position: absolute;
@@ -279,7 +281,7 @@
 	}
 	
 	.bg6{
-		background-color: rgb(140, 184, 216);
+		// background-color: rgb(140, 184, 216);
 		display: none;
 		img{
 			position: absolute;

@@ -107,40 +107,39 @@ body {
     top: 0;
     right: 0;
     bottom: 0;
-    left: 0; }
-  #home .bg1 {
-    background-color: #1460a8; }
-    #home .bg1 img {
-      position: absolute;
-      transform: translateX(-50%); }
-      #home .bg1 img:nth-child(1) {
-        left: 18%;
-        z-index: 3;
-        bottom: 10%; }
-      #home .bg1 img:nth-child(2) {
-        left: 22%;
-        z-index: 1;
-        bottom: 20%; }
-      #home .bg1 img:nth-child(3) {
-        left: 29%;
-        z-index: 2;
-        bottom: 10%; }
-      #home .bg1 img:nth-child(4) {
-        right: 15%;
-        bottom: 23%;
-        z-index: 2; }
-      #home .bg1 img:nth-child(5) {
-        right: -2%;
-        bottom: 10%;
-        z-index: 1; }
-      #home .bg1 img:nth-child(6) {
-        left: 50%;
-        bottom: 15%; }
-      #home .bg1 img:nth-child(7) {
-        left: 50%;
-        top: 3%; }
+    left: 0;
+    background: url(../img/background.png) no-repeat 50% 50%;
+    background-size: cover; }
+  #home .bg1 img {
+    position: absolute;
+    transform: translateX(-50%); }
+    #home .bg1 img:nth-child(1) {
+      left: 18%;
+      z-index: 3;
+      bottom: 10%; }
+    #home .bg1 img:nth-child(2) {
+      left: 22%;
+      z-index: 1;
+      bottom: 20%; }
+    #home .bg1 img:nth-child(3) {
+      left: 29%;
+      z-index: 2;
+      bottom: 10%; }
+    #home .bg1 img:nth-child(4) {
+      right: 15%;
+      bottom: 23%;
+      z-index: 2; }
+    #home .bg1 img:nth-child(5) {
+      right: -2%;
+      bottom: 10%;
+      z-index: 1; }
+    #home .bg1 img:nth-child(6) {
+      left: 50%;
+      bottom: 15%; }
+    #home .bg1 img:nth-child(7) {
+      left: 50%;
+      top: 3%; }
   #home .bg2 {
-    background-color: #3a8ac1;
     display: none; }
     #home .bg2 img {
       position: absolute;
@@ -178,7 +177,6 @@ body {
         left: 63%;
         top: 1%; }
   #home .bg3 {
-    background-color: #8cb8d8;
     display: none; }
     #home .bg3 img {
       position: absolute;
@@ -210,7 +208,6 @@ body {
         right: -8%;
         top: 3%; }
   #home .bg4 {
-    background-color: #1460a8;
     display: none; }
     #home .bg4 img {
       position: absolute;
@@ -245,7 +242,6 @@ body {
         right: 2%;
         top: 4%; }
   #home .bg5 {
-    background-color: #3a8ac1;
     display: none; }
     #home .bg5 img {
       position: absolute;
@@ -280,7 +276,6 @@ body {
         right: 2%;
         top: 7%; }
   #home .bg6 {
-    background-color: #8cb8d8;
     display: none; }
     #home .bg6 img {
       position: absolute;
