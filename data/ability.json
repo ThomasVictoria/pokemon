@@ -1,2940 +1,2941 @@
 {
-    "1": {
-        "name": "stench",
-        "resource_uri": "/api/v1/ability/1/",
-        "pokemons": [
-            44,
-            88,
-            89,
-            434,
-            435,
-            568,
-            569
-        ]
-    },
-    "2": {
-        "name": "drizzle",
-        "resource_uri": "/api/v1/ability/2/",
-        "pokemons": [
-            186,
-            382
-        ]
-    },
-    "3": {
-        "name": "speed-boost",
-        "resource_uri": "/api/v1/ability/3/",
-        "pokemons": [
-            10050,
-            193,
-            255,
-            256,
-            257,
-            291,
-            318,
-            319,
-            469
-        ]
-    },
-    "4": {
-        "name": "battle-armor",
-        "resource_uri": "/api/v1/ability/4/",
-        "pokemons": [
-            104,
-            105,
-            140,
-            141,
-            347,
-            348,
-            451,
-            452
-        ]
-    },
-    "5": {
-        "name": "sturdy",
-        "resource_uri": "/api/v1/ability/5/",
-        "pokemons": [
-            74,
-            75,
-            76,
-            81,
-            82,
-            95,
-            185,
-            204,
-            205,
-            208,
-            213,
-            227,
-            232,
-            299,
-            304,
-            305,
-            306,
-            369,
-            377,
-            410,
-            411,
-            438,
-            462,
-            476,
-            524,
-            525,
-            526,
-            539,
-            557,
-            558,
-            564,
-            565,
-            703,
-            712,
-            713
-        ]
-    },
-    "6": {
-        "name": "damp",
-        "resource_uri": "/api/v1/ability/6/",
-        "pokemons": [
-            46,
-            47,
-            54,
-            55,
-            60,
-            61,
-            62,
-            116,
-            117,
-            186,
-            194,
-            195,
-            230,
-            258,
-            259,
-            260,
-            592,
-            593
-        ]
-    },
-    "7": {
-        "name": "limber",
-        "resource_uri": "/api/v1/ability/7/",
-        "pokemons": [
-            53,
-            106,
-            132,
-            427,
-            428,
-            431,
-            509,
-            510,
-            618,
-            701
-        ]
-    },
-    "8": {
-        "name": "sand-veil",
-        "resource_uri": "/api/v1/ability/8/",
-        "pokemons": [
-            27,
-            28,
-            50,
-            51,
-            74,
-            75,
-            76,
-            207,
-            231,
-            232,
-            246,
-            331,
-            332,
-            443,
-            444,
-            445,
-            472,
-            618,
-            694,
-            695
-        ]
-    },
-    "9": {
-        "name": "static",
-        "resource_uri": "/api/v1/ability/9/",
-        "pokemons": [
-            25,
-            26,
-            100,
-            101,
-            125,
-            172,
-            179,
-            180,
-            181,
-            239,
-            309,
-            310,
-            587,
-            618
-        ]
-    },
-    "10": {
-        "name": "volt-absorb",
-        "resource_uri": "/api/v1/ability/10/",
-        "pokemons": [
-            10020,
-            135,
-            170,
-            171,
-            243,
-            417
-        ]
-    },
-    "11": {
-        "name": "water-absorb",
-        "resource_uri": "/api/v1/ability/11/",
-        "pokemons": [
-            60,
-            61,
-            62,
-            131,
-            134,
-            170,
-            171,
-            186,
-            194,
-            195,
-            226,
-            245,
-            331,
-            332,
-            458,
-            535,
-            536,
-            537,
-            556,
-            592,
-            593
-        ]
-    },
-    "12": {
-        "name": "oblivious",
-        "resource_uri": "/api/v1/ability/12/",
-        "pokemons": [
-            79,
-            80,
-            108,
-            124,
-            199,
-            220,
-            221,
-            238,
-            314,
-            320,
-            321,
-            322,
-            339,
-            340,
-            363,
-            364,
-            365,
-            463,
-            473
-        ]
-    },
-    "13": {
-        "name": "cloud-nine",
-        "resource_uri": "/api/v1/ability/13/",
-        "pokemons": [
-            54,
-            55,
-            108,
-            333,
-            334,
-            463
-        ]
-    },
-    "14": {
-        "name": "compoundeyes",
-        "resource_uri": "/api/v1/ability/14/",
-        "pokemons": [
-            12,
-            48,
-            193,
-            269,
-            290,
-            595,
-            596,
-            664,
-            666
-        ]
-    },
-    "15": {
-        "name": "insomnia",
-        "resource_uri": "/api/v1/ability/15/",
-        "pokemons": [
-            10027,
-            10028,
-            10029,
-            10030,
-            10031,
-            10032,
-            10044,
-            96,
-            97,
-            163,
-            164,
-            167,
-            168,
-            198,
-            225,
-            353,
-            354,
-            430,
-            710,
-            711
-        ]
-    },
-    "16": {
-        "name": "color-change",
-        "resource_uri": "/api/v1/ability/16/",
-        "pokemons": [
-            352
-        ]
-    },
-    "17": {
-        "name": "immunity",
-        "resource_uri": "/api/v1/ability/17/",
-        "pokemons": [
-            143,
-            207,
-            335
-        ]
-    },
-    "18": {
-        "name": "flash-fire",
-        "resource_uri": "/api/v1/ability/18/",
-        "pokemons": [
-            37,
-            38,
-            58,
-            59,
-            77,
-            78,
-            136,
-            155,
-            156,
-            157,
-            228,
-            229,
-            244,
-            485,
-            607,
-            608,
-            609,
-            631
-        ]
-    },
-    "19": {
-        "name": "shield-dust",
-        "resource_uri": "/api/v1/ability/19/",
-        "pokemons": [
-            10,
-            13,
-            49,
-            265,
-            269,
-            664,
-            666
-        ]
-    },
-    "20": {
-        "name": "own-tempo",
-        "resource_uri": "/api/v1/ability/20/",
-        "pokemons": [
-            79,
-            80,
-            108,
-            199,
-            235,
-            270,
-            271,
-            272,
-            322,
-            325,
-            326,
-            327,
-            431,
-            432,
-            463,
-            548,
-            549,
-            677,
-            712,
-            713
-        ]
-    },
-    "21": {
-        "name": "suction-cups",
-        "resource_uri": "/api/v1/ability/21/",
-        "pokemons": [
-            224,
-            345,
-            346,
-            686,
-            687
-        ]
-    },
-    "22": {
-        "name": "intimidate",
-        "resource_uri": "/api/v1/ability/22/",
-        "pokemons": [
-            10021,
-            10055,
-            23,
-            24,
-            58,
-            59,
-            128,
-            130,
-            209,
-            210,
-            211,
-            234,
-            237,
-            262,
-            284,
-            303,
-            373,
-            397,
-            398,
-            403,
-            404,
-            405,
-            507,
-            508,
-            551,
-            552,
-            553,
-            559,
-            560
-        ]
-    },
-    "23": {
-        "name": "shadow-tag",
-        "resource_uri": "/api/v1/ability/23/",
-        "pokemons": [
-            10038,
-            202,
-            360,
-            574,
-            575,
-            576,
-            607,
-            608,
-            609
-        ]
-    },
-    "24": {
-        "name": "rough-skin",
-        "resource_uri": "/api/v1/ability/24/",
-        "pokemons": [
-            318,
-            319,
-            443,
-            444,
-            445,
-            621
-        ]
-    },
-    "25": {
-        "name": "wonder-guard",
-        "resource_uri": "/api/v1/ability/25/",
-        "pokemons": [
-            292
-        ]
-    },
-    "26": {
-        "name": "levitate",
-        "resource_uri": "/api/v1/ability/26/",
-        "pokemons": [
-            10007,
-            10008,
-            10009,
-            10010,
-            10011,
-            10012,
-            92,
-            93,
-            94,
-            109,
-            110,
-            200,
-            201,
-            329,
-            330,
-            337,
-            338,
-            343,
-            344,
-            355,
-            358,
-            380,
-            381,
-            429,
-            433,
-            436,
-            437,
-            455,
-            479,
-            480,
-            481,
-            482,
-            488,
-            602,
-            603,
-            604,
-            615,
-            635
-        ]
-    },
-    "27": {
-        "name": "effect-spore",
-        "resource_uri": "/api/v1/ability/27/",
-        "pokemons": [
-            45,
-            46,
-            47,
-            285,
-            286,
-            590,
-            591
-        ]
-    },
-    "28": {
-        "name": "synchronize",
-        "resource_uri": "/api/v1/ability/28/",
-        "pokemons": [
-            63,
-            64,
-            65,
-            151,
-            177,
-            178,
-            196,
-            197,
-            280,
-            281,
-            282,
-            517,
-            518,
-            605,
-            606
-        ]
-    },
-    "29": {
-        "name": "clear-body",
-        "resource_uri": "/api/v1/ability/29/",
-        "pokemons": [
-            72,
-            73,
-            374,
-            375,
-            376,
-            377,
-            378,
-            379,
-            599,
-            600,
-            601,
-            703
-        ]
-    },
-    "30": {
-        "name": "natural-cure",
-        "resource_uri": "/api/v1/ability/30/",
-        "pokemons": [
-            113,
-            120,
-            121,
-            222,
-            242,
-            251,
-            315,
-            333,
-            334,
-            406,
-            407,
-            440,
-            492,
-            708,
-            709
-        ]
-    },
-    "31": {
-        "name": "lightningrod",
-        "resource_uri": "/api/v1/ability/31/",
-        "pokemons": [
-            25,
-            26,
-            104,
-            105,
-            111,
-            112,
-            118,
-            119,
-            145,
-            172,
-            309,
-            310,
-            464,
-            522,
-            523
-        ]
-    },
-    "32": {
-        "name": "serene-grace",
-        "resource_uri": "/api/v1/ability/32/",
-        "pokemons": [
-            10006,
-            10018,
-            113,
-            175,
-            176,
-            206,
-            242,
-            385,
-            440,
-            468,
-            585,
-            586,
-            648
-        ]
-    },
-    "33": {
-        "name": "swift-swim",
-        "resource_uri": "/api/v1/ability/33/",
-        "pokemons": [
-            54,
-            55,
-            60,
-            61,
-            62,
-            116,
-            118,
-            119,
-            129,
-            138,
-            139,
-            140,
-            141,
-            211,
-            226,
-            230,
-            270,
-            271,
-            272,
-            283,
-            347,
-            348,
-            349,
-            367,
-            368,
-            369,
-            370,
-            418,
-            419,
-            456,
-            457,
-            458,
-            535,
-            536,
-            537,
-            564,
-            565,
-            614
-        ]
-    },
-    "34": {
-        "name": "chlorophyll",
-        "resource_uri": "/api/v1/ability/34/",
-        "pokemons": [
-            1,
-            2,
-            3,
-            43,
-            44,
-            45,
-            69,
-            70,
-            71,
-            102,
-            103,
-            114,
-            182,
-            187,
-            188,
-            189,
-            191,
-            192,
-            273,
-            274,
-            275,
-            357,
-            420,
-            465,
-            470,
-            540,
-            541,
-            542,
-            546,
-            547,
-            548,
-            549,
-            556,
-            585,
-            586
-        ]
-    },
-    "35": {
-        "name": "illuminate",
-        "resource_uri": "/api/v1/ability/35/",
-        "pokemons": [
-            120,
-            121,
-            170,
-            171,
-            313,
-            505
-        ]
-    },
-    "36": {
-        "name": "trace",
-        "resource_uri": "/api/v1/ability/36/",
-        "pokemons": [
-            10037,
-            137,
-            233,
-            280,
-            281,
-            282
-        ]
-    },
-    "37": {
-        "name": "huge-power",
-        "resource_uri": "/api/v1/ability/37/",
-        "pokemons": [
-            10052,
-            183,
-            184,
-            298,
-            659,
-            660
-        ]
-    },
-    "38": {
-        "name": "poison-point",
-        "resource_uri": "/api/v1/ability/38/",
-        "pokemons": [
-            29,
-            30,
-            31,
-            32,
-            33,
-            34,
-            117,
-            211,
-            315,
-            406,
-            407,
-            543,
-            544,
-            545,
-            690,
-            691
-        ]
-    },
-    "39": {
-        "name": "inner-focus",
-        "resource_uri": "/api/v1/ability/39/",
-        "pokemons": [
-            41,
-            42,
-            63,
-            64,
-            65,
-            83,
-            96,
-            97,
-            107,
-            115,
-            149,
-            169,
-            197,
-            203,
-            215,
-            361,
-            362,
-            447,
-            448,
-            538,
-            539,
-            554,
-            619,
-            620,
-            624,
-            625
-        ]
-    },
-    "40": {
-        "name": "magma-armor",
-        "resource_uri": "/api/v1/ability/40/",
-        "pokemons": [
-            218,
-            219,
-            323
-        ]
-    },
-    "41": {
-        "name": "water-veil",
-        "resource_uri": "/api/v1/ability/41/",
-        "pokemons": [
-            118,
-            119,
-            226,
-            320,
-            321,
-            367,
-            418,
-            419,
-            456,
-            457,
-            458
-        ]
-    },
-    "42": {
-        "name": "magnet-pull",
-        "resource_uri": "/api/v1/ability/42/",
-        "pokemons": [
-            81,
-            82,
-            299,
-            462,
-            476
-        ]
-    },
-    "43": {
-        "name": "soundproof",
-        "resource_uri": "/api/v1/ability/43/",
-        "pokemons": [
-            100,
-            101,
-            122,
-            293,
-            294,
-            295,
-            410,
-            411,
-            439,
-            459,
-            460,
-            626
-        ]
-    },
-    "44": {
-        "name": "rain-dish",
-        "resource_uri": "/api/v1/ability/44/",
-        "pokemons": [
-            7,
-            8,
-            9,
-            72,
-            73,
-            270,
-            271,
-            272,
-            278,
-            279,
-            283
-        ]
-    },
-    "45": {
-        "name": "sand-stream",
-        "resource_uri": "/api/v1/ability/45/",
-        "pokemons": [
-            10049,
-            248,
-            449,
-            450
-        ]
-    },
-    "46": {
-       "name": "Pressure",
-        "pokemons": [
-            10001,
-            10002,
-            10003,
-            142,
-            144,
-            145,
-            146,
-            150,
-            243,
-            244,
-            245,
-            249,
-            250,
-            320,
-            321,
-            356,
-            359,
-            386,
-            416,
-            442,
-            461,
-            477,
-            483,
-            484,
-            487,
-            624,
-            625,
-            646
-        ]
-    },
-    "47": {
-        "name": "thick-fat",
-        "resource_uri": "/api/v1/ability/47/",
-        "pokemons": [
-            10033,
-            86,
-            87,
-            143,
-            183,
-            184,
-            220,
-            221,
-            241,
-            296,
-            297,
-            298,
-            325,
-            326,
-            363,
-            364,
-            365,
-            432,
-            446,
-            473,
-            498,
-            499
-        ]
-    },
-    "48": {
-        "name": "early-bird",
-        "resource_uri": "/api/v1/ability/48/",
-        "pokemons": [
-            84,
-            85,
-            115,
-            165,
-            166,
-            177,
-            178,
-            191,
-            192,
-            203,
-            228,
-            229,
-            273,
-            274,
-            275
-        ]
-    },
-    "49": {
-        "name": "flame-body",
-        "resource_uri": "/api/v1/ability/49/",
-        "pokemons": [
-            77,
-            78,
-            126,
-            146,
-            218,
-            219,
-            240,
-            467,
-            485,
-            607,
-            608,
-            609,
-            636,
-            637,
-            662,
-            663
-        ]
-    },
-    "50": {
-        "name": "run-away",
-        "resource_uri": "/api/v1/ability/50/",
-        "pokemons": [
-            10,
-            13,
-            19,
-            20,
-            43,
-            48,
-            77,
-            78,
-            84,
-            85,
-            133,
-            161,
-            162,
-            190,
-            206,
-            209,
-            261,
-            265,
-            290,
-            401,
-            417,
-            427,
-            504,
-            506
-        ]
-    },
-    "51": {
-        "name": "keen-eye",
-        "resource_uri": "/api/v1/ability/51/",
-        "pokemons": [
-            10025,
-            16,
-            17,
-            18,
-            21,
-            22,
-            83,
-            107,
-            161,
-            162,
-            163,
-            164,
-            215,
-            227,
-            278,
-            279,
-            302,
-            396,
-            431,
-            434,
-            435,
-            441,
-            451,
-            452,
-            504,
-            505,
-            580,
-            581,
-            627,
-            628,
-            677,
-            678
-        ]
-    },
-    "52": {
-        "name": "hyper-cutter",
-        "resource_uri": "/api/v1/ability/52/",
-        "pokemons": [
-            98,
-            99,
-            127,
-            207,
-            303,
-            328,
-            341,
-            342,
-            472
-        ]
-    },
-    "53": {
-        "name": "pickup",
-        "resource_uri": "/api/v1/ability/53/",
-        "pokemons": [
-            10027,
-            10028,
-            10029,
-            10030,
-            10031,
-            10032,
-            52,
-            190,
-            216,
-            231,
-            263,
-            264,
-            417,
-            424,
-            446,
-            506,
-            659,
-            660,
-            702,
-            710,
-            711
-        ]
-    },
-    "54": {
-        "name": "truant",
-        "resource_uri": "/api/v1/ability/54/",
-        "pokemons": [
-            287,
-            289,
-            632
-        ]
-    },
-    "55": {
-        "name": "hustle",
-        "resource_uri": "/api/v1/ability/55/",
-        "pokemons": [
-            19,
-            20,
-            29,
-            30,
-            32,
-            33,
-            175,
-            176,
-            222,
-            223,
-            225,
-            415,
-            468,
-            554,
-            627,
-            632,
-            633,
-            634
-        ]
-    },
-    "56": {
-        "name": "cute-charm",
-        "resource_uri": "/api/v1/ability/56/",
-        "pokemons": [
-            35,
-            36,
-            39,
-            40,
-            173,
-            174,
-            300,
-            301,
-            350,
-            428,
-            572,
-            573,
-            700
-        ]
-    },
-    "57": {
-        "name": "plus",
-        "resource_uri": "/api/v1/ability/57/",
-        "pokemons": [
-            179,
-            180,
-            181,
-            311,
-            599,
-            600,
-            601,
-            702
-        ]
-    },
-    "58": {
-        "name": "minus",
-        "resource_uri": "/api/v1/ability/58/",
-        "pokemons": [
-            309,
-            310,
-            312,
-            599,
-            600,
-            601
-        ]
-    },
-    "59": {
-        "name": "forecast",
-        "resource_uri": "/api/v1/ability/59/",
-        "pokemons": [
-            10013,
-            10014,
-            10015,
-            351
-        ]
-    },
-    "60": {
-        "name": "sticky-hold",
-        "resource_uri": "/api/v1/ability/60/",
-        "pokemons": [
-            88,
-            89,
-            316,
-            317,
-            422,
-            423,
-            568,
-            617
-        ]
-    },
-    "61": {
-        "name": "shed-skin",
-        "resource_uri": "/api/v1/ability/61/",
-        "pokemons": [
-            11,
-            14,
-            23,
-            24,
-            147,
-            148,
-            247,
-            266,
-            268,
-            336,
-            401,
-            412,
-            559,
-            560,
-            588,
-            665
-        ]
-    },
-    "62": {
-        "name": "guts",
-        "resource_uri": "/api/v1/ability/62/",
-        "pokemons": [
-            19,
-            20,
-            66,
-            67,
-            68,
-            136,
-            214,
-            217,
-            236,
-            246,
-            276,
-            277,
-            296,
-            297,
-            403,
-            404,
-            405,
-            532,
-            533,
-            534,
-            538
-        ]
-    },
-    "63": {
-        "name": "marvel-scale",
-        "resource_uri": "/api/v1/ability/63/",
-        "pokemons": [
-            147,
-            148,
-            350
-        ]
-    },
-    "64": {
-        "name": "liquid-ooze",
-        "resource_uri": "/api/v1/ability/64/",
-        "pokemons": [
-            72,
-            73,
-            316,
-            317
-        ]
-    },
-    "65": {
-        "name": "overgrow",
-        "resource_uri": "/api/v1/ability/65/",
-        "pokemons": [
-            1,
-            2,
-            3,
-            152,
-            153,
-            154,
-            252,
-            253,
-            254,
-            387,
-            388,
-            389,
-            495,
-            496,
-            497,
-            511,
-            512,
-            650,
-            651,
-            652
-        ]
-    },
-    "66": {
-        "name": "blaze",
-        "resource_uri": "/api/v1/ability/66/",
-        "pokemons": [
-            4,
-            5,
-            6,
-            155,
-            156,
-            157,
-            255,
-            256,
-            257,
-            390,
-            391,
-            392,
-            498,
-            499,
-            500,
-            513,
-            514,
-            653,
-            654,
-            655
-        ]
-    },
-    "67": {
-        "name": "torrent",
-        "resource_uri": "/api/v1/ability/67/",
-        "pokemons": [
-            7,
-            8,
-            9,
-            158,
-            159,
-            160,
-            258,
-            259,
-            260,
-            393,
-            394,
-            395,
-            501,
-            502,
-            503,
-            515,
-            516,
-            656,
-            657,
-            658
-        ]
-    },
-    "68": {
-        "name": "swarm",
-        "resource_uri": "/api/v1/ability/68/",
-        "pokemons": [
-            15,
-            123,
-            165,
-            166,
-            167,
-            168,
-            212,
-            214,
-            267,
-            313,
-            402,
-            414,
-            540,
-            542,
-            543,
-            544,
-            545,
-            588,
-            589,
-            595,
-            596,
-            632,
-            636,
-            637
-        ]
-    },
-    "69": {
-        "name": "rock-head",
-        "resource_uri": "/api/v1/ability/69/",
-        "pokemons": [
-            10016,
-            74,
-            75,
-            76,
-            95,
-            104,
-            105,
-            111,
-            112,
-            142,
-            185,
-            208,
-            304,
-            305,
-            306,
-            369,
-            371,
-            372,
-            438,
-            696,
-            697
-        ]
-    },
-    "70": {
-        "name": "drought",
-        "resource_uri": "/api/v1/ability/70/",
-        "pokemons": [
-            10035,
-            37,
-            38,
-            383
-        ]
-    },
-    "71": {
-        "name": "arena-trap",
-        "resource_uri": "/api/v1/ability/71/",
-        "pokemons": [
-            50,
-            51,
-            328
-        ]
-    },
-    "72": {
-        "name": "vital-spirit",
-        "resource_uri": "/api/v1/ability/72/",
-        "pokemons": [
-            56,
-            57,
-            125,
-            126,
-            225,
-            236,
-            239,
-            240,
-            288,
-            466,
-            467,
-            506
-        ]
-    },
-    "73": {
-        "name": "white-smoke",
-        "resource_uri": "/api/v1/ability/73/",
-        "pokemons": [
-            324,
-            631
-        ]
-    },
-    "74": {
-        "name": "pure-power",
-        "resource_uri": "/api/v1/ability/74/",
-        "pokemons": [
-            10054,
-            307,
-            308
-        ]
-    },
-    "75": {
-        "name": "shell-armor",
-        "resource_uri": "/api/v1/ability/75/",
-        "pokemons": [
-            90,
-            91,
-            98,
-            99,
-            131,
-            138,
-            139,
-            324,
-            341,
-            342,
-            366,
-            387,
-            388,
-            389,
-            501,
-            502,
-            503,
-            557,
-            558,
-            589,
-            616
-        ]
-    },
-    "76": {
-        "name": "air-lock",
-        "resource_uri": "/api/v1/ability/76/",
-        "pokemons": [
-            384
-        ]
-    },
-    "77": {
-        "name": "tangled-feet",
-        "resource_uri": "/api/v1/ability/77/",
-        "pokemons": [
-            16,
-            17,
-            18,
-            84,
-            85,
-            327,
-            441
-        ]
-    },
-    "78": {
-        "name": "motor-drive",
-        "resource_uri": "/api/v1/ability/78/",
-        "pokemons": [
-            466,
-            522,
-            523,
-            587
-        ]
-    },
-    "79": {
-        "name": "rivalry",
-        "resource_uri": "/api/v1/ability/79/",
-        "pokemons": [
-            29,
-            30,
-            31,
-            32,
-            33,
-            34,
-            267,
-            403,
-            404,
-            405,
-            519,
-            520,
-            521,
-            610,
-            611,
-            612,
-            667,
-            668
-        ]
-    },
-    "80": {
-        "name": "steadfast",
-        "resource_uri": "/api/v1/ability/80/",
-        "pokemons": [
-            10043,
-            66,
-            67,
-            68,
-            123,
-            236,
-            237,
-            447,
-            448,
-            475
-        ]
-    },
-    "81": {
-        "name": "snow-cloak",
-        "resource_uri": "/api/v1/ability/81/",
-        "pokemons": [
-            144,
-            220,
-            221,
-            471,
-            473,
-            478,
-            613,
-            614
-        ]
-    },
-    "82": {
-        "name": "gluttony",
-        "resource_uri": "/api/v1/ability/82/",
-        "pokemons": [
-            69,
-            70,
-            71,
-            143,
-            213,
-            263,
-            264,
-            316,
-            317,
-            325,
-            326,
-            446,
-            511,
-            512,
-            513,
-            514,
-            515,
-            516,
-            631
-        ]
-    },
-    "83": {
-        "name": "anger-point",
-        "resource_uri": "/api/v1/ability/83/",
-        "pokemons": [
-            56,
-            57,
-            128,
-            323,
-            551,
-            552,
-            553
-        ]
-    },
-    "84": {
-        "name": "unburden",
-        "resource_uri": "/api/v1/ability/84/",
-        "pokemons": [
-            106,
-            252,
-            253,
-            254,
-            425,
-            426,
-            509,
-            510,
-            617,
-            684,
-            685,
-            701
-        ]
-    },
-    "85": {
-        "name": "heatproof",
-        "resource_uri": "/api/v1/ability/85/",
-        "pokemons": [
-            436,
-            437
-        ]
-    },
-    "86": {
-        "name": "simple",
-        "resource_uri": "/api/v1/ability/86/",
-        "pokemons": [
-            322,
-            399,
-            400,
-            527,
-            528
-        ]
-    },
-    "87": {
-        "name": "dry-skin",
-        "resource_uri": "/api/v1/ability/87/",
-        "pokemons": [
-            46,
-            47,
-            124,
-            453,
-            454,
-            694,
-            695
-        ]
-    },
-    "88": {
-        "name": "download",
-        "resource_uri": "/api/v1/ability/88/",
-        "pokemons": [
-            137,
-            233,
-            474,
-            649
-        ]
-    },
-    "89": {
-        "name": "iron-fist",
-        "resource_uri": "/api/v1/ability/89/",
-        "pokemons": [
-            107,
-            166,
-            390,
-            391,
-            392,
-            532,
-            533,
-            534,
-            622,
-            623,
-            674,
-            675
-        ]
-    },
-    "90": {
-        "name": "poison-heal",
-        "resource_uri": "/api/v1/ability/90/",
-        "pokemons": [
-            285,
-            286,
-            472
-        ]
-    },
-    "91": {
-        "name": "adaptability",
-        "resource_uri": "/api/v1/ability/91/",
-        "pokemons": [
-            10016,
-            10059,
-            133,
-            341,
-            342,
-            349,
-            474,
-            550,
-            690,
-            691
-        ]
-    },
-    "92": {
-        "name": "skill-link",
-        "resource_uri": "/api/v1/ability/92/",
-        "pokemons": [
-            10047,
-            90,
-            91,
-            190,
-            424,
-            572,
-            573
-        ]
-    },
-    "93": {
-        "name": "hydration",
-        "resource_uri": "/api/v1/ability/93/",
-        "pokemons": [
-            86,
-            87,
-            131,
-            134,
-            238,
-            339,
-            340,
-            368,
-            370,
-            489,
-            490,
-            535,
-            536,
-            580,
-            581,
-            594,
-            616,
-            617,
-            704,
-            705,
-            706
-        ]
-    },
-    "94": {
-        "name": "solar-power",
-        "resource_uri": "/api/v1/ability/94/",
-        "pokemons": [
-            10048,
-            4,
-            5,
-            6,
-            191,
-            192,
-            357,
-            694,
-            695
-        ]
-    },
-    "95": {
-        "name": "quick-feet",
-        "resource_uri": "/api/v1/ability/95/",
-        "pokemons": [
-            135,
-            210,
-            216,
-            217,
-            261,
-            262,
-            263,
-            264,
-            285,
-            543,
-            544,
-            545
-        ]
-    },
-    "96": {
-        "name": "normalize",
-        "resource_uri": "/api/v1/ability/96/",
-        "pokemons": [
-            300,
-            301
-        ]
-    },
-    "97": {
-        "name": "sniper",
-        "resource_uri": "/api/v1/ability/97/",
-        "pokemons": [
-            15,
-            21,
-            22,
-            116,
-            117,
-            167,
-            168,
-            223,
-            224,
-            230,
-            451,
-            452,
-            688,
-            689
-        ]
-    },
-    "98": {
-        "name": "magic-guard",
-        "resource_uri": "/api/v1/ability/98/",
-        "pokemons": [
-            35,
-            36,
-            63,
-            64,
-            65,
-            173,
-            561,
-            577,
-            578,
-            579
-        ]
-    },
-    "99": {
-        "name": "no-guard",
-        "resource_uri": "/api/v1/ability/99/",
-        "pokemons": [
-            66,
-            67,
-            68,
-            588,
-            622,
-            623,
-            679,
-            680
-        ]
-    },
-    "100": {
-        "name": "stall",
-        "resource_uri": "/api/v1/ability/100/",
-        "pokemons": [
-            302
-        ]
-    },
-    "101": {
-        "name": "technician",
-        "resource_uri": "/api/v1/ability/101/",
-        "pokemons": [
-            10046,
-            52,
-            53,
-            122,
-            123,
-            212,
-            235,
-            237,
-            286,
-            402,
-            407,
-            424,
-            439,
-            572,
-            573
-        ]
-    },
-    "102": {
-        "name": "leaf-guard",
-        "resource_uri": "/api/v1/ability/102/",
-        "pokemons": [
-            114,
-            152,
-            153,
-            154,
-            187,
-            188,
-            189,
-            315,
-            406,
-            465,
-            470,
-            541,
-            548,
-            549
-        ]
-    },
-    "103": {
-        "name": "klutz",
-        "resource_uri": "/api/v1/ability/103/",
-        "pokemons": [
-            427,
-            428,
-            527,
-            528,
-            531,
-            622,
-            623
-        ]
-    },
-    "104": {
-        "name": "mold-breaker",
-        "resource_uri": "/api/v1/ability/104/",
-        "pokemons": [
-            10016,
-            10041,
-            10045,
-            127,
-            408,
-            409,
-            529,
-            530,
-            538,
-            539,
-            550,
-            610,
-            611,
-            612,
-            621,
-            674,
-            675,
-            701
-        ]
-    },
-    "105": {
-        "name": "super-luck",
-        "resource_uri": "/api/v1/ability/105/",
-        "pokemons": [
-            175,
-            176,
-            198,
-            359,
-            430,
-            468,
-            519,
-            520,
-            521
-        ]
-    },
-    "106": {
-        "name": "aftermath",
-        "resource_uri": "/api/v1/ability/106/",
-        "pokemons": [
-            100,
-            101,
-            425,
-            426,
-            434,
-            435,
-            568,
-            569
-        ]
-    },
-    "107": {
-        "name": "anticipation",
-        "resource_uri": "/api/v1/ability/107/",
-        "pokemons": [
-            10004,
-            10005,
-            133,
-            339,
-            340,
-            413,
-            453,
-            454
-        ]
-    },
-    "108": {
-        "name": "forewarn",
-        "resource_uri": "/api/v1/ability/108/",
-        "pokemons": [
-            96,
-            97,
-            124,
-            238,
-            517,
-            518
-        ]
-    },
-    "109": {
-        "name": "unaware",
-        "resource_uri": "/api/v1/ability/109/",
-        "pokemons": [
-            36,
-            194,
-            195,
-            399,
-            400,
-            527,
-            528
-        ]
-    },
-    "110": {
-        "name": "tinted-lens",
-        "resource_uri": "/api/v1/ability/110/",
-        "pokemons": [
-            12,
-            48,
-            49,
-            163,
-            164,
-            314,
-            414,
-            469,
-            561
-        ]
-    },
-    "111": {
-        "name": "filter",
-        "resource_uri": "/api/v1/ability/111/",
-        "pokemons": [
-            10053,
-            122,
-            439
-        ]
-    },
-    "112": {
-        "name": "slow-start",
-        "resource_uri": "/api/v1/ability/112/",
-        "pokemons": [
-            486
-        ]
-    },
-    "113": {
-        "name": "scrappy",
-        "resource_uri": "/api/v1/ability/113/",
-        "pokemons": [
-            115,
-            241,
-            276,
-            277,
-            294,
-            295,
-            507,
-            508,
-            674,
-            675
-        ]
-    },
-    "114": {
-        "name": "storm-drain",
-        "resource_uri": "/api/v1/ability/114/",
-        "pokemons": [
-            345,
-            346,
-            422,
-            423,
-            456,
-            457,
-            556
-        ]
-    },
-    "115": {
-        "name": "ice-body",
-        "resource_uri": "/api/v1/ability/115/",
-        "pokemons": [
-            86,
-            87,
-            361,
-            362,
-            363,
-            364,
-            365,
-            378,
-            471,
-            582,
-            583,
-            584,
-            712,
-            713
-        ]
-    },
-    "116": {
-        "name": "solid-rock",
-        "resource_uri": "/api/v1/ability/116/",
-        "pokemons": [
-            323,
-            464,
-            564,
-            565
-        ]
-    },
-    "117": {
-        "name": "snow-warning",
-        "resource_uri": "/api/v1/ability/117/",
-        "pokemons": [
-            10060,
-            459,
-            460,
-            698,
-            699
-        ]
-    },
-    "118": {
-        "name": "honey-gather",
-        "resource_uri": "/api/v1/ability/118/",
-        "pokemons": [
-            216,
-            415
-        ]
-    },
-    "119": {
-        "name": "frisk",
-        "resource_uri": "/api/v1/ability/119/",
-        "pokemons": [
-            10027,
-            10028,
-            10029,
-            10030,
-            10031,
-            10032,
-            40,
-            161,
-            162,
-            193,
-            234,
-            353,
-            354,
-            469,
-            574,
-            575,
-            576,
-            708,
-            709,
-            710,
-            711,
-            714,
-            715
-        ]
-    },
-    "120": {
-        "name": "reckless",
-        "resource_uri": "/api/v1/ability/120/",
-        "pokemons": [
-            106,
-            111,
-            112,
-            397,
-            398,
-            464,
-            500,
-            550,
-            619,
-            620,
-            626
-        ]
-    },
-    "121": {
-        "name": "multitype",
-        "resource_uri": "/api/v1/ability/121/",
-        "pokemons": [
-            493
-        ]
-    },
-    "122": {
-        "name": "flower-gift",
-        "resource_uri": "/api/v1/ability/122/",
-        "pokemons": [
-            421
-        ]
-    },
-    "123": {
-        "name": "bad-dreams",
-        "resource_uri": "/api/v1/ability/123/",
-        "pokemons": [
-            491
-        ]
-    },
-    "124": {
-        "name": "pickpocket",
-        "resource_uri": "/api/v1/ability/124/",
-        "pokemons": [
-            215,
-            273,
-            274,
-            275,
-            461,
-            688,
-            689
-        ]
-    },
-    "125": {
-        "name": "sheer-force",
-        "resource_uri": "/api/v1/ability/125/",
-        "pokemons": [
-            10017,
-            31,
-            34,
-            98,
-            99,
-            128,
-            158,
-            159,
-            160,
-            208,
-            296,
-            297,
-            303,
-            328,
-            371,
-            408,
-            409,
-            532,
-            533,
-            534,
-            555,
-            621,
-            627,
-            628,
-            645
-        ]
-    },
-    "126": {
-        "name": "contrary",
-        "resource_uri": "/api/v1/ability/126/",
-        "pokemons": [
-            213,
-            327,
-            495,
-            496,
-            497,
-            686,
-            687
-        ]
-    },
-    "127": {
-        "name": "unnerve",
-        "resource_uri": "/api/v1/ability/127/",
-        "pokemons": [
-            23,
-            24,
-            52,
-            53,
-            142,
-            150,
-            217,
-            228,
-            229,
-            248,
-            284,
-            416,
-            595,
-            596,
-            610,
-            611,
-            612,
-            667,
-            668
-        ]
-    },
-    "128": {
-        "name": "defiant",
-        "resource_uri": "/api/v1/ability/128/",
-        "pokemons": [
-            56,
-            57,
-            83,
-            393,
-            394,
-            395,
-            432,
-            624,
-            625,
-            628,
-            641,
-            642
-        ]
-    },
-    "129": {
-        "name": "defeatist",
-        "resource_uri": "/api/v1/ability/129/",
-        "pokemons": [
-            566,
-            567
-        ]
-    },
-    "130": {
-        "name": "cursed-body",
-        "resource_uri": "/api/v1/ability/130/",
-        "pokemons": [
-            353,
-            354,
-            478,
-            592,
-            593
-        ]
-    },
-    "131": {
-        "name": "healer",
-        "resource_uri": "/api/v1/ability/131/",
-        "pokemons": [
-            113,
-            182,
-            242,
-            531,
-            594,
-            682,
-            683
-        ]
-    },
-    "132": {
-        "name": "friend-guard",
-        "resource_uri": "/api/v1/ability/132/",
-        "pokemons": [
-            35,
-            39,
-            173,
-            174,
-            440,
-            664,
-            665,
-            666
-        ]
-    },
-    "133": {
-        "name": "weak-armor",
-        "resource_uri": "/api/v1/ability/133/",
-        "pokemons": [
-            95,
-            138,
-            139,
-            140,
-            141,
-            218,
-            219,
-            227,
-            557,
-            558,
-            569,
-            582,
-            583,
-            584,
-            629,
-            630
-        ]
-    },
-    "134": {
-        "name": "heavy-metal",
-        "resource_uri": "/api/v1/ability/134/",
-        "pokemons": [
-            304,
-            305,
-            306,
-            436,
-            437
-        ]
-    },
-    "135": {
-        "name": "light-metal",
-        "resource_uri": "/api/v1/ability/135/",
-        "pokemons": [
-            212,
-            374,
-            375,
-            376,
-            379
-        ]
-    },
-    "136": {
-        "name": "multiscale",
-        "resource_uri": "/api/v1/ability/136/",
-        "pokemons": [
-            149,
-            249
-        ]
-    },
-    "137": {
-        "name": "toxic-boost",
-        "resource_uri": "/api/v1/ability/137/",
-        "pokemons": [
-            335
-        ]
-    },
-    "138": {
-        "name": "flare-boost",
-        "resource_uri": "/api/v1/ability/138/",
-        "pokemons": [
-            425,
-            426
-        ]
-    },
-    "139": {
-        "name": "harvest",
-        "resource_uri": "/api/v1/ability/139/",
-        "pokemons": [
-            102,
-            103,
-            357,
-            708,
-            709
-        ]
-    },
-    "140": {
-        "name": "telepathy",
-        "resource_uri": "/api/v1/ability/140/",
-        "pokemons": [
-            202,
-            280,
-            281,
-            282,
-            307,
-            308,
-            360,
-            483,
-            484,
-            487,
-            517,
-            518,
-            605,
-            606,
-            714,
-            715
-        ]
-    },
-    "141": {
-        "name": "moody",
-        "resource_uri": "/api/v1/ability/141/",
-        "pokemons": [
-            223,
-            224,
-            235,
-            361,
-            362,
-            399,
-            400
-        ]
-    },
-    "142": {
-        "name": "overcoat",
-        "resource_uri": "/api/v1/ability/142/",
-        "pokemons": [
-            10004,
-            10005,
-            90,
-            91,
-            204,
-            205,
-            372,
-            412,
-            413,
-            540,
-            541,
-            542,
-            577,
-            578,
-            579,
-            589,
-            616,
-            629,
-            630
-        ]
-    },
-    "143": {
-        "name": "poison-touch",
-        "resource_uri": "/api/v1/ability/143/",
-        "pokemons": [
-            88,
-            89,
-            453,
-            454,
-            537,
-            690,
-            691
-        ]
-    },
-    "144": {
-        "name": "regenerator",
-        "resource_uri": "/api/v1/ability/144/",
-        "pokemons": [
-            10019,
-            79,
-            80,
-            114,
-            199,
-            222,
-            250,
-            465,
-            531,
-            577,
-            578,
-            579,
-            590,
-            591,
-            594,
-            619,
-            620
-        ]
-    },
-    "145": {
-        "name": "big-pecks",
-        "resource_uri": "/api/v1/ability/145/",
-        "pokemons": [
-            16,
-            17,
-            18,
-            441,
-            519,
-            520,
-            521,
-            580,
-            581,
-            629,
-            630,
-            661
-        ]
-    },
-    "146": {
-        "name": "sand-rush",
-        "resource_uri": "/api/v1/ability/146/",
-        "pokemons": [
-            27,
-            28,
-            507,
-            508,
-            529,
-            530
-        ]
-    },
-    "147": {
-        "name": "wonder-skin",
-        "resource_uri": "/api/v1/ability/147/",
-        "pokemons": [
-            49,
-            300,
-            301,
-            561
-        ]
-    },
-    "148": {
-        "name": "analytic",
-        "resource_uri": "/api/v1/ability/148/",
-        "pokemons": [
-            81,
-            82,
-            120,
-            121,
-            137,
-            233,
-            462,
-            474,
-            504,
-            505,
-            605,
-            606
-        ]
-    },
-    "149": {
-        "name": "illusion",
-        "resource_uri": "/api/v1/ability/149/",
-        "pokemons": [
-            570,
-            571
-        ]
-    },
-    "150": {
-        "name": "imposter",
-        "resource_uri": "/api/v1/ability/150/",
-        "pokemons": [
-            132
-        ]
-    },
-    "151": {
-        "name": "infiltrator",
-        "resource_uri": "/api/v1/ability/151/",
-        "pokemons": [
-            10025,
-            41,
-            42,
-            169,
-            187,
-            188,
-            189,
-            291,
-            336,
-            442,
-            546,
-            547,
-            677,
-            678,
-            686,
-            687,
-            714,
-            715
-        ]
-    },
-    "152": {
-        "name": "mummy",
-        "resource_uri": "/api/v1/ability/152/",
-        "pokemons": [
-            562,
-            563
-        ]
-    },
-    "153": {
-        "name": "moxie",
-        "resource_uri": "/api/v1/ability/153/",
-        "pokemons": [
-            127,
-            130,
-            214,
-            262,
-            373,
-            430,
-            551,
-            552,
-            553,
-            559,
-            560,
-            667,
-            668
-        ]
-    },
-    "154": {
-        "name": "justified",
-        "resource_uri": "/api/v1/ability/154/",
-        "pokemons": [
-            10024,
-            58,
-            59,
-            359,
-            448,
-            475,
-            638,
-            639,
-            640,
-            647
-        ]
-    },
-    "155": {
-        "name": "rattled",
-        "resource_uri": "/api/v1/ability/155/",
-        "pokemons": [
-            129,
-            165,
-            185,
-            206,
-            209,
-            210,
-            261,
-            293,
-            366,
-            438,
-            613
-        ]
-    },
-    "156": {
-        "name": "magic-bounce",
-        "resource_uri": "/api/v1/ability/156/",
-        "pokemons": [
-            10057,
-            177,
-            178,
-            196
-        ]
-    },
-    "157": {
-        "name": "sap-sipper",
-        "resource_uri": "/api/v1/ability/157/",
-        "pokemons": [
-            183,
-            184,
-            203,
-            234,
-            241,
-            298,
-            522,
-            523,
-            585,
-            586,
-            626,
-            672,
-            673,
-            704,
-            705,
-            706
-        ]
-    },
-    "158": {
-        "name": "prankster",
-        "resource_uri": "/api/v1/ability/158/",
-        "pokemons": [
-            10056,
-            198,
-            302,
-            313,
-            314,
-            447,
-            509,
-            510,
-            546,
-            547,
-            641,
-            642,
-            678,
-            707
-        ]
-    },
-    "159": {
-        "name": "sand-force",
-        "resource_uri": "/api/v1/ability/159/",
-        "pokemons": [
-            10058,
-            50,
-            51,
-            299,
-            422,
-            423,
-            449,
-            450,
-            476,
-            524,
-            525,
-            526,
-            529,
-            530,
-            645
-        ]
-    },
-    "160": {
-        "name": "iron-barbs",
-        "resource_uri": "/api/v1/ability/160/",
-        "pokemons": [
-            597,
-            598
-        ]
-    },
-    "161": {
-        "name": "zen-mode",
-        "resource_uri": "/api/v1/ability/161/",
-        "pokemons": [
-            10017,
-            555
-        ]
-    },
-    "162": {
-        "name": "victory-star",
-        "resource_uri": "/api/v1/ability/162/",
-        "pokemons": [
-            494
-        ]
-    },
-    "163": {
-        "name": "turboblaze",
-        "resource_uri": "/api/v1/ability/163/",
-        "pokemons": [
-            10023,
-            643
-        ]
-    },
-    "164": {
-        "name": "teravolt",
-        "resource_uri": "/api/v1/ability/164/",
-        "pokemons": [
-            10022,
-            644
-        ]
-    },
-    "165": {
-        "name": "aerilate",
-        "resource_uri": "/api/v1/ability/165/",
-        "pokemons": [
-            10040
-        ]
-    },
-    "166": {
-        "name": "aroma-veil",
-        "resource_uri": "/api/v1/ability/166/",
-        "pokemons": [
-            682,
-            683
-        ]
-    },
-    "167": {
-        "name": "aura-break",
-        "resource_uri": "/api/v1/ability/167/",
-        "pokemons": [
-            718
-        ]
-    },
-    "168": {
-        "name": "bulletproof",
-        "resource_uri": "/api/v1/ability/168/",
-        "pokemons": [
-            650,
-            651,
-            652
-        ]
-    },
-    "169": {
-        "name": "cheek-pouch",
-        "resource_uri": "/api/v1/ability/169/",
-        "pokemons": [
-            659,
-            660,
-            702
-        ]
-    },
-    "170": {
-        "name": "competitive",
-        "resource_uri": "/api/v1/ability/170/",
-        "pokemons": [
-            10025
-        ]
-    },
-    "171": {
-        "name": "dark-aura",
-        "resource_uri": "/api/v1/ability/171/",
-        "pokemons": [
-            717
-        ]
-    },
-    "172": {
-        "name": "fairy-aura",
-        "resource_uri": "/api/v1/ability/172/",
-        "pokemons": [
-            716
-        ]
-    },
-    "173": {
-        "name": "flower-veil",
-        "resource_uri": "/api/v1/ability/173/",
-        "pokemons": [
-            669,
-            670,
-            671
-        ]
-    },
-    "174": {
-        "name": "fur-coat",
-        "resource_uri": "/api/v1/ability/174/",
-        "pokemons": [
-            676
-        ]
-    },
-    "175": {
-        "name": "gale-wings",
-        "resource_uri": "/api/v1/ability/175/",
-        "pokemons": [
-            661,
-            662,
-            663
-        ]
-    },
-    "176": {
-        "name": "gooey",
-        "resource_uri": "/api/v1/ability/176/",
-        "pokemons": [
-            704,
-            705,
-            706
-        ]
-    },
-    "177": {
-        "name": "grass-pelt",
-        "resource_uri": "/api/v1/ability/177/",
-        "pokemons": [
-            672,
-            673
-        ]
-    },
-    "178": {
-        "name": "magician",
-        "resource_uri": "/api/v1/ability/178/",
-        "pokemons": [
-            653,
-            654,
-            655,
-            707
-        ]
-    },
-    "179": {
-        "name": "mega-launcher",
-        "resource_uri": "/api/v1/ability/179/",
-        "pokemons": [
-            10036,
-            692,
-            693
-        ]
-    },
-    "180": {
-        "name": "parental-bond",
-        "resource_uri": "/api/v1/ability/180/",
-        "pokemons": [
-            10039
-        ]
-    },
-    "181": {
-        "name": "pixilate",
-        "resource_uri": "/api/v1/ability/181/",
-        "pokemons": [
-            10051,
-            700
-        ]
-    },
-    "182": {
-        "name": "protean",
-        "resource_uri": "/api/v1/ability/182/",
-        "pokemons": [
-            656,
-            657,
-            658
-        ]
-    },
-    "183": {
-        "name": "refrigerate",
-        "resource_uri": "/api/v1/ability/183/",
-        "pokemons": [
-            698,
-            699
-        ]
-    },
-    "184": {
-        "name": "stance-change",
-        "resource_uri": "/api/v1/ability/184/",
-        "pokemons": [
-            10026,
-            681
-        ]
-    },
-    "185": {
-        "name": "strong-jaw",
-        "resource_uri": "/api/v1/ability/185/",
-        "pokemons": [
-            696,
-            697
-        ]
-    },
-    "186": {
-        "name": "sweet-veil",
-        "resource_uri": "/api/v1/ability/186/",
-        "pokemons": [
-            684,
-            685
-        ]
-    },
-    "187": {
-        "name": "symbiosis",
-        "resource_uri": "/api/v1/ability/187/",
-        "pokemons": [
-            669,
-            670,
-            671
-        ]
-    },
-    "188": {
-        "name": "tough-claws",
-        "resource_uri": "/api/v1/ability/188/",
-        "pokemons": [
-            10034,
-            10042,
-            688,
-            689
-        ]
-    }
+  "1": {
+    "name": "stench",
+    "resource_uri": "/api/v1/ability/1/",
+    "pokemons": [
+      44,
+      88,
+      89,
+      434,
+      435,
+      568,
+      569
+    ]
+  },
+  "2": {
+    "name": "drizzle",
+    "resource_uri": "/api/v1/ability/2/",
+    "pokemons": [
+      186,
+      382
+    ]
+  },
+  "3": {
+    "name": "speed-boost",
+    "resource_uri": "/api/v1/ability/3/",
+    "pokemons": [
+      10050,
+      193,
+      255,
+      256,
+      257,
+      291,
+      318,
+      319,
+      469
+    ]
+  },
+  "4": {
+    "name": "battle-armor",
+    "resource_uri": "/api/v1/ability/4/",
+    "pokemons": [
+      104,
+      105,
+      140,
+      141,
+      347,
+      348,
+      451,
+      452
+    ]
+  },
+  "5": {
+    "name": "sturdy",
+    "resource_uri": "/api/v1/ability/5/",
+    "pokemons": [
+      74,
+      75,
+      76,
+      81,
+      82,
+      95,
+      185,
+      204,
+      205,
+      208,
+      213,
+      227,
+      232,
+      299,
+      304,
+      305,
+      306,
+      369,
+      377,
+      410,
+      411,
+      438,
+      462,
+      476,
+      524,
+      525,
+      526,
+      539,
+      557,
+      558,
+      564,
+      565,
+      703,
+      712,
+      713
+    ]
+  },
+  "6": {
+    "name": "damp",
+    "resource_uri": "/api/v1/ability/6/",
+    "pokemons": [
+      46,
+      47,
+      54,
+      55,
+      60,
+      61,
+      62,
+      116,
+      117,
+      186,
+      194,
+      195,
+      230,
+      258,
+      259,
+      260,
+      592,
+      593
+    ]
+  },
+  "7": {
+    "name": "limber",
+    "resource_uri": "/api/v1/ability/7/",
+    "pokemons": [
+      53,
+      106,
+      132,
+      427,
+      428,
+      431,
+      509,
+      510,
+      618,
+      701
+    ]
+  },
+  "8": {
+    "name": "sand-veil",
+    "resource_uri": "/api/v1/ability/8/",
+    "pokemons": [
+      27,
+      28,
+      50,
+      51,
+      74,
+      75,
+      76,
+      207,
+      231,
+      232,
+      246,
+      331,
+      332,
+      443,
+      444,
+      445,
+      472,
+      618,
+      694,
+      695
+    ]
+  },
+  "9": {
+    "name": "static",
+    "resource_uri": "/api/v1/ability/9/",
+    "pokemons": [
+      25,
+      26,
+      100,
+      101,
+      125,
+      172,
+      179,
+      180,
+      181,
+      239,
+      309,
+      310,
+      587,
+      618
+    ]
+  },
+  "10": {
+    "name": "volt-absorb",
+    "resource_uri": "/api/v1/ability/10/",
+    "pokemons": [
+      10020,
+      135,
+      170,
+      171,
+      243,
+      417
+    ]
+  },
+  "11": {
+    "name": "water-absorb",
+    "resource_uri": "/api/v1/ability/11/",
+    "pokemons": [
+      60,
+      61,
+      62,
+      131,
+      134,
+      170,
+      171,
+      186,
+      194,
+      195,
+      226,
+      245,
+      331,
+      332,
+      458,
+      535,
+      536,
+      537,
+      556,
+      592,
+      593
+    ]
+  },
+  "12": {
+    "name": "oblivious",
+    "resource_uri": "/api/v1/ability/12/",
+    "pokemons": [
+      79,
+      80,
+      108,
+      124,
+      199,
+      220,
+      221,
+      238,
+      314,
+      320,
+      321,
+      322,
+      339,
+      340,
+      363,
+      364,
+      365,
+      463,
+      473
+    ]
+  },
+  "13": {
+    "name": "cloud-nine",
+    "resource_uri": "/api/v1/ability/13/",
+    "pokemons": [
+      54,
+      55,
+      108,
+      333,
+      334,
+      463
+    ]
+  },
+  "14": {
+    "name": "compoundeyes",
+    "resource_uri": "/api/v1/ability/14/",
+    "pokemons": [
+      12,
+      48,
+      193,
+      269,
+      290,
+      595,
+      596,
+      664,
+      666
+    ]
+  },
+  "15": {
+    "name": "insomnia",
+    "resource_uri": "/api/v1/ability/15/",
+    "pokemons": [
+      10027,
+      10028,
+      10029,
+      10030,
+      10031,
+      10032,
+      10044,
+      96,
+      97,
+      163,
+      164,
+      167,
+      168,
+      198,
+      225,
+      353,
+      354,
+      430,
+      710,
+      711
+    ]
+  },
+  "16": {
+    "name": "color-change",
+    "resource_uri": "/api/v1/ability/16/",
+    "pokemons": [
+      352
+    ]
+  },
+  "17": {
+    "name": "immunity",
+    "resource_uri": "/api/v1/ability/17/",
+    "pokemons": [
+      143,
+      207,
+      335
+    ]
+  },
+  "18": {
+    "name": "flash-fire",
+    "resource_uri": "/api/v1/ability/18/",
+    "pokemons": [
+      37,
+      38,
+      58,
+      59,
+      77,
+      78,
+      136,
+      155,
+      156,
+      157,
+      228,
+      229,
+      244,
+      485,
+      607,
+      608,
+      609,
+      631
+    ]
+  },
+  "19": {
+    "name": "shield-dust",
+    "resource_uri": "/api/v1/ability/19/",
+    "pokemons": [
+      10,
+      13,
+      49,
+      265,
+      269,
+      664,
+      666
+    ]
+  },
+  "20": {
+    "name": "own-tempo",
+    "resource_uri": "/api/v1/ability/20/",
+    "pokemons": [
+      79,
+      80,
+      108,
+      199,
+      235,
+      270,
+      271,
+      272,
+      322,
+      325,
+      326,
+      327,
+      431,
+      432,
+      463,
+      548,
+      549,
+      677,
+      712,
+      713
+    ]
+  },
+  "21": {
+    "name": "suction-cups",
+    "resource_uri": "/api/v1/ability/21/",
+    "pokemons": [
+      224,
+      345,
+      346,
+      686,
+      687
+    ]
+  },
+  "22": {
+    "name": "intimidate",
+    "resource_uri": "/api/v1/ability/22/",
+    "pokemons": [
+      10021,
+      10055,
+      23,
+      24,
+      58,
+      59,
+      128,
+      130,
+      209,
+      210,
+      211,
+      234,
+      237,
+      262,
+      284,
+      303,
+      373,
+      397,
+      398,
+      403,
+      404,
+      405,
+      507,
+      508,
+      551,
+      552,
+      553,
+      559,
+      560
+    ]
+  },
+  "23": {
+    "name": "shadow-tag",
+    "resource_uri": "/api/v1/ability/23/",
+    "pokemons": [
+      10038,
+      202,
+      360,
+      574,
+      575,
+      576,
+      607,
+      608,
+      609
+    ]
+  },
+  "24": {
+    "name": "rough-skin",
+    "resource_uri": "/api/v1/ability/24/",
+    "pokemons": [
+      318,
+      319,
+      443,
+      444,
+      445,
+      621
+    ]
+  },
+  "25": {
+    "name": "wonder-guard",
+    "resource_uri": "/api/v1/ability/25/",
+    "pokemons": [
+      292
+    ]
+  },
+  "26": {
+    "name": "levitate",
+    "resource_uri": "/api/v1/ability/26/",
+    "pokemons": [
+      10007,
+      10008,
+      10009,
+      10010,
+      10011,
+      10012,
+      92,
+      93,
+      94,
+      109,
+      110,
+      200,
+      201,
+      329,
+      330,
+      337,
+      338,
+      343,
+      344,
+      355,
+      358,
+      380,
+      381,
+      429,
+      433,
+      436,
+      437,
+      455,
+      479,
+      480,
+      481,
+      482,
+      488,
+      602,
+      603,
+      604,
+      615,
+      635
+    ]
+  },
+  "27": {
+    "name": "effect-spore",
+    "resource_uri": "/api/v1/ability/27/",
+    "pokemons": [
+      45,
+      46,
+      47,
+      285,
+      286,
+      590,
+      591
+    ]
+  },
+  "28": {
+    "name": "synchronize",
+    "resource_uri": "/api/v1/ability/28/",
+    "pokemons": [
+      63,
+      64,
+      65,
+      151,
+      177,
+      178,
+      196,
+      197,
+      280,
+      281,
+      282,
+      517,
+      518,
+      605,
+      606
+    ]
+  },
+  "29": {
+    "name": "clear-body",
+    "resource_uri": "/api/v1/ability/29/",
+    "pokemons": [
+      72,
+      73,
+      374,
+      375,
+      376,
+      377,
+      378,
+      379,
+      599,
+      600,
+      601,
+      703
+    ]
+  },
+  "30": {
+    "name": "natural-cure",
+    "resource_uri": "/api/v1/ability/30/",
+    "pokemons": [
+      113,
+      120,
+      121,
+      222,
+      242,
+      251,
+      315,
+      333,
+      334,
+      406,
+      407,
+      440,
+      492,
+      708,
+      709
+    ]
+  },
+  "31": {
+    "name": "lightningrod",
+    "resource_uri": "/api/v1/ability/31/",
+    "pokemons": [
+      25,
+      26,
+      104,
+      105,
+      111,
+      112,
+      118,
+      119,
+      145,
+      172,
+      309,
+      310,
+      464,
+      522,
+      523
+    ]
+  },
+  "32": {
+    "name": "serene-grace",
+    "resource_uri": "/api/v1/ability/32/",
+    "pokemons": [
+      10006,
+      10018,
+      113,
+      175,
+      176,
+      206,
+      242,
+      385,
+      440,
+      468,
+      585,
+      586,
+      648
+    ]
+  },
+  "33": {
+    "name": "swift-swim",
+    "resource_uri": "/api/v1/ability/33/",
+    "pokemons": [
+      54,
+      55,
+      60,
+      61,
+      62,
+      116,
+      118,
+      119,
+      129,
+      138,
+      139,
+      140,
+      141,
+      211,
+      226,
+      230,
+      270,
+      271,
+      272,
+      283,
+      347,
+      348,
+      349,
+      367,
+      368,
+      369,
+      370,
+      418,
+      419,
+      456,
+      457,
+      458,
+      535,
+      536,
+      537,
+      564,
+      565,
+      614
+    ]
+  },
+  "34": {
+    "name": "chlorophyll",
+    "resource_uri": "/api/v1/ability/34/",
+    "pokemons": [
+      1,
+      2,
+      3,
+      43,
+      44,
+      45,
+      69,
+      70,
+      71,
+      102,
+      103,
+      114,
+      182,
+      187,
+      188,
+      189,
+      191,
+      192,
+      273,
+      274,
+      275,
+      357,
+      420,
+      465,
+      470,
+      540,
+      541,
+      542,
+      546,
+      547,
+      548,
+      549,
+      556,
+      585,
+      586
+    ]
+  },
+  "35": {
+    "name": "illuminate",
+    "resource_uri": "/api/v1/ability/35/",
+    "pokemons": [
+      120,
+      121,
+      170,
+      171,
+      313,
+      505
+    ]
+  },
+  "36": {
+    "name": "trace",
+    "resource_uri": "/api/v1/ability/36/",
+    "pokemons": [
+      10037,
+      137,
+      233,
+      280,
+      281,
+      282
+    ]
+  },
+  "37": {
+    "name": "huge-power",
+    "resource_uri": "/api/v1/ability/37/",
+    "pokemons": [
+      10052,
+      183,
+      184,
+      298,
+      659,
+      660
+    ]
+  },
+  "38": {
+    "name": "poison-point",
+    "resource_uri": "/api/v1/ability/38/",
+    "pokemons": [
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      117,
+      211,
+      315,
+      406,
+      407,
+      543,
+      544,
+      545,
+      690,
+      691
+    ]
+  },
+  "39": {
+    "name": "inner-focus",
+    "resource_uri": "/api/v1/ability/39/",
+    "pokemons": [
+      41,
+      42,
+      63,
+      64,
+      65,
+      83,
+      96,
+      97,
+      107,
+      115,
+      149,
+      169,
+      197,
+      203,
+      215,
+      361,
+      362,
+      447,
+      448,
+      538,
+      539,
+      554,
+      619,
+      620,
+      624,
+      625
+    ]
+  },
+  "40": {
+    "name": "magma-armor",
+    "resource_uri": "/api/v1/ability/40/",
+    "pokemons": [
+      218,
+      219,
+      323
+    ]
+  },
+  "41": {
+    "name": "water-veil",
+    "resource_uri": "/api/v1/ability/41/",
+    "pokemons": [
+      118,
+      119,
+      226,
+      320,
+      321,
+      367,
+      418,
+      419,
+      456,
+      457,
+      458
+    ]
+  },
+  "42": {
+    "name": "magnet-pull",
+    "resource_uri": "/api/v1/ability/42/",
+    "pokemons": [
+      81,
+      82,
+      299,
+      462,
+      476
+    ]
+  },
+  "43": {
+    "name": "soundproof",
+    "resource_uri": "/api/v1/ability/43/",
+    "pokemons": [
+      100,
+      101,
+      122,
+      293,
+      294,
+      295,
+      410,
+      411,
+      439,
+      459,
+      460,
+      626
+    ]
+  },
+  "44": {
+    "name": "rain-dish",
+    "resource_uri": "/api/v1/ability/44/",
+    "pokemons": [
+      7,
+      8,
+      9,
+      72,
+      73,
+      270,
+      271,
+      272,
+      278,
+      279,
+      283
+    ]
+  },
+  "45": {
+    "name": "sand-stream",
+    "resource_uri": "/api/v1/ability/45/",
+    "pokemons": [
+      10049,
+      248,
+      449,
+      450
+    ]
+  },
+  "46": {
+    "name": "Pressure",
+    "resource_uri": "/api/v1/ability/46/",
+    "pokemons": [
+      10001,
+      10002,
+      10003,
+      142,
+      144,
+      145,
+      146,
+      150,
+      243,
+      244,
+      245,
+      249,
+      250,
+      320,
+      321,
+      356,
+      359,
+      386,
+      416,
+      442,
+      461,
+      477,
+      483,
+      484,
+      487,
+      624,
+      625,
+      646
+    ]
+  },
+  "47": {
+    "name": "thick-fat",
+    "resource_uri": "/api/v1/ability/47/",
+    "pokemons": [
+      10033,
+      86,
+      87,
+      143,
+      183,
+      184,
+      220,
+      221,
+      241,
+      296,
+      297,
+      298,
+      325,
+      326,
+      363,
+      364,
+      365,
+      432,
+      446,
+      473,
+      498,
+      499
+    ]
+  },
+  "48": {
+    "name": "early-bird",
+    "resource_uri": "/api/v1/ability/48/",
+    "pokemons": [
+      84,
+      85,
+      115,
+      165,
+      166,
+      177,
+      178,
+      191,
+      192,
+      203,
+      228,
+      229,
+      273,
+      274,
+      275
+    ]
+  },
+  "49": {
+    "name": "flame-body",
+    "resource_uri": "/api/v1/ability/49/",
+    "pokemons": [
+      77,
+      78,
+      126,
+      146,
+      218,
+      219,
+      240,
+      467,
+      485,
+      607,
+      608,
+      609,
+      636,
+      637,
+      662,
+      663
+    ]
+  },
+  "50": {
+    "name": "run-away",
+    "resource_uri": "/api/v1/ability/50/",
+    "pokemons": [
+      10,
+      13,
+      19,
+      20,
+      43,
+      48,
+      77,
+      78,
+      84,
+      85,
+      133,
+      161,
+      162,
+      190,
+      206,
+      209,
+      261,
+      265,
+      290,
+      401,
+      417,
+      427,
+      504,
+      506
+    ]
+  },
+  "51": {
+    "name": "keen-eye",
+    "resource_uri": "/api/v1/ability/51/",
+    "pokemons": [
+      10025,
+      16,
+      17,
+      18,
+      21,
+      22,
+      83,
+      107,
+      161,
+      162,
+      163,
+      164,
+      215,
+      227,
+      278,
+      279,
+      302,
+      396,
+      431,
+      434,
+      435,
+      441,
+      451,
+      452,
+      504,
+      505,
+      580,
+      581,
+      627,
+      628,
+      677,
+      678
+    ]
+  },
+  "52": {
+    "name": "hyper-cutter",
+    "resource_uri": "/api/v1/ability/52/",
+    "pokemons": [
+      98,
+      99,
+      127,
+      207,
+      303,
+      328,
+      341,
+      342,
+      472
+    ]
+  },
+  "53": {
+    "name": "pickup",
+    "resource_uri": "/api/v1/ability/53/",
+    "pokemons": [
+      10027,
+      10028,
+      10029,
+      10030,
+      10031,
+      10032,
+      52,
+      190,
+      216,
+      231,
+      263,
+      264,
+      417,
+      424,
+      446,
+      506,
+      659,
+      660,
+      702,
+      710,
+      711
+    ]
+  },
+  "54": {
+    "name": "truant",
+    "resource_uri": "/api/v1/ability/54/",
+    "pokemons": [
+      287,
+      289,
+      632
+    ]
+  },
+  "55": {
+    "name": "hustle",
+    "resource_uri": "/api/v1/ability/55/",
+    "pokemons": [
+      19,
+      20,
+      29,
+      30,
+      32,
+      33,
+      175,
+      176,
+      222,
+      223,
+      225,
+      415,
+      468,
+      554,
+      627,
+      632,
+      633,
+      634
+    ]
+  },
+  "56": {
+    "name": "cute-charm",
+    "resource_uri": "/api/v1/ability/56/",
+    "pokemons": [
+      35,
+      36,
+      39,
+      40,
+      173,
+      174,
+      300,
+      301,
+      350,
+      428,
+      572,
+      573,
+      700
+    ]
+  },
+  "57": {
+    "name": "plus",
+    "resource_uri": "/api/v1/ability/57/",
+    "pokemons": [
+      179,
+      180,
+      181,
+      311,
+      599,
+      600,
+      601,
+      702
+    ]
+  },
+  "58": {
+    "name": "minus",
+    "resource_uri": "/api/v1/ability/58/",
+    "pokemons": [
+      309,
+      310,
+      312,
+      599,
+      600,
+      601
+    ]
+  },
+  "59": {
+    "name": "forecast",
+    "resource_uri": "/api/v1/ability/59/",
+    "pokemons": [
+      10013,
+      10014,
+      10015,
+      351
+    ]
+  },
+  "60": {
+    "name": "sticky-hold",
+    "resource_uri": "/api/v1/ability/60/",
+    "pokemons": [
+      88,
+      89,
+      316,
+      317,
+      422,
+      423,
+      568,
+      617
+    ]
+  },
+  "61": {
+    "name": "shed-skin",
+    "resource_uri": "/api/v1/ability/61/",
+    "pokemons": [
+      11,
+      14,
+      23,
+      24,
+      147,
+      148,
+      247,
+      266,
+      268,
+      336,
+      401,
+      412,
+      559,
+      560,
+      588,
+      665
+    ]
+  },
+  "62": {
+    "name": "guts",
+    "resource_uri": "/api/v1/ability/62/",
+    "pokemons": [
+      19,
+      20,
+      66,
+      67,
+      68,
+      136,
+      214,
+      217,
+      236,
+      246,
+      276,
+      277,
+      296,
+      297,
+      403,
+      404,
+      405,
+      532,
+      533,
+      534,
+      538
+    ]
+  },
+  "63": {
+    "name": "marvel-scale",
+    "resource_uri": "/api/v1/ability/63/",
+    "pokemons": [
+      147,
+      148,
+      350
+    ]
+  },
+  "64": {
+    "name": "liquid-ooze",
+    "resource_uri": "/api/v1/ability/64/",
+    "pokemons": [
+      72,
+      73,
+      316,
+      317
+    ]
+  },
+  "65": {
+    "name": "overgrow",
+    "resource_uri": "/api/v1/ability/65/",
+    "pokemons": [
+      1,
+      2,
+      3,
+      152,
+      153,
+      154,
+      252,
+      253,
+      254,
+      387,
+      388,
+      389,
+      495,
+      496,
+      497,
+      511,
+      512,
+      650,
+      651,
+      652
+    ]
+  },
+  "66": {
+    "name": "blaze",
+    "resource_uri": "/api/v1/ability/66/",
+    "pokemons": [
+      4,
+      5,
+      6,
+      155,
+      156,
+      157,
+      255,
+      256,
+      257,
+      390,
+      391,
+      392,
+      498,
+      499,
+      500,
+      513,
+      514,
+      653,
+      654,
+      655
+    ]
+  },
+  "67": {
+    "name": "torrent",
+    "resource_uri": "/api/v1/ability/67/",
+    "pokemons": [
+      7,
+      8,
+      9,
+      158,
+      159,
+      160,
+      258,
+      259,
+      260,
+      393,
+      394,
+      395,
+      501,
+      502,
+      503,
+      515,
+      516,
+      656,
+      657,
+      658
+    ]
+  },
+  "68": {
+    "name": "swarm",
+    "resource_uri": "/api/v1/ability/68/",
+    "pokemons": [
+      15,
+      123,
+      165,
+      166,
+      167,
+      168,
+      212,
+      214,
+      267,
+      313,
+      402,
+      414,
+      540,
+      542,
+      543,
+      544,
+      545,
+      588,
+      589,
+      595,
+      596,
+      632,
+      636,
+      637
+    ]
+  },
+  "69": {
+    "name": "rock-head",
+    "resource_uri": "/api/v1/ability/69/",
+    "pokemons": [
+      10016,
+      74,
+      75,
+      76,
+      95,
+      104,
+      105,
+      111,
+      112,
+      142,
+      185,
+      208,
+      304,
+      305,
+      306,
+      369,
+      371,
+      372,
+      438,
+      696,
+      697
+    ]
+  },
+  "70": {
+    "name": "drought",
+    "resource_uri": "/api/v1/ability/70/",
+    "pokemons": [
+      10035,
+      37,
+      38,
+      383
+    ]
+  },
+  "71": {
+    "name": "arena-trap",
+    "resource_uri": "/api/v1/ability/71/",
+    "pokemons": [
+      50,
+      51,
+      328
+    ]
+  },
+  "72": {
+    "name": "vital-spirit",
+    "resource_uri": "/api/v1/ability/72/",
+    "pokemons": [
+      56,
+      57,
+      125,
+      126,
+      225,
+      236,
+      239,
+      240,
+      288,
+      466,
+      467,
+      506
+    ]
+  },
+  "73": {
+    "name": "white-smoke",
+    "resource_uri": "/api/v1/ability/73/",
+    "pokemons": [
+      324,
+      631
+    ]
+  },
+  "74": {
+    "name": "pure-power",
+    "resource_uri": "/api/v1/ability/74/",
+    "pokemons": [
+      10054,
+      307,
+      308
+    ]
+  },
+  "75": {
+    "name": "shell-armor",
+    "resource_uri": "/api/v1/ability/75/",
+    "pokemons": [
+      90,
+      91,
+      98,
+      99,
+      131,
+      138,
+      139,
+      324,
+      341,
+      342,
+      366,
+      387,
+      388,
+      389,
+      501,
+      502,
+      503,
+      557,
+      558,
+      589,
+      616
+    ]
+  },
+  "76": {
+    "name": "air-lock",
+    "resource_uri": "/api/v1/ability/76/",
+    "pokemons": [
+      384
+    ]
+  },
+  "77": {
+    "name": "tangled-feet",
+    "resource_uri": "/api/v1/ability/77/",
+    "pokemons": [
+      16,
+      17,
+      18,
+      84,
+      85,
+      327,
+      441
+    ]
+  },
+  "78": {
+    "name": "motor-drive",
+    "resource_uri": "/api/v1/ability/78/",
+    "pokemons": [
+      466,
+      522,
+      523,
+      587
+    ]
+  },
+  "79": {
+    "name": "rivalry",
+    "resource_uri": "/api/v1/ability/79/",
+    "pokemons": [
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      267,
+      403,
+      404,
+      405,
+      519,
+      520,
+      521,
+      610,
+      611,
+      612,
+      667,
+      668
+    ]
+  },
+  "80": {
+    "name": "steadfast",
+    "resource_uri": "/api/v1/ability/80/",
+    "pokemons": [
+      10043,
+      66,
+      67,
+      68,
+      123,
+      236,
+      237,
+      447,
+      448,
+      475
+    ]
+  },
+  "81": {
+    "name": "snow-cloak",
+    "resource_uri": "/api/v1/ability/81/",
+    "pokemons": [
+      144,
+      220,
+      221,
+      471,
+      473,
+      478,
+      613,
+      614
+    ]
+  },
+  "82": {
+    "name": "gluttony",
+    "resource_uri": "/api/v1/ability/82/",
+    "pokemons": [
+      69,
+      70,
+      71,
+      143,
+      213,
+      263,
+      264,
+      316,
+      317,
+      325,
+      326,
+      446,
+      511,
+      512,
+      513,
+      514,
+      515,
+      516,
+      631
+    ]
+  },
+  "83": {
+    "name": "anger-point",
+    "resource_uri": "/api/v1/ability/83/",
+    "pokemons": [
+      56,
+      57,
+      128,
+      323,
+      551,
+      552,
+      553
+    ]
+  },
+  "84": {
+    "name": "unburden",
+    "resource_uri": "/api/v1/ability/84/",
+    "pokemons": [
+      106,
+      252,
+      253,
+      254,
+      425,
+      426,
+      509,
+      510,
+      617,
+      684,
+      685,
+      701
+    ]
+  },
+  "85": {
+    "name": "heatproof",
+    "resource_uri": "/api/v1/ability/85/",
+    "pokemons": [
+      436,
+      437
+    ]
+  },
+  "86": {
+    "name": "simple",
+    "resource_uri": "/api/v1/ability/86/",
+    "pokemons": [
+      322,
+      399,
+      400,
+      527,
+      528
+    ]
+  },
+  "87": {
+    "name": "dry-skin",
+    "resource_uri": "/api/v1/ability/87/",
+    "pokemons": [
+      46,
+      47,
+      124,
+      453,
+      454,
+      694,
+      695
+    ]
+  },
+  "88": {
+    "name": "download",
+    "resource_uri": "/api/v1/ability/88/",
+    "pokemons": [
+      137,
+      233,
+      474,
+      649
+    ]
+  },
+  "89": {
+    "name": "iron-fist",
+    "resource_uri": "/api/v1/ability/89/",
+    "pokemons": [
+      107,
+      166,
+      390,
+      391,
+      392,
+      532,
+      533,
+      534,
+      622,
+      623,
+      674,
+      675
+    ]
+  },
+  "90": {
+    "name": "poison-heal",
+    "resource_uri": "/api/v1/ability/90/",
+    "pokemons": [
+      285,
+      286,
+      472
+    ]
+  },
+  "91": {
+    "name": "adaptability",
+    "resource_uri": "/api/v1/ability/91/",
+    "pokemons": [
+      10016,
+      10059,
+      133,
+      341,
+      342,
+      349,
+      474,
+      550,
+      690,
+      691
+    ]
+  },
+  "92": {
+    "name": "skill-link",
+    "resource_uri": "/api/v1/ability/92/",
+    "pokemons": [
+      10047,
+      90,
+      91,
+      190,
+      424,
+      572,
+      573
+    ]
+  },
+  "93": {
+    "name": "hydration",
+    "resource_uri": "/api/v1/ability/93/",
+    "pokemons": [
+      86,
+      87,
+      131,
+      134,
+      238,
+      339,
+      340,
+      368,
+      370,
+      489,
+      490,
+      535,
+      536,
+      580,
+      581,
+      594,
+      616,
+      617,
+      704,
+      705,
+      706
+    ]
+  },
+  "94": {
+    "name": "solar-power",
+    "resource_uri": "/api/v1/ability/94/",
+    "pokemons": [
+      10048,
+      4,
+      5,
+      6,
+      191,
+      192,
+      357,
+      694,
+      695
+    ]
+  },
+  "95": {
+    "name": "quick-feet",
+    "resource_uri": "/api/v1/ability/95/",
+    "pokemons": [
+      135,
+      210,
+      216,
+      217,
+      261,
+      262,
+      263,
+      264,
+      285,
+      543,
+      544,
+      545
+    ]
+  },
+  "96": {
+    "name": "normalize",
+    "resource_uri": "/api/v1/ability/96/",
+    "pokemons": [
+      300,
+      301
+    ]
+  },
+  "97": {
+    "name": "sniper",
+    "resource_uri": "/api/v1/ability/97/",
+    "pokemons": [
+      15,
+      21,
+      22,
+      116,
+      117,
+      167,
+      168,
+      223,
+      224,
+      230,
+      451,
+      452,
+      688,
+      689
+    ]
+  },
+  "98": {
+    "name": "magic-guard",
+    "resource_uri": "/api/v1/ability/98/",
+    "pokemons": [
+      35,
+      36,
+      63,
+      64,
+      65,
+      173,
+      561,
+      577,
+      578,
+      579
+    ]
+  },
+  "99": {
+    "name": "no-guard",
+    "resource_uri": "/api/v1/ability/99/",
+    "pokemons": [
+      66,
+      67,
+      68,
+      588,
+      622,
+      623,
+      679,
+      680
+    ]
+  },
+  "100": {
+    "name": "stall",
+    "resource_uri": "/api/v1/ability/100/",
+    "pokemons": [
+      302
+    ]
+  },
+  "101": {
+    "name": "technician",
+    "resource_uri": "/api/v1/ability/101/",
+    "pokemons": [
+      10046,
+      52,
+      53,
+      122,
+      123,
+      212,
+      235,
+      237,
+      286,
+      402,
+      407,
+      424,
+      439,
+      572,
+      573
+    ]
+  },
+  "102": {
+    "name": "leaf-guard",
+    "resource_uri": "/api/v1/ability/102/",
+    "pokemons": [
+      114,
+      152,
+      153,
+      154,
+      187,
+      188,
+      189,
+      315,
+      406,
+      465,
+      470,
+      541,
+      548,
+      549
+    ]
+  },
+  "103": {
+    "name": "klutz",
+    "resource_uri": "/api/v1/ability/103/",
+    "pokemons": [
+      427,
+      428,
+      527,
+      528,
+      531,
+      622,
+      623
+    ]
+  },
+  "104": {
+    "name": "mold-breaker",
+    "resource_uri": "/api/v1/ability/104/",
+    "pokemons": [
+      10016,
+      10041,
+      10045,
+      127,
+      408,
+      409,
+      529,
+      530,
+      538,
+      539,
+      550,
+      610,
+      611,
+      612,
+      621,
+      674,
+      675,
+      701
+    ]
+  },
+  "105": {
+    "name": "super-luck",
+    "resource_uri": "/api/v1/ability/105/",
+    "pokemons": [
+      175,
+      176,
+      198,
+      359,
+      430,
+      468,
+      519,
+      520,
+      521
+    ]
+  },
+  "106": {
+    "name": "aftermath",
+    "resource_uri": "/api/v1/ability/106/",
+    "pokemons": [
+      100,
+      101,
+      425,
+      426,
+      434,
+      435,
+      568,
+      569
+    ]
+  },
+  "107": {
+    "name": "anticipation",
+    "resource_uri": "/api/v1/ability/107/",
+    "pokemons": [
+      10004,
+      10005,
+      133,
+      339,
+      340,
+      413,
+      453,
+      454
+    ]
+  },
+  "108": {
+    "name": "forewarn",
+    "resource_uri": "/api/v1/ability/108/",
+    "pokemons": [
+      96,
+      97,
+      124,
+      238,
+      517,
+      518
+    ]
+  },
+  "109": {
+    "name": "unaware",
+    "resource_uri": "/api/v1/ability/109/",
+    "pokemons": [
+      36,
+      194,
+      195,
+      399,
+      400,
+      527,
+      528
+    ]
+  },
+  "110": {
+    "name": "tinted-lens",
+    "resource_uri": "/api/v1/ability/110/",
+    "pokemons": [
+      12,
+      48,
+      49,
+      163,
+      164,
+      314,
+      414,
+      469,
+      561
+    ]
+  },
+  "111": {
+    "name": "filter",
+    "resource_uri": "/api/v1/ability/111/",
+    "pokemons": [
+      10053,
+      122,
+      439
+    ]
+  },
+  "112": {
+    "name": "slow-start",
+    "resource_uri": "/api/v1/ability/112/",
+    "pokemons": [
+      486
+    ]
+  },
+  "113": {
+    "name": "scrappy",
+    "resource_uri": "/api/v1/ability/113/",
+    "pokemons": [
+      115,
+      241,
+      276,
+      277,
+      294,
+      295,
+      507,
+      508,
+      674,
+      675
+    ]
+  },
+  "114": {
+    "name": "storm-drain",
+    "resource_uri": "/api/v1/ability/114/",
+    "pokemons": [
+      345,
+      346,
+      422,
+      423,
+      456,
+      457,
+      556
+    ]
+  },
+  "115": {
+    "name": "ice-body",
+    "resource_uri": "/api/v1/ability/115/",
+    "pokemons": [
+      86,
+      87,
+      361,
+      362,
+      363,
+      364,
+      365,
+      378,
+      471,
+      582,
+      583,
+      584,
+      712,
+      713
+    ]
+  },
+  "116": {
+    "name": "solid-rock",
+    "resource_uri": "/api/v1/ability/116/",
+    "pokemons": [
+      323,
+      464,
+      564,
+      565
+    ]
+  },
+  "117": {
+    "name": "snow-warning",
+    "resource_uri": "/api/v1/ability/117/",
+    "pokemons": [
+      10060,
+      459,
+      460,
+      698,
+      699
+    ]
+  },
+  "118": {
+    "name": "honey-gather",
+    "resource_uri": "/api/v1/ability/118/",
+    "pokemons": [
+      216,
+      415
+    ]
+  },
+  "119": {
+    "name": "frisk",
+    "resource_uri": "/api/v1/ability/119/",
+    "pokemons": [
+      10027,
+      10028,
+      10029,
+      10030,
+      10031,
+      10032,
+      40,
+      161,
+      162,
+      193,
+      234,
+      353,
+      354,
+      469,
+      574,
+      575,
+      576,
+      708,
+      709,
+      710,
+      711,
+      714,
+      715
+    ]
+  },
+  "120": {
+    "name": "reckless",
+    "resource_uri": "/api/v1/ability/120/",
+    "pokemons": [
+      106,
+      111,
+      112,
+      397,
+      398,
+      464,
+      500,
+      550,
+      619,
+      620,
+      626
+    ]
+  },
+  "121": {
+    "name": "multitype",
+    "resource_uri": "/api/v1/ability/121/",
+    "pokemons": [
+      493
+    ]
+  },
+  "122": {
+    "name": "flower-gift",
+    "resource_uri": "/api/v1/ability/122/",
+    "pokemons": [
+      421
+    ]
+  },
+  "123": {
+    "name": "bad-dreams",
+    "resource_uri": "/api/v1/ability/123/",
+    "pokemons": [
+      491
+    ]
+  },
+  "124": {
+    "name": "pickpocket",
+    "resource_uri": "/api/v1/ability/124/",
+    "pokemons": [
+      215,
+      273,
+      274,
+      275,
+      461,
+      688,
+      689
+    ]
+  },
+  "125": {
+    "name": "sheer-force",
+    "resource_uri": "/api/v1/ability/125/",
+    "pokemons": [
+      10017,
+      31,
+      34,
+      98,
+      99,
+      128,
+      158,
+      159,
+      160,
+      208,
+      296,
+      297,
+      303,
+      328,
+      371,
+      408,
+      409,
+      532,
+      533,
+      534,
+      555,
+      621,
+      627,
+      628,
+      645
+    ]
+  },
+  "126": {
+    "name": "contrary",
+    "resource_uri": "/api/v1/ability/126/",
+    "pokemons": [
+      213,
+      327,
+      495,
+      496,
+      497,
+      686,
+      687
+    ]
+  },
+  "127": {
+    "name": "unnerve",
+    "resource_uri": "/api/v1/ability/127/",
+    "pokemons": [
+      23,
+      24,
+      52,
+      53,
+      142,
+      150,
+      217,
+      228,
+      229,
+      248,
+      284,
+      416,
+      595,
+      596,
+      610,
+      611,
+      612,
+      667,
+      668
+    ]
+  },
+  "128": {
+    "name": "defiant",
+    "resource_uri": "/api/v1/ability/128/",
+    "pokemons": [
+      56,
+      57,
+      83,
+      393,
+      394,
+      395,
+      432,
+      624,
+      625,
+      628,
+      641,
+      642
+    ]
+  },
+  "129": {
+    "name": "defeatist",
+    "resource_uri": "/api/v1/ability/129/",
+    "pokemons": [
+      566,
+      567
+    ]
+  },
+  "130": {
+    "name": "cursed-body",
+    "resource_uri": "/api/v1/ability/130/",
+    "pokemons": [
+      353,
+      354,
+      478,
+      592,
+      593
+    ]
+  },
+  "131": {
+    "name": "healer",
+    "resource_uri": "/api/v1/ability/131/",
+    "pokemons": [
+      113,
+      182,
+      242,
+      531,
+      594,
+      682,
+      683
+    ]
+  },
+  "132": {
+    "name": "friend-guard",
+    "resource_uri": "/api/v1/ability/132/",
+    "pokemons": [
+      35,
+      39,
+      173,
+      174,
+      440,
+      664,
+      665,
+      666
+    ]
+  },
+  "133": {
+    "name": "weak-armor",
+    "resource_uri": "/api/v1/ability/133/",
+    "pokemons": [
+      95,
+      138,
+      139,
+      140,
+      141,
+      218,
+      219,
+      227,
+      557,
+      558,
+      569,
+      582,
+      583,
+      584,
+      629,
+      630
+    ]
+  },
+  "134": {
+    "name": "heavy-metal",
+    "resource_uri": "/api/v1/ability/134/",
+    "pokemons": [
+      304,
+      305,
+      306,
+      436,
+      437
+    ]
+  },
+  "135": {
+    "name": "light-metal",
+    "resource_uri": "/api/v1/ability/135/",
+    "pokemons": [
+      212,
+      374,
+      375,
+      376,
+      379
+    ]
+  },
+  "136": {
+    "name": "multiscale",
+    "resource_uri": "/api/v1/ability/136/",
+    "pokemons": [
+      149,
+      249
+    ]
+  },
+  "137": {
+    "name": "toxic-boost",
+    "resource_uri": "/api/v1/ability/137/",
+    "pokemons": [
+      335
+    ]
+  },
+  "138": {
+    "name": "flare-boost",
+    "resource_uri": "/api/v1/ability/138/",
+    "pokemons": [
+      425,
+      426
+    ]
+  },
+  "139": {
+    "name": "harvest",
+    "resource_uri": "/api/v1/ability/139/",
+    "pokemons": [
+      102,
+      103,
+      357,
+      708,
+      709
+    ]
+  },
+  "140": {
+    "name": "telepathy",
+    "resource_uri": "/api/v1/ability/140/",
+    "pokemons": [
+      202,
+      280,
+      281,
+      282,
+      307,
+      308,
+      360,
+      483,
+      484,
+      487,
+      517,
+      518,
+      605,
+      606,
+      714,
+      715
+    ]
+  },
+  "141": {
+    "name": "moody",
+    "resource_uri": "/api/v1/ability/141/",
+    "pokemons": [
+      223,
+      224,
+      235,
+      361,
+      362,
+      399,
+      400
+    ]
+  },
+  "142": {
+    "name": "overcoat",
+    "resource_uri": "/api/v1/ability/142/",
+    "pokemons": [
+      10004,
+      10005,
+      90,
+      91,
+      204,
+      205,
+      372,
+      412,
+      413,
+      540,
+      541,
+      542,
+      577,
+      578,
+      579,
+      589,
+      616,
+      629,
+      630
+    ]
+  },
+  "143": {
+    "name": "poison-touch",
+    "resource_uri": "/api/v1/ability/143/",
+    "pokemons": [
+      88,
+      89,
+      453,
+      454,
+      537,
+      690,
+      691
+    ]
+  },
+  "144": {
+    "name": "regenerator",
+    "resource_uri": "/api/v1/ability/144/",
+    "pokemons": [
+      10019,
+      79,
+      80,
+      114,
+      199,
+      222,
+      250,
+      465,
+      531,
+      577,
+      578,
+      579,
+      590,
+      591,
+      594,
+      619,
+      620
+    ]
+  },
+  "145": {
+    "name": "big-pecks",
+    "resource_uri": "/api/v1/ability/145/",
+    "pokemons": [
+      16,
+      17,
+      18,
+      441,
+      519,
+      520,
+      521,
+      580,
+      581,
+      629,
+      630,
+      661
+    ]
+  },
+  "146": {
+    "name": "sand-rush",
+    "resource_uri": "/api/v1/ability/146/",
+    "pokemons": [
+      27,
+      28,
+      507,
+      508,
+      529,
+      530
+    ]
+  },
+  "147": {
+    "name": "wonder-skin",
+    "resource_uri": "/api/v1/ability/147/",
+    "pokemons": [
+      49,
+      300,
+      301,
+      561
+    ]
+  },
+  "148": {
+    "name": "analytic",
+    "resource_uri": "/api/v1/ability/148/",
+    "pokemons": [
+      81,
+      82,
+      120,
+      121,
+      137,
+      233,
+      462,
+      474,
+      504,
+      505,
+      605,
+      606
+    ]
+  },
+  "149": {
+    "name": "illusion",
+    "resource_uri": "/api/v1/ability/149/",
+    "pokemons": [
+      570,
+      571
+    ]
+  },
+  "150": {
+    "name": "imposter",
+    "resource_uri": "/api/v1/ability/150/",
+    "pokemons": [
+      132
+    ]
+  },
+  "151": {
+    "name": "infiltrator",
+    "resource_uri": "/api/v1/ability/151/",
+    "pokemons": [
+      10025,
+      41,
+      42,
+      169,
+      187,
+      188,
+      189,
+      291,
+      336,
+      442,
+      546,
+      547,
+      677,
+      678,
+      686,
+      687,
+      714,
+      715
+    ]
+  },
+  "152": {
+    "name": "mummy",
+    "resource_uri": "/api/v1/ability/152/",
+    "pokemons": [
+      562,
+      563
+    ]
+  },
+  "153": {
+    "name": "moxie",
+    "resource_uri": "/api/v1/ability/153/",
+    "pokemons": [
+      127,
+      130,
+      214,
+      262,
+      373,
+      430,
+      551,
+      552,
+      553,
+      559,
+      560,
+      667,
+      668
+    ]
+  },
+  "154": {
+    "name": "justified",
+    "resource_uri": "/api/v1/ability/154/",
+    "pokemons": [
+      10024,
+      58,
+      59,
+      359,
+      448,
+      475,
+      638,
+      639,
+      640,
+      647
+    ]
+  },
+  "155": {
+    "name": "rattled",
+    "resource_uri": "/api/v1/ability/155/",
+    "pokemons": [
+      129,
+      165,
+      185,
+      206,
+      209,
+      210,
+      261,
+      293,
+      366,
+      438,
+      613
+    ]
+  },
+  "156": {
+    "name": "magic-bounce",
+    "resource_uri": "/api/v1/ability/156/",
+    "pokemons": [
+      10057,
+      177,
+      178,
+      196
+    ]
+  },
+  "157": {
+    "name": "sap-sipper",
+    "resource_uri": "/api/v1/ability/157/",
+    "pokemons": [
+      183,
+      184,
+      203,
+      234,
+      241,
+      298,
+      522,
+      523,
+      585,
+      586,
+      626,
+      672,
+      673,
+      704,
+      705,
+      706
+    ]
+  },
+  "158": {
+    "name": "prankster",
+    "resource_uri": "/api/v1/ability/158/",
+    "pokemons": [
+      10056,
+      198,
+      302,
+      313,
+      314,
+      447,
+      509,
+      510,
+      546,
+      547,
+      641,
+      642,
+      678,
+      707
+    ]
+  },
+  "159": {
+    "name": "sand-force",
+    "resource_uri": "/api/v1/ability/159/",
+    "pokemons": [
+      10058,
+      50,
+      51,
+      299,
+      422,
+      423,
+      449,
+      450,
+      476,
+      524,
+      525,
+      526,
+      529,
+      530,
+      645
+    ]
+  },
+  "160": {
+    "name": "iron-barbs",
+    "resource_uri": "/api/v1/ability/160/",
+    "pokemons": [
+      597,
+      598
+    ]
+  },
+  "161": {
+    "name": "zen-mode",
+    "resource_uri": "/api/v1/ability/161/",
+    "pokemons": [
+      10017,
+      555
+    ]
+  },
+  "162": {
+    "name": "victory-star",
+    "resource_uri": "/api/v1/ability/162/",
+    "pokemons": [
+      494
+    ]
+  },
+  "163": {
+    "name": "turboblaze",
+    "resource_uri": "/api/v1/ability/163/",
+    "pokemons": [
+      10023,
+      643
+    ]
+  },
+  "164": {
+    "name": "teravolt",
+    "resource_uri": "/api/v1/ability/164/",
+    "pokemons": [
+      10022,
+      644
+    ]
+  },
+  "165": {
+    "name": "aerilate",
+    "resource_uri": "/api/v1/ability/165/",
+    "pokemons": [
+      10040
+    ]
+  },
+  "166": {
+    "name": "aroma-veil",
+    "resource_uri": "/api/v1/ability/166/",
+    "pokemons": [
+      682,
+      683
+    ]
+  },
+  "167": {
+    "name": "aura-break",
+    "resource_uri": "/api/v1/ability/167/",
+    "pokemons": [
+      718
+    ]
+  },
+  "168": {
+    "name": "bulletproof",
+    "resource_uri": "/api/v1/ability/168/",
+    "pokemons": [
+      650,
+      651,
+      652
+    ]
+  },
+  "169": {
+    "name": "cheek-pouch",
+    "resource_uri": "/api/v1/ability/169/",
+    "pokemons": [
+      659,
+      660,
+      702
+    ]
+  },
+  "170": {
+    "name": "competitive",
+    "resource_uri": "/api/v1/ability/170/",
+    "pokemons": [
+      10025
+    ]
+  },
+  "171": {
+    "name": "dark-aura",
+    "resource_uri": "/api/v1/ability/171/",
+    "pokemons": [
+      717
+    ]
+  },
+  "172": {
+    "name": "fairy-aura",
+    "resource_uri": "/api/v1/ability/172/",
+    "pokemons": [
+      716
+    ]
+  },
+  "173": {
+    "name": "flower-veil",
+    "resource_uri": "/api/v1/ability/173/",
+    "pokemons": [
+      669,
+      670,
+      671
+    ]
+  },
+  "174": {
+    "name": "fur-coat",
+    "resource_uri": "/api/v1/ability/174/",
+    "pokemons": [
+      676
+    ]
+  },
+  "175": {
+    "name": "gale-wings",
+    "resource_uri": "/api/v1/ability/175/",
+    "pokemons": [
+      661,
+      662,
+      663
+    ]
+  },
+  "176": {
+    "name": "gooey",
+    "resource_uri": "/api/v1/ability/176/",
+    "pokemons": [
+      704,
+      705,
+      706
+    ]
+  },
+  "177": {
+    "name": "grass-pelt",
+    "resource_uri": "/api/v1/ability/177/",
+    "pokemons": [
+      672,
+      673
+    ]
+  },
+  "178": {
+    "name": "magician",
+    "resource_uri": "/api/v1/ability/178/",
+    "pokemons": [
+      653,
+      654,
+      655,
+      707
+    ]
+  },
+  "179": {
+    "name": "mega-launcher",
+    "resource_uri": "/api/v1/ability/179/",
+    "pokemons": [
+      10036,
+      692,
+      693
+    ]
+  },
+  "180": {
+    "name": "parental-bond",
+    "resource_uri": "/api/v1/ability/180/",
+    "pokemons": [
+      10039
+    ]
+  },
+  "181": {
+    "name": "pixilate",
+    "resource_uri": "/api/v1/ability/181/",
+    "pokemons": [
+      10051,
+      700
+    ]
+  },
+  "182": {
+    "name": "protean",
+    "resource_uri": "/api/v1/ability/182/",
+    "pokemons": [
+      656,
+      657,
+      658
+    ]
+  },
+  "183": {
+    "name": "refrigerate",
+    "resource_uri": "/api/v1/ability/183/",
+    "pokemons": [
+      698,
+      699
+    ]
+  },
+  "184": {
+    "name": "stance-change",
+    "resource_uri": "/api/v1/ability/184/",
+    "pokemons": [
+      10026,
+      681
+    ]
+  },
+  "185": {
+    "name": "strong-jaw",
+    "resource_uri": "/api/v1/ability/185/",
+    "pokemons": [
+      696,
+      697
+    ]
+  },
+  "186": {
+    "name": "sweet-veil",
+    "resource_uri": "/api/v1/ability/186/",
+    "pokemons": [
+      684,
+      685
+    ]
+  },
+  "187": {
+    "name": "symbiosis",
+    "resource_uri": "/api/v1/ability/187/",
+    "pokemons": [
+      669,
+      670,
+      671
+    ]
+  },
+  "188": {
+    "name": "tough-claws",
+    "resource_uri": "/api/v1/ability/188/",
+    "pokemons": [
+      10034,
+      10042,
+      688,
+      689
+    ]
+  }
 }

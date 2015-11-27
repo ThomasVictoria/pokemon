@@ -33,7 +33,6 @@
         "DbgName": "mat_0.002",
         "depthTest": true,
         "specularCoef": 49,
-        "colorAmbient": [0,0,0],
         "DbgColor": 15597568,
         "wireframe": false,
         "mapDiffuse": "kameil_0_0.jpg"
@@ -54,7 +53,6 @@
         "DbgName": "mat_1.002",
         "depthTest": true,
         "specularCoef": 49,
-        "colorAmbient": [0,0,0],
         "DbgColor": 15658734,
         "wireframe": false,
         "mapDiffuse": "kameil_0_0.jpg"

@@ -1,83 +1,272 @@
-#article{
-	position: fixed;
-	width: 100%; height: 100%;
-	top: 0; right: 0; bottom: 0; left: 0;
-	z-index: 20;
-	background-color: #d8d8d8;
-	display: none;
+.popup{
+  position: fixed;
+  width: 100%; height: 100%;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: 20;
+  background-color: #d8d8d8;
+  display: none;
+
+  .caracteristique{
+
+    h2{
+      text-align: center;
+      font-size: 50px;
+      margin-top: 25px;
+    }
+    
+    .pokemons.desc{
+
+      width: 90%;
+      margin: auto;
+      height: 550px;
+      margin-top: 125px;
+      overflow-y: auto;
+
+      .pokemon{
+        
+        text-align: center;
+        width: 150px;
+        height: 40px;
+        border-radius: 5px;
+        display: inline-block;
+        float: left;
+        margin-left: 20px;
+        margin-top: 20px;
+        background-color: #eee;
+        padding-top: 20px
+        
+      }
+      
+    }
+
+  }
+
+  .interaction{
+
+    width: 20%;
+    float: left;
+
+  }
+
 }
 
 .container{
-	width: 1200px; height: 100%;
-	margin: 0 auto;
+  width: 1200px; height: 100%;
+  margin: 0 auto;
 }
 
-#controls{
-	width: 100%;
-	height: 60px;
-	position: relative;
-	
-	#back{
-		width: 40px; 
-		height: 40px;
-		background: url('../img/arrowL.svg') no-repeat;
-		position: absolute;
-		top: 10px; left: 0; bottom: 10px;
-	}
-	
-	#close{
-		width: 40px; 
-		height: 40px;
-		background: url('../img/cross.svg') no-repeat;
-		position: absolute;
-		top: 10px; left: 50%; right: 50%; bottom: 10px;
-    	transform: translateX(-50%); 
-	}
-	
-	#next{
-		width: 40px; 
-		height: 40px;
-		background: url('../img/arrowR.svg') no-repeat;
-		position: absolute;
-		top: 10px; right: 0; bottom: 10px;
-	}
-	
+.controls{
+  width: 100%;
+  height: 60px;
+  position: relative;
+
+  .close{
+    width: 40px; 
+    height: 40px;
+    background: url('../img/cross.svg') no-repeat;
+    position: absolute;
+    top: 10px; left: 50%; right: 50%; bottom: 10px;
+    transform: translateX(-50%);
+    transition: all 0.2s ease-out;
+    
+    &:hover{
+      width: 45px;
+      height: 45px;
+      transition: all 0.2s ease-out;
+    } 
+  }
+
 }
 
 #view3d{
-	width: 520px;
-    height: 750px; 
-	float: left;
+  width: 520px;
+  height: 750px; 
+  float: left;
 }
 
 #caracteristique{
-	width: 680px;
-	height: 750px; 
-	float: right;
-	
-	h2{
-		font-size: 2em;
-		padding: 40px 40px 40px 20px;
-	}
-	
-	p{
-		font-size: 1.2em;
-		padding: 20px 40px 20px 20px;
-		line-height: 1.4em;
-	}
-	
-	table{
-		background-color: #ebebeb;
-		margin: 20px;
-		border-radius: 5px;
-		width: 620px;
-		
-		td{
-			padding: 20px;
-			
-			strong{
-				font-weight: bold;
-			}
-		}
-	}
+  width: 680px;
+  height: 750px; 
+  float: right;
+
+
+  #types{ 
+
+    span{
+      padding-top: 10px;
+      margin-left: 10px;      
+      img{
+        width: 75px;
+      }
+
+    }
+
+  }
+
+  .details{
+
+    margin-top: 5px;
+
+    li{
+
+      display: inline-block;      
+      width: 50px;
+      margin-left: 6.2%;
+      text-align: center;
+      font-size: 13px;
+
+    }
+
+  }
+
+  .spec{
+
+    width: 600px;
+    height: 200px;
+    position: relative;
+
+    .attack{
+      background: #19B5FE; 
+      .triangle{
+        border-color: transparent transparent #19B5FE transparent;
+      }
+    }
+
+    .vitesse{
+      background: #9A12B3; 
+      .triangle{
+        border-color: transparent transparent #9A12B3 transparent;
+      }
+    }
+
+    .spe_attack{
+      background: #F9BF3B; 
+      .triangle{
+        border-color: transparent transparent #F9BF3B transparent;
+      }
+    }
+
+    .defense{
+      background: #2ECC71; 
+      .triangle{
+        border-color: transparent transparent #2ECC71 transparent;
+      }
+    }
+
+    .spe_def{
+      background: #26C281; 
+      .triangle{
+        border-color: transparent transparent #26C281 transparent;
+      }
+    }
+
+    .hp{
+      background: #CF000F; 
+      .triangle{
+        border-color: transparent transparent #CF000F transparent;
+      }
+    }
+
+    li{
+
+      text-align: center;
+      width: 50px;
+      position: relative;
+      display: inline-block;
+      margin-left: 7%;
+
+      .triangle{
+
+        position:absolute;
+        top:-20px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 25px 20px 25px;
+
+      }
+
+    }
+
+  }
+
+  h2{
+    font-size: 2em;
+    padding: 40px 40px 40px 20px;
+    text-align: center;
+  }
+
+  p{
+    font-size: 1.2em;
+    padding: 20px 40px 20px 20px;
+    line-height: 1.4em;
+  }
+
+  table{
+    background-color: #ebebeb;
+    margin: 20px;
+    border-radius: 5px;
+    width: 620px;
+
+    td#abilities{
+
+      a{
+
+        &:after{
+
+          content:", ";
+
+        }
+
+        &:last-child{
+
+          &:after{
+            content:"";
+          }
+
+        }
+
+      }
+
+    }
+
+    td{
+      padding: 20px;
+
+      strong{
+        font-weight: bold;
+      }
+    }
+  }
+
+  #moves{
+    margin-top: 20px;
+    width: 100%;
+    margin: auto;
+    overflow-y: auto;
+    height: 300px;
+
+    div{
+      margin-top: 5px;
+    }
+
+    .ability{
+
+      display: inline-block;
+      float: left;
+      background-color: #eee;
+      padding: 10px 10px 10px 10px;
+      margin-left: 10px;
+      margin-top: 10px;
+      border-radius:5px;
+      width: 175px;
+      height: 50px;
+
+    }
+
+  }
+
+
+
+
 }

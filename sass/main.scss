@@ -1,12 +1,17 @@
 @import "reset";
 
+@font-face {
+    font-family: fontPokemon;
+    src: url(../assets/font/ProximaNova-Light.otf);
+}
+
 /*********** BODY **************/
 
 body{
-	font-family: 'klavika-web', 'Open Sans', sans-serif;
 	background: #e5e5e3;
 	overflow: hidden;
 	width: 100%; height: 100%;
+  font-family: fontPokemon;
 }
 
 
@@ -14,3 +19,4 @@ body{
 @import "views/home";
 @import "views/categorie";
 @import "views/article";
+@import "views/loader"; 

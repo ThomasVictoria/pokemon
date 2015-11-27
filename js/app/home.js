@@ -1,14 +1,43 @@
 // Home
+var gen;
+var actualGen = 1;
 $('#timeline > .time').on('mouseenter', function(){
 	if($(this).attr('data-gen')){
-		$('#generation h3').html($(this).attr('data-gen'));
+		gen = $(this).attr('data-gen');
+		$('#generation h3').html(gen);
+	}
+	
+	
+	if(gen != "all" && gen != actualGen){
+		$('#home .bg').css('display', 'none');
+		actualGen = gen;
+		var bg = '.bg'+$(this).attr('data-gen');
+		var img = bg+' img';
+		TweenMax.to($(bg), 0,{display: 'block', opacity: 1});
+		TweenMax.staggerFrom($(img), 0.2, {
+			x:"-3000px",
+			ease: Power1.easeIn
+			}, 0.1);
 	}
 })
+
+
+$('#timeline').on('mouseenter', '.time', function(){
+	var thiss, before, afer;
+	thiss = $(this);
+	
+	var size = $(this).children('div').css('height');
+	size = size - 20;
+	TweenMax.to(thiss.children('div'), 1, {height: size+'px'});
+	
+});
+
 
 var TimeLine = function(){
 	
 	// Var
-	this.sizeIT; 
+	this.sizeIT;
+	this.elmt = $('.time');
 	
 	// Function
 	this.init();
