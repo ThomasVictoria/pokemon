@@ -45,8 +45,9 @@ categorie.prototype.callAjax = function(){
   var selfPopup   = this.popup;
 
   $(this.pokemon).on('click', function(e){
-    $(selfPokemon).fadeIn(400);
-
+    TweenMax.fromTo($('#loader-container'), 1,{display: 'block', opacity: 1}, {opcity: '0', display: 'none', delay:0.2});
+    TweenMax.to($('#loader-container'), 0.2,{opcity: '0', display: 'none', delay:0.8})
+    TweenMax.fromTo($(selfPokemon), 1,{'left': '-100%', display: 'block'}, {left: '0%', display: 'block', delay:1});
     var name = $(this).attr('data-name'),
         id   = $(this).attr('data-id');
     showModel(name);
@@ -79,7 +80,9 @@ categorie.prototype.callAjax = function(){
   });
 
   $(this.close).on('click', function(e){
-    $(selfPopup).fadeOut(400);
+    stopScroll = false;
+    raf();
+    TweenMax.fromTo($(selfPopup), 1,{'left': '0%', display: 'block'}, {left: '100%', display: 'none'});
   });
 
 }

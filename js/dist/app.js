@@ -162,7 +162,6 @@ $('#search').on('click', function(e){
 
         dirLight.shadowCameraFar = 3500;
         dirLight.shadowBias = -0.0001;
-        //dirLight.shadowCameraVisible = true;
     }
     
     var mesh = null;
@@ -246,8 +245,9 @@ categorie.prototype.callAjax = function(){
   var selfPopup   = this.popup;
 
   $(this.pokemon).on('click', function(e){
-    $(selfPokemon).fadeIn(400);
-
+    TweenMax.fromTo($('#loader-container'), 1,{display: 'block', opacity: 1}, {opcity: '0', display: 'none', delay:0.2});
+    TweenMax.to($('#loader-container'), 0.2,{opcity: '0', display: 'none', delay:0.8})
+    TweenMax.fromTo($(selfPokemon), 1,{'left': '-100%', display: 'block'}, {left: '0%', display: 'block', delay:1});
     var name = $(this).attr('data-name'),
         id   = $(this).attr('data-id');
     showModel(name);
@@ -280,7 +280,9 @@ categorie.prototype.callAjax = function(){
   });
 
   $(this.close).on('click', function(e){
-    $(selfPopup).fadeOut(400);
+    stopScroll = false;
+    raf();
+    TweenMax.fromTo($(selfPopup), 1,{'left': '0%', display: 'block'}, {left: '100%', display: 'none'});
   });
 
 }
@@ -323,8 +325,6 @@ pokearticle.prototype.show = function(){
   });
 
   this.article.find('h2').html(this.data.reponse.name);
-
-  console.log(this.data.reponse.descriptions[0].resource_uri);
   
   var link         = this.data.reponse.descriptions[0].resource_uri,
       delimiter    = '/',
@@ -335,25 +335,40 @@ pokearticle.prototype.show = function(){
       id           = step.slice(0,lenght -1);
 
   new call('description', id, desc);
-
+  
+  var heightVar, topVar;
+  
+  stopScroll = true;
+  
   $('.spec .vitesse span').append(this.data.reponse.speed);
-  $('.spec .vitesse').css('height', (this.data.reponse.speed*100)/180+'%');
-  $('.spec .vitesse').css('top', 100-((this.data.reponse.speed*100)/180)+'%');
+  heightVar = (this.data.reponse.speed*100)/180 + '%';
+  topVar = (100-((this.data.reponse.speed*100)/180)) + '%';
+  TweenMax.fromTo($('.spec .vitesse'), 1,{'height': '0%', 'top': '100%'}, {height: heightVar, top: topVar, delay:0.6});
+  
   $('.spec .attack span').append(this.data.reponse.attack);
-  $('.spec .attack').css('height', (this.data.reponse.attack*100)/180+'%');
-  $('.spec .attack').css('top', 100-((this.data.reponse.attack*100)/180)+'%');
+  heightVar = (this.data.reponse.attack*100)/180 + '%';
+  topVar = (100-((this.data.reponse.attack*100)/180)) + '%';
+  TweenMax.fromTo($('.spec .attack'), 1,{'height': '0%', 'top': '100%'}, {height: heightVar, top: topVar, delay:0.8});
+
   $('.spec .spe_attack span').append(this.data.reponse.sp_atk);
-  $('.spec .spe_attack').css('height', (this.data.reponse.sp_atk*100)/180+'%');
-  $('.spec .spe_attack').css('top', 100-((this.data.reponse.sp_atk*100)/180)+'%');
+  heightVar = (this.data.reponse.sp_atk*100)/180 + '%';
+  topVar = (100-((this.data.reponse.sp_atk*100)/180)) + '%';
+  TweenMax.fromTo($('.spec .spe_attack'), 1,{'height': '0%', 'top': '100%'}, {height: heightVar, top: topVar, delay:1});
+  
   $('.spec .defense span').append(this.data.reponse.defense);
-  $('.spec .defense').css('height', (this.data.reponse.defense*100)/230+'%');
-  $('.spec .defense').css('top', 100-((this.data.reponse.defense*100)/230)+'%');
+  heightVar = (this.data.reponse.defense*100)/180 + '%';
+  topVar = (100-((this.data.reponse.defense*100)/180)) + '%';
+  TweenMax.fromTo($('.spec .defense'), 1,{'height': '0%', 'top': '100%'}, {height: heightVar, top: topVar, delay:1.2});
+  
   $('.spec .hp span').append(this.data.reponse.hp);
-  $('.spec .hp').css('height', (this.data.reponse.hp*100)/255+'%');
-  $('.spec .hp').css('top', 100-((this.data.reponse.hp*100)/255)+'%');
+   heightVar = (this.data.reponse.hp*100)/180 + '%';
+  topVar = (100-((this.data.reponse.hp*100)/180)) + '%';
+  TweenMax.fromTo($('.spec .hp'), 1,{'height': '0%', 'top': '100%'}, {height: heightVar, top: topVar, delay:1.4});
+  
   $('.spec .spe_def span').append(this.data.reponse.sp_def);
-  $('.spec .spe_def').css('height', (this.data.reponse.sp_def*100)/230+'%');
-  $('.spec .spe_def').css('top', 100-((this.data.reponse.sp_def*100)/230)+'%');
+   heightVar = (this.data.reponse.sp_def*100)/180 + '%';
+  topVar = (100-((this.data.reponse.sp_def*100)/180)) + '%';
+  TweenMax.fromTo($('.spec .spe_def'), 1,{'height': '0%', 'top': '100%'}, {height: heightVar, top: topVar, delay:1.6});
 
 }
 

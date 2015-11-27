@@ -67,7 +67,6 @@
 
         dirLight.shadowCameraFar = 3500;
         dirLight.shadowBias = -0.0001;
-        //dirLight.shadowCameraVisible = true;
     }
     
     var mesh = null;
