@@ -146,19 +146,20 @@ Home.prototype.toGen = function(){
   var home = this.home;
   
   $(this.bg).on('click', function(e){
-    $(home).fadeOut();
-    $(self).fadeIn();
+    TweenMax.fromTo(home, 1, {left:0,display:'block', opacity:'1'},{left:'-100%', display:"none", opacity:'0'});
+    TweenMax.fromTo(self, 1, {right:"100%", display:'none', opacity:'0'},{left:0, display:"block", opacity:'1'});
     $('#version').html($('#generation h3').html());
   });
   
   $(this.logo).on('click', function(){
     if($(home).css('display') == 'block'){
-      $(home).fadeOut();
-      $(self).fadeIn();
+      TweenMax.fromTo(home, 1, {left:0,display:'block', opacity:'1'},{left:'-100%', display:"none", opacity:'0'});
+      TweenMax.fromTo(self, 1, {right:"100%", display:'none', opacity:'0'},{left:0, display:"block", opacity:'1'});
       $('#version').html('All');
     }else{
-      $(self).fadeOut();
-      $(home).fadeIn();
+      $('#content').empty();
+      TweenMax.fromTo(self, 1, {left:0,display:'block', opacity:'1'},{right:'100%', display:"none", opacity:'0'});
+      TweenMax.fromTo(home, 1, {left:"-100%", display:'none', opacity:'0'},{left:0, display:"block", opacity:'1'});
     }
   })
 

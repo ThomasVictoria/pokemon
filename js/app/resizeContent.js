@@ -18,8 +18,10 @@ resizeContent.prototype.resize = function(){
 }
 
 resizeContent.prototype.razScroll = function(){
-  	
-	TweenMax.staggerFrom(this.divView, 0.5,{opacity: 0, x:-300, delai:0.5}, 0.1);
+
+	TweenMax.staggerFrom(this.divView, 0.5,{opacity: 0, x:-300}, 0.1);
+	
+	
 	
 	if(stopScroll){
 		TweenMax.from(this.content, 1, {

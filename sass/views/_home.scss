@@ -334,11 +334,14 @@
 		}
 		
 		h3{
-			font-size: 6em;
+			font-size: 4em;
 			text-align: center;
 			position: absolute;
-			left: 0; right: 0; bottom: 0; top: 0;
+			left: 0;
+			right: 0;
+			bottom: -55px;
 			color: #4a4a4a;
+			font-weight: bold;
 		}
 		
 	}
