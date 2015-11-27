@@ -52,8 +52,6 @@ Home.prototype.filters = function(){
 
       filters.push($(this).attr('data-name'));      
 
-      console.log($(this).attr('data-name'));
-      
     });
 
     $.getJSON( "../../data/types.json", function(data){

@@ -1,6 +1,6 @@
 function SearchField(){
 
-  this.field = $('form #search');
+  this.field = $('#search');
 
   this.inputOnKeydown();
 
@@ -42,11 +42,11 @@ SearchField.prototype.init = function(type, ability, move, value, callback){
   for(i=0; i < 3;i++){
 
     if(i == 0)
-      $(result).append('<div class="title">Types</div>');
+      $(result).append('<div class="title">Types <div class="line"></div></div>');
     else if(i == 1)
-      $(result).append('<div class="title">Ability</div>');
+      $(result).append('<div class="title">Ability<div class="line"></div></div>');
     else if(i == 2)
-      $(result).append('<div class="title">Move</div>');
+      $(result).append('<div class="title">Move<div class="line"></div></div>');
 
     for(y=1; y <= Object.keys(index[i]).length; y++){
 
@@ -94,21 +94,28 @@ SearchField.prototype.init = function(type, ability, move, value, callback){
             $(this).addClass('hide');
             $(this).removeClass('view');
           }
-          
+
         });
 
       }
     }
 
   }
-  
+
   //   Get the size of the content
   new resizeContent();
   //   Size of the content
 
   if(Vallenght == 0){
+    new TweenMax.to($('.searchField'), 0.5, {right:'-200px'});
     $(result).empty();
+
+  }else{
+
+    new TweenMax.to($('.searchField'), 0.5, {right:'0px'});
+
   }
+
 
   new Navigation();
 

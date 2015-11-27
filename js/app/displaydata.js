@@ -38,6 +38,8 @@ pokearticle.prototype.show = function(){
 
   this.article.find('h2').html(this.data.reponse.name);
 
+  console.log(this.data.reponse.descriptions[0].resource_uri);
+  
   var link         = this.data.reponse.descriptions[0].resource_uri,
       delimiter    = '/',
       start        = 4,
@@ -87,7 +89,6 @@ pokearticle.prototype.moveability = function(){
 
   $(this.detail).children('h2').html(self.reponse.name);
 
-
   $.when(ability, moves, type).done(function(ability, moves, type){
 
     selfFun(ability[0], moves[0], type[0], selfid, localSelector);
@@ -100,10 +101,6 @@ pokearticle.prototype.display = function(ability, moves, type, pokemonId, localS
   $('#abilities, #moves, #types').empty();
 
   $('#abilities').append('Abilities : ');
-
-  $('#moves').append('Moves : ');
-
-
 
   for(i=1; i < Object.keys(ability).length; i++){
 
@@ -142,7 +139,7 @@ pokearticle.prototype.display = function(ability, moves, type, pokemonId, localS
               lenght    = step.length,
               id        = step.slice(0,lenght -1);
 
-          $('#moves').append('<a href="#"><div class="ability" data-id="'+id+'" >'+ moves[y].name +'</div></a>')
+          $('#moves').append('<a href="#"><div class="ability" data-id="'+id+'" ><div>Name : '+ moves[y].name +' </div><div> Learn type : '+ moves[y].learn_type +'</div></div></a>')
         }
 
       }

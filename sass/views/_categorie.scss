@@ -48,11 +48,11 @@ $colorNav : #4a4a4a;
     top: 53%; 
     transform: translateY(-50%);
     margin-left: 20px;
-  
+
     li{
 
       margin-top: 5px;
-      
+
       .point{
 
         width: 40px;
@@ -122,67 +122,61 @@ $colorNav : #4a4a4a;
     }
 
   }
-<<<<<<< HEAD
+
+  #search{
+    position: fixed;
+    top: 20px; right: 20px;
+    z-index: 19;
+    background: url(../img/search-dark.png) no-repeat 10px 6px #444;
+    border: 0 none;
+    font: bold 12px Arial,Helvetica,Sans-serif;
+    color: #777;
+    width: 5%;
+    padding: 6px 15px 6px 35px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+  }
+
+  .line{
+    width: 75%;
+    height: 2px;
+    background: #eee;
+    margin-top: 5px;
+  }
 
   .searchField{
-
+    overflow-y: auto; 
     position: fixed;
-    top: 0; right: 0;
+    top: 0; 
+    right: -200px;
     width: 200px;
     height: 100%;
+    background: #4A4A4A;
 
-    input{
-      position: relative;
-      top: 20px; left: 20px;
-      background: url(../img/search-dark.png) no-repeat 10px 6px #444;
-      border: 0 none;
-      font: bold 12px Arial,Helvetica,Sans-serif;
-      color: #777;
-      width: 45%;
-      padding: 6px 15px 6px 35px;
-      -webkit-border-radius: 20px;
-      -moz-border-radius: 20px;
-      border-radius: 20px;
-      text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
-      -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
-      -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
-      box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
-    }
-
-=======
-  
-	#search{
-		position: fixed;
-		top: 20px; right: 20px;
-		background: url(../img/search-dark.png) no-repeat 10px 6px #444;
-		border: 0 none;
-		font: bold 12px Arial,Helvetica,Sans-serif;
-		color: #777;
-		width: 5%;
-		padding: 6px 15px 6px 35px;
-		-webkit-border-radius: 20px;
-		-moz-border-radius: 20px;
-		border-radius: 20px;
-		text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
-		-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
-		-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
-		box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
-	}
-  
-  .searchField{
-    
-    position: fixed;
-    top: 0; right: 0;
-    width: 0px;
-    height: 100%;
-	
-    
->>>>>>> bfea7bf551f94d5f728f8b0980bf29bf37db1a8e
     .results{
 
+      margin-top: 70px;
+      margin-left: 10px;
+
+      .type, .ability, .move{
+        
+        font-size: 18px;
+        color: #eee;
+        
+      }
+      
       .title{
 
-        color:aliceblue;
+        font-size:30px;
+        color:#fff;
+        margin-top: 10px;
+        margin-left: 5px;
+        margin-bottom: 5px;
 
       }
 

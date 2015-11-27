@@ -62,13 +62,17 @@ a {
   text-decoration: none;
   color: black; }
 
+@font-face {
+  font-family: fontPokemon;
+  src: url(../assets/font/ProximaNova-Light.otf); }
+
 /*********** BODY **************/
 body {
-  font-family: 'klavika-web', 'Open Sans', sans-serif;
   background: #e5e5e3;
   overflow: hidden;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  font-family: fontPokemon; }
 
 #home {
   width: 100%;
@@ -460,6 +464,7 @@ body {
     position: fixed;
     top: 20px;
     right: 20px;
+    z-index: 19;
     background: url(../img/search-dark.png) no-repeat 10px 6px #444;
     border: 0 none;
     font: bold 12px Arial,Helvetica,Sans-serif;
@@ -473,14 +478,31 @@ body {
     -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
     -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset; }
+  #categorie .line {
+    width: 75%;
+    height: 2px;
+    background: #eee;
+    margin-top: 5px; }
   #categorie .searchField {
+    overflow-y: auto;
     position: fixed;
     top: 0;
-    right: 0;
-    width: 0px;
-    height: 100%; }
-    #categorie .searchField .results .title {
-      color: aliceblue; }
+    right: -200px;
+    width: 200px;
+    height: 100%;
+    background: #4A4A4A; }
+    #categorie .searchField .results {
+      margin-top: 70px;
+      margin-left: 10px; }
+      #categorie .searchField .results .type, #categorie .searchField .results .ability, #categorie .searchField .results .move {
+        font-size: 18px;
+        color: #eee; }
+      #categorie .searchField .results .title {
+        font-size: 30px;
+        color: #fff;
+        margin-top: 10px;
+        margin-left: 5px;
+        margin-bottom: 5px; }
 
 .popup {
   position: fixed;
@@ -493,14 +515,30 @@ body {
   z-index: 20;
   background-color: #d8d8d8;
   display: none; }
+  .popup .caracteristique h2 {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 25px; }
+  .popup .caracteristique .pokemons.desc {
+    width: 90%;
+    margin: auto;
+    height: 550px;
+    margin-top: 125px;
+    overflow-y: auto; }
+    .popup .caracteristique .pokemons.desc .pokemon {
+      text-align: center;
+      width: 150px;
+      height: 40px;
+      border-radius: 5px;
+      display: inline-block;
+      float: left;
+      margin-left: 20px;
+      margin-top: 20px;
+      background-color: #eee;
+      padding-top: 20px; }
   .popup .interaction {
     width: 20%;
     float: left; }
-  .popup .desc {
-    width: 18%;
-    float: left;
-    overflow: auto;
-    height: 500px; }
 
 .container {
   width: 1200px;
@@ -552,12 +590,14 @@ body {
     margin-left: 10px; }
     #caracteristique #types span img {
       width: 75px; }
-  #caracteristique .details li {
-    display: inline-block;
-    width: 50px;
-    margin-left: 6.2%;
-    text-align: center;
-    font-size: 13px; }
+  #caracteristique .details {
+    margin-top: 5px; }
+    #caracteristique .details li {
+      display: inline-block;
+      width: 50px;
+      margin-left: 6.2%;
+      text-align: center;
+      font-size: 13px; }
   #caracteristique .spec {
     width: 600px;
     height: 200px;
@@ -620,6 +660,24 @@ body {
       padding: 20px; }
       #caracteristique table td strong {
         font-weight: bold; }
+  #caracteristique #moves {
+    margin-top: 20px;
+    width: 100%;
+    margin: auto;
+    overflow-y: auto;
+    height: 300px; }
+    #caracteristique #moves div {
+      margin-top: 5px; }
+    #caracteristique #moves .ability {
+      display: inline-block;
+      float: left;
+      background-color: #eee;
+      padding: 10px 10px 10px 10px;
+      margin-left: 10px;
+      margin-top: 10px;
+      border-radius: 5px;
+      width: 175px;
+      height: 50px; }
 
 #loader-container {
   display: none;

@@ -6,19 +6,45 @@
   background-color: #d8d8d8;
   display: none;
 
+  .caracteristique{
+
+    h2{
+      text-align: center;
+      font-size: 50px;
+      margin-top: 25px;
+    }
+    
+    .pokemons.desc{
+
+      width: 90%;
+      margin: auto;
+      height: 550px;
+      margin-top: 125px;
+      overflow-y: auto;
+
+      .pokemon{
+        
+        text-align: center;
+        width: 150px;
+        height: 40px;
+        border-radius: 5px;
+        display: inline-block;
+        float: left;
+        margin-left: 20px;
+        margin-top: 20px;
+        background-color: #eee;
+        padding-top: 20px
+        
+      }
+      
+    }
+
+  }
+
   .interaction{
 
     width: 20%;
     float: left;
-
-  }
-
-  .desc{
-
-    width: 18%;
-    float: left;
-    overflow:auto;
-    height: 500px;
 
   }
 
@@ -72,6 +98,7 @@
   height: 750px; 
   float: right;
 
+
   #types{ 
 
     span{
@@ -86,6 +113,8 @@
   }
 
   .details{
+
+    margin-top: 5px;
 
     li{
 
@@ -218,4 +247,35 @@
       }
     }
   }
+
+  #moves{
+    margin-top: 20px;
+    width: 100%;
+    margin: auto;
+    overflow-y: auto;
+    height: 300px;
+
+    div{
+      margin-top: 5px;
+    }
+
+    .ability{
+
+      display: inline-block;
+      float: left;
+      background-color: #eee;
+      padding: 10px 10px 10px 10px;
+      margin-left: 10px;
+      margin-top: 10px;
+      border-radius:5px;
+      width: 175px;
+      height: 50px;
+
+    }
+
+  }
+
+
+
+
 }

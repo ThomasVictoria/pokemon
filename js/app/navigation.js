@@ -1,8 +1,8 @@
 function Navigation(){
 
-  this.type      = $('a div.type');
-  this.move      = $('a div.move');
-  this.ability   = $('a div.ability');
+  this.type      = $('a .type');
+  this.move      = $('a .move');
+  this.ability   = $('a .ability');
   this.articleP  = $('.popup#article');
   this.articleA  = $('.popup#ability');
   this.articleT  = $('.popup#type');

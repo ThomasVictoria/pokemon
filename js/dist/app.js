@@ -324,6 +324,8 @@ pokearticle.prototype.show = function(){
 
   this.article.find('h2').html(this.data.reponse.name);
 
+  console.log(this.data.reponse.descriptions[0].resource_uri);
+  
   var link         = this.data.reponse.descriptions[0].resource_uri,
       delimiter    = '/',
       start        = 4,
@@ -386,10 +388,6 @@ pokearticle.prototype.display = function(ability, moves, type, pokemonId, localS
 
   $('#abilities').append('Abilities : ');
 
-  $('#moves').append('Moves : ');
-
-
-
   for(i=1; i < Object.keys(ability).length; i++){
 
     for(x=0; x < Object.keys(ability[i].pokemons).length; x++){
@@ -427,7 +425,7 @@ pokearticle.prototype.display = function(ability, moves, type, pokemonId, localS
               lenght    = step.length,
               id        = step.slice(0,lenght -1);
 
-          $('#moves').append('<a href="#"><div class="ability" data-id="'+id+'" >'+ moves[y].name +'</div></a>')
+          $('#moves').append('<a href="#"><div class="ability" data-id="'+id+'" ><div>Name : '+ moves[y].name +' </div><div> Learn type : '+ moves[y].learn_type +'</div></div></a>')
         }
 
       }
@@ -571,8 +569,6 @@ Home.prototype.filters = function(){
 
       filters.push($(this).attr('data-name'));      
 
-      console.log($(this).attr('data-name'));
-      
     });
 
     $.getJSON( "../../data/types.json", function(data){
@@ -838,9 +834,9 @@ Move.prototype.pokemon = function(json){
 
 function Navigation(){
 
-  this.type      = $('a div.type');
-  this.move      = $('a div.move');
-  this.ability   = $('a div.ability');
+  this.type      = $('a .type');
+  this.move      = $('a .move');
+  this.ability   = $('a .ability');
   this.articleP  = $('.popup#article');
   this.articleA  = $('.popup#ability');
   this.articleT  = $('.popup#type');
@@ -884,6 +880,8 @@ Navigation.prototype.init = function(){
 
 }
 function DisplayPokemon(pokemon, json){
+
+  $('.popup').find('h2').html(json.name);
   
   for(i=1; i < Object.keys(json.pokemons).length; i++){
 
@@ -945,7 +943,7 @@ function completeRazScroll(){
 }
 function SearchField(){
 
-  this.field = $('form #search');
+  this.field = $('#search');
 
   this.inputOnKeydown();
 
@@ -987,11 +985,11 @@ SearchField.prototype.init = function(type, ability, move, value, callback){
   for(i=0; i < 3;i++){
 
     if(i == 0)
-      $(result).append('<div class="title">Types</div>');
+      $(result).append('<div class="title">Types <div class="line"></div></div>');
     else if(i == 1)
-      $(result).append('<div class="title">Ability</div>');
+      $(result).append('<div class="title">Ability<div class="line"></div></div>');
     else if(i == 2)
-      $(result).append('<div class="title">Move</div>');
+      $(result).append('<div class="title">Move<div class="line"></div></div>');
 
     for(y=1; y <= Object.keys(index[i]).length; y++){
 
@@ -1039,21 +1037,28 @@ SearchField.prototype.init = function(type, ability, move, value, callback){
             $(this).addClass('hide');
             $(this).removeClass('view');
           }
-          
+
         });
 
       }
     }
 
   }
-  
+
   //   Get the size of the content
   new resizeContent();
   //   Size of the content
 
   if(Vallenght == 0){
+    new TweenMax.to($('.searchField'), 0.5, {right:'-200px'});
     $(result).empty();
+
+  }else{
+
+    new TweenMax.to($('.searchField'), 0.5, {right:'0px'});
+
   }
+
 
   new Navigation();
 
