@@ -316,7 +316,7 @@ body {
     #home #generation h2 {
       font-size: 4em;
       text-align: center;
-      color: #a0a0a0; }
+      color: #fdcc03; }
     #home #generation h3 {
       font-size: 4em;
       text-align: center;
@@ -324,7 +324,7 @@ body {
       left: 0;
       right: 0;
       bottom: -55px;
-      color: #4a4a4a;
+      color: #2a2a2a;
       font-weight: bold; }
   #home #timeline {
     position: fixed;
@@ -347,7 +347,20 @@ body {
       top: 0px; }
       #home #timeline .time:hover {
         cursor: pointer; }
+        #home #timeline .time:hover .smallTimeL, #home #timeline .time:hover .smallTimeR {
+          height: 30px;
+          border-color: #9c9c9c;
+          transition: all 0.2s ease-out; }
+        #home #timeline .time:hover .fullTimeL, #home #timeline .time:hover .fullTimeR {
+          height: 50px;
+          border-color: #9c9c9c;
+          transition: all 0.2s ease-out; }
+        #home #timeline .time:hover span {
+          top: -15px;
+          font-size: 2em;
+          transition: all 0.2s ease-out; }
       #home #timeline .time .smallTimeL {
+        transition: all 0.2s ease-out;
         position: absolute;
         width: 10px;
         height: 20px;
@@ -355,6 +368,7 @@ body {
         left: 0;
         border-right: 1px solid #bcbcbc; }
       #home #timeline .time .smallTimeR {
+        transition: all 0.2s ease-out;
         position: absolute;
         width: 10px;
         height: 20px;
@@ -380,9 +394,11 @@ body {
         left: 0px;
         right: 0px;
         top: 0px;
+        font-size: 1em;
         transform: translateX(-30px);
         width: 80px;
-        text-align: center; }
+        text-align: center;
+        transition: all 0.2s ease-out; }
 
 .logo {
   width: 40px;
@@ -526,6 +542,11 @@ body {
         margin-left: 5px;
         margin-bottom: 5px; }
 
+@media screen and (max-height: 1079px) {
+  #nav ul {
+    max-height: 630px;
+    overflow-y: auto; } }
+
 .popup {
   position: fixed;
   width: 100%;
@@ -613,7 +634,8 @@ body {
     right: 50%;
     bottom: 10px;
     transform: translateX(-50%);
-    transition: all 0.2s ease-out; }
+    transition: all 0.2s ease-out;
+    cursor: pointer; }
     .controls .close:hover {
       width: 45px;
       height: 45px;
