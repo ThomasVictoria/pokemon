@@ -537,7 +537,7 @@ body {
         margin-left: 5px;
         margin-bottom: 5px; }
 
-@media screen and (max-height: 1079px) {
+@media screen and (max-height: 900px) {
   #nav ul {
     max-height: 630px;
     overflow-y: auto; } }
