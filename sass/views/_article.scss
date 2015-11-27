@@ -8,22 +8,45 @@
 
   .caracteristique{
 
+    .tableEffect{
+
+      width: 90%;
+      margin: auto;
+      text-align: center;
+
+    }
+
+    .image{
+
+      width: 300px;
+      margin: auto;
+      margin-top: 50px;
+      margin-bottom: 50px;
+
+      img{
+
+        width: 100%;
+
+      }
+
+    }
+
     h2{
       text-align: center;
       font-size: 50px;
       margin-top: 25px;
     }
-    
+
     .pokemons.desc{
 
       width: 90%;
       margin: auto;
       height: 550px;
-      margin-top: 125px;
+      margin-top: 180px;
       overflow-y: auto;
 
       .pokemon{
-        
+
         text-align: center;
         width: 150px;
         height: 40px;
@@ -34,9 +57,9 @@
         margin-top: 20px;
         background-color: #eee;
         padding-top: 20px
-        
+
       }
-      
+
     }
 
   }
@@ -45,7 +68,25 @@
 
     width: 20%;
     float: left;
-
+    font-size: 25px;
+    background-color: #8b8b8b;
+    height: 30px ;
+    padding-top: 10px;
+    
+    .type.img{
+      
+      width: 100px;
+      margin: auto;
+      margin-top: 20px;
+      
+      img{
+        
+        width: 100%;
+        
+      }
+      
+    }
+    
   }
 
 }
@@ -74,6 +115,7 @@
       height: 45px;
       transition: all 0.2s ease-out;
     } 
+
   }
 
 }
@@ -91,7 +133,7 @@
 
 
   #types{ 
-
+    
     span{
       padding-top: 10px;
       margin-left: 10px;      

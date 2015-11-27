@@ -517,6 +517,17 @@ body {
   z-index: 20;
   background-color: #d8d8d8;
   display: none; }
+  .popup .caracteristique .tableEffect {
+    width: 90%;
+    margin: auto;
+    text-align: center; }
+  .popup .caracteristique .image {
+    width: 300px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px; }
+    .popup .caracteristique .image img {
+      width: 100%; }
   .popup .caracteristique h2 {
     text-align: center;
     font-size: 50px;
@@ -525,7 +536,7 @@ body {
     width: 90%;
     margin: auto;
     height: 550px;
-    margin-top: 125px;
+    margin-top: 180px;
     overflow-y: auto; }
     .popup .caracteristique .pokemons.desc .pokemon {
       text-align: center;
@@ -540,7 +551,17 @@ body {
       padding-top: 20px; }
   .popup .interaction {
     width: 20%;
-    float: left; }
+    float: left;
+    font-size: 25px;
+    background-color: #8b8b8b;
+    height: 30px;
+    padding-top: 10px; }
+    .popup .interaction .type.img {
+      width: 100px;
+      margin: auto;
+      margin-top: 20px; }
+      .popup .interaction .type.img img {
+        width: 100%; }
 
 .container {
   width: 1200px;
@@ -560,12 +581,16 @@ body {
     left: 50%;
     right: 50%;
     bottom: 10px;
+<<<<<<< HEAD
     transform: translateX(-50%);
     transition: all 0.2s ease-out; }
     .controls .close:hover {
       width: 45px;
       height: 45px;
       transition: all 0.2s ease-out; }
+=======
+    transform: translateX(-50%); }
+>>>>>>> recherche
 
 #view3d {
   width: 520px;
