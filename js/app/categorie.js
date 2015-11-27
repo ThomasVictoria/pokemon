@@ -97,5 +97,22 @@ categorie.prototype.callAjax = function(){
     $(context).children('h2').empty();
     
   });
+  
+  $(this.pokemon).on('click', function(e){
+    stopScroll = false;
+    raf();
+    console.log($(this));
+    new TweenMax.to($('#ability, #type, #move'), 1, {left: '100%', display: 'none'});
+    var context = $('#ability, #type, #move');
+    $(context).children('.image').empty();
+    $(context).children('.tableEffect').children('.innteraction').each(function(){
+      
+      $(this).empty();
+      
+    });
+    $(context).children('.pokemons').empty();
+    $(context).children('h2').empty();
+    
+  });
 
 }
