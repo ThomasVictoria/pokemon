@@ -380,10 +380,7 @@ pokearticle.prototype.moveability = function(){
   $('#height').html('Height : '+self.reponse.height);
   $('#categories').html('Categories : '+self.reponse.species);
 
-
   $(this.detail).children('h2').html(self.reponse.name);
-
-  console.log(self);
 
   $.when(ability, moves, type).done(function(ability, moves, type){
 
